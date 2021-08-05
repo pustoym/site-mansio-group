@@ -10,6 +10,7 @@
 
 $white: #fff;
 $primary-color: #f9df8f;
+$secondary-color: #0c1e2c;
    
 @import 'fonts';
 @import 'page-style';
@@ -20,3 +21,4 @@ $primary-color: #f9df8f;
 
 /* page-1 */
 @import '../components/intro/style.scss';
+@import '../components/intro/intro-item/style.scss';
