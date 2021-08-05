@@ -1,0 +1,124 @@
+.works-item {
+   padding-top: 431px;
+   padding-bottom: 96px;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   width: 33.3333%;
+   min-height: 867px;
+   padding-left: 111px;
+   @media ( max-width: 1450px ) {
+      padding-left: 50px;
+   }
+   @media ( max-width: 1250px ) {
+      padding-left: 20px;
+   }
+   @media ( max-width: 1020px ) {
+      width: 100%;
+      min-height: auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+   @media ( max-width: 576px ) {
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+   }
+   svg {
+      width: 63px;
+      height: 49px;
+      fill: $white;
+      @media ( max-width: 576px ) {
+         width: 48px;
+         height: 38px;
+      }
+   }
+   &__title {
+      font-family: $font-400;
+      font-weight: 400;
+      font-size: 2.9rem;
+      color: $white;
+
+      padding: 38px 0;
+      @media ( max-width: 1250px ) {
+         font-size: 2.2rem;
+         padding: 26px 0;
+      }
+      @media ( max-width: 576px ) {
+         font-size: 1.8rem;
+         line-height: 2rem;
+         padding: 18px 0;
+      }
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 51px;
+      @media ( max-width: 576px ) {
+         margin-bottom: 40px;
+      }
+      li {
+         font-family: $font-400;
+         font-weight: 400;
+         font-size: 1.6rem;
+         color: $white;
+
+         margin-bottom: 10px;
+         @media ( max-width: 1250px ) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+         }
+         @media ( max-width: 576px ) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+         }
+         svg {
+            width: 9px;
+            height: 12px;
+            fill: $white;
+            margin-right: 10px;
+            @media ( max-width: 576px ) {
+               width: 6px;
+               height: 10px;
+
+               margin-right: 5px;
+            }
+         }
+      }
+   }
+   &__link {
+      font-family: $font-500;
+      font-size: 1.3rem;
+      color: #fff;
+      border: solid 3px rgba(251, 251, 251, 0.15);
+
+      padding: 15px 69px;
+      padding-right: 35px;
+
+      transition: .2s;
+      @media ( max-width: 576px ) {
+         padding: 9px 48px;
+         padding-right: 24px;
+      }
+      svg {
+         width: 12px;
+         height: 10px;
+         fill: $white;
+         opacity: 0.15;
+         transition: .2s;
+
+         margin-left: 50px;
+         @media ( max-width: 576px ) {
+            width: 12px;
+            height: 10px;
+         }
+      }
+      &:hover {
+         border: solid 3px #fbfbfb;
+         svg {
+            opacity: 1;
+         }
+      }
+   }
+}
