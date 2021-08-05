@@ -466,6 +466,7 @@ textarea {
 @media (max-width: 991px) {
   .header {
     padding: 0 15px;
+    padding-right: 45px;
     padding-top: 68px;
   }
 }
