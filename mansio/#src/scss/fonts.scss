@@ -1,0 +1,11 @@
+@include font("Montserrat-Bold", "Montserrat-Bold", "400", "normal");
+@include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
+@include font("Montserrat-Medium", "Montserrat-Medium", "400", "normal");
+@include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
+@include font("Montserrat-Semi-bold", "Montserrat-Regular", "400", "normal");
+
+$font-700: Montserrat-Bold;
+$font-300: Montserrat-Light;
+$font-400: Montserrat-Regular;
+$font-500: Montserrat-Medium;
+$font-600: Montserrat-Semi-bold;
