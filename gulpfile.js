@@ -15,7 +15,7 @@ let path ={
    },
    src:{
       html: [source_folder + "/*.html", "!" + source_folder + "/_*.html" ],
-      css: source_folder + "/scss/style.scss",
+      css: [source_folder + "/scss/style.scss", source_folder + "components/**/*.{scss,sass}"],
       js: source_folder + "/js/*.js",
       img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,wepb}",
       fonts: source_folder + "/fonts/*.ttf",
@@ -46,15 +46,27 @@ let {src, dest} = require('gulp'),
    ttf2woff2 = require('gulp-ttf2woff2'),
    fonter = require('gulp-fonter');
 
-function browserSync(params) {
+const syncserver = () => {
    browsersync.init({
       server: {
          baseDir: "./" + project_folder + "/"
       },
       port: 3000,
-      notify: false
-   })
-}
+      notify: false,
+      open: true,
+      cors: true,
+      ui: false,
+  });
+
+  gulp.watch([path.watch.html], gulp.series(html, refresh));
+  gulp.watch([path.watch.css, source_folder + "/components/**/*.scss"], gulp.series(css, refresh));
+  gulp.watch([path.watch.js], gulp.series(js, refresh));
+};
+
+const refresh = (done) => {
+  browsersync.reload();
+  done();
+};
 
 function html() {
    return src(path.src.html)
@@ -153,46 +165,39 @@ gulp.task('svgSprite', function() {
       .pipe(dest(path.build.img))
 })
 
-function fontsStyle(params) {
-   let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
-   if (file_content == '') {
-      fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
-      return fs.readdir(path.build.fonts, function (err, items) {
-         if (items) {
-            let c_fontname;
-            for (var i = 0; i < items.length; i++) {
-               let fontname = items[i].split('.');
-               fontname = fontname[0];
-               if (c_fontname != fontname) {
-                  fs.appendFile(source_folder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal")\r\n', cb);
-               }
-               c_fontname = fontname;
-               }
-            }
-         })
-      }
-   }
+// Сходу не понял зачем и что даёт. Объясни?
+// function fontsStyle(params) {
+//    let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
+//    if (file_content == '') {
+//       fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
+//       return fs.readdir(path.build.fonts, function (err, items) {
+//          if (items) {
+//             let c_fontname;
+//             for (var i = 0; i < items.length; i++) {
+//                let fontname = items[i].split('.');
+//                fontname = fontname[0];
+//                if (c_fontname != fontname) {
+//                   fs.appendFile(source_folder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal")\r\n', cb);
+//                }
+//                c_fontname = fontname;
+//                }
+//             }
+//          })
+//       }
+//    }
 
 
 function cb() {
 
 }
 
-function watchFiles() {
-   gulp.watch([path.watch.html], html);
-   gulp.watch([path.watch.css], css);
-   gulp.watch([path.watch.js], js);
-   gulp.watch([path.watch.js], images);
-}
-
 function clean(params) {
    return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
-let watch = gulp.parallel(build, watchFiles, browserSync);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+let watch = gulp.series(build, syncserver);
 
-exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
