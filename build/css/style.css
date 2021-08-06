@@ -1900,6 +1900,89 @@ textarea {
   margin-right: 26px;
 }
 
+/* reviews */
+
+.reviews {
+  background-image: url("../../img/foto/reviews-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 79px;
+  padding-bottom: 108px;
+}
+
+.reviews__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reviews__title {
+  font-family: Commissioner-Bold;
+  font-weight: 700;
+  font-size: 3.3rem;
+  color: #0c1e2c;
+  text-transform: uppercase;
+  padding: 38px 0;
+  padding-left: 100px;
+  border-left: 1px solid #0c1e2c;
+  margin-bottom: 51px;
+}
+
+.reviews__item {
+  width: calc( 50% - 15px);
+  margin-bottom: 48px;
+}
+
+.reviews__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 23px 30px;
+  background-color: #0c1e2c;
+  width: 100%;
+  margin-top: -5px;
+}
+
+.reviews__icon {
+  margin-right: 26px;
+}
+
+.reviews__icon svg {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+}
+
+.reviews__subtitle {
+  font-family: Commissioner-Regular;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fff;
+  padding-right: 10px;
+}
+
+.reviews__logo {
+  margin-left: auto;
+}
+
+.reviews__logo svg {
+  width: 90px;
+  height: 12px;
+  fill: #fff;
+}
+
+.reviews__video video {
+  width: 100%;
+}
+
 @media (max-width: 1500px) {
   .project__foto {
     margin-right: 30px;
@@ -2294,6 +2377,11 @@ textarea {
 
   .contacts-text__name {
     margin-top: 50px;
+  }
+
+  .reviews__item {
+    width: 100%;
+    margin-bottom: 40px;
   }
 }
 
@@ -2732,6 +2820,14 @@ textarea {
     padding-left: 24px;
     padding-right: 21px;
   }
+
+  .reviews__title {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    border-left: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 567px) {
@@ -2829,5 +2925,20 @@ textarea {
   .project__feedback span {
     font-size: 1.3rem;
     line-height: 1.8rem;
+  }
+
+  .reviews {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .reviews__panel {
+    padding: 18px 20px;
+  }
+
+  .reviews__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding-right: 5px;
   }
 }
