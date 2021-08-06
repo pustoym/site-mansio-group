@@ -188,30 +188,27 @@ const start = series(build, syncserver);
 const createWebp = () => {
    const root = ``;
    return gulp.src(srcFolder + `/img/${root}**/*.{png,jpg}`)
-     .pipe(webp({quality: 90}))
-     .pipe(gulp.dest(srcFolder + `/img/${root}`));
- };
- 
- const optimizeImages = () => {
+      .pipe(webp({ quality: 90 }))
+      .pipe(gulp.dest(srcFolder + `/img/${root}`));
+};
+
+const optimizeImages = () => {
    return gulp.src(buildFolder + '/img/**/*.{png,jpg}')
-       .pipe(imagemin([
-         imagemin.optipng({optimizationLevel: 3}),
-         imagemin.mozjpeg({quality: 75, progressive: true}),
-       ]))
-       .pipe(gulp.dest(buildFolder + '/img'));
- };
+      .pipe(imagemin([
+         imagemin.optipng({ optimizationLevel: 3 }),
+         imagemin.mozjpeg({ quality: 75, progressive: true }),
+      ]))
+      .pipe(gulp.dest(buildFolder + '/img'));
+};
 exports.build = build;
 exports.start = start;
 exports.webp = createWebp;
 exports.imagemin = optimizeImages;
 
 function fonts() {
-   src(path.src.fonts)
-      .pipe(ttf2woff())
-      .pipe(dest(path.build.fonts))
    return src(path.src.fonts)
-      .pipe(ttf2woff2())
-      .pipe(dest(path.build.fonts))
+      .pipe([ttf2woff(), ttf2woff2()])
+      .pipe(dest(srcFolder + 'fonts/'))
 }
 exports.fonts = fonts;
 
