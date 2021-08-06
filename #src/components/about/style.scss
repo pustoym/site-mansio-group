@@ -1,0 +1,208 @@
+.about {
+   background-image: url('../../img/foto/about-background.png');
+   background-size: cover;
+   background-repeat: repeat;
+   background-position: center;
+
+   padding-bottom: 127px;
+   @media ( max-width: 991px ) {
+      padding-bottom: 40px;
+   }
+   @media ( max-width: 576px ) {
+      padding-bottom: 20px;
+   } 
+   &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding-top: 108px;
+      padding-bottom: 147px;
+      @media ( max-width: 991px ) {
+         padding-top: 60px;
+         padding-bottom: 80px;
+      }
+      @media ( max-width: 714px ) {
+         flex-direction: column;
+      }
+      @media ( max-width: 576px ) {
+         padding-top: 30px;
+         padding-bottom: 40px;
+      }
+      span {
+         font-family: $font-300;
+         font-size: 1.6rem;
+         color: #bebebe;
+         margin: 0 45px;
+         @media ( max-width: 714px ) {
+            margin: 20px 0;
+         }
+      }
+   }
+   &__btn {
+      font-family: $font-500;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #f7f7f7;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      height: 55px;
+      background-color: $secondary-color;
+      box-shadow: 0px 15px 34px 0 rgba(12, 30, 44, 0.2);
+
+      display: flex;
+      align-items: center;
+
+      padding-left: 71px;
+
+      transition: .2s;
+      svg {
+         width: 12px;
+         height: 10px;
+         fill: #f0d276;
+         transition: .2s;
+      }
+      span {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #153248;
+         height: 55px;
+         margin: 0;
+         margin-left: 48px;
+         padding-left: 34px;
+         padding-right: 31px;
+         transition: .2s;
+         @media ( max-width: 714px ) {
+            margin: 0;
+            margin-left: 48px;
+         }
+      }
+      &:hover {
+         background-color: #153248;
+         span {
+            background-color: $secondary-color;
+         }
+         svg {
+            fill:  #fcf7e6;
+         }
+      }
+      @media ( max-width: 576px ) {
+         padding-left: 40px;
+         height: 48px;
+         span {
+            height: 48px;
+            margin-left: 24px;
+            padding-left: 24px;
+            padding-right: 21px;
+         }
+      }
+   }
+   &__link {
+      font-family: $font-400;
+      font-size: 1.6rem;
+      color: $secondary-color;
+      text-decoration: underline;
+
+      display: flex;
+      align-items: center;
+      transition: .2s;
+      &:hover {
+         color: $primary-color;
+      }
+      svg {
+         width: 48px;
+         height: 55px;
+         margin-right: 18px;
+      }
+   }
+   &__content {
+      display: flex;
+      @media ( max-width: 991px ) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+   &__foto {
+      margin-right: 77px;
+      @media ( max-width: 991px ) {
+         margin-right: 0;
+      }
+      img {
+         width: 100%;
+         max-width: 471px;
+      }
+   }
+   &__text {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      max-width: 513px;
+
+      padding-top: 50px;
+      @media ( max-width: 576px ) {
+         padding-top: 25px;
+      }
+      span {
+         font-family: $font-300;
+         font-weight: 300;
+         font-size: 1.6rem;
+         line-height: 1.8rem;
+         color: $secondary-color;
+
+         margin-bottom: 20px;
+         @media ( max-width: 576px ) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+
+            margin-bottom: 15px;
+         }
+         span {
+            font-family: $font-700;
+            font-weight: 700;
+            color: $primary-color;
+         }
+      }
+   }
+   &__title {
+      font-family: $logo-font;
+      font-weight: 400;
+      font-size: 3.3rem;
+      color: $secondary-color;
+
+      margin-bottom: 34px;
+      @media ( max-width: 576px ) {
+         font-size: 2.4rem;
+
+         margin-bottom: 15px;
+      }
+   }
+   &__list {
+      margin-top: 12px;
+      @media ( max-width: 576px ) {
+         margin-top: 0;
+      }
+      li {
+         font-family: $font-300;
+         font-weight: 300;
+         font-size: 1.6rem;
+         line-height: 1.8rem;
+         color: $secondary-color;
+
+         margin-bottom: 10px;
+         @media ( max-width: 576px ) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+         }
+      }
+      svg {
+         width: 9px;
+         height: 12px;
+         fill: #7c97aa;
+
+         margin-right: 10px;
+      }
+   }
+}

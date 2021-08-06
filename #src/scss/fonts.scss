@@ -1,11 +1,15 @@
-@include font("Montserrat-Bold", "Montserrat-Bold", "400", "normal");
-@include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
-@include font("Montserrat-Medium", "Montserrat-Medium", "400", "normal");
-@include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
-@include font("Montserrat-Semi-bold", "Montserrat-Regular", "400", "normal");
+@include font("Commissioner-Bold", "Commissioner-Bold", "400", "normal");
+@include font("Commissioner-Light", "Commissioner-Light", "400", "normal");
+@include font("Commissioner-Medium", "Commissioner-Medium", "400", "normal");
+@include font("Commissioner-Regular", "Commissioner-Regular", "400", "normal");
+@include font("Commissioner-SemiBold", "Commissioner-SemiBold", "400", "normal");
+@include font("Commissioner-Thin", "Commissioner-Thin", "400", "normal");
+@include font("Radiotechnika", "Radiotechnika", "400", "normal");
 
-$font-700: Montserrat-Bold;
-$font-300: Montserrat-Light;
-$font-400: Montserrat-Regular;
-$font-500: Montserrat-Medium;
-$font-600: Montserrat-Semi-bold;
+$font-700: Commissioner-Bold;
+$font-300: Commissioner-Light;
+$font-400: Commissioner-Regular;
+$font-500: Commissioner-Medium;
+$font-600: Commissioner-SemiBold;
+$font-100: Commissioner-Thin;
+$logo-font: Radiotechnika;
