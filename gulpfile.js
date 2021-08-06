@@ -155,7 +155,7 @@ const copypngjpg = () => {
 
 const copy = () => {
    return gulp.src([
-      srcFolder + '/fonts/**',
+      srcFolder + '/fonts/**.{woff, woff2}',
       srcFolder + '/img/**',
       // srcFolder + '/data/**',
       srcFolder + '/favicon/**',
