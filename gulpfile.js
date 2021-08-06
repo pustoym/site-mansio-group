@@ -155,7 +155,7 @@ const copypngjpg = () => {
 
 const copy = () => {
    return gulp.src([
-      srcFolder + '/fonts/**.{woff, woff2}',
+      srcFolder + '/fonts/*.{woff,woff2}',
       srcFolder + '/img/**',
       // srcFolder + '/data/**',
       srcFolder + '/favicon/**',
@@ -167,6 +167,7 @@ const copy = () => {
    })
       .pipe(gulp.dest(buildFolder));
 };
+exports.copy = copy;
 
 const clean = () => {
    return del(path.clean);
