@@ -78,12 +78,6 @@ const clean = () => {
 };
 exports.clean = clean;
 
-const build = series(clean, svgo, parallel(js, css, html, images, sprite));
-const start = series(build, syncserver);
-
-exports.build = build;
-exports.start = start;
-
 const html = () => {
    return src(path.src.html)
       .pipe(fileinclude())
@@ -190,6 +184,14 @@ gulp.task('otf2ttf', function () {
       .pipe(dest(srcFolder + '/fonts/'));
 })
 
+const build = series(clean, svgo, parallel(js, css, html, images, sprite));
+const start = series(build, syncserver);
+
+exports.build = build;
+exports.start = start;
+// exports.webp = createWebp;
+// exports.imagemin = optimizeImages;
+
 // gulp.task('svgSprite', function () {
 //    return gulp.src([srcFolder + '/iconsprite/*.svg'])
 //       .pipe(svgSprite({
@@ -227,6 +229,3 @@ gulp.task('otf2ttf', function () {
 // function cb() {
 
 // }
-
-// exports.webp = createWebp;
-// exports.imagemin = optimizeImages;
