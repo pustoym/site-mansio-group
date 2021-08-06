@@ -41,42 +41,12 @@ const { series, parallel, src, dest, watch, lastRun } = require('gulp'),
    rename = require("gulp-rename"),
    uglify = require("gulp-uglify-es").default,
    imagemin = require("gulp-imagemin"),
+   webp = require('gulp-webp'),
    svgstore = require('gulp-svgstore'),
    ttf2woff = require('gulp-ttf2woff'),
    ttf2woff2 = require('gulp-ttf2woff2'),
    htmlbeautify = require('gulp-html-beautify'),
    fonter = require('gulp-fonter');
-
-const syncserver = () => {
-   browsersync.init({
-      server: {baseDir: "./" + buildFolder + "/"},
-      port: 3000,
-      notify: false,
-      open: true,
-      cors: true,
-      ui: false,
-   });
-
-   gulp.watch(path.watch.html, series(html, refresh));
-   gulp.watch([path.watch.css, srcFolder + "/components/**/*.scss"], series(css, refresh));
-   gulp.watch(path.watch.js, series(js, refresh));
-   gulp.watch(srcFolder + '/img/**/*.svg', series(copysvg, sprite, html, refresh));
-};
-
-const refresh = (done) => {
-   browsersync.reload();
-   done();
-};
-
-const copysvg = () => {
-   return gulp.src(srcFolder + '/img/**/*.svg', {base: srcFolder})
-       .pipe(gulp.dest(buildFolder));
- };
-
-const clean = () => {
-   return del(path.clean);
-};
-exports.clean = clean;
 
 const html = () => {
    return src(path.src.html)
@@ -94,16 +64,16 @@ exports.html = html;
 const css = () => {
    return src(path.src.css)
       .pipe(plumber())
-      .pipe(sass({outputStyle: "expanded"}))
+      .pipe(sass({ outputStyle: "expanded" }))
       .pipe(group_media())
       .pipe(autoprefixer({
-            overrideBrowserslist: ['last 5 versions'],
-            cascade: true,
-            grid: true,
-         }))
+         overrideBrowserslist: ['last 5 versions'],
+         cascade: true,
+         grid: true,
+      }))
       .pipe(dest(path.build.css))
       .pipe(clean_css())
-      .pipe(rename({extname: ".min.css"}))
+      .pipe(rename({ extname: ".min.css" }))
       .pipe(dest(path.build.css))
       .pipe(browsersync.stream())
 };
@@ -128,45 +98,114 @@ exports.js = js;
 
 const svgo = () => {
    return gulp.src(srcFolder + '/img/**/*.{svg}')
-       .pipe(imagemin([
+      .pipe(imagemin([
          imagemin.svgo({
-             plugins: [
-               {removeViewBox: false},
-               {removeRasterImages: true},
-               {removeUselessStrokeAndFill: false},
-             ]
-           }),
-       ]))
-       .pipe(gulp.dest(srcFolder + '/img'));
- };
- exports.svgo = svgo;
+            plugins: [
+               { removeViewBox: false },
+               { removeRasterImages: true },
+               { removeUselessStrokeAndFill: false },
+            ]
+         }),
+      ]))
+      .pipe(gulp.dest(srcFolder + '/img'));
+};
+exports.svgo = svgo;
 
- const sprite = () => {
+const sprite = () => {
    return gulp.src(srcFolder + '/img/sprite/*.svg')
-       .pipe(svgstore({inlineSvg: true}))
-       .pipe(rename('sprite_auto.svg'))
+      .pipe(svgstore({ inlineSvg: true }))
+      .pipe(rename('sprite_auto.svg'))
+      .pipe(gulp.dest(buildFolder + '/img'));
+};
+exports.sprite = sprite;
+
+const syncserver = () => {
+   browsersync.init({
+      server: { baseDir: "./" + buildFolder + "/" },
+      port: 3000,
+      notify: false,
+      open: true,
+      cors: true,
+      ui: false,
+   });
+
+   gulp.watch(path.watch.html, series(html, refresh));
+   gulp.watch([path.watch.css, srcFolder + "/components/**/*.scss"], series(css, refresh));
+   gulp.watch(path.watch.js, series(js, refresh));
+   gulp.watch(srcFolder + '/img/**/*.svg', series(copysvg, sprite, html, refresh));
+   gulp.watch(srcFolder + '/img/**/*.{png,jpg}', series(copypngjpg, html, refresh));
+
+   gulp.watch(srcFolder + '/favicon/**', gulp.series(copy, refresh));
+};
+
+const refresh = (done) => {
+   browsersync.reload();
+   done();
+};
+
+const copysvg = () => {
+   return gulp.src(srcFolder + '/img/**/*.svg', { base: srcFolder })
+      .pipe(gulp.dest(buildFolder));
+};
+
+const copypngjpg = () => {
+   return gulp.src(srcFolder + '/img/**/*.{png,jpg}', { base: srcFolder })
+      .pipe(gulp.dest(buildFolder));
+};
+
+const copy = () => {
+   return gulp.src([
+      srcFolder + '/fonts/**',
+      srcFolder + '/img/**',
+      // srcFolder + '/data/**',
+      srcFolder + '/favicon/**',
+      // srcFolder + '/video/**',
+      // srcFolder + '/downloads/**',
+      // srcFolder + '/*.php',
+   ], {
+      base: srcFolder,
+   })
+      .pipe(gulp.dest(buildFolder));
+};
+
+const clean = () => {
+   return del(path.clean);
+};
+exports.clean = clean;
+
+const build = series(clean, svgo, parallel(js, css, html, copy, sprite));
+const start = series(build, syncserver);
+
+// Optional tasks
+//---------------------------------
+
+// Использовать отличное от дефолтного значение root, если нужно обработать отдельную папку в img,
+// а не все изображения в img во всех папках.
+
+// root = `` - по дефолту webp добавляются и обналяются во всех папках в source/img/
+// root = `content/` - webp добавляются и обновляются только в source/img/content/
+
+const createWebp = () => {
+   const root = ``;
+   return gulp.src(srcFolder + `/img/${root}**/*.{png,jpg}`)
+     .pipe(webp({quality: 90}))
+     .pipe(gulp.dest(srcFolder + `/img/${root}`));
+ };
+ 
+ const optimizeImages = () => {
+   return gulp.src(buildFolder + '/img/**/*.{png,jpg}')
+       .pipe(imagemin([
+         imagemin.optipng({optimizationLevel: 3}),
+         imagemin.mozjpeg({quality: 75, progressive: true}),
+       ]))
        .pipe(gulp.dest(buildFolder + '/img'));
  };
- exports.sprite = sprite;
+exports.build = build;
+exports.start = start;
+exports.webp = createWebp;
+exports.imagemin = optimizeImages;
 
-function images() {
-   return src(path.src.img)
-      .pipe(dest(path.build.img))
-      .pipe(src(path.src.img))
-      .pipe(
-         imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true,
-            optimizationLevel: 3
-         })
-      )
-      .pipe(dest(path.build.img))
-      .pipe(browsersync.stream())
-}
-exports.images = images;
-
-function fonts(params) {
+function fonts() {
    src(path.src.fonts)
       .pipe(ttf2woff())
       .pipe(dest(path.build.fonts))
@@ -183,14 +222,6 @@ gulp.task('otf2ttf', function () {
       }))
       .pipe(dest(srcFolder + '/fonts/'));
 })
-
-const build = series(clean, svgo, parallel(js, css, html, images, sprite));
-const start = series(build, syncserver);
-
-exports.build = build;
-exports.start = start;
-// exports.webp = createWebp;
-// exports.imagemin = optimizeImages;
 
 // gulp.task('svgSprite', function () {
 //    return gulp.src([srcFolder + '/iconsprite/*.svg'])
