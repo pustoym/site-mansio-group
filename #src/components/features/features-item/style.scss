@@ -1,0 +1,63 @@
+.features-item {
+   display: flex;
+   flex-direction: column;
+   
+   padding: 84px 37px 20px 67px;
+   box-shadow: 0px 15px 34px 0 rgba(124, 151, 170, 0.2);
+   background-color: #fff;
+
+   width: calc( 50% - 15px);
+   min-height: 322px;
+   position: relative;
+
+   margin-bottom: 88px;
+   @media ( max-width: 991px ) {
+      width: 100%;
+   }
+   @media ( max-width: 576px ) {
+      padding-left: 20px;
+      padding-top: 50px;
+      padding-bottom: 40px;
+      min-height: auto;
+      &:last-child {
+         margin-bottom: 30px;
+      }
+   }
+   span {
+      font-family: $font-400;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: #999;
+   }
+   &__title {
+      font-family: $font-700;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: $secondary-color;
+
+      margin-bottom: 20px;
+   }
+   &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 97px;
+      height: 97px;
+      border-radius: 50%;
+      background-color: $primary-color;
+
+      position: absolute;
+      top: -62px;
+      left: 68px;
+      @media ( max-width: 576px ) {
+         left: 8px;
+      }
+      svg {
+         width: 46px;
+         height: 46px;
+         fill: $white;
+      }
+   }
+}

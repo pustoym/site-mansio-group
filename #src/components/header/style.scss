@@ -35,8 +35,7 @@
          align-items: flex-start;
          position: fixed;
          top: 0;
-         left: -140vh;
-         z-index: 3;
+         left: -100%;
       
          background-color: black;
          width: 100%;
@@ -51,9 +50,10 @@
       }
    }
    &__logo {
-      img {
+      svg {
          width: 169px;
          height: 26px;
+         fill: $white;
       }
    }
    &__nav {

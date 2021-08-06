@@ -100,4 +100,11 @@ textarea {
    max-width: 1920px;
    margin: 0 auto;
    overflow: hidden;
+   &__background {
+      background-image: url('../img/foto/features-background.png');
+      background-repeat: no-repeat;
+      @media (max-width: 1200px) {
+         background-size: cover;
+      }
+   }
 }
