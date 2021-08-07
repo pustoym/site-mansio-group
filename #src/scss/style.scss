@@ -49,3 +49,11 @@ $secondary-color: #0c1e2c;
 
 /* reviews */
 @import '../components/reviews/style.scss';
+
+/* reviews-slider */
+@import '../components/reviews-slider/style.scss';
+@import '../components/reviews-slider/reviews-foto/style.scss';
+@import '../components/reviews-slider/reviews-panel/style.scss';
+
+/* footer */
+@import '../components/footer/style.scss';

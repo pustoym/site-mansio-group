@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mansio</title>
+  <!-- style index -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- style glightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 
 <body>
@@ -435,63 +438,65 @@
                 <div class="contacts-form">
                   <span>Форма заявки</span>
                   <div class="contacts-form__title">Организуем встречу с нашим архитектором,на которой вы<span>:</span></div>
-                  <ul class="contacts-form__list">
-                    <li>
-                      Определите назначение дома
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
-                      </svg>
-                    </li>
-                    <li>
-                      Выберите архитектурный стиль
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
-                      </svg>
-                    </li>
-                    <li>
-                      Определите желаемую площадь дома
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
-                      </svg>
-                    </li>
-                    <li>
-                      Посмотрите образцы материалов
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
-                      </svg>
-                    </li>
-                    <li>
-                      Получите полную техническую консультацию
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
-                      </svg>
-                    </li>
-                  </ul>
                   <form class="contacts-form__form" action="/">
-                    <div class="contacts-form__input">
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#contacts-icon-1"></use>
-                      </svg>
-                      <input type="text" placeholder="Введите ваше имя">
-                    </div>
-                    <div class="contacts-form__input">
-                      <svg>
-                        <use xlink:href="img/sprite_auto.svg#contacts-icon-2"></use>
-                      </svg>
-                      <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
-                    </div>
-                    <div class="contacts-form__checkbox">
-                      <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
-                      <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно политике конфиденциальности</label>
-                    </div>
-                    <button class="contacts-form__btn" type="submit">
-                      Записаться на встречу с архитектором
-                      <span>
+                    <ul class="contacts-form__list">
+                      <li>
+                        Определите назначение дома
                         <svg>
-                          <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
                         </svg>
-                      </span>
-                    </button>
+                      </li>
+                      <li>
+                        Выберите архитектурный стиль
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Определите желаемую площадь дома
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Посмотрите образцы материалов
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Получите полную техническую консультацию
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="contacts-form__block">
+                      <div class="contacts-form__input">
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#contacts-icon-1"></use>
+                        </svg>
+                        <input type="text" placeholder="Введите ваше имя">
+                      </div>
+                      <div class="contacts-form__input">
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#contacts-icon-2"></use>
+                        </svg>
+                        <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
+                      </div>
+                      <div class="contacts-form__checkbox">
+                        <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
+                        <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно политике конфиденциальности</label>
+                      </div>
+                      <button class="contacts-form__btn" type="submit">
+                        Записаться на встречу с архитектором
+                        <span>
+                          <svg>
+                            <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
                   </form>
                 </div>
                 <!-- contacts-form end -->
@@ -533,7 +538,10 @@
       <!-- item 1 -->
       <div class="project__item">
         <div class="project__foto">
-          <img src="img/foto/project-1.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-1.jpg" />
+            <img src="img/foto/project-1.jpg" alt="##">
+          </picture>
         </div>
         <div class="project__content">
           <div class="project__desc">Создаем красивый и функциональный дом в рамках вашего бюджета</div>
@@ -637,13 +645,19 @@
           </ul>
         </div>
         <div class="project__foto project__foto--right">
-          <img src="img/foto/project-2.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-2.jpg" />
+            <img src="img/foto/project-2.jpg" alt="##">
+          </picture>
         </div>
       </div>
       <!-- item 3 -->
       <div class="project__item">
         <div class="project__foto">
-          <img src="img/foto/project-3.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-3.jpg" />
+            <img src="img/foto/project-3.jpg" alt="##">
+          </picture>
         </div>
         <div class="project__content">
           <div class="project__title">Строительство</div>
@@ -705,13 +719,19 @@
           </div>
         </div>
         <div class="project__foto project__foto--right">
-          <img src="img/foto/project-4.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-4.jpg" />
+            <img src="img/foto/project-4.jpg" alt="##">
+          </picture>
         </div>
       </div>
       <!-- item 5 -->
       <div class="project__item">
         <div class="project__foto">
-          <img src="img/foto/project-5.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-5.jpg" />
+            <img src="img/foto/project-5.jpg" alt="##">
+          </picture>
         </div>
         <div class="project__content">
           <div class="project__title">Отделочные работы</div>
@@ -769,13 +789,19 @@
           </ul>
         </div>
         <div class="project__foto project__foto--right">
-          <img src="img/foto/project-6.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-6.jpg" />
+            <img src="img/foto/project-6.jpg" alt="##">
+          </picture>
         </div>
       </div>
       <!-- item 7 -->
       <div class="project__item">
         <div class="project__foto">
-          <img src="img/foto/project-7.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-7.jpg" />
+            <img src="img/foto/project-7.jpg" alt="##">
+          </picture>
         </div>
         <div class="project__content">
           <div class="project__title">Ландшафтный дизайн</div>
@@ -829,13 +855,19 @@
           </ul>
         </div>
         <div class="project__foto project__foto--right">
-          <img src="img/foto/project-8.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-8.jpg" />
+            <img src="img/foto/project-8.jpg" alt="##">
+          </picture>
         </div>
       </div>
       <!-- item 9 -->
       <div class="project__item">
         <div class="project__foto">
-          <img src="img/foto/project-10.png" alt="##">
+          <picture>
+            <source srcset="img/foto/project-9.jpg" />
+            <img src="img/foto/project-9.jpg" alt="##">
+          </picture>
         </div>
         <div class="project__content">
           <div class="project__desc">Для обсуждения деталей вашего проекта</div>
@@ -966,10 +998,461 @@
         </div>
       </div>
     </div>
+    <div class="main__background main__background--bottom">
+      <!-- reviews-slider -->
+      <div class="reviews-slider">
+        <div class="container">
+          <div class="reviews-slider__title">Мы воплотили в жизни мечту <br> более 800 клиентов, посмотрите их отзывы</div>
+        </div>
+        <div class="reviews-slider__content">
+          <!-- item -->
+          <div class="reviews-slider__item">
+            <!-- reviews foto -->
+            <div class="reviews-foto">
+              <a class="reviews-foto__link glightbox" href="img/foto/reviews-slider-foto-1.png" data-gallery="gallery1">
+                <img src="img/foto/reviews-slider-foto-1.png" alt="##">
+              </a>
+            </div>
+            <!-- reviews foto -->
+            <div class="reviews-slider__inner">
+              <div class="reviews-slider__foto-slider">
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery1">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery1">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery1">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery1">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+              </div>
+              <div class="reviews-slider__info">
+                <div class="reviews-slider__block">
+                  <div class="reviews-slider__img">
+                    <img src="img/foto/reviews-slider-foto-3.png" alt="##">
+                  </div>
+                  <div class="reviews-slider__name">
+                    <div class="reviews-slider__fio">Семья Дунаевых</div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-1"></use>
+                      </svg>
+                      <span>Дом 143 м2</span>
+                    </div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-2"></use>
+                      </svg>
+                      <span>д. Усово</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="reviews-slider__btn">
+                  ХОЧУ ПОДОБНЫЙ ДОМ
+                  <span>
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="reviews-slider__item">
+            <!-- reviews foto -->
+            <div class="reviews-foto">
+              <a class="reviews-foto__link glightbox" href="img/foto/reviews-slider-foto-1.png" data-gallery="gallery1">
+                <img src="img/foto/reviews-slider-foto-1.png" alt="##">
+              </a>
+            </div>
+            <!-- reviews foto -->
+            <div class="reviews-slider__inner">
+              <div class="reviews-slider__foto-slider">
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery2">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery2">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery2">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery2">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+              </div>
+              <div class="reviews-slider__info">
+                <div class="reviews-slider__block">
+                  <div class="reviews-slider__img">
+                    <img src="img/foto/reviews-slider-foto-3.png" alt="##">
+                  </div>
+                  <div class="reviews-slider__name">
+                    <div class="reviews-slider__fio">Семья Дунаевых</div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-1"></use>
+                      </svg>
+                      <span>Дом 143 м2</span>
+                    </div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-2"></use>
+                      </svg>
+                      <span>д. Усово</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="reviews-slider__btn">
+                  ХОЧУ ПОДОБНЫЙ ДОМ
+                  <span>
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="reviews-slider__item">
+            <!-- reviews foto -->
+            <div class="reviews-foto">
+              <a class="reviews-foto__link glightbox" href="img/foto/reviews-slider-foto-1.png" data-gallery="gallery1">
+                <img src="img/foto/reviews-slider-foto-1.png" alt="##">
+              </a>
+            </div>
+            <!-- reviews foto -->
+            <div class="reviews-slider__inner">
+              <div class="reviews-slider__foto-slider">
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery3">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery3">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery3">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery3">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+              </div>
+              <div class="reviews-slider__info">
+                <div class="reviews-slider__block">
+                  <div class="reviews-slider__img">
+                    <img src="img/foto/reviews-slider-foto-3.png" alt="##">
+                  </div>
+                  <div class="reviews-slider__name">
+                    <div class="reviews-slider__fio">Семья Дунаевых</div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-1"></use>
+                      </svg>
+                      <span>Дом 143 м2</span>
+                    </div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-2"></use>
+                      </svg>
+                      <span>д. Усово</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="reviews-slider__btn">
+                  ХОЧУ ПОДОБНЫЙ ДОМ
+                  <span>
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="reviews-slider__item">
+            <!-- reviews foto -->
+            <div class="reviews-foto">
+              <a class="reviews-foto__link glightbox" href="img/foto/reviews-slider-foto-1.png" data-gallery="gallery1">
+                <img src="img/foto/reviews-slider-foto-1.png" alt="##">
+              </a>
+            </div>
+            <!-- reviews foto -->
+            <div class="reviews-slider__inner">
+              <div class="reviews-slider__foto-slider">
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery4">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery4">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery4">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+                <a class="reviews-slider__foto glightbox" href="img/foto/reviews-slider-foto-2.png" data-gallery="gallery4">
+                  <img src="img/foto/reviews-slider-foto-2.png" alt="##">
+                </a>
+              </div>
+              <div class="reviews-slider__info">
+                <div class="reviews-slider__block">
+                  <div class="reviews-slider__img">
+                    <img src="img/foto/reviews-slider-foto-3.png" alt="##">
+                  </div>
+                  <div class="reviews-slider__name">
+                    <div class="reviews-slider__fio">Семья Дунаевых</div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-1"></use>
+                      </svg>
+                      <span>Дом 143 м2</span>
+                    </div>
+                    <div class="reviews-slider__wrap">
+                      <svg>
+                        <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-2"></use>
+                      </svg>
+                      <span>д. Усово</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="reviews-slider__btn">
+                  ХОЧУ ПОДОБНЫЙ ДОМ
+                  <span>
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- reviews panel -->
+        <div class="reviews-panel">
+          <div class="container">
+            <div class="reviews-panel__inner">
+              <div class="reviews-panel__icon">
+                <svg>
+                  <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-3"></use>
+                </svg>
+              </div>
+              <div class="reviews-panel__content">
+                <div class="reviews-panel__title">Вы можете увидеть наши дома собственными глазами и пообщаться с их владельцами</div>
+                <button class="reviews-panel__btn">
+                  ЗАПИСАТЬСЯ НА ПРОСМОТР
+                  <span>
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- reviews panel -->
+      </div>
+      <!-- contacts -->
+      <div class="contacts">
+        <div class="container">
+          <div class="contacts__inner">
+            <div class="contacts__content">
+              <div class="contacts__logo">
+                <svg>
+                  <use xlink:href="img/sprite_auto.svg#logo"></use>
+                </svg>
+              </div>
+              <div class="contacts__wrap">
+                <div class="contacts__name">
+                  <div class="contacts__title">Александра Бикова</div>
+                  <div class="contacts__subtitle">Проектный консультантв</div>
+                </div>
+                <div class="contacts__foto">
+                  <img src="img/foto/contacts-foto-3.png" alt="##">
+                </div>
+                <!-- contacts-form -->
+                <div class="contacts-form">
+                  <span>Форма заявки</span>
+                  <div class="contacts-form__title">Мы готовы проконсультировать Вас по любому вопросу</div>
+                  <form class="contacts-form__form" action="/">
+                    <ul class="contacts-form__list">
+                      <li>
+                        Определите назначение дома
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Выберите архитектурный стиль
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Определите желаемую площадь дома
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Посмотрите образцы материалов
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Получите полную техническую консультацию
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#arrow-right"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="contacts-form__block">
+                      <div class="contacts-form__input">
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#contacts-icon-1"></use>
+                        </svg>
+                        <input type="text" placeholder="Введите ваше имя">
+                      </div>
+                      <div class="contacts-form__input">
+                        <svg>
+                          <use xlink:href="img/sprite_auto.svg#contacts-icon-2"></use>
+                        </svg>
+                        <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
+                      </div>
+                      <div class="contacts-form__checkbox">
+                        <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
+                        <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно политике конфиденциальности</label>
+                      </div>
+                      <button class="contacts-form__btn" type="submit">
+                        Сделать первый шаг к вашей мечте
+                        <span>
+                          <svg>
+                            <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <!-- contacts-form end -->
+              </div>
+            </div>
+          </div>
+          <div class="contacts__text">
+            <span>SEO-текст. С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития. Разнообразный и богатый опыт сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что консультация с широким активом представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения дальнейших направлений развития.</span>
+            <span>С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации систем массового участия. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании модели развития.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__name">
+            <div class="footer__logo">
+              <svg>
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
+            </div>
+            <div class="footer__title">Строим дома бизнес-класса в Москве и Московской области</div>
+            <div class="footer__bank">
+              <span>ООО «МАНСИО»</span>
+              <span>ИНН 11111111</span>
+              <span>ОГРН 111111111111</span>
+            </div>
+            <a class="footer__policy" href="##">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__center">
+            <nav class="footer__nav">
+              <a class="footer__link" href="##">Проекты</a>
+              <a class="footer__link" href="##">Услуги</a>
+              <a class="footer__link" href="##">Технологии</a>
+              <a class="footer__link" href="##">О нас</a>
+              <a class="footer__link" href="##">Контакты</a>
+            </nav>
+            <div class="footer__login">
+              <a href="##">
+                <svg>
+                  <use xlink:href="img/sprite_auto.svg#login"></use>
+                </svg>
+                Войти в личный кабинет
+              </a>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <div class="footer__wrap">
+              <div class="footer__item">
+                <div class="footer__item-wrap">
+                  <svg>
+                    <use xlink:href="img/sprite_auto.svg#contacts-icon-2"></use>
+                  </svg>
+                  <div class="footer__text">
+                    <a class="footer__phone" href="tel:88">+7 (800) 800-80-80</a>
+                    <button>Получить консультацию</button>
+                  </div>
+                </div>
+                <div class="footer__social">
+                  <a href="##">
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#telegram"></use>
+                    </svg>
+                  </a>
+                  <a href="##">
+                    <svg>
+                      <use xlink:href="img/sprite_auto.svg#whatsapp"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__item-wrap">
+                  <svg>
+                    <use xlink:href="img/sprite_auto.svg#reviews-slider-icon-2"></use>
+                  </svg>
+                  <div class="footer__text">
+                    <div class="footer__subtitle">Адрес:</div>
+                    <span>г. Москва, ул. Шмидтов, д. 48, 3-й этаж</span>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__item-wrap">
+                  <svg>
+                    <use xlink:href="img/sprite_auto.svg#footer-icon-1"></use>
+                  </svg>
+                  <div class="footer__text">
+                    <div class="footer__subtitle">Электронная почта:</div>
+                    <span>info@infoinfo.ru</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="footer__btn">
+              ОБРАТНЫЙ ЗВОНОК
+              <span>
+                <svg>
+                  <use xlink:href="img/sprite_auto.svg#arrows"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom"></div>
+    </footer>
   </div>
   <!-- scripts -->
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- glightbox scripts -->
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- slick scripts -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- index scripts -->
   <script src="js/scripts.js"></script>
 </body>
