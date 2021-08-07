@@ -979,6 +979,10 @@ textarea {
 }
 
 .product__content {
+  display: none;
+}
+
+.product__content--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

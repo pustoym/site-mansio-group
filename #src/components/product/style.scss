@@ -91,7 +91,10 @@
       }
    }
    &__content {
-      display: flex;
+      display: none;
+      &--active {
+         display: flex;
+      }
       @media ( max-width: 1200px ) {
          flex-wrap: wrap;
       }

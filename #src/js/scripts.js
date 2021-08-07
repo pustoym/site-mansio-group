@@ -8,6 +8,40 @@ $(function(){
 
    /* -- header menu end -- */
 
+   /* scroll mouse */
+
+   $("[data-scroll]").on('click', function (event) {
+      event.preventDefault();
+
+      const elementID = $(this).data('scroll');
+      const elementOffset = $(elementID).offset().top;
+
+      $("html,body").animate({
+         scrollTop: elementOffset
+      }, 700);
+   });
+
+   /* -- scroll mouse end -- */
+ 
+   /* product tabs */
+
+   $('.product__btn').click(function(){
+      /* nav script */
+      $('.product__btn').removeClass('product__btn--active');
+      $(this).addClass('product__btn--active');
+
+      /* content script */
+      const id = $(this).attr('data-product'),
+      content = $('.product__content[data-product="'+ id +'"]');
+      
+      $('.product__content--active').removeClass('product__content--active');
+      content.addClass('product__content--active');
+   })
+
+   /* -- product tabs end -- */
+
+   /* SLIDER */
+
    /* slider reviews */
 
    $('.reviews-slider__content').slick({
@@ -60,6 +94,8 @@ $(function(){
    });
    
    /* -- slider foto end -- */
+
+   /* ---- SLIDER END ---- */
 });
 
 /* lightbox */
