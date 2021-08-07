@@ -1475,7 +1475,7 @@ textarea {
   z-index: 2;
   width: 20px;
   height: 20px;
-  background-image: url("../../../img/sprite/check.svg");
+  background-image: url("../img/sprite/check.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -13,6 +13,7 @@
    margin-bottom: 88px;
    @media ( max-width: 991px ) {
       width: 100%;
+      // OPTIMIZE TODO: до 768 можно оставить две колонки, добавив пропорциональный padding-bottom карточкам
    }
    @media ( max-width: 576px ) {
       padding-left: 20px;
