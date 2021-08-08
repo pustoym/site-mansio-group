@@ -1,0 +1,191 @@
+.members {
+   padding-top: 88px;
+   padding-bottom: 141px;
+   background-image: url('../../img/foto/members-background.png');
+   @media ( max-width:  991px ) {
+      padding-top: 60px;
+      padding-bottom: 70px;
+   }
+   @media ( max-width:  567px ) {
+      padding-top: 30px;
+      padding-bottom: 70px;
+   }
+   &__desc {
+      font-family: $font-400;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #999;
+      text-align: end;
+      margin-bottom: 21px;
+      @media ( max-width:  567px ) {
+         font-size: 1.4rem;
+         margin-bottom: 15px;
+      }
+   }
+   &__title {
+      font-family: $font-700;
+      font-weight: 700;
+      font-size: 2.9rem;
+      line-height: 3.7rem;
+      color: $white;
+      max-width: 479px;
+      text-align: end;
+      margin-left: auto;
+      margin-bottom: 71px;
+      @media ( max-width:  567px ) {
+         font-size: 2rem;
+         line-height: 2.6rem;
+         margin-bottom: 50px;
+      }
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: calc( 50% - 23px);
+      @media ( max-width:  1024px ) {
+         width: 50%;
+
+         margin-bottom: 30px;
+      }
+      @media ( max-width:  567px ) {
+         width: 100%;
+         margin-bottom: 55px;
+      }
+   }
+   &__foto {
+      width: 100%;
+      max-width: 247px;
+      height: 247px;
+
+      margin-bottom: 42px;
+      position: relative;
+      margin-top: 30px;
+      > * {
+         display: inline-block;
+         width: 100%;
+         max-width: 247px;
+         height: 290px;
+         margin-top: -43px;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: contain;
+         border-radius: 0 0 247px 247px;
+         position: relative;
+         z-index: 2;
+      } 
+      &::after {
+         content: '';
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         z-index: 1;
+
+         width: 100%;
+         max-width: 247px;
+         height: 247px;
+         background-color: $white;
+         border-radius: 50%;
+      }
+      @media ( max-width:  567px ) {
+         margin-bottom: 20px;
+      }
+      &--yellow {
+         &::after {
+            background-color: $primary-color;
+         }
+      }
+   }
+   &__fio {
+      font-family: $font-700;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      color: $primary-color;
+
+      margin-bottom: 5px;
+      @media ( max-width:  567px ) {
+         font-size: 1.4rem;
+      }
+   }
+   &__subtitle {
+      font-family: $font-400;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #999;
+      @media ( max-width:  567px ) {
+         font-size: 1.4rem;
+      }
+   }
+   &__content {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 100px;
+      @media ( max-width:  1024px ) {
+         flex-wrap: wrap;
+
+         margin-bottom: 40px;
+      }
+      @media ( max-width:  567px ) {
+         margin-bottom: 20px;
+      }
+   }
+   &__btn {
+      font-family: $font-700;
+      font-weight: 700;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: $secondary-color;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      height: 55px;
+      background-color: $primary-color;
+
+      display: flex;
+      align-items: center;
+
+      padding-left: 71px;
+      margin: 0 auto;
+
+      transition: .2s;
+      svg {
+         width: 12px;
+         height: 10px;
+         fill: #f0d276;
+         transition: .2s;
+      }
+      span {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #fcf7e6;
+         height: 55px;
+         margin-left: 48px;
+         padding-left: 34px;
+         padding-right: 31px;
+         transition: .2s;
+      }
+      &:hover {
+         background-color: #fcf7e6;
+         span {
+            background-color: $primary-color;
+         }
+         svg {
+            fill:  #fcf7e6;
+         }
+      }
+      @media ( max-width: 576px ) {
+         padding-left: 40px;
+         height: 48px;
+         span {
+            height: 48px;
+            margin-left: 24px;
+            padding-left: 24px;
+            padding-right: 21px;
+         }
+      }
+   }
+}

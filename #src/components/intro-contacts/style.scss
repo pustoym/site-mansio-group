@@ -1,0 +1,35 @@
+.intro-contacts {
+   padding-top: 278px;
+   padding-bottom: 306px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   @media ( max-width: 991px ) {
+      padding-top: 152px;
+      padding-bottom: 120px;
+   }
+   @media ( max-width: 576px ) {
+      padding-top: 102px;
+   }
+   &__title {
+      font-size: $font-700;
+      font-weight: 700;
+      font-size: 3.7rem;
+      color: $white;
+      margin-bottom: 101px;
+      @media ( max-width: 576px ) {
+         font-size: 2.2rem;
+
+         margin-bottom: 60px;
+      }
+   }
+   &__breadcrumbs {
+      font-family: $font-500;
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: #7c97aa;
+      @media ( max-width: 576px ) {
+         font-size: 1.4rem;
+      }
+   }
+}

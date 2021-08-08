@@ -19,6 +19,9 @@ $secondary-color: #0c1e2c;
 @import '../components/header/style.scss';
 @import '../components/header/menu/style.scss';
 
+/* footer */
+@import '../components/footer/style.scss';
+
 /* page-1 */
 
 /* intro */
@@ -55,5 +58,19 @@ $secondary-color: #0c1e2c;
 @import '../components/reviews-slider/reviews-foto/style.scss';
 @import '../components/reviews-slider/reviews-panel/style.scss';
 
-/* footer */
-@import '../components/footer/style.scss';
+/* page-2 */
+
+/* intro-contacts */
+@import '../components/intro-contacts/style.scss';
+
+/* connection */
+@import '../components/connection/style.scss';
+
+/* connection */
+@import '../components/members/style.scss';
+
+/* info */
+@import '../components/info/style.scss';
+
+/* info-foto */
+@import '../components/info-foto/style.scss';

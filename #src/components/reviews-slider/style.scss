@@ -47,7 +47,7 @@
          transition-delay: .4s;
       }
       @media ( max-width: 1180px ) {
-         flex-direction: column-reverse;
+         flex-direction: column;
          max-width: 100%;
          margin: 0 15px;
       }
@@ -128,6 +128,9 @@
        background-color: $white;
 
        margin-top: 31px;
+       @media (max-width: 1180px) {
+          padding-bottom: 40px;
+       }
        @media ( max-width: 767px ) {
          flex-direction: column;
          align-items: flex-start;
