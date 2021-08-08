@@ -636,7 +636,28 @@ textarea {
   font-weight: 300;
   font-size: 1.6rem;
   color: #fff;
+<<<<<<< HEAD
   text-decoration: underline;
+=======
+  margin-bottom: 10px;
+}
+
+.works-item__list li svg {
+  width: 9px;
+  height: 12px;
+  fill: #fff;
+  margin-right: 10px;
+}
+
+.works-item__link {
+  font-family: Commissioner-Medium;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #fff;
+  border: solid 3px rgba(251, 251, 251, 0.15);
+  padding: 15px 69px;
+  padding-right: 35px;
+>>>>>>> 90b9692b4c06914a93d9f30afeda9e66a013b594
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
