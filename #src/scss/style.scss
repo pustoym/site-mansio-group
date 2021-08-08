@@ -58,7 +58,7 @@ $secondary-color: #0c1e2c;
 @import '../components/reviews-slider/reviews-foto/style.scss';
 @import '../components/reviews-slider/reviews-panel/style.scss';
 
-/* page-2 */
+/* page-contacts */
 
 /* intro-contacts */
 @import '../components/intro-contacts/style.scss';
@@ -72,5 +72,12 @@ $secondary-color: #0c1e2c;
 /* info */
 @import '../components/info/style.scss';
 
+/* map */
+@import '../components/map/style.scss';
+
 /* info-foto */
 @import '../components/info-foto/style.scss';
+
+/* contacts */
+@import '../components/contacts/style.scss';
+@import '../components/contacts/contacts-form/style.scss';
