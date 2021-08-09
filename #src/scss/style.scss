@@ -5,15 +5,18 @@
       src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
       font-weight: #{$weight};
       font-style: #{$style};
-   } 
+   }
 }
 
 $white: #fff;
 $primary-color: #f9df8f;
 $secondary-color: #0c1e2c;
-   
+
 @import 'fonts';
 @import 'page-style';
+
+// Модуль для тестирования, не должен быть в финальной версии и версии для клиента
+@import "vendor/test";
 
 /* header */
 @import '../components/header/style.scss';

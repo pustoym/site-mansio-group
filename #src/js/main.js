@@ -1,3 +1,7 @@
+//-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
+import {testInstruments} from './vendor/testInstruments';
+//--
+
 $(function(){
    /* header menu */
 
@@ -22,7 +26,7 @@ $(function(){
    });
 
    /* -- scroll mouse end -- */
- 
+
    /* product tabs */
 
    $('.product__btn').click(function(){
@@ -33,7 +37,7 @@ $(function(){
       /* content script */
       const id = $(this).attr('data-product'),
       content = $('.product__content[data-product="'+ id +'"]');
-      
+
       $('.product__content--active').removeClass('product__content--active');
       content.addClass('product__content--active');
    })
@@ -71,7 +75,7 @@ $(function(){
          }
       ]
    });
-      
+
    /* -- slider reviews end -- */
 
    /* slider foto */
@@ -92,7 +96,7 @@ $(function(){
          }
       ]
    });
-   
+
    /* -- slider foto end -- */
 
    /* ---- SLIDER END ---- */
@@ -104,3 +108,9 @@ const lightbox = GLightbox({
 });
 
 /* lightbox end */
+
+//-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
+window.addEventListener('load', () => {
+  testInstruments();
+});
+//--
