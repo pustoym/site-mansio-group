@@ -46,6 +46,7 @@ const svgstore = require('gulp-svgstore');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const htmlbeautify = require('gulp-html-beautify');
+const rsync = require('gulp-rsync');
 const fonter = require('gulp-fonter');
 
 const html = () => {
@@ -201,10 +202,28 @@ const optimizeImages = () => {
       ]))
       .pipe(gulp.dest(buildFolder + '/img'));
 };
+
+const deploy = () => {
+   return src('build/')
+   .pipe(rsync({
+      root: 'build/',
+      hostname: 'cl315565@fortuna.timeweb.ru',
+      destination: 'preview-mg/public_html',
+      // clean: true, // Mirror copy with file deletion
+      include: [/* '*.htaccess' */], // Included files to deploy,
+      exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
+      recursive: true,
+      archive: true,
+      silent: false,
+      compress: true
+   }))
+};
+
 exports.build = build;
 exports.start = start;
 exports.webp = createWebp;
 exports.imagemin = optimizeImages;
+exports.deploy = deploy;
 
 function fonts() {
    return src(path.src.fonts)
