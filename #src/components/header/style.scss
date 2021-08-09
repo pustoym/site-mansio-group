@@ -75,6 +75,11 @@
       text-transform: uppercase;
       margin-right: 56px;
       position: relative;
+
+      &--active {
+         // TODO: добавить стили для активного элемента. не должен работать ховер и элемент должен обозначить об отсутствии возможности перехода
+      }
+
       @media ( max-width: 1450px ) {
          font-size: 1.2rem;
          margin-right: 36px;

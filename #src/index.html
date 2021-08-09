@@ -14,7 +14,9 @@
 
 <div class="main">
    <!-- header -->
-   @@include('components/header/template.html')
+   @@include('components/header/template.html', {
+      "main": true
+   })
    <!-- intro -->
    @@include('components/intro/template.html')
    <!-- works -->
@@ -40,7 +42,9 @@
       @@include('components/contacts/template-2.html')
    </div>
    <!-- footer -->
-   @@include('components/footer/template.html')
+   @@include('components/footer/template.html', {
+      "main": true
+   })
 </div>
    
 <!-- scripts -->

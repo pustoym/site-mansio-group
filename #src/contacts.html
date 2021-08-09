@@ -12,7 +12,9 @@
 
 <div class="main">
    <!-- header -->
-   @@include('components/header/template.html')
+   @@include('components/header/template.html', {
+      "activeLinkIndex": 4
+   })
    <!-- intro-contacts -->
    @@include('components/intro-contacts/template.html')
    <!-- connection -->
@@ -28,7 +30,9 @@
    <!-- contacts -->
    @@include('components/contacts/template-3.html')
    <!-- footer -->
-   @@include('components/footer/template.html')
+   @@include('components/footer/template.html', {
+      "activeLinkIndex": 4
+   })
 </div>
    
 <!-- scripts -->

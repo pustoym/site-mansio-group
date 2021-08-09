@@ -2,11 +2,11 @@
    <div class="container">
       <div class="footer__inner">
          <div class="footer__name">
-            <div class="footer__logo">
+            <a class="footer__logo" @@if (!context.main) {href="index.html"} aria-label="Переход на главную">
                <svg>
                   <use xlink:href="img/sprite_auto.svg#logo"></use>
                </svg> 
-            </div>
+            </a>
             <div class="footer__title">Строим дома бизнес-класса в Москве и Московской области</div>
             <div class="footer__bank">
                <span>ООО «МАНСИО»</span>
@@ -17,11 +17,11 @@
          </div>
          <div class="footer__center">
             <nav class="footer__nav">
-               <a class="footer__link" href="##">Проекты</a>
-               <a class="footer__link" href="##">Услуги</a>
-               <a class="footer__link" href="##">Технологии</a>
-               <a class="footer__link" href="##">О нас</a>
-               <a class="footer__link" href="##">Контакты</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 0) { footer__link--active }" @@if (context.activeLinkIndex !== 0) { href="#" }>Проекты</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 1) { footer__link--active }" @@if (context.activeLinkIndex !== 1) { href="#" }>Услуги</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 2) { footer__link--active }" @@if (context.activeLinkIndex !== 2) { href="#" }>Технологии</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 3) { footer__link--active }" @@if (context.activeLinkIndex !== 3) { href="#" }>О нас</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 4) { footer__link--active }" @@if (context.activeLinkIndex !== 4) { href="./contacts.html" }>Контакты</a>
             </nav>
             <div class="footer__login">
                <a href="##">
