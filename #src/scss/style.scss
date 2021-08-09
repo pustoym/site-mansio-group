@@ -25,7 +25,10 @@ $secondary-color: #0c1e2c;
 /* footer */
 @import '../components/footer/style.scss';
 
-/* page-1 */
+
+/* ------- PAGES ------- */
+
+/* -- index -- */
 
 /* intro */
 @import '../components/intro/style.scss';
@@ -61,7 +64,9 @@ $secondary-color: #0c1e2c;
 @import '../components/reviews-slider/reviews-foto/style.scss';
 @import '../components/reviews-slider/reviews-panel/style.scss';
 
-/* page-contacts */
+
+/* -- page-contacts -- */
+
 
 /* intro-contacts */
 @import '../components/intro-contacts/style.scss';
@@ -84,3 +89,27 @@ $secondary-color: #0c1e2c;
 /* contacts */
 @import '../components/contacts/style.scss';
 @import '../components/contacts/contacts-form/style.scss';
+
+
+/* --  page-project -- */
+
+/* intro-project */
+@import '../components/intro-project/style.scss';
+
+/* works */
+@import '../components/works/style.scss';
+@import '../components/works/works-item/style.scss';
+
+/* filter */
+@import '../components/filter/style.scss';
+
+/* form */
+@import '../components/form/style.scss';
+
+/* contacts */
+@import '../components/contacts/style.scss';
+@import '../components/contacts/contacts-form/style.scss';
+@import '../components/contacts/contacts-about/style.scss';
+
+/* project-item */
+@import '../components/project-item/style.scss';

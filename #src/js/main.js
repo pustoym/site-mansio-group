@@ -102,6 +102,18 @@ $(function(){
 
    /* -- slider foto end -- */
 
+   /* filter */
+
+   $('#filterShow').click(function(){
+      $('.filter__inner').fadeIn();
+   })
+
+   $('#filterHide').click(function(){
+      $('.filter__inner').fadeOut();
+   })
+
+   /* -- filter -- */
+
    /* ---- SLIDER END ---- */
 });
 

@@ -1,0 +1,126 @@
+.contacts-about {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 115px;
+   padding-bottom: 62px;
+   @media (max-width: 1132px) {
+      padding: 0;
+      padding-bottom: 50px;
+   }
+   @media (max-width: 870px) {
+      flex-direction: column;
+      align-items: center;
+   }
+   @media (max-width: 576px) {
+      padding-bottom: 30px;
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      svg {
+         width: 11px;
+         height: 10px;
+         fill: $secondary-color;
+         transition: .2s;
+      }
+      @media (max-width: 870px) {
+         align-items: center;
+      }
+   }
+   &__title {
+      font-family: $font-700;
+      font-size: 2.9rem;
+      line-height: 3.7rem;
+      color: $white;
+      max-width: 305px;
+
+      margin-bottom: 41px;
+      @media (max-width: 870px) {
+         max-width: 100%;
+      }
+      @media (max-width: 576px) {
+         font-size: 2rem;
+         line-height: 2.4rem;
+         text-align: center;
+
+         margin-bottom: 30px;
+      }
+   }
+   &__link {
+      font-family: $font-500;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: $white;
+      border: solid 3px rgba(251, 251, 251, 0.15);
+      padding: 18px;
+      padding-bottom: 16px;
+      padding-left: 48px;
+      padding-right: 19px;
+      width: 100;
+      max-width: 371px;
+      letter-spacing: 1.35px;
+      &:hover {
+         color: rgba(255, 255, 255, 0.5);
+         svg {
+            fill: rgba(255, 255, 255, 0.5);
+         }
+      }
+      svg {
+         fill: rgba(255, 255, 255, 0.15);
+         margin-left: 58px;
+         transform: rotate(180deg);
+      }
+      @media (max-width: 576px) {
+         font-size: 1.2rem;
+         padding-top: 16px;
+         padding-bottom: 17px;
+         svg {
+            margin-left: 46px;
+         }
+      }
+   }
+   &__btn {
+      display: flex;
+      align-items: center;
+      font-family: $font-500;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      color: $secondary-color;
+      background-color: $white;
+      padding-left: 63px;
+      padding-right: 32px;
+      padding-top: 30px;
+      padding-bottom: 23px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      width: 100;
+      max-width: 371px;
+      &:hover {
+         color: rgba($secondary-color, .4);
+         svg {
+            fill: rgba($secondary-color, .4);
+         }
+      }
+      svg {
+         margin-left: 42px;
+      }
+      @media (max-width: 576px) {
+         font-size: 1.2rem;
+         line-height: 1.9rem;
+
+         padding-left: 40px;
+         padding-right: 25px;
+      }
+   }
+   &__foto {
+      img {
+         width: 100%;
+         max-width: 470px;
+      }
+      @media (max-width: 870px) {
+         margin-top: 30px;
+      }
+   }
+}

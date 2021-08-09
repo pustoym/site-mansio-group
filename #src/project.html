@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mansio</title>
+   <!-- style index -->
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="main">
+   <!-- header -->
+   @@include('components/header/template.html')
+   <!-- intro-project -->
+   @@include('components/intro-project/template.html')
+   <!-- works -->
+   @@include('components/works/template-2.html')
+   <!-- filter -->
+   @@include('components/filter/template.html')
+   <!-- form -->
+   @@include('components/form/template.html')
+   <div class="main__background--project">
+      <!-- project-item -->
+      @@include('components/project-item/template.html')
+      <!-- contacts -->
+      @@include('components/contacts/template-4.html')
+   </div>
+   <!-- footer -->
+   @@include('components/footer/template.html')
+</div>
+   
+<!-- index scripts -->
+<script src="js/vendor.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+</html>

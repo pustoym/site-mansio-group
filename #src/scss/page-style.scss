@@ -107,6 +107,11 @@ textarea {
       &--bottom {
          background-image: url('../img/foto/reviews-background-2.png');
       }
+      &--project {
+         background-image: url('../img/foto/project-background-foto.png');
+         background-repeat: no-repeat;
+         background-position: bottom;
+      }
       @media (max-width: 1200px) {
          background-size: cover;
       }
