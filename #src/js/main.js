@@ -1,3 +1,6 @@
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 //-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
 import {testInstruments} from './vendor/testInstruments';
 //--
