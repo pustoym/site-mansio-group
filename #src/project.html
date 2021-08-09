@@ -12,7 +12,9 @@
 
 <div class="main">
    <!-- header -->
-   @@include('components/header/template.html')
+   @@include('components/header/template.html', {
+     "activeLinkIndex": 0
+   })
    <!-- intro-project -->
    @@include('components/intro-project/template.html')
    <!-- works -->
@@ -28,9 +30,11 @@
       @@include('components/contacts/template-4.html')
    </div>
    <!-- footer -->
-   @@include('components/footer/template.html')
+   @@include('components/footer/template.html', {
+     "activeLinkIndex": 0
+   })
 </div>
-   
+
 <!-- index scripts -->
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
