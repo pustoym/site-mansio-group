@@ -51,7 +51,13 @@ const fonter = require('gulp-fonter');
 
 const html = () => {
    return src(path.src.html)
-      .pipe(fileinclude())
+      .pipe(fileinclude({
+         prefix: '@@',
+         basepath: '@file',
+         context: { // глобальные переменные для include
+            test: 'text'
+         }
+      }))
       .pipe(htmlbeautify({
          'indent_size': 2,
          'preserve_newlines': true,
@@ -128,6 +134,8 @@ const syncserver = () => {
       open: true,
       cors: true,
       ui: false,
+      ghostMode: { clicks: false },
+      // tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
    });
 
    gulp.watch(path.watch.html, series(html, refresh));
