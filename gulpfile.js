@@ -27,26 +27,26 @@ let path = {
    clean: "./" + buildFolder + "/"
 }
 
-const { series, parallel, src, dest, watch, lastRun } = require('gulp'),
-   gulp = require('gulp'),
-   plumber = require('gulp-plumber'),
-   fileinclude = require('gulp-file-include'),
-   browsersync = require("browser-sync").create(),
-   include = require('gulp-file-include'),
-   del = require('del'),
-   sass = require("gulp-sass"),
-   autoprefixer = require("gulp-autoprefixer"),
-   group_media = require("gulp-group-css-media-queries"),
-   clean_css = require("gulp-clean-css"),
-   rename = require("gulp-rename"),
-   uglify = require("gulp-uglify-es").default,
-   imagemin = require("gulp-imagemin"),
-   webp = require('gulp-webp'),
-   svgstore = require('gulp-svgstore'),
-   ttf2woff = require('gulp-ttf2woff'),
-   ttf2woff2 = require('gulp-ttf2woff2'),
-   htmlbeautify = require('gulp-html-beautify'),
-   fonter = require('gulp-fonter');
+const { series, parallel, src, dest, watch, lastRun } = require('gulp');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const fileinclude = require('gulp-file-include');
+const browsersync = require("browser-sync").create();
+const include = require('gulp-file-include');
+const del = require('del');
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const group_media = require("gulp-group-css-media-queries");
+const clean_css = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const uglify = require("gulp-uglify-es").default;
+const imagemin = require("gulp-imagemin");
+const webp = require('gulp-webp');
+const svgstore = require('gulp-svgstore');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const htmlbeautify = require('gulp-html-beautify');
+const fonter = require('gulp-fonter');
 
 const html = () => {
    return src(path.src.html)
