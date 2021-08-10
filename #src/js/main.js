@@ -1,3 +1,6 @@
+import {initModals} from './modules/init-modals';
+initModals();
+
 $(function(){
    /* header menu */
 
