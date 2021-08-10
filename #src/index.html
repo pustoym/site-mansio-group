@@ -6,13 +6,17 @@
 </head>
 <body>
 
+  <div style="display: none;">
+    @@include("../build/img/sprite_auto.svg")
+  </div>
+
 <div class="main">
    <!-- header -->
    @@include('components/header/template.html', {
       "main": true
    })
    <!-- intro -->
-   @@include('components/intro/template.html')
+   @@include('components/intro/intro.html')
    <!-- works -->
    @@include('components/works/template.html')
    <!-- about -->
