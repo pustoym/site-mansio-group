@@ -8,6 +8,15 @@
    }
 }
 
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
+
 $white: #fff;
 $primary-color: #f9df8f;
 $secondary-color: #0c1e2c;
