@@ -1,33 +1,17 @@
-@mixin font($font_name, $file_name, $weight, $style)  {
-   @font-face {
-      font-family: $font_name;
-      font-display: swap;
-      font-style: #{$style};
-      font-weight: #{$weight};
-      src: local(#{$file_name}), url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-   }
-}
-
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
-}
-
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
-
-$white: #fff;
-$primary-color: #f9df8f;
-$secondary-color: #0c1e2c;
+// Vendor
+//---------------------------------
 
 @import 'node_modules/glightbox/dist/css/glightbox';
-
-@import 'fonts';
-@import 'page-style';
-
 // Модуль для тестирования, не должен быть в финальной версии и версии для клиента
 @import "vendor/test";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import 'fonts';
+@import 'page-style';
 
 /* header */
 @import '../components/header/style.scss';
@@ -35,6 +19,8 @@ $secondary-color: #0c1e2c;
 
 /* footer */
 @import '../components/footer/style.scss';
+
+@import "blocks/modal";
 
 
 /* ------- PAGES ------- */
