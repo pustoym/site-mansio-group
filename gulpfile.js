@@ -200,7 +200,7 @@ const clean = () => {
 };
 exports.clean = clean;
 
-const build = series(clean, svgo, parallel(js, css, html, copy, sprite));
+const build = series(clean, svgo, sprite, parallel(js, css, html, copy));
 const start = series(build, syncserver);
 
 // Optional tasks
