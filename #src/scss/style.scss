@@ -12,6 +12,8 @@ $white: #fff;
 $primary-color: #f9df8f;
 $secondary-color: #0c1e2c;
 
+@import 'node_modules/glightbox/dist/css/glightbox';
+
 @import 'fonts';
 @import 'page-style';
 

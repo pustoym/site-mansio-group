@@ -1,10 +1,3 @@
-import $ from 'jquery'
-window.jQuery = $
-window.$ = $
-//-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
-import {testInstruments} from './vendor/testInstruments';
-//--
-
 $(function(){
    /* header menu */
 
@@ -116,16 +109,3 @@ $(function(){
 
    /* ---- SLIDER END ---- */
 });
-
-/* lightbox */
-
-const lightbox = GLightbox({
-});
-
-/* lightbox end */
-
-//-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
-window.addEventListener('load', () => {
-  testInstruments();
-});
-//--
