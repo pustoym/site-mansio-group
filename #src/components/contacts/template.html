@@ -1,28 +1,32 @@
 <div class="contacts">
-   <div class="container">
-      <div class="contacts__inner">
-         <div class="contacts__content">
-            <div class="contacts__logo">
+  <div class="container">
+    <div class="contacts__inner">
+      <div class="contacts__content">
+        <div class="contacts__logo">
           <svg width="103" height="16">
             <use xlink:href="#logo"></use>
-               </svg> 
-            </div>
-            <div class="contacts__wrap">
-               <div class="contacts__name">
-                  <div class="contacts__title">Михаил Михайлов</div>
-                  <div class="contacts__subtitle">Архитектор Mansio</div>
-               </div>
-               <div class="contacts__foto">
-                  <img src="img/foto/contacts-foto-1.png" alt="##">
-               </div>
-               <!-- contacts-form -->
-               @@include('contacts-form/template.html')
-               <!-- contacts-form end -->
-            </div>
-         </div>
+          </svg>
+        </div>
+        <div class="contacts__wrap">
+          <div class="contacts__name">
+            <div class="contacts__title">Михаил Михайлов</div>
+            <div class="contacts__subtitle">Архитектор Mansio</div>
+          </div>
+          <div class="contacts__foto">
+            <img src="img/foto/contacts-foto-1.png" alt="##">
+          </div>
+          <!-- contacts-form -->
+          @@include('contacts-form/template.html', {
+          "title": "Организуем встречу с&nbsp;нашим архитектором,на которой&nbsp;вы<span>:</span>"
+          })
+          <!-- contacts-form end -->
+        </div>
       </div>
-      <!-- contacts-text -->
-      @@include('contacts-text/template.html')
-      <!-- contacts-text end -->
-   </div>
+    </div>
+    <!-- contacts-text -->
+    @@if (context.textAfter) {
+    @@include('contacts-text/template.html')
+    }
+    <!-- contacts-text end -->
+  </div>
 </div>

@@ -27,7 +27,9 @@
       <!-- features -->
       @@include('components/features/template.html')
       <!-- contacts -->
-      @@include('components/contacts/template.html')
+      @@include('components/contacts/template.html', {
+        "textAfter": true
+      })
    </div>
    <!-- project -->
    @@include('components/project/template.html')
