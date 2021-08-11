@@ -2,19 +2,19 @@ body {
    margin: 0;
    overflow-x: hidden;
 }
-   
+
 
 html {
    overflow-x:hidden;
    font-size: 62.5%;
 }
-   
-   
+
+
 a {
    text-decoration: none;
    transition: .2s;
 }
-   
+
 
 *,
 *:before,
@@ -24,7 +24,7 @@ a {
    margin: 0;
    padding: 0;
 }
-   
+
 
 h1, h2, h3, h4, h5, h6 {
    margin: 0;
@@ -33,29 +33,29 @@ h1, h2, h3, h4, h5, h6 {
 p {
    margin: 0;
 }
-   
+
 
 li {
    list-style: none;
 }
-   
+
 
 ul {
    padding-left: 0;
    margin: 0;
 }
-   
+
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button  {
    -webkit-appearance: none;
    margin: 0;
 }
-   
+
 input[type="number"] {
    -moz-appearance: textfield;
 }
-   
+
 input[type="number"]:hover,
 input[type="number"]:focus {
    -moz-appearance: number-input
@@ -65,7 +65,7 @@ input[type=number]::-webkit-outer-spin-button {
    -webkit-appearance: none;
    margin: 0;
 }
-   
+
 input {
    margin: 0;
    padding: 0;
@@ -74,26 +74,26 @@ input {
    -moz-appearance: none;
    appearance: none;
 }
-   
+
 
 button {
    background: none;
    border: none;
 }
-   
+
 
 textarea {
    resize: none;
 }
-   
+
 
 .container {
    width: 100%;
-   max-width: 1168px;
+   max-width: 1170px;
    margin: 0 auto;
    padding: 0 15px;
 }
-   
+
 
 .main {
    width: 100%;
