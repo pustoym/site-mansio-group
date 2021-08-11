@@ -143,7 +143,7 @@ const syncserver = () => {
   gulp.watch(path.watch.html, series(html, refresh));
   gulp.watch(
     [path.watch.css, srcFolder + "/components/**/*.scss"],
-    series(css, refresh)
+    series(css)
   );
   gulp.watch(path.watch.js, series(js, refresh));
   gulp.watch(
