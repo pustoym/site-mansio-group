@@ -1,5 +1,7 @@
+// TODO: поднять блок вверх за границы секции
 .contacts {
    background-size: cover;
+   background-image: url('../img/bg-call-to-action.jpg');
    &__inner {
       padding-bottom: 102px;
       padding-top: 41px;
@@ -47,7 +49,7 @@
             max-width: 360px;
          }
       }
-      @media ( max-width: 576px ) {  
+      @media ( max-width: 576px ) {
          top: auto;
       }
    }

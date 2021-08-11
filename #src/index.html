@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   @@include("components/base/head.html")
   <title>Mansio — Главная</title>
 </head>
+
 <body>
 
   <div style="display: none;">
     @@include("../build/img/sprite_auto.svg")
   </div>
 
-<div class="main">
-   <!-- header -->
-   @@include('components/header/template.html', {
-      "main": true
-   })
-   <!-- intro -->
-   @@include('components/intro/intro.html')
-   <!-- works -->
-   @@include('components/works/template.html')
-   <!-- about -->
-   @@include('components/about/template.html')
-   <!-- product -->
-   @@include('components/product/template.html')
-   <div class="main__background">
-      <!-- features -->
-      @@include('components/features/template.html')
-      <!-- contacts -->
-      @@include('components/contacts/template.html', {
-        "textAfter": true
-      })
-   </div>
-   <!-- project -->
-   @@include('components/project/template.html')
-   <!-- reviews -->
-   @@include('components/reviews/template.html')
-   <div class="main__background main__background--bottom">
-      <!-- reviews-slider -->
-      @@include('components/reviews-slider/template.html')
-      <!-- contacts -->
-      @@include('components/contacts/template-2.html')
-   </div>
-   <!-- footer -->
-   @@include('components/footer/template.html', {
-      "main": true
-   })
+  <div class="main">
+    <!-- header -->
+    @@include('components/header/template.html', {
+    "main": true
+    })
+    <!-- intro -->
+    @@include('components/intro/intro.html')
+    <!-- works -->
+    @@include('components/works/template.html')
+    <!-- about -->
+    @@include('components/about/template.html')
+    <!-- product -->
+    @@include('components/product/template.html')
+    <!-- features -->
+    @@include('components/features/template.html')
+    <!-- contacts -->
+    @@include('components/contacts/template.html', {
+    "textAfter": true
+    })
+    <!-- project -->
+    @@include('components/project/template.html')
+    <!-- reviews -->
+    @@include('components/reviews/template.html')
+    <!-- reviews-slider -->
+    @@include('components/reviews-slider/template.html')
+    <!-- contacts -->
+    @@include('components/contacts/template-2.html')
+    <!-- footer -->
+    @@include('components/footer/template.html', {
+    "main": true
+    })
 
-     <!-- инклюд модалки -->
-  @@include("components/base/modal.html", {
+    <!-- инклюд модалки -->
+    @@include("components/base/modal.html", {
     "name": "discuss",
     "fitContent": true,
-  })
-</div>
+    })
+  </div>
 
-<!-- index scripts -->
-<script src="js/vendor.min.js"></script>
-<script src="js/main.min.js"></script>
+  <!-- index scripts -->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 
 </body>
+
 </html>
