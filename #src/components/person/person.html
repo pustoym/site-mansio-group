@@ -1,0 +1,12 @@
+<div class="person  @@if (context.actionCall) {action-call__person}">
+  <header class="person__name-wrap">
+    <h1 class="person__name">@@person.name</h1>
+    <p class="person__sub-name">@@person.employee</p>
+  </header>
+  <div class="person__foto-wrap @@if (context.actionCall) {action-call__person-foto}">
+    <picture>
+      <source srcset="@@person.imgSrc.webp 1x" type="image/webp">
+      <img src="@@person.imgSrc.png" width="651" alt="Фотография @@employee @@name">
+    </picture>
+  </div>
+</div>

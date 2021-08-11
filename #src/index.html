@@ -41,13 +41,23 @@
     @@include('components/contacts/template-2.html')
     <!-- footer -->
     @@include('components/footer/template.html', {
-    "main": true
+      "main": true
     })
 
     <!-- инклюд модалки -->
     @@include("components/base/modal.html", {
-    "name": "discuss",
-    "fitContent": true,
+      "name": "discuss",
+      "fitContent": true,
+    })
+
+    @@include("components/base/modal.html", {
+      "name": "registration-for-viewing",
+      "fitContent": true,
+    })
+
+    @@include("components/base/modal.html", {
+      "name": "already-have",
+      "fitContent": true,
     })
   </div>
 

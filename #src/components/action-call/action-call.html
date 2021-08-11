@@ -5,22 +5,20 @@
     </svg>
   </div>
   <div class="action-call__content">
-    <div class="action-call__person  person">
-      <header class="person__name-wrap">
-        <h1 class="person__name">@@name</h1>
-        <p class="person__sub-name">@@employee</p>
-      </header>
-      <div class="action-call__person-foto  person__foto-wrap">
-        <picture>
-          <source srcset="img/content/manager.webp 1x" type="image/webp">
-          <img src="img/content/manager.png" width="651" alt="Фотография @@employee @@name">
-        </picture>
-      </div>
-    </div>
+    @@if (context.person) {
+      @@include('../person/person.html', {
+        "actionCall": true,
+        "person": {
+          "name": "@@person.name",
+          "employee": "@@person.employee",
+          "imgSrc": "@@person.imgSrc",
+        },
+      })
+    }
     <!-- contacts-form -->
     <div class="action-call__form-column">
       @@include('../contacts/contacts-form/template.html', {
-      "title": "Запишитесь на&nbsp;встречу с&nbsp;архитектором Mansio Group"
+      "title": "@@title"
       })
     </div>
     <!-- contacts-form end -->

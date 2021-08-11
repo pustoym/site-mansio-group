@@ -3,6 +3,12 @@ import {setupModal} from '../utils/modal';
 const modals = document.querySelectorAll('.modal');
 const modalDiscuss = document.querySelector('.modal--discuss');
 const modalDiscussBtns = document.querySelectorAll('[data-modal="discuss"]');
+const modalRefForVie = document.querySelector('.modal--registration-for-viewing');
+const modalRefForVieBtns = document.querySelectorAll('[data-modal="registration-for-viewing"]');
+const modalAlreadyHave = document.querySelector('.modal--already-have');
+const modalAlreadyHaveBtns = document.querySelectorAll('[data-modal="already-have"]');
+const modalBackCall = document.querySelector('.modal--back-call');
+const modalBackCallBtns = document.querySelectorAll('[data-modal="back-call"]');
 // const modalSuccess = document.querySelector('.modal--success');
 // const modalSuccessBtns = document.querySelectorAll('[data-modal="success"]');
 
@@ -24,9 +30,15 @@ const initModals = () => {
   if (modalDiscuss && modalDiscussBtns.length) {
     setupModal(modalDiscuss, false, modalDiscussBtns, false, false);
   }
-  // if (modalSuccess && modalSuccessBtns.length) {
-  //   setupModal(modalSuccess, false, modalSuccessBtns);
-  // }
+  if (modalRefForVie && modalRefForVieBtns.length) {
+    setupModal(modalRefForVie, false, modalRefForVieBtns);
+  }
+  if (modalAlreadyHave && modalRefForVieBtns.length) {
+    setupModal(modalAlreadyHave, false, modalAlreadyHaveBtns);
+  }
+  if (modalBackCall && modalBackCallBtns.length) {
+    setupModal(modalBackCall, false, modalBackCallBtns);
+  }
 };
 
 export {initModals};
