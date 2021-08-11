@@ -10,7 +10,10 @@
       <div class="action-call__sub-name">@@employee</div>
     </header>
     <div class="action-call__foto">
-      <img src="img/foto/contacts-foto-1.png" width="654" alt="##">
+      <picture>
+        <source srcset="img/content/manager.webp 1x" type="image/webp">
+        <img src="img/content/manager.png" width="651" alt="Фотография @@employee @@name">
+      </picture>
     </div>
     <!-- contacts-form -->
     @@include('contacts/contacts-form/template.html', {
