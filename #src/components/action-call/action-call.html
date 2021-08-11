@@ -1,0 +1,28 @@
+<article class="action-call">
+  <div class="action-call__aside">
+    <svg class="action-call__logo" width="103" height="16">
+      <use xlink:href="#logo"></use>
+    </svg>
+  </div>
+  <div class="action-call__content">
+    <div class="action-call__person  person">
+      <header class="person__name-wrap">
+        <h1 class="person__name">@@name</h1>
+        <p class="person__sub-name">@@employee</p>
+      </header>
+      <div class="action-call__person-foto  person__foto-wrap">
+        <picture>
+          <source srcset="img/content/manager.webp 1x" type="image/webp">
+          <img src="img/content/manager.png" width="651" alt="Фотография @@employee @@name">
+        </picture>
+      </div>
+    </div>
+    <!-- contacts-form -->
+    <div class="action-call__form-column">
+      @@include('../contacts/contacts-form/template.html', {
+      "title": "Запишитесь на&nbsp;встречу с&nbsp;архитектором Mansio Group"
+      })
+    </div>
+    <!-- contacts-form end -->
+  </div>
+</article>
