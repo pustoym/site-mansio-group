@@ -114,6 +114,7 @@
          margin-bottom: 20px;
       }
       span {
+        // TODO UGLY привязка к тегу в редактируемой области, необходимо переписать!
          font-family: $font-300;
          font-weight: 300;
          font-size: 1.6rem;
