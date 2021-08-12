@@ -49,9 +49,11 @@ const rsync = require("gulp-rsync");
 const fonter = require("gulp-fonter");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
+const ghpages = require('gh-pages');
 
 const html = () => {
   return src(path.src.html)
+    .pipe(plumber())
     .pipe(
       fileinclude({
         prefix: "@@",
@@ -79,16 +81,18 @@ const css = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ["last 5 versions"],
-      cascade: true,
-      grid: true,
-    }))
-    .pipe(group_media())// выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 5 versions"],
+        cascade: true,
+        grid: true,
+      })
+    )
+    .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(rename({ extname: ".min.css" }))
-    .pipe(sourcemap.write('.'))
+    .pipe(sourcemap.write("."))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
 };
@@ -156,6 +160,7 @@ const syncserver = () => {
   );
 
   gulp.watch(srcFolder + "/favicon/**", gulp.series(copy, refresh));
+  gulp.watch(srcFolder + "/video/**", gulp.series(copy, refresh));
 };
 
 const refresh = (done) => {
@@ -183,7 +188,7 @@ const copy = () => {
         srcFolder + "/img/**",
         // srcFolder + '/data/**',
         srcFolder + "/favicon/**",
-        // srcFolder + '/video/**',
+        srcFolder + "/video/**",
         // srcFolder + '/downloads/**',
         // srcFolder + '/*.php',
       ],
@@ -199,6 +204,11 @@ const clean = () => {
   return del(path.clean);
 };
 exports.clean = clean;
+
+const deploy = (cb) => {
+  ghpages.publish("build/", cb);
+};
+exports.deploy = deploy;
 
 const build = series(clean, svgo, sprite, parallel(js, css, html, copy));
 const start = series(build, syncserver);
@@ -232,7 +242,7 @@ const optimizeImages = () => {
     .pipe(gulp.dest(buildFolder + "/img"));
 };
 
-const deploy = () => {
+const deployFtp = () => {
   return src("build/").pipe(
     rsync({
       root: "build/",
@@ -255,7 +265,7 @@ exports.build = build;
 exports.start = start;
 exports.webp = createWebp;
 exports.imagemin = optimizeImages;
-exports.deploy = deploy;
+exports.deployFtp = deployFtp;
 
 gulp.task("otf2ttf", function () {
   return gulp
