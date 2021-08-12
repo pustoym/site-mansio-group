@@ -1,6 +1,8 @@
 .project {
    padding-top: 142px;
    padding-bottom: 2px;
+   max-width: 1920px;
+   margin: 0 auto;
    @media ( max-width: 768px ) {
       padding-top: 80px;
    }
@@ -83,7 +85,7 @@
       color: $secondary-color;
       text-transform: uppercase;
       max-width: 600px;
-      
+
       margin-bottom: 56px;
       @media ( max-width: 768px ) {
          max-width: 100%;
