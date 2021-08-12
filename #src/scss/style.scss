@@ -1,7 +1,8 @@
 // Vendor
 //---------------------------------
 
-@import 'node_modules/glightbox/dist/css/glightbox';
+@import "vendor/normalize";
+@import "node_modules/glightbox/dist/css/glightbox";
 // Модуль для тестирования, не должен быть в финальной версии и версии для клиента
 // @import "vendor/test";
 
@@ -10,96 +11,92 @@
 
 @import "variables";
 @import "mixins";
-@import 'fonts';
-@import 'page-style';
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
 
 /* header */
-@import '../components/header/style.scss';
-@import '../components/header/menu/style.scss';
+@import "../components/header/style.scss";
+@import "../components/header/menu/style.scss";
 
 /* footer */
-@import '../components/footer/style.scss';
+@import "../components/footer/style.scss";
 
-@import 'blocks/modal';
-@import '../components/action-call/action-call';
-@import '../components/person/person';
-
+@import "blocks/modal";
+@import "../components/action-call/action-call";
+@import "../components/person/person";
 
 /* ------- PAGES ------- */
 
 /* -- index -- */
 
 /* intro */
-@import '../components/intro/style.scss';
-@import '../components/intro/intro-item/style.scss';
+@import "../components/intro/style.scss";
+@import "../components/intro/intro-item/style.scss";
 
 /* works */
-@import '../components/works/style.scss';
-@import '../components/works/works-item/style.scss';
+@import "../components/works/style.scss";
+@import "../components/works/works-item/style.scss";
 
 /* about */
-@import '../components/about/style.scss';
+@import "../components/about/style.scss";
 
 /* product */
-@import '../components/product/style.scss';
+@import "../components/product/style.scss";
 
 /* features */
-@import '../components/features/style.scss';
-@import '../components/features/features-item/style.scss';
+@import "../components/features/style.scss";
+@import "../components/features/features-item/style.scss";
 
 /* contacts */
-@import '../components/contacts/style.scss';
-@import '../components/contacts/contacts-form/style.scss';
-@import '../components/contacts/contacts-text/style.scss';
+@import "../components/contacts/style.scss";
+@import "../components/contacts/contacts-form/style.scss";
+@import "../components/contacts/contacts-text/style.scss";
 
 /* project */
-@import '../components/project/style.scss';
+@import "../components/project/style.scss";
 
 /* reviews */
-@import '../components/reviews/style.scss';
+@import "../components/reviews/style.scss";
 
 /* reviews-slider */
-@import '../components/reviews-slider/style.scss';
-@import '../components/reviews-slider/reviews-foto/style.scss';
-@import '../components/reviews-slider/reviews-panel/style.scss';
-
+@import "../components/reviews-slider/style.scss";
+@import "../components/reviews-slider/reviews-foto/style.scss";
+@import "../components/reviews-slider/reviews-panel/style.scss";
 
 /* -- page-contacts -- */
 
-
 /* intro-contacts */
-@import '../components/intro-contacts/style.scss';
+@import "../components/intro-contacts/style.scss";
 
 /* connection */
-@import '../components/connection/style.scss';
+@import "../components/connection/style.scss";
 
 /* connection */
-@import '../components/members/style.scss';
+@import "../components/members/style.scss";
 
 /* info */
-@import '../components/info/style.scss';
+@import "../components/info/style.scss";
 
 /* map */
-@import '../components/map/style.scss';
+@import "../components/map/style.scss";
 
 /* info-foto */
-@import '../components/info-foto/style.scss';
-
-
+@import "../components/info-foto/style.scss";
 
 /* --  page-project -- */
 
 /* intro-project */
-@import '../components/intro-project/style.scss';
+@import "../components/intro-project/style.scss";
 
 /* filter */
-@import '../components/filter/style.scss';
+@import "../components/filter/style.scss";
 
 /* form */
-@import '../components/form/style.scss';
+@import "../components/form/style.scss";
 
 /* contacts */
-@import '../components/contacts/contacts-about/style.scss';
+@import "../components/contacts/contacts-about/style.scss";
 
 /* project-item */
-@import '../components/project-item/style.scss';
+@import "../components/project-item/style.scss";
