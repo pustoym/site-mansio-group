@@ -1340,6 +1340,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -1475,6 +1476,13 @@ source {
   font-size: 0;
 }
 
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: red;
+  }
+} */
+
 h1,
 h2,
 h3,
@@ -1601,6 +1609,94 @@ button {
     visibility: hidden;
     opacity: 0;
   }
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  min-width: 350px;
+  max-width: 440px;
+  min-height: 55px;
+  padding: 18px 25px;
+  padding-right: 78px;
+  margin: 0;
+  border: 0;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-transform: none;
+  position: relative;
+  font-family: "Commissioner-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-align: center;
+  color: #0c1e2c;
+  text-transform: uppercase;
+  background-color: #f9df8f;
+  background-image: none;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  background-color: #fcf7e6;
+}
+
+.btn:hover span,
+.btn:focus span {
+  background-color: #f9df8f;
+}
+
+.btn:hover svg,
+.btn:focus svg {
+  fill: #fcf7e6;
+}
+
+.btn--disabled,
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn span {
+  height: 100%;
+  width: 78px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcf7e6;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.btn svg {
+  position: relative;
+  width: 12px;
+  height: 10px;
+  fill: #f0d276;
+  -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
 }
 
 /* header */
@@ -2477,69 +2573,6 @@ button {
   margin-bottom: 34px;
 }
 
-.intro__btn {
-  font-family: "Commissioner-Medium", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #0c1e2c;
-  cursor: pointer;
-  text-transform: uppercase;
-  height: 55px;
-  background-color: #f9df8f;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 71px;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-}
-
-.intro__btn svg {
-  width: 12px;
-  height: 10px;
-  fill: #f0d276;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-}
-
-.intro__btn span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fcf7e6;
-  height: 55px;
-  margin-left: 48px;
-  padding-left: 34px;
-  padding-right: 31px;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-}
-
-.intro__btn:hover {
-  background-color: #fcf7e6;
-}
-
-.intro__btn:hover span {
-  background-color: #f9df8f;
-}
-
-.intro__btn:hover svg {
-  fill: #fcf7e6;
-}
-
 .intro__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2571,9 +2604,9 @@ button {
   width: 30px;
   height: 47px;
   fill: #fff;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
+  -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
 }
 
 .intro__btn-mouse svg:hover {
@@ -7446,6 +7479,16 @@ button {
   }
 }
 
+@media (max-width: 577px) {
+  .btn {
+    width: 100%;
+    min-width: auto;
+    max-width: 280px;
+    padding-left: 12px;
+    padding-right: 78px;
+  }
+}
+
 @media (max-width: 576px) {
   .footer {
     padding-top: 20px;
@@ -7545,18 +7588,6 @@ button {
     font-size: 1.4rem;
     line-height: 1.6rem;
     margin-bottom: 20px;
-  }
-
-  .intro__btn {
-    padding-left: 40px;
-    height: 48px;
-  }
-
-  .intro__btn span {
-    height: 48px;
-    margin-left: 24px;
-    padding-left: 24px;
-    padding-right: 21px;
   }
 
   .intro__content {
