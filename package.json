@@ -1,19 +1,33 @@
 {
-  "name": "fls-gulp",
-  "version": "1.0.0",
-  "description": "fls",
-  "main": "index.js",
+  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"#src/scss/**/*.scss\" \"#src/components/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig & npm run stylelint",
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
     "deploy": "cross-env NODE_ENV=production gulp build & gulp imagemin && gulp deploy",
-    "start": "cross-env NODE_ENV=development gulp start"
+    "start": "cross-env NODE_ENV=development gulp start",
+    "webp": "gulp webp",
+    "imagemin": "gulp imagemin"
   },
-  "author": "Fls",
-  "license": "ISC",
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "#src/**/*.html",
+    "#src/js/**/*.js",
+    "#src/img/**/*.svg",
+    "#src/scss/**/*.{sass,scss}",
+    "#src/components/**/*.{sass,scss}"
+  ],
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
+    "@htmlacademy/editorconfig-cli": "1.x",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.12",
     "circular-dependency-plugin": "5.2.0",
@@ -39,6 +53,8 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-webp": "^4.0.1",
+    "stylelint": "13.5.0",
+    "stylelint-config-htmlacademy": "0.1.x",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1"
   },
