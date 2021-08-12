@@ -1,16 +1,11 @@
 <div class="intro">
    <div class="container">
       <div class="intro__inner">
-         <div class="intro__title">Строим дома по <span>авторским проектам</span> с заботой и вниманием к деталям</div>
+         <h1 class="intro__title">Строим дома по <span>авторским проектам</span> с заботой и вниманием к деталям</h1>
          <div class="intro__subtitle">Хотите обсудить проект вашего будущего дома?</div>
-         <button class="intro__btn" type="button" data-modal="discuss">
-            Обсудить проект
-            <span>
-               <svg>
-                  <use xlink:href="#arrows"></use>
-               </svg>
-            </span>
-         </button>
+         @@include('../btn/btn.html', {
+           "text": "Обсудить проект",
+         })
       </div>
       <div class="intro__content">
          @@include('intro-item/template.html')
