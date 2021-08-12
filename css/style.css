@@ -951,6 +951,8 @@ body {
 html {
   overflow-x: hidden;
   font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -963,8 +965,8 @@ a {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
   outline: none;
   margin: 0;
   padding: 0;
@@ -1036,6 +1038,11 @@ source {
   font-size: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
@@ -1044,7 +1051,6 @@ source {
 
 .main {
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -3318,6 +3324,8 @@ source {
 .project {
   padding-top: 142px;
   padding-bottom: 2px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .project__item {
@@ -4779,6 +4787,7 @@ source {
   padding-top: 288px;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .intro-project__title {
@@ -5963,12 +5972,11 @@ source {
     margin: 0;
     margin-right: 25px;
     width: 100%;
-    max-width: 348px;
+    max-width: 349px;
   }
 
   .contacts-text__foto img {
     width: 100%;
-    max-width: 348px;
   }
 }
 
@@ -6767,12 +6775,7 @@ source {
   }
 
   .contacts-text__foto {
-    max-width: 100%;
     margin-bottom: 20px;
-  }
-
-  .contacts-text__foto img {
-    max-width: 380px;
   }
 
   .contacts-text__wrap {
@@ -7709,14 +7712,6 @@ source {
     font-size: 1.8rem;
     line-height: 2.4rem;
     margin-bottom: 30px;
-  }
-
-  .contacts-text__foto {
-    max-width: 260px;
-  }
-
-  .contacts-text__foto img {
-    max-width: 260px;
   }
 
   .contacts-text__desc {
