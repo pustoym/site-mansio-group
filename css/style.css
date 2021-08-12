@@ -2725,6 +2725,11 @@ img {
   object-fit: contain;
 }
 
+.contacts__foto--black-woman {
+  top: 39px;
+  left: 65px;
+}
+
 .contacts__content {
   display: -webkit-box;
   display: -ms-flexbox;
