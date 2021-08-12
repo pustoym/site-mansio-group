@@ -1,5 +1,6 @@
 <header class="header">
-   <a class="header__logo" @@if (!context.main) {href="index.html"} aria-label="Переход на главную">
+   <!-- <div class="header__wrapper"> -->
+    <a class="header__logo" @@if (!context.main) {href="index.html"} aria-label="Переход на главную">
       <svg>
          <use xlink:href="#logo"></use>
       </svg>
@@ -31,11 +32,12 @@
          </a>
       </div>
       <div class="header__contacts">
-         <a class="header__phone" href="tel:+8">+7 (800) 800-80-80</a>
+         <a class="header__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
          <a class="header__consultation " href="##">Получить консультацию</a>
       </div>
    </div>
    <!-- burger menu -->
    @@include('menu/template.html')
    <!-- burger menu end -->
+   <!-- </div> -->
 </header>
