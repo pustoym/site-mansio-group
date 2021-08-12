@@ -15,12 +15,15 @@
         },
       })
     }
-    <!-- contacts-form -->
     <div class="action-call__form-column">
-      @@include('../contacts/contacts-form/template.html', {
-      "title": "@@title"
-      })
+      @@if (context.external) {
+        @@external
+      }
+      @@if (!context.external) {
+        @@include('../contacts/contacts-form/template.html', {
+          "title": "@@title"
+          })
+      }
     </div>
-    <!-- contacts-form end -->
   </div>
 </article>

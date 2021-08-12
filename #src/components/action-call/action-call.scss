@@ -1,3 +1,12 @@
+:root {
+  --action-call-left-offset: -242px;
+
+  @media (max-width: 1233px) {
+    --action-call-left-offset: -215px;
+  }
+}
+$left-offset: var(--action-call-left-offset);
+
 .action-call {
   display: flex;
   font-family: $font-400;
@@ -7,20 +16,31 @@
   overflow: hidden;
 
   &__aside {
-    padding-bottom: 80px;
+    flex: none;
+    // padding-bottom: 80px;
     display: flex;
     align-items: flex-end;
     width: 70px;
     background-color: #dce6ed;
+    position: relative;
+
+    @include viewport--sm {
+      width: 48px;
+    }
   }
 
   &__logo {
     width: 103px;
     height: 16px;
+    position: absolute;
+    bottom: 93px;
+    left: 50%;
+    margin-left: -51.5px;
     transform: rotate(-90deg);
   }
 
   &__content {
+    width: 100%;
     display: flex;
     align-items: flex-start;
     padding: 50px 70px 0 45px;
@@ -32,22 +52,40 @@
     @include viewport--md {
       padding: 25px 24px;
     }
+
+    @include viewport--sm {
+      padding: 10px;
+    }
   }
 
   &__person + &__form-column {
-    margin-left: -242px;
+    margin-left: $left-offset;
+
+    @media (max-width: 1233px) {
+      margin-left: $left-offset;
+    }
 
     @include viewport--md {
-      margin-left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__form-column {
+    width: 100%;
+    max-width: 440px;
+
+    @media (max-width: 1233px) {
+      max-width: 350px;
     }
   }
 
   &__person-foto {
     position: relative;
-    left: -242px;
+    left: $left-offset;
     bottom: -6px;
 
     @media (max-width: 1233px) {
+      left: $left-offset;
       bottom: -243px;
     }
 
