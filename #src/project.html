@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   @@include("components/base/head.html")
   <title>Mansio — Проекты</title>
 </head>
+
 <body>
 
   <div style="display: none;">
     @@include("../build/img/sprite_auto.svg")
   </div>
 
-<div class="main">
-   <!-- header -->
-   @@include('components/header/template.html', {
-     "activeLinkIndex": 0
-   })
-   <!-- intro-project -->
-   @@include('components/intro-project/template.html')
-   <!-- works -->
-   @@include('components/works/template-2.html')
-   <!-- filter -->
-   @@include('components/filter/template.html')
-   <!-- form -->
-   @@include('components/form/template.html')
-   <div class="main__background--project">
-      <!-- project-item -->
-      @@include('components/project-item/template.html')
-      <!-- contacts -->
-      @@include('components/contacts/template-4.html')
-   </div>
-   <!-- footer -->
-   @@include('components/footer/footer.html', {
-     "activeLinkIndex": 0
-   })
-</div>
+  <div class="main">
+    <!-- header -->
+    @@include('components/header/template.html', {
+    "activeLinkIndex": 0
+    })
+    <!-- intro-project -->
+    @@include('components/intro-project/template.html')
+    <!-- works -->
+    @@include('components/works/template-2.html')
+    <!-- filter -->
+    @@include('components/filter/template.html')
+    <!-- form -->
+    @@include('components/form/template.html')
+    <!-- project-item -->
+    @@include('components/project-item/project-item.html')
+    <!-- contacts -->
+    @@include('components/contacts/template-4.html')
+    <!-- footer -->
+    @@include('components/footer/footer.html', {
+    "activeLinkIndex": 0
+    })
+  </div>
 
-<!-- index scripts -->
-<script src="js/vendor.min.js"></script>
-<script src="js/main.min.js"></script>
+  <!-- index scripts -->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 
 </body>
+
 </html>
