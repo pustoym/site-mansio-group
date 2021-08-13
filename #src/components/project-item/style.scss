@@ -42,7 +42,7 @@
       font-family: $font-300;
       font-weight: 300;
       font-size: 1.2rem;
-      color: $white;
+      color: $color-default-white;
       letter-spacing: 7px;
       margin-bottom: 26px;
       &--panel {
@@ -72,7 +72,7 @@
       font-family: $font-700;
       font-weight: 700;
       font-size: 2.9rem;
-      color: $white;
+      color: $color-default-white;
       @media ( max-width: 576px ) {
          font-size: 2.4rem;
       }
@@ -141,7 +141,7 @@
             font-size: 1.2rem;
          }
          &:first-child {
-            color: $white;
+            color: $color-default-white;
             margin-right: 23px;
             width: 100%;
             max-width: 88px;

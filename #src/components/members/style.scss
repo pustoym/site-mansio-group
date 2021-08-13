@@ -27,7 +27,7 @@
       font-weight: 700;
       font-size: 2.9rem;
       line-height: 3.7rem;
-      color: $white;
+      color: $color-default-white;
       max-width: 479px;
       text-align: end;
       margin-left: auto;
@@ -74,7 +74,7 @@
          border-radius: 0 0 247px 247px;
          position: relative;
          z-index: 2;
-      } 
+      }
       &::after {
          content: '';
          position: absolute;
@@ -85,7 +85,7 @@
          width: 100%;
          max-width: 247px;
          height: 247px;
-         background-color: $white;
+         background-color: $color-default-white;
          border-radius: 50%;
       }
       @media ( max-width:  567px ) {

@@ -42,7 +42,7 @@
       justify-content: space-between;
       align-items: flex-end;
 
-      background-color: $white;
+      background-color: $color-default-white;
       padding-left: 116px;
       padding-right: 71px;
       position: relative;
@@ -50,7 +50,7 @@
          content: '';
          width: 70px;
          height: 100%;
-      
+
          position: absolute;
          left: 0;
          top: 0;

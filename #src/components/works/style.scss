@@ -19,7 +19,7 @@
    &__header {
       padding-top: 100px;
       padding-bottom: 45px;
-      background-color: $white;
+      background-color: $color-default-white;
       @media ( max-width: 576px ) {
          padding: 0;
       }

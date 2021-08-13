@@ -57,14 +57,14 @@
       svg {
          width: 25px;
          height: 25px;
-         fill: $white;
+         fill: $color-default-white;
       }
    }
    &__subtitle {
       font-family: $font-400;
       font-weight: 400;
       font-size: 1.6rem;
-      color: $white;
+      color: $color-default-white;
 
       padding-right: 10px;
       @media ( max-width: 567px ) {
@@ -79,7 +79,7 @@
       svg {
          width: 90px;
          height: 12px;
-         fill: $white;
+         fill: $color-default-white;
       }
    }
    &__video {
