@@ -1354,6 +1354,7 @@ body {
   height: 100%;
   font-style: normal;
   font-weight: 400;
+  font-family: "Commissioner-Regular", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1699,6 +1700,25 @@ button {
   transition: fill 0.3s ease;
 }
 
+.btn--blue {
+  max-width: 390px;
+  background-color: #0c1e2c;
+  color: #f7f7f7;
+}
+
+.btn--blue span {
+  background-color: #153248;
+}
+
+.btn--blue:hover {
+  background-color: #153248;
+  color: #bcbcbc;
+}
+
+.btn--blue:hover span {
+  background-color: #0c1e2c;
+}
+
 /* header */
 
 .header {
@@ -1738,7 +1758,7 @@ button {
 .header__logo svg {
   width: 169px;
   height: 26px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .header__nav {
@@ -1754,7 +1774,7 @@ button {
   font-family: "Commissioner-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   margin-right: 56px;
   position: relative;
@@ -1801,13 +1821,13 @@ button {
   font-weight: 300;
   font-size: 1.6rem;
   text-decoration: underline;
-  color: #fff;
+  color: #ffffff;
 }
 
 .header__login svg {
   width: 27px;
   height: 27px;
-  fill: #fff;
+  fill: #ffffff;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -1838,7 +1858,7 @@ button {
 .header__telegram svg {
   width: 27px;
   height: 23px;
-  fill: #fff;
+  fill: #ffffff;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -1851,7 +1871,7 @@ button {
 .header__whatsapp svg {
   width: 23px;
   height: 23px;
-  fill: #fff;
+  fill: #ffffff;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -1879,7 +1899,7 @@ button {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 14px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .header__phone:hover {
@@ -1890,7 +1910,7 @@ button {
   font-family: "Commissioner-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -1918,7 +1938,7 @@ button {
   z-index: 4;
   width: 30px;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-transition: .6s;
   -o-transition: .6s;
   transition: .6s;
@@ -1994,14 +2014,14 @@ button {
 .footer__logo svg {
   width: 208px;
   height: 58px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .footer__title {
   font-family: "Commissioner-Regular", "Arial", sans-serif;
   font-size: 1.6rem;
   line-height: 2.5rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 94px;
 }
 
@@ -2029,7 +2049,7 @@ button {
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 2.5rem;
-  color: #fff;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -2064,7 +2084,7 @@ button {
   font-family: "Commissioner-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -2091,13 +2111,13 @@ button {
   font-family: "Commissioner-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer__login a svg {
   width: 27px;
   height: 27px;
-  fill: #fff;
+  fill: #ffffff;
   margin-right: 15px;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -2142,7 +2162,7 @@ button {
 .footer__item svg {
   width: 18px;
   height: 18px;
-  fill: #fff;
+  fill: #ffffff;
   margin-top: 3px;
   margin-right: 19px;
 }
@@ -2151,7 +2171,7 @@ button {
   font-family: "Commissioner-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 14px;
 }
 
@@ -2176,7 +2196,7 @@ button {
   font-family: "Commissioner-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   text-decoration: underline;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -2194,7 +2214,7 @@ button {
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 2.8rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer__social {
@@ -2223,7 +2243,7 @@ button {
   font-family: "Commissioner-SemiBold", "Arial", sans-serif;
   font-weight: 600;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
@@ -2555,7 +2575,7 @@ button {
   font-weight: 700;
   font-size: 3.8rem;
   line-height: 5rem;
-  color: #fff;
+  color: #ffffff;
   max-width: 878px;
   text-transform: uppercase;
   margin-bottom: 78px;
@@ -2569,7 +2589,7 @@ button {
   font-family: "Commissioner-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 34px;
 }
 
@@ -2603,7 +2623,7 @@ button {
 .intro__btn-mouse svg {
   width: 30px;
   height: 47px;
-  fill: #fff;
+  fill: #ffffff;
   -webkit-transition: fill 0.3s ease;
   -o-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
@@ -2624,14 +2644,14 @@ button {
 .intro-item__icon svg {
   width: 51px;
   height: 51px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .intro-item__title {
   font-family: "Commissioner-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
@@ -2657,7 +2677,7 @@ button {
 .works__header {
   padding-top: 100px;
   padding-bottom: 45px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .works__content {
@@ -2699,14 +2719,14 @@ button {
 .works-item svg {
   width: 63px;
   height: 49px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .works-item__title {
   font-family: "Commissioner-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 2.9rem;
-  color: #fff;
+  color: #ffffff;
   padding: 38px 0;
 }
 
@@ -2725,14 +2745,14 @@ button {
   font-family: "Commissioner-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .works-item__list li svg {
   width: 9px;
   height: 12px;
-  fill: #fff;
+  fill: #ffffff;
   margin-right: 10px;
 }
 
@@ -2754,7 +2774,7 @@ button {
 .works-item__link svg {
   width: 12px;
   height: 10px;
-  fill: #fff;
+  fill: #ffffff;
   opacity: 0.15;
   -webkit-transition: .4s;
   -o-transition: .4s;
@@ -2763,8 +2783,8 @@ button {
 }
 
 .works-item__link:hover {
-  border: solid 3px #fff;
-  background-color: #fff;
+  border: solid 3px #ffffff;
+  background-color: #ffffff;
   color: #0c1e2c;
 }
 
@@ -2800,76 +2820,11 @@ button {
   padding-bottom: 147px;
 }
 
-.about__nav span {
+.about__nav > span {
   font-family: "Commissioner-Light", "Arial", sans-serif;
   font-size: 1.6rem;
   color: #bebebe;
   margin: 0 45px;
-}
-
-.about__btn {
-  font-family: "Commissioner-Medium", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #f7f7f7;
-  cursor: pointer;
-  text-transform: uppercase;
-  height: 55px;
-  background-color: #0c1e2c;
-  -webkit-box-shadow: 0px 15px 34px 0 rgba(12, 30, 44, 0.2);
-  box-shadow: 0px 15px 34px 0 rgba(12, 30, 44, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-left: 71px;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-}
-
-.about__btn svg {
-  width: 12px;
-  height: 10px;
-  fill: #f0d276;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-}
-
-.about__btn span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #153248;
-  height: 55px;
-  margin: 0;
-  margin-left: 48px;
-  padding-left: 34px;
-  padding-right: 31px;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-}
-
-.about__btn:hover {
-  background-color: #153248;
-}
-
-.about__btn:hover span {
-  background-color: #0c1e2c;
-}
-
-.about__btn:hover svg {
-  fill: #fcf7e6;
 }
 
 .about__link {
@@ -2883,9 +2838,9 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .about__link:hover {
@@ -2974,7 +2929,7 @@ button {
 .product {
   padding-top: 86px;
   padding-bottom: 135px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .product__inner {
@@ -3017,7 +2972,7 @@ button {
   font-family: "Commissioner-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
-  color: #c5c5c5;
+  color: #595959;
   text-transform: uppercase;
   border: solid 3px #f3f3f3;
   padding: 17px 50px;
@@ -3286,7 +3241,7 @@ button {
 .features-item__icon svg {
   width: 46px;
   height: 46px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 /* contacts */
@@ -3358,7 +3313,7 @@ button {
   width: 100%;
   padding-top: 59px;
   padding-right: 75px;
-  background: #fff;
+  background: #ffffff;
   padding-bottom: 48px;
 }
 
@@ -3444,7 +3399,7 @@ button {
   font-weight: 700;
   font-size: 2.9rem;
   line-height: 3.7rem;
-  color: #fff;
+  color: #ffffff;
   max-width: 524px;
 }
 
@@ -3468,7 +3423,7 @@ button {
 .contacts__link svg {
   width: 26px;
   height: 26px;
-  fill: #fff;
+  fill: #ffffff;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -3870,7 +3825,7 @@ button {
 }
 
 .contacts-text__desc--white {
-  color: #fff;
+  color: #ffffff;
 }
 
 .contacts-text__logo {
@@ -3880,7 +3835,7 @@ button {
 .contacts-text__logo svg {
   width: 283px;
   height: 43px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .contacts-text__name {
@@ -4220,14 +4175,14 @@ button {
 .reviews__icon svg {
   width: 25px;
   height: 25px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .reviews__subtitle {
   font-family: "Commissioner-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ffffff;
   padding-right: 10px;
 }
 
@@ -4238,7 +4193,7 @@ button {
 .reviews__logo svg {
   width: 90px;
   height: 12px;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .reviews__video video {
@@ -4373,7 +4328,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-top: 31px;
 }
 
@@ -4684,7 +4639,7 @@ button {
   font-family: "Commissioner-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 3.7rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 101px;
 }
 
@@ -4833,7 +4788,7 @@ button {
   font-weight: 700;
   font-size: 2.9rem;
   line-height: 3.7rem;
-  color: #fff;
+  color: #ffffff;
   max-width: 479px;
   text-align: end;
   margin-left: auto;
@@ -4886,7 +4841,7 @@ button {
   width: 100%;
   max-width: 247px;
   height: 247px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
@@ -5018,7 +4973,7 @@ button {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  background-color: #fff;
+  background-color: #ffffff;
   padding-left: 116px;
   padding-right: 71px;
   position: relative;
@@ -5401,7 +5356,7 @@ button {
   font-family: "Commissioner-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 3.7rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 101px;
 }
 
@@ -5891,7 +5846,7 @@ button {
   font-family: "Commissioner-Bold", "Arial", sans-serif;
   font-size: 2.9rem;
   line-height: 3.7rem;
-  color: #fff;
+  color: #ffffff;
   max-width: 305px;
   margin-bottom: 41px;
 }
@@ -5900,7 +5855,7 @@ button {
   font-family: "Commissioner-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
-  color: #fff;
+  color: #ffffff;
   border: solid 3px rgba(251, 251, 251, 0.15);
   padding: 18px;
   padding-bottom: 16px;
@@ -5939,7 +5894,7 @@ button {
   font-size: 1.3rem;
   line-height: 2rem;
   color: #0c1e2c;
-  background-color: #fff;
+  background-color: #ffffff;
   padding-left: 63px;
   padding-right: 32px;
   padding-top: 30px;
@@ -6016,7 +5971,7 @@ button {
   font-family: "Commissioner-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 7px;
   margin-bottom: 26px;
 }
@@ -6045,7 +6000,7 @@ button {
   font-family: "Commissioner-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 2.9rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .project-item__panel {
@@ -6113,7 +6068,7 @@ button {
 }
 
 .project-item__list span:first-child {
-  color: #fff;
+  color: #ffffff;
   margin-right: 23px;
   width: 100%;
   max-width: 88px;
@@ -7469,13 +7424,8 @@ button {
     flex-direction: column;
   }
 
-  .about__nav span {
+  .about__nav > span {
     margin: 20px 0;
-  }
-
-  .about__btn span {
-    margin: 0;
-    margin-left: 48px;
   }
 }
 
@@ -7675,18 +7625,6 @@ button {
   .about__nav {
     padding-top: 30px;
     padding-bottom: 40px;
-  }
-
-  .about__btn {
-    padding-left: 40px;
-    height: 48px;
-  }
-
-  .about__btn span {
-    height: 48px;
-    margin-left: 24px;
-    padding-left: 24px;
-    padding-right: 21px;
   }
 
   .about__text {
