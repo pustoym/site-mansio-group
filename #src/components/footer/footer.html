@@ -17,16 +17,11 @@
       </div>
       <div class="footer__center">
         <nav class="footer__nav">
-          <a class="footer__link @@if (context.activeLinkIndex === 0) { footer__link--active }" @@if
-            (context.activeLinkIndex !==0) { href="./project.html" }>Проекты</a>
-          <a class="footer__link @@if (context.activeLinkIndex === 1) { footer__link--active }" @@if
-            (context.activeLinkIndex !==1) { href="#" }>Услуги</a>
-          <a class="footer__link @@if (context.activeLinkIndex === 2) { footer__link--active }" @@if
-            (context.activeLinkIndex !==2) { href="#" }>Технологии</a>
-          <a class="footer__link @@if (context.activeLinkIndex === 3) { footer__link--active }" @@if
-            (context.activeLinkIndex !==3) { href="#" }>О нас</a>
-          <a class="footer__link @@if (context.activeLinkIndex === 4) { footer__link--active }" @@if
-            (context.activeLinkIndex !==4) { href="./contacts.html" }>Контакты</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 0) { footer__link--active }" @@if (context.activeLinkIndex !== 0) { href="./project.html" }>Проекты</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 1) { footer__link--active }" @@if (context.activeLinkIndex !== 1) { href="#" }>Услуги</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 2) { footer__link--active }" @@if (context.activeLinkIndex !== 2) { href="#" }>Технологии</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 3) { footer__link--active }" @@if (context.activeLinkIndex !== 3) { href="#" }>О нас</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 4) { footer__link--active }" @@if (context.activeLinkIndex !== 4) { href="./contacts.html" }>Контакты</a>
         </nav>
         <div class="footer__login">
           <a href="##">
