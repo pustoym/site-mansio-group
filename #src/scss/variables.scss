@@ -6,15 +6,27 @@ $color-transparent:               rgba(255, 255, 255, 0);
 
 // Base
 
-$white: #fff;
-$primary-color: #f9df8f;
-$secondary-color: #0c1e2c;
+$white: #f7f7f7; // hsl(0, 0%, 97%)
+$primary-color: #f9df8f; // hsl(45, 90%, 77%)
+$primary-color-desaturate: #f0d276; // hsl(45, 80%, 70%)
+$primary-color-lighten: #fcf7e6; // hsl(46, 79%, 95%)
+$secondary-color: #0c1e2c; // hsl(206, 57%, 11%)
+$secondary-color-lighten: #153248; // hsl(206, 55%, 18%)
+$grey: #595959;
+
+// Typography
+//---------------------------------
+
+// $font-family--:                     $font-400;
+
 
 // Animation
 //---------------------------------
 
 $default-transition-settings:       0.3s ease;
 $modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
+// также для любых transition обязательно указывайте transition-property
+// transition: color $default-transition-settings, а не transition: $default-transition-settings
 
 // Viewports
 //---------------------------------

@@ -7,6 +7,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -21,7 +22,7 @@ body {
 
   font-style: normal;
   font-weight: 400;
-  // font-family: $font-family--;
+  font-family: $font-400;
   // color: $color-default-black;
   // background-color: $color-default-white;
   -webkit-font-smoothing: antialiased;
@@ -126,6 +127,15 @@ picture, source {
   font-size: 0;
 }
 
+// используйте это для отключения ховеров на тач устройствах
+// ! но не используйте это для текстовых полей ( input, textarea )
+
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: red;
+  }
+} */
 
 // hard reset
 
