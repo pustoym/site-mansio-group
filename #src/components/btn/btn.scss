@@ -1,15 +1,14 @@
 .btn {
-  display: inline-block;
-  text-align: center;
-  min-width: 350px;
+  display: inline-flex;
+  justify-content: center;
+  text-align: left;
+  // min-width: 350px;
   max-width: 440px;
   min-height: 55px;
-  padding: 18px 25px;
-  padding-right: 78px;
+  padding: 17px 50px;
+  padding-right: 130px;
   margin: 0;
   border: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   user-select: none;
   text-decoration: none;
   text-transform: none;
@@ -17,8 +16,8 @@
   font-family: $font-500;
   font-weight: 500;
   font-size: 13.5px;
+  line-height: 1.54;
   font-weight: 500;
-  text-align: center;
   color: $secondary-color;
   text-transform: uppercase;
   background-color: $primary-color;
@@ -27,25 +26,30 @@
   cursor: pointer;
   overflow: hidden;
 
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+
   @media (max-width: 577px) {
     width: 100%;
     min-width: auto;
-    max-width: 280px;
-    padding-left: 12px;
-    padding-right: 78px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 88px;
+    text-align: center;
   }
 
   &:hover,
   &:focus {
+    color: saturate($secondary-color, 50);
     text-decoration: none;
-    background-color: #fcf7e6;
+    background-color: $primary-color-lighten;
 
     span {
       background-color: $primary-color;
     }
 
     svg {
-      fill: #fcf7e6;
+      fill: $primary-color-lighten;
     }
   }
 
@@ -67,7 +71,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fcf7e6;
+    background-color: $primary-color-lighten;
     transition: background-color $default-transition-settings;
   }
 
@@ -75,7 +79,26 @@
     position: relative;
     width: 12px;
     height: 10px;
-    fill: #f0d276;
+    fill: $primary-color-desaturate;
     transition: fill $default-transition-settings;
+  }
+
+  &--blue {
+    max-width: 390px;
+    background-color: $secondary-color;
+    color: $white;
+
+    span {
+      background-color: $secondary-color-lighten;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $secondary-color-lighten;
+      color: darken($white, 23);
+      span {
+         background-color: $secondary-color;
+      }
+    }
   }
 }

@@ -1,8 +1,8 @@
-<button class="intro__btn  btn" type="button" data-modal="discuss">
+<a @@if (context.href) {href="@@href"} class="btn @@if (context.mod) {btn--@@mod}" @@if (context.modal) { data-modal="@@modal" }>
   @@text
   <span>
     <svg>
       <use xlink:href="#arrows"></use>
     </svg>
   </span>
-</button>
+</a>
