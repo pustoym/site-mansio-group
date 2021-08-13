@@ -14,14 +14,14 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "../components/btn/btn.scss";
+@import "../components/btn/btn";
 
 /* header */
 @import "../components/header/style.scss";
 @import "../components/header/menu/style.scss";
 
 /* footer */
-@import "../components/footer/style.scss";
+@import "../components/footer/footer";
 
 @import "blocks/modal";
 @import "../components/action-call/action-call";
@@ -40,10 +40,10 @@
 @import "../components/works/works-item/style.scss";
 
 /* about */
-@import "../components/about/style.scss";
+@import "../components/about/about";
 
 /* product */
-@import "../components/product/style.scss";
+@import "../components/product/product";
 
 /* features */
 @import "../components/features/style.scss";
@@ -55,15 +55,15 @@
 @import "../components/contacts/contacts-text/style.scss";
 
 /* project */
-@import "../components/project/style.scss";
+@import "../components/project/project";
 
 /* reviews */
 @import "../components/reviews/style.scss";
 
 /* reviews-slider */
-@import "../components/reviews-slider/style.scss";
-@import "../components/reviews-slider/reviews-foto/style.scss";
-@import "../components/reviews-slider/reviews-panel/style.scss";
+@import "../components/reviews-slider/reviews-slider";
+@import "../components/reviews-slider/reviews-foto/reviews-foto";
+@import "../components/reviews-slider/reviews-panel/reviews-panel";
 
 /* -- page-contacts -- */
 
