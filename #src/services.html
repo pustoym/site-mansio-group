@@ -3,7 +3,7 @@
 
 <head>
   @@include("components/base/head.html")
-  <title>Mansio — Технологии</title>
+  <title>Mansio — Услуги</title>
 </head>
 
 <body>
@@ -15,25 +15,23 @@
   <div class="wrapper">
     <!-- header -->
     @@include('components/header/header.html', {
-    "activeLinkIndex": 2
+    "activeLinkIndex": 1
     })
     <main>
       <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
-        "title": "Технологии строительства",
-        "bgClass": "tech",
-        "dsc": {
-          "first-line": "Высокая степень качества и надежности домов компании «MANSIO GROUP» обусловлена использованием:",
-          "list": "<ul><li>Надежных и&nbsp;проверенных годами технологий строительства</li><li>Только качественных строительных материалов крупных заводов изготовителей</li></ul>"
-        }
+        "title": "Услуги",
+        "bgClass": "services"
       })
+      @@include('components/services/services.html')
+      <!-- contacts -->
       @@include('components/contacts/template-3.html', {
         "person": "black-woman"
       })
     </main>
     <!-- footer -->
     @@include('components/footer/footer.html', {
-    "activeLinkIndex": 2
+    "activeLinkIndex": 1
     })
 
     <!-- инклюд модалки -->
