@@ -15,33 +15,35 @@
     @@include("../build/img/sprite_auto.svg")
   </div>
 
-  <div class="main">
+  <div class="wrapper">
     <!-- header -->
-    @@include('components/header/template.html', {
+    @@include('components/header/header.html', {
       "main": true
     })
-    <!-- intro -->
-    @@include('components/intro/intro.html')
-    <!-- works -->
-    @@include('components/works/template.html')
-    <!-- about -->
-    @@include('components/about/about.html')
-    <!-- product -->
-    @@include('components/product/product.html')
-    <!-- features -->
-    @@include('components/features/template.html')
-    <!-- contacts -->
-    @@include('components/contacts/template.html', {
+    <main>
+      <!-- intro -->
+      @@include('components/intro/intro.html')
+      <!-- works -->
+      @@include('components/works/template.html')
+      <!-- about -->
+      @@include('components/about/about.html')
+      <!-- product -->
+      @@include('components/product/product.html')
+      <!-- features -->
+      @@include('components/features/template.html')
+      <!-- contacts -->
+      @@include('components/contacts/template.html', {
       "textAfter": true
-    })
-    <!-- project -->
-    @@include('components/project/project.html')
-    <!-- reviews -->
-    @@include('components/reviews/template.html')
-    <!-- reviews-slider -->
-    @@include('components/reviews-slider/reviews-slider.html')
-    <!-- contacts -->
-    @@include('components/contacts/template-2.html')
+      })
+      <!-- project -->
+      @@include('components/project/project.html')
+      <!-- reviews -->
+      @@include('components/reviews/template.html')
+      <!-- reviews-slider -->
+      @@include('components/reviews-slider/reviews-slider.html')
+      <!-- contacts -->
+      @@include('components/contacts/template-2.html')
+    </main>
     <!-- footer -->
     @@include('components/footer/footer.html', {
       "main": true
@@ -64,10 +66,7 @@
     })
   </div>
 
-  <!-- index scripts -->
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
-
 </body>
-
 </html>

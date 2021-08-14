@@ -12,24 +12,29 @@
     @@include("../build/img/sprite_auto.svg")
   </div>
 
-  <div class="main">
+  <div class="wrapper">
     <!-- header -->
-    @@include('components/header/template.html', {
+    @@include('components/header/header.html', {
     "activeLinkIndex": 0
     })
-    <!-- intro-project -->
-    @@include('components/intro-project/template.html')
-    <!-- works -->
-    @@include('components/works/template-2.html')
-    <!-- filter -->
-    @@include('components/filter/template.html')
-    <!-- form -->
-    @@include('components/form/template.html')
-    <!-- project-item -->
-    @@include('components/project-item/project-item.html')
-    <!-- contacts -->
-    @@include('components/contacts/template-4.html')
-    <!-- footer -->
+    <main>
+      <!-- intro-project -->
+      @@include('components/first-screen/first-screen.html', {
+        "title": "Наши проекты",
+        "bgClass": "projects"
+      })
+      <!-- works -->
+      @@include('components/works/template-2.html')
+      <!-- filter -->
+      @@include('components/filter/template.html')
+      <!-- form -->
+      @@include('components/form/template.html')
+      <!-- project-item -->
+      @@include('components/project-item/project-item.html')
+      <!-- contacts -->
+      @@include('components/contacts/template-4.html')
+      <!-- footer -->
+    </main>
     @@include('components/footer/footer.html', {
     "activeLinkIndex": 0
     })

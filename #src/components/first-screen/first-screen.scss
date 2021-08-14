@@ -1,0 +1,119 @@
+.first-screen {
+  display: flex;
+  align-items: center;
+
+  font-size: 16.7px;
+  line-height: 1.68;
+  color: #dce6ed;
+  background-color: #0d1e2b;
+  height: 70vh;
+  min-height: 750px;
+  // padding-top: 285px;
+  // padding-bottom: 306px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include viewport--xl {
+    height: 100vh;
+  }
+  @include viewport--md {
+    height: auto;
+    min-height: 60vh;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+  // @media (max-width: 991px) {
+  //   padding-top: 152px;
+  //   padding-bottom: 120px;
+  // }
+  // @media (max-width: 576px) {
+  //   padding-top: 102px;
+  // }
+
+  &__inner {
+    padding-left: 100px;
+
+    @include viewport--md {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    font-family: $font-700;
+    font-weight: 700;
+    font-size: 37.5px;
+    line-height: 1.33;
+    color: $color-default-white;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 75px;
+
+    @media (max-width: 576px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  p {
+    max-width: 650px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &__breadcrumbs {
+    font-family: $font-500;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #7c97aa;
+    @media (max-width: 576px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.no-webp .first-screen,
+.no-js .first-screen {
+  &--contacts {
+    background-image: url("../img/bg/bg-first-screen--contacts.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--contacts@2x.jpg");
+    }
+  }
+
+  &--projects {
+    background-image: url("../img/bg/bg-first-screen--projects.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--projects@2x.jpg");
+    }
+  }
+}
+
+.webp .first-screen {
+  &--contacts {
+    background-image: url("../img/bg/bg-first-screen--contacts.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--contacts@2x.webp");
+    }
+  }
+
+  &--projects {
+    background-image: url("../img/bg/bg-first-screen--projects.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--projects@2x.webp");
+    }
+  }
+}
