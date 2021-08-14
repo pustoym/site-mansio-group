@@ -83,6 +83,14 @@
 
 .no-webp .first-screen,
 .no-js .first-screen {
+  &--tech {
+    background-image: url("../img/bg/bg-first-screen--tech.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--tech@2x.jpg");
+    }
+  }
+
   &--contacts {
     background-image: url("../img/bg/bg-first-screen--contacts.jpg");
 
@@ -101,6 +109,14 @@
 }
 
 .webp .first-screen {
+  &--tech {
+    background-image: url("../img/bg/bg-first-screen--tech.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--tech@2x.webp");
+    }
+  }
+
   &--contacts {
     background-image: url("../img/bg/bg-first-screen--contacts.webp");
 

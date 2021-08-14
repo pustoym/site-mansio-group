@@ -16,13 +16,17 @@
 @import "global/utils";
 @import "../components/btn/btn";
 
+// Blocks
+//---------------------------------
+
 /* header */
-@import "../components/header/style.scss";
+@import "../components/header/header.scss";
 @import "../components/header/menu/style.scss";
 
 /* footer */
 @import "../components/footer/footer";
 
+@import "../components/first-screen/first-screen";
 @import "blocks/modal";
 @import "../components/action-call/action-call";
 @import "../components/person/person";
@@ -67,9 +71,6 @@
 
 /* -- page-contacts -- */
 
-/* intro-contacts */
-@import "../components/intro-contacts/style.scss";
-
 /* connection */
 @import "../components/connection/style.scss";
 
@@ -86,9 +87,6 @@
 @import "../components/info-foto/style.scss";
 
 /* --  page-project -- */
-
-/* intro-project */
-@import "../components/intro-project/style.scss";
 
 /* filter */
 @import "../components/filter/style.scss";
