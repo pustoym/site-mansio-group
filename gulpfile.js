@@ -155,7 +155,7 @@ const syncserver = () => {
     series(copysvg, sprite, html, refresh)
   );
   gulp.watch(
-    srcFolder + "/img/**/*.{png,jpg}",
+    srcFolder + "/img/**/*.{png,jpg,webp}",
     series(copypngjpg, html, refresh)
   );
 
@@ -176,7 +176,7 @@ const copysvg = () => {
 
 const copypngjpg = () => {
   return gulp
-    .src(srcFolder + "/img/**/*.{png,jpg}", { base: srcFolder })
+    .src(srcFolder + "/img/**/*.{png,jpg,webp}", { base: srcFolder })
     .pipe(gulp.dest(buildFolder));
 };
 
