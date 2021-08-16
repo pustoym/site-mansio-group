@@ -3026,8 +3026,47 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 45px;
   margin-bottom: 75px;
+}
+
+.product__btn {
+  font-family: "Commissioner-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #c5c5c5;
+  text-transform: uppercase;
+  border: solid 3px #f3f3f3;
+  padding: 17px 50px;
+  height: 55px;
+  margin-right: 17px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.product__btn:hover {
+  color: #f9df8f;
+  border: solid 3px #f9df8f;
+}
+
+.product__btn--active {
+  color: #7c97aa;
+  background-color: #dce6ed;
+  border: none;
+}
+
+.product__btn--active:hover {
+  color: #7c97aa;
+  border: none;
+}
+
+.product__btn:last-child {
+  margin-right: 0;
 }
 
 .product__content {
@@ -4576,7 +4615,7 @@ button {
 .members {
   padding-top: 88px;
   padding-bottom: 141px;
-  background-image: url("../../img/foto/members-background.png");
+  background-image: url("../img/foto/members-background.png");
 }
 
 .members__desc {
@@ -5920,6 +5959,47 @@ button {
   transition: 0.2s;
 }
 
+.tech__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  gap: 1px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+}
+
+.tech__item {
+  min-height: 500px;
+  position: relative;
+}
+
+.article-card {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-bottom: 70px;
+  background-color: #0c1e2c;
+  color: #ffffff;
+}
+
+.article-card__title {
+  font-family: "Commissioner-SemiBold", "Arial", sans-serif;
+  font-size: 29.2px;
+  font-weight: 600;
+}
+
 @media (min-width: 769px) {
   .glightbox-container .ginner-container {
     width: auto;
@@ -6205,6 +6285,11 @@ button {
     flex-wrap: wrap;
     margin-top: 35px;
     margin-bottom: 25px;
+  }
+
+  .product__btn {
+    width: calc( 50% - 17px);
+    margin-bottom: 15px;
   }
 
   .product__content {
@@ -7055,6 +7140,13 @@ button {
     -ms-flex-align: start;
     align-items: flex-start;
     margin-bottom: 10px;
+  }
+
+  .product__btn {
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
   }
 
   .product__text {
