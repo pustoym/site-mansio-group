@@ -34,6 +34,7 @@
   &__nav {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     margin-top: 45px;
     margin-bottom: 75px;
@@ -48,6 +49,48 @@
       margin-bottom: 10px;
     }
   }
+  &__btn {
+    font-family: $font-500;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #c5c5c5;
+    text-transform: uppercase;
+
+    border: solid 3px #f3f3f3;
+
+    padding: 17px 50px;
+    height: 55px;
+    margin-right: 17px;
+
+    cursor: pointer;
+    transition: .2s;
+    @media ( max-width: 1200px ) {
+       width: calc( 50% - 17px);
+       margin-bottom: 15px;
+    }
+    @media ( max-width: 767px ) {
+       width: 100%;
+       margin-right: 0;
+       font-size: 1.2rem;
+       white-space: nowrap;
+    }
+    &:hover {
+       color: $primary-color;
+       border: solid 3px $primary-color;
+    }
+    &--active {
+       color: #7c97aa;
+       background-color: #dce6ed;
+       border: none;
+       &:hover {
+          color: #7c97aa;
+          border: none;
+       }
+    }
+    &:last-child {
+       margin-right: 0;
+    }
+ }
   &__content {
     display: none;
     &--active {
