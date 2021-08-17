@@ -101,4 +101,16 @@
       }
     }
   }
+
+  &--white {
+    background-color: $color-default-white;
+
+    span {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      fill: $secondary-color;
+    }
+  }
 }
