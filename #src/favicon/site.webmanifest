@@ -1,6 +1,6 @@
 {
-    "name": "\u0421\u0430\u0439\u0442 Mansio-group",
-    "short_name": "\u0421\u0430\u0439\u0442 Mansio-group",
+    "name": "Mansio",
+    "short_name": "Mansio",
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png",
@@ -8,12 +8,12 @@
             "type": "image/png"
         },
         {
-            "src": "/favicon/android-chrome-384x384.png",
-            "sizes": "384x384",
+            "src": "/favicon/android-chrome-256x256.png",
+            "sizes": "256x256",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#0c1e2c",
+    "background_color": "#0c1e2c",
     "display": "standalone"
 }
