@@ -5,7 +5,7 @@
   font-size: 16.7px;
   line-height: 1.68;
   color: #dce6ed;
-  background-color: #0d1e2b;
+  background-color: rgba(13, 30, 43, 0.6);
   height: 70vh;
   min-height: 750px;
   // padding-top: 285px;
@@ -24,13 +24,6 @@
     padding-top: 100px;
     padding-bottom: 120px;
   }
-  // @media (max-width: 991px) {
-  //   padding-top: 152px;
-  //   padding-bottom: 120px;
-  // }
-  // @media (max-width: 576px) {
-  //   padding-top: 102px;
-  // }
 
   &__inner {
     padding-left: 100px;
@@ -114,6 +107,14 @@
       background-image: url("../img/bg/bg-first-screen--services2x.jpg");
     }
   }
+
+  &--about {
+    background-image: url("../img/bg/bg-first-screen--about.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--about@2x.jpg");
+    }
+  }
 }
 
 .webp .first-screen {
@@ -142,12 +143,20 @@
   }
 
   &--services {
-    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--services.webp");
     background-blend-mode: darken;
 
     @include retina {
       background-image: url("../img/bg/bg-first-screen--services2x.webp");
+    }
+  }
+
+  &--about {
+    background-image: url("../img/bg/bg-first-screen--about.webp");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--about@2x.webp");
     }
   }
 }
