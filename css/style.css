@@ -1726,6 +1726,18 @@ button {
   background-color: #0c1e2c;
 }
 
+.btn--white {
+  background-color: #ffffff;
+}
+
+.btn--white span {
+  background-color: #ffffff;
+}
+
+.btn--white svg {
+  fill: #0c1e2c;
+}
+
 /* header */
 
 .header {
@@ -5959,6 +5971,10 @@ button {
   transition: 0.2s;
 }
 
+.tech {
+  padding: 1px 0;
+}
+
 .tech__list {
   margin: 0;
   padding: 0;
@@ -5974,7 +5990,6 @@ button {
 
 .tech__item {
   min-height: 500px;
-  position: relative;
 }
 
 .article-card {
@@ -5990,14 +6005,78 @@ button {
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-bottom: 70px;
+  padding-left: 70px;
+  padding-right: 95px;
   background-color: #0c1e2c;
   color: #ffffff;
+  position: relative;
+}
+
+.article-card:hover .article-card__img:after {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.article-card:hover img {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .article-card__title {
   font-family: "Commissioner-SemiBold", "Arial", sans-serif;
   font-size: 29.2px;
   font-weight: 600;
+  z-index: 1;
+  margin-bottom: 25px;
+}
+
+.article-card__link {
+  z-index: 1;
+}
+
+.article-card__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.article-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.article-card__img:before,
+.article-card__img:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.3)));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 80%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 80%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 @media (min-width: 769px) {
