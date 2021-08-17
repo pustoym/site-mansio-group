@@ -6004,9 +6004,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding-bottom: 70px;
-  padding-left: 70px;
-  padding-right: 95px;
+  padding: 70px;
   background-color: #0c1e2c;
   color: #ffffff;
   position: relative;
@@ -6312,6 +6310,15 @@ button {
   .project-item__btn-wrapper .btn {
     padding-left: 25px;
     padding-right: 83px;
+  }
+
+  .tech__list {
+    -ms-grid-columns: (minmax(320px, 1fr))[auto];
+    grid-template-columns: repeat(auto, minmax(320px, 1fr));
+  }
+
+  .article-card {
+    padding: 70px 30px;
   }
 }
 
@@ -6646,6 +6653,10 @@ button {
 
   .product__foto img {
     max-width: 360px;
+  }
+
+  .tech__list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 }
 
@@ -7201,6 +7212,10 @@ button {
 
   .project-item__content:nth-child(even) {
     margin-left: 0;
+  }
+
+  .tech__item {
+    min-height: 300px;
   }
 }
 
