@@ -1,20 +1,20 @@
 <div class="contacts-about">
-   <div class="contacts-about__content">
-      <div class="contacts-about__title">Узнайте больше о нас и нашем подходе!</div>
-      <a class="contacts-about__link" href="##">
-         ПЕРЕЙТИ В РАЗДЕЛ О НАС
-         <svg>
-            <use xlink:href="#arrows"></use>
-         </svg>
-      </a>
-      <a class="contacts-about__btn" href="##">
-         Посетить наши готовые <br> объекты и пообщаться <br> с их владельцами
-         <svg>
-            <use xlink:href="#arrows"></use>
-         </svg>
-      </a>
-   </div>
-   <div class="contacts-about__foto">
-      <img src="img/foto/contacts-about-foto.jpg" alt="##">
-   </div>
+  <div class="contacts-about__content">
+    <div class="contacts-about__title">Узнайте больше о нас и нашем подходе!</div>
+    <a class="contacts-about__link" href="/about.html">
+      Перейти в раздел о нас
+      <svg>
+        <use xlink:href="#arrows"></use>
+      </svg>
+    </a>
+    @@include('../../btn/btn.html', {
+      "text": "Посетить наши готовые объекты и&nbsp;пообщаться с&nbsp;их&nbsp;владельцами",
+      "modal": "registration-for-viewing",
+      "mod": "white",
+      "bemElement": "contacts-about__btn"
+    })
+  </div>
+  <div class="contacts-about__foto">
+    <img src="img/foto/contacts-about-foto.jpg" alt="##">
+  </div>
 </div>

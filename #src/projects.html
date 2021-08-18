@@ -33,7 +33,8 @@
       <!-- form -->
       @@include('components/row-form/row-form.html', {
         "title": "У&nbsp;вас есть свой проект?",
-        "subtitle": "Загрузите его для расчёта. Проведем профессиональную экспертизу и&nbsp;сделаем подробную смету."
+        "subtitle": "Загрузите его для расчёта. Проведем профессиональную экспертизу и&nbsp;сделаем подробную смету.",
+        "buttonText": "Рассчитать стоимость"
       })
       <!-- project-item -->
       @@include('components/project-item/project-item.html')
@@ -43,6 +44,11 @@
     </main>
     @@include('components/footer/footer.html', {
       "activeLinkIndex": 0
+    })
+
+    @@include("components/base/modal.html", {
+      "name": "registration-for-viewing",
+      "fitContent": true,
     })
   </div>
 

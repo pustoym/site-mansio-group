@@ -58,6 +58,8 @@
       width: 100;
       max-width: 371px;
       letter-spacing: 1.35px;
+      text-transform: uppercase;
+
       &:hover {
          color: rgba(255, 255, 255, 0.5);
          svg {
@@ -79,38 +81,8 @@
       }
    }
    &__btn {
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      font-size: 1.3rem;
-      line-height: 2rem;
-      color: $secondary-color;
-      background-color: $color-default-white;
-      padding-left: 63px;
-      padding-right: 32px;
-      padding-top: 30px;
-      padding-bottom: 23px;
-      margin-top: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
-      width: 100;
-      max-width: 371px;
-      &:hover {
-         color: rgba($secondary-color, .4);
-         svg {
-            fill: rgba($secondary-color, .4);
-         }
-      }
-      svg {
-         margin-left: 42px;
-      }
-      @media (max-width: 576px) {
-         font-size: 1.2rem;
-         line-height: 1.9rem;
-
-         padding-left: 40px;
-         padding-right: 25px;
-      }
+     max-width: 370px;
+     margin-top: 20px;
    }
    &__foto {
       img {
