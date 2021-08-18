@@ -35,9 +35,10 @@ const fileinclude = require("gulp-file-include");
 const browsersync = require("browser-sync").create();
 const del = require("del");
 const sass = require("gulp-sass");
+const bulk = require('gulp-sass-bulk-importer');
 const autoprefixer = require("gulp-autoprefixer");
 const group_media = require("gulp-group-css-media-queries");
-const clean_css = require("gulp-clean-css");
+const csso = require('gulp-csso');
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -80,6 +81,7 @@ const css = () => {
   return src(path.src.css)
     .pipe(plumber())
     .pipe(sourcemap.init())
+    .pipe(bulk())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(
       autoprefixer({
@@ -90,7 +92,7 @@ const css = () => {
     )
     .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
     .pipe(dest(path.build.css))
-    .pipe(clean_css())
+    .pipe(csso())
     .pipe(rename({ extname: ".min.css" }))
     .pipe(sourcemap.write("."))
     .pipe(dest(path.build.css))
