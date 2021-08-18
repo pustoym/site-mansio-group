@@ -71,3 +71,25 @@
     @content;
   }
 } */
+
+@mixin container {
+  width: 100%;
+  max-width: 1290px;
+  padding: 0 60px;
+  margin: 0 auto;
+
+  @include viewport--lg {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include viewport--md {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include viewport--sm {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

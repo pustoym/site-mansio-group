@@ -1,5 +1,26 @@
-<div class="container container--xxl">
-  <section class="about-item  about-item--invert">
+<section class="about-item  about-item--brand">
+  <div class="about-item__inner">
+    @@include('../brand-flag/brand-flag.html')
+    <div class="about-item__text">
+      <h2 class="about-item__title">Mansio Group</h2>
+      <p><b>MANSIO GROUP&nbsp;&mdash; это современная, технологичная компания, которая проектирует и&nbsp;строит под
+          ключ
+          каменные дома для частного и&nbsp;коммерческого использования.</b></p>
+      <p>История компании началась с&nbsp;небольшой строительной монтажной фирмы, которая выполняла государственные
+        контракты.</p>
+      <p>Параллельно по&nbsp;просьбе наших друзей и&nbsp;партнеров мы&nbsp;строили им&nbsp;частные дома, нас начали
+        рекомендовать соседям, друзьям друзей.</p>
+      <p>Спрос рождает предложение, поэтому было принято решение о&nbsp;выделении в&nbsp;отдельную структуру
+        и&nbsp;развитии строительной проектной компании, которая получила название MANSIO GROUP.</p>
+    </div>
+    <picture class="about-item__picture">
+      <source srcset="img/content/about-content-1.webp" type="image/webp">
+      <img src="img/content/about-content-1.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+    </picture>
+  </div>
+</section>
+<section class="about-item  about-item--invert">
+  <div class="about-item__inner">
     <div class="about-item__text">
       <h2 class="about-item__title">Mansio сегодня</h2>
       <p class="about-teim__lead">MANSIO GROUP сегодня предлагает своими клиентам окружить их&nbsp;заботой, вниманием
@@ -17,8 +38,10 @@
       <source srcset="img/content/about-content-2.webp" type="image/webp">
       <img src="img/content/about-content-2.jpg" width="885" alt="Небольшая строительная монтажная фирма">
     </picture>
-  </section>
-  <section class="about-item">
+  </div>
+</section>
+<section class="about-item">
+  <div class="about-item__inner">
     <div class="about-item__text">
       <h2 class="about-item__title">Наш постулат</h2>
       <ul>
@@ -42,11 +65,11 @@
       <source srcset="img/content/about-content-3.webp" type="image/webp">
       <img src="img/content/about-content-3.jpg" width="885" alt="Небольшая строительная монтажная фирма">
     </picture>
-  </section>
-</div>
+  </div>
+</section>
 @@include('../row-alert/row-alert.html')
-<div class="container container--xxl">
-  <section class="about-item">
+<section class="about-item">
+  <div class="about-item__inner">
     <div class="about-item__text">
       <h2 class="about-item__title">Как происходит процесс сотрудничества с&nbsp;нами</h2>
       <p>Процесс взаимодействия с&nbsp;нашей компанией мы&nbsp;сделали максимально комфортным для вас.</p>
@@ -60,12 +83,14 @@
       <source srcset="img/content/about-content-4.webp" type="image/webp">
       <img src="img/content/about-content-4.jpg" width="885" alt="Небольшая строительная монтажная фирма">
     </picture>
-  </section>
-  @@include('../row-form/row-form.html', {
-    "title": "Мы&nbsp;готовы к&nbsp;сотрудничеству!",
-    "subtitle": "Обратитесь к&nbsp;нашим специалистам за&nbsp;консультацией"
-  })
-  <section class="about-item about-item--blue">
+  </div>
+</section>
+@@include('../row-form/row-form.html', {
+  "title": "Мы&nbsp;готовы к&nbsp;сотрудничеству!",
+  "subtitle": "Обратитесь к&nbsp;нашим специалистам за&nbsp;консультацией"
+})
+<section class="about-item about-item--blue">
+  <div class="about-item__inner">
     <div class="about-item__text">
       <h2 class="about-item__title">Наша команда</h2>
       <blockquote>&laquo;Сила команды&nbsp;&mdash; каждый ее&nbsp;участник.<br>
@@ -77,13 +102,12 @@
       <p>Все специалисты работаю совместно, учитывают задачи друг друга и&nbsp;активно обсуждают все вопросы.</p>
       <p>Вы&nbsp;получаете дом, в&nbsp;котором каждая деталь на&nbsp;своем месте и&nbsp;дополняет другую.</p>
       @@include('../btn/btn.html', {
-      "text": "Подробнее о сотрудниках",
-      "bemElement": "about-item__btn"
+        "text": "Подробнее о сотрудниках",
+        "bemElement": "about-item__btn"
       })
     </div>
     <picture class="about-item__picture">
       <source srcset="img/content/team.webp" type="image/webp">
       <img src="img/content/team.jpg" width="885" alt="Небольшая строительная монтажная фирма">
     </picture>
-  </section>
-</div>
+</section>
