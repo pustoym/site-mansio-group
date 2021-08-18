@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Project Name - описание">
-  <!-- генеририровать favicon тут - https://realfavicongenerator.net/ -->
-  <!-- ! в подключение фавикон манифеста обязательно добавить строчки crossorigin="use-credentials"-->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -17,12 +16,37 @@
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="msapplication-config" content="/favicon/browserconfig.xml">
   <meta name="theme-color" content="#0c1e2c">
-  <!-- использовать только для шрифта находящегося на первом экране -->
   <link rel="preload" href="fonts/Commissioner-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Commissioner-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Commissioner-Light.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Mansio — Проекты</title>
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    function cth(c) {
+      document.documentElement.classList.add(c)
+    }
+    'ontouchstart' in window ? cth('touch') : cth('no-touch');
+    if (typeof InstallTrigger !== 'undefined') cth('firefox');
+    if (/constructor/i.test(window.HTMLElement) || (function(p) {
+        return p.toString() === "[object SafariRemoteNotification]"
+      })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))) cth('safari');
+    if ( /*@cc_on!@*/ false || !!document.documentMode) cth('ie');
+    if (!( /*@cc_on!@*/ false || !!document.documentMode) && !!window.StyleMedia) cth('edge');
+    if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) cth('chrome');
+    if (~navigator.appVersion.indexOf("Win")) cth('windows');
+    if (~navigator.appVersion.indexOf("Mac")) cth('osx');
+    if (~['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform)) cth('ios');
+    if (~navigator.appVersion.indexOf("Linux")) cth('linux');
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  </script>
+  <title>Mansio — О компании</title>
 </head>
 
 <body>
@@ -1031,18 +1055,18 @@
         </a>
         <div class="header__inner">
           <nav class="header__nav">
-            <a class="header__link  header__link--active ">Проекты</a>
+            <a class="header__link " href="./projects.html">Проекты</a>
             <a class="header__link " href="./services.html">Услуги</a>
             <a class="header__link " href="./technology.html">Технологии</a>
-            <a class="header__link " href="">О нас</a>
+            <a class="header__link " href="./about.html">О нас</a>
             <a class="header__link " href="./contacts.html">Контакты</a>
           </nav>
-          <a class="header__login" href="##">
-            <svg>
-              <use xlink:href="#login"></use>
-            </svg>
-            Войти
-          </a>
+          <!-- <a class="header__login" href="##">
+        <svg>
+          <use xlink:href="#login"></use>
+        </svg>
+        Войти
+      </a> -->
           <div class="header__social">
             <a class="header__telegram" href="#">
               <svg>
@@ -1057,7 +1081,7 @@
           </div>
           <div class="header__contacts">
             <a class="header__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
-            <a class="header__consultation " href="##">Получить консультацию</a>
+            <a class="header__consultation" href="##" data-modal="back-call">Получить консультацию</a>
           </div>
         </div>
         <!-- burger menu -->
@@ -1070,319 +1094,141 @@
       </div>
     </header>
     <main>
-      <!-- intro-project -->
-      <div class="first-screen  first-screen--projects">
+      <!-- intro-contacts -->
+      <div class="first-screen  first-screen--about">
         <div class="container">
           <div class="first-screen__inner">
-            <h1 class="first-screen__title">Наши проекты</h1>
+            <h1 class="first-screen__title">О&nbsp;компании Mansio Group</h1>
           </div>
         </div>
       </div>
-      <!-- works -->
-      <div class="works">
-        <div class="works__content">
-          <!-- works-item -->
-          <!-- item -->
-          <div class="works-item" style="background-image: url('img/works-item1.jpg');">
-            <svg>
-              <use xlink:href="#works-icon-1"></use>
+      <section class="about-item  about-item--brand">
+        <div class="about-item__inner">
+          <div class="brand-flag">
+            <svg class="brand-flag__logo" width="103" height="16">
+              <use xlink:href="#logo"></use>
             </svg>
-            <div class="works-item__title">Типовые проекты</div>
-            <ul class="works-item__list">
+          </div>
+          <div class="about-item__text">
+            <h2 class="about-item__title">Mansio Group</h2>
+            <p><b>MANSIO GROUP&nbsp;&mdash; это современная, технологичная компания, которая проектирует и&nbsp;строит под
+                ключ
+                каменные дома для частного и&nbsp;коммерческого использования.</b></p>
+            <p>История компании началась с&nbsp;небольшой строительной монтажной фирмы, которая выполняла государственные
+              контракты.</p>
+            <p>Параллельно по&nbsp;просьбе наших друзей и&nbsp;партнеров мы&nbsp;строили им&nbsp;частные дома, нас начали
+              рекомендовать соседям, друзьям друзей.</p>
+            <p>Спрос рождает предложение, поэтому было принято решение о&nbsp;выделении в&nbsp;отдельную структуру
+              и&nbsp;развитии строительной проектной компании, которая получила название MANSIO GROUP.</p>
+          </div>
+          <picture class="about-item__picture">
+            <source srcset="img/content/about-content-1.webp" type="image/webp">
+            <img src="img/content/about-content-1.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+          </picture>
+        </div>
+      </section>
+      <section class="about-item  about-item--invert">
+        <div class="about-item__inner">
+          <div class="about-item__text">
+            <h2 class="about-item__title">Mansio сегодня</h2>
+            <p class="about-teim__lead">MANSIO GROUP сегодня предлагает своими клиентам окружить их&nbsp;заботой, вниманием
+              и&nbsp;уверенностью в&nbsp;том, что процесс проектирования и&nbsp;строительства дома может быть беззаботным
+              и&nbsp;легким.</p>
+            <p>Компания имеет полный штат собственных квалифицированных специалистов: архитекторы, конструкторы, инженеры,
+              дизайнеры, служба инженеров технического надзора, собственные бригады строителей, которые позволяют выполнить
+              работы
+              от&nbsp;проектирования до&nbsp;ландшафтного дизайна и&nbsp;комплектации мебелью.</p>
+            <p>Все усилия нашей команды нацелены на&nbsp;то, что&nbsp;бы процесс проектирования, строитель ства
+              и&nbsp;сотрудничества в&nbsp;целом прошел комфортно. Мы&nbsp;хотим развеять стереотип, что строительство
+              дома&nbsp;&mdash; это сложная и&nbsp;нервная процедура для заказчика.</p>
+          </div>
+          <picture class="about-item__picture">
+            <source srcset="img/content/about-content-2.webp" type="image/webp">
+            <img src="img/content/about-content-2.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+          </picture>
+        </div>
+      </section>
+      <section class="about-item">
+        <div class="about-item__inner">
+          <div class="about-item__text">
+            <h2 class="about-item__title">Наш постулат</h2>
+            <ul>
               <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Приступаем к строительству сразу
+                <h3>Архитектура&nbsp;&mdash;</h3> внимание к&nbsp;деталям, применяем современные архитектурные
+                и&nbsp;дизайнерские
+                решения.
               </li>
               <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Оптимизированный расход материалов
+                <h3>Строительство&nbsp;&mdash;</h3> соблюдение технологии, все строительные и&nbsp;монтажные процессы
+                соответствуют строительным нормам и&nbsp;правилам
               </li>
               <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Стоимость м2 в типовых проектах ниже
+                <h3>Контроль качества&nbsp;&mdash;</h3> тройной контроль, бригадир (или прораб), инженерпроекта, инженер
+                технадзора, так&nbsp;же иногда на&nbsp;объекты приезжают представители заводов производителей строительных
+                материалов.
               </li>
             </ul>
-            <a class="works-item__link" href="##">
-              Подробнее
-              <svg>
-                <use xlink:href="#arrows"></use>
-              </svg>
-            </a>
           </div>
-          <!-- item -->
-          <div class="works-item" style="background-image: url('img/works-item2.jpg');">
-            <svg>
-              <use xlink:href="#works-icon-2"></use>
-            </svg>
-            <div class="works-item__title">Авторские проекты</div>
-            <ul class="works-item__list">
-              <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Кому важна индивидуальность
-              </li>
-              <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Дом большой площади
-              </li>
-              <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Особенности пятна застройки
-              </li>
-            </ul>
-            <a class="works-item__link" href="##">
-              Подробнее
-              <svg>
-                <use xlink:href="#arrows"></use>
-              </svg>
-            </a>
-          </div>
-          <!-- item -->
-          <div class="works-item" style="background-image: url('img/works-item3.jpg');">
-            <svg>
-              <use xlink:href="#works-icon-3"></use>
-            </svg>
-            <div class="works-item__title">Коммерческие проекты</div>
-            <ul class="works-item__list">
-              <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Приступаем к строительству сразу
-              </li>
-              <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Оптимизированный расход материалов
-              </li>
-              <li>
-                <svg>
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-                Стоимость м2 в типовых проектах ниже
-              </li>
-            </ul>
-            <a class="works-item__link" href="projects.html">
-              Подробнее
-              <svg>
-                <use xlink:href="#arrows"></use>
-              </svg>
-            </a>
-          </div>
-          <!--  works item end -->
+          <picture class="about-item__picture">
+            <source srcset="img/content/about-content-3.webp" type="image/webp">
+            <img src="img/content/about-content-3.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+          </picture>
+        </div>
+      </section>
+      <div class="row-alert">
+        <div class="row-alert__inner">
+          <p><b>Наша компания готова выполнить услуги по&nbsp;отдельности, но&nbsp;мы&nbsp;<span style="text-decoration: underline;">настоятельно рекомендуем
+                комплексный подход!</span></b></p>
+          <p>Практическая польза комплексного подхода выгодна в&nbsp;первую очередь Заказчику, наши специалисты: архитекторы,
+            инженеры, дизайнеры, строители работают над проектом совместно, чтобы сразу учитывать нужды и&nbsp;задачи друг
+            друга.</p>
+          <p><b style="text-transform: uppercase;">Результат:</b> Заказчик получает одно гармонично целое,
+            а&nbsp;не&nbsp;набор разных элементов, не&nbsp;согласованных между собой.</p>
         </div>
       </div>
-      <!-- filter -->
-      <div class="filter">
-        <div class="filter__panel">
-          <div class="filter__btn" id='filterShow'>
-            ПОКАЗАТЬ ФИЛЬТР
-            <svg>
-              <use xlink:href="#arrows"></use>
-            </svg>
+      <section class="about-item">
+        <div class="about-item__inner">
+          <div class="about-item__text">
+            <h2 class="about-item__title">Как происходит процесс сотрудничества с&nbsp;нами</h2>
+            <p>Процесс взаимодействия с&nbsp;нашей компанией мы&nbsp;сделали максимально комфортным для вас.</p>
+            <p>На&nbsp;каждом этапе вас будет сопровождать персональный менеджер, который контролирует работу всех
+              специалистов
+              и&nbsp;всегда в&nbsp;курсе, что происходит на&nbsp;вашем объекте.</p>
+            <p>Отчеты, вопросы, важную информацию по&nbsp;ходу строительства менеджер отправляет вам на&nbsp;почту или
+              в&nbsp;любой удобный мессенджер.</p>
           </div>
+          <picture class="about-item__picture">
+            <source srcset="img/content/about-content-4.webp" type="image/webp">
+            <img src="img/content/about-content-4.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+          </picture>
         </div>
-        <div class="filter__inner">
-          <div class="container">
-            <form class="filter__form" action="/">
-              <div class="filter__checkbox">
-                <!-- filter -->
-                <div class="filter__content">
-                  <div class="filter__title">Категории</div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-1" id="categories-1" checked>
-                    <label class="filter__label" for="categories-1">Авторские</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories" id="categories-2">
-                    <label class="filter__label" for="categories-2">Типовые</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories" id="categories-3">
-                    <label class="filter__label" for="categories-3">Коммерческие</label>
-                  </div>
-                </div>
-                <!-- filter -->
-                <div class="filter__content">
-                  <div class="filter__title">ЦЕНА</div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-2" id="categories-4" checked>
-                    <label class="filter__label" for="categories-4">5-7 млн руб</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-2" id="categories-5">
-                    <label class="filter__label" for="categories-5">8-10 млн руб</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-2" id="categories-6">
-                    <label class="filter__label" for="categories-6">11-15 млн руб</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-2" id="categories-7">
-                    <label class="filter__label" for="categories-7">15-20 млн руб</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-2" id="categories-8">
-                    <label class="filter__label" for="categories-8">21+ млн руб</label>
-                  </div>
-                </div>
-                <!-- filter -->
-                <div class="filter__content">
-                  <div class="filter__title">Этажность</div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-3" id="categories-9" checked>
-                    <label class="filter__label" for="categories-9">1 этаж</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-3" id="categories-10">
-                    <label class="filter__label" for="categories-10">2 этажа</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-3" id="categories-11">
-                    <label class="filter__label" for="categories-11">3 этажа</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-3" id="categories-12">
-                    <label class="filter__label" for="categories-12">Мансарда</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-3" id="categories-13">
-                    <label class="filter__label" for="categories-13">Цоколь</label>
-                  </div>
-                </div>
-                <!-- filter -->
-                <div class="filter__content">
-                  <div class="filter__title">Технологии</div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-4" id="categories-14" checked>
-                    <label class="filter__label" for="categories-14">Газобетон</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-4" id="categories-15">
-                    <label class="filter__label" for="categories-15">Тёплая керамика</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-4" id="categories-16">
-                    <label class="filter__label" for="categories-16">Кирпич</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-4" id="categories-17">
-                    <label class="filter__label" for="categories-17">Монолит</label>
-                  </div>
-                </div>
-                <!-- filter -->
-                <div class="filter__content">
-                  <div class="filter__title">Площадь</div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-5" id="categories-18" checked>
-                    <label class="filter__label" for="categories-18">До 200 м2</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-5" id="categories-19">
-                    <label class="filter__label" for="categories-19">200-300 м2</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-5" id="categories-20">
-                    <label class="filter__label" for="categories-20">300-500 м2</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-5" id="categories-21">
-                    <label class="filter__label" for="categories-21">500 м2 и более</label>
-                  </div>
-                </div>
-                <!-- filter -->
-                <div class="filter__content">
-                  <div class="filter__title">Спальни</div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-22" checked>
-                    <label class="filter__label" for="categories-22">1 спальня</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-23">
-                    <label class="filter__label" for="categories-23">2 спальни</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-24">
-                    <label class="filter__label" for="categories-24">3 спальни</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-25">
-                    <label class="filter__label" for="categories-25">4 спальни</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-26">
-                    <label class="filter__label" for="categories-26">5 спален</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-27">
-                    <label class="filter__label" for="categories-27">6 спален</label>
-                  </div>
-                  <div class="filter__wrap">
-                    <input class="filter__input" type="checkbox" name="categories-6" id="categories-28">
-                    <label class="filter__label" for="categories-28">7 спален и более</label>
-                  </div>
-                </div>
-              </div>
-              <!-- nav -->
-              <div class="filter__nav">
-                <div class="filter__btn filter__btn--show" id='filterHide'>
-                  СКРЫТЬ ФИЛЬТР
-                  <svg>
-                    <use xlink:href="#arrows"></use>
-                  </svg>
-                </div>
-                <button class="filter__submit" type="submit">
-                  Применить фильтры
-                  <span>
-                    <svg>
-                      <use xlink:href="#arrows"></use>
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </form>
+      </section>
+      <div class="row-form">
+        <div class="row-form__inner">
+          <div class="row-form__text">
+            <div class="row-form__title">Мы&nbsp;готовы к&nbsp;сотрудничеству!</div>
+            <div class="row-form__subtitle">Обратитесь к&nbsp;нашим специалистам за&nbsp;консультацией</div>
           </div>
-        </div>
-      </div>
-      <!-- form -->
-      <div class="form">
-        <div class="form__inner">
-          <div class="form__text">
-            <div class="form__title">У вас есть свой проект?</div>
-            <div class="form__subtitle">Загрузите его для расчёта. Проведем профессиональную экспертизу и сделаем подробную смету.</div>
-          </div>
-          <form class="form__content" action="/">
-            <div class="form__wrap">
-              <div class="form__item">
+          <form class="row-form__content" action="/">
+            <div class="row-form__wrap">
+              <div class="row-form__item">
                 <svg>
                   <use xlink:href="#form-icon"></use>
                 </svg>
-                <input class="form__file" type="file" name="formFile" id="formFile">
-                <label class="form__file-label" for="formFile">
+                <input class="row-form__file" type="file" name="formFile" id="formFile">
+                <label class="row-form__file-label" for="formFile">
                   Прикрепите файлы
                 </label>
               </div>
-              <div class="form__item">
+              <div class="row-form__item">
                 <svg>
                   <use xlink:href="#contacts-icon-2"></use>
                 </svg>
-                <input class="form__input" type="text" placeholder="Введите номер телефона">
+                <input class="row-form__input" type="text" placeholder="Введите номер телефона">
               </div>
             </div>
-            <button class="form__btn" type="submit">
-              РАССЧИТАТЬ СТОИМОСТЬ
+            <button class="btn  btn--blue row-form__btn" type="submit">
+              Назначить встречу
               <span>
                 <svg>
                   <use xlink:href="#arrows"></use>
@@ -1392,188 +1238,145 @@
           </form>
         </div>
       </div>
-      <!-- project-item -->
-      <div class="project-item">
-        <div class="project-item__inner">
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-1.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Амстердам</div>
+      <section class="about-item about-item--blue">
+        <div class="about-item__inner">
+          <div class="about-item__text">
+            <h2 class="about-item__title">Наша команда</h2>
+            <blockquote>&laquo;Сила команды&nbsp;&mdash; каждый ее&nbsp;участник.<br>
+              Сила каждого участника&nbsp;&mdash; команда&raquo;</blockquote>
+            <p>Наша команда&nbsp;&mdash; активные, инициативные профессионалы своего дела. Каждый участник команды нацелен
+              на&nbsp;идельный результат.</p>
+            <p>Архитекторы, дизайнеры, инженеры и&nbsp;строители MANSIO с&nbsp;опытом работы не&nbsp;менее 10&nbsp;лет
+              и&nbsp;профильным образованием.</p>
+            <p>Все специалисты работаю совместно, учитывают задачи друг друга и&nbsp;активно обсуждают все вопросы.</p>
+            <p>Вы&nbsp;получаете дом, в&nbsp;котором каждая деталь на&nbsp;своем месте и&nbsp;дополняет другую.</p>
+            <a href="/team.html" class="btn  about-item__btn">
+              Подробнее о сотрудниках
+              <span>
+                <svg>
+                  <use xlink:href="#arrows"></use>
+                </svg>
+              </span>
+            </a>
           </div>
-          <!-- item-panel -->
-          <div class="project-item__content project-item__content--panel" style="background-image: url(img/foto/project-item-foto-2.jpg);">
-            <div class="project-item__panel">
-              <div class="project-item__name">
-                <div class="project-item__desc project-item__desc--panel">АВТОРСКИЙ ПРОЕКТ</div>
-                <div class="project-item__title">Канны</div>
-              </div>
-              <ul class="project-item__list">
-                <li>
-                  <span>Площадь:</span>
-                  <span>250 м2</span>
-                </li>
-                <li>
-                  <span>Этажность:</span>
-                  <span>2 + цоколь</span>
-                </li>
-                <li>
-                  <span>Материал:</span>
-                  <span>Монолит</span>
-                </li>
-              </ul>
-              <div class="project-item__btn-wrapper">
-                <a class="btn  ">
-                  Открыть проект
-                  <span>
-                    <svg>
-                      <use xlink:href="#arrows"></use>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-3.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Каталония</div>
-          </div>
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-4.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Скадика</div>
-          </div>
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-5.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Хельсинки</div>
-          </div>
-          <!-- item-panel -->
-          <div class="project-item__content project-item__content--panel" style="background-image: url(img/foto/project-item-foto-6.jpg);">
-            <div class="project-item__panel">
-              <div class="project-item__name">
-                <div class="project-item__desc project-item__desc--panel">ТИПОВОЙ ПРОЕКТ</div>
-                <div class="project-item__title">Анима</div>
-              </div>
-              <ul class="project-item__list">
-                <li>
-                  <span>Площадь:</span>
-                  <span>250 м2</span>
-                </li>
-                <li>
-                  <span>Этажность:</span>
-                  <span>2 + цоколь</span>
-                </li>
-                <li>
-                  <span>Материал:</span>
-                  <span>Монолит</span>
-                </li>
-                <li>
-                  <span>Цена:</span>
-                  <span>от 7,85 млн.</span>
-                </li>
-              </ul>
-              <div class="project-item__btn-wrapper">
-                <a class="btn  ">
-                  Открыть проект
-                  <span>
-                    <svg>
-                      <use xlink:href="#arrows"></use>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-7.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Амбассадор</div>
-          </div>
-          <!-- item-panel -->
-          <div class="project-item__content project-item__content--panel" style="background-image: url(img/foto/project-item-foto-8.jpg);">
-            <div class="project-item__panel">
-              <div class="project-item__name">
-                <div class="project-item__desc project-item__desc--panel">КОММЕРЧЕСКИЙ ПРОЕКТ</div>
-                <div class="project-item__title">Мио</div>
-              </div>
-              <ul class="project-item__list">
-                <li>
-                  <span>Площадь:</span>
-                  <span>250 м2</span>
-                </li>
-                <li>
-                  <span>Этажность:</span>
-                  <span>2 + цоколь</span>
-                </li>
-                <li>
-                  <span>Материал:</span>
-                  <span>Монолит</span>
-                </li>
-                <li>
-                  <span>Назначение:</span>
-                  <span>База отдыха</span>
-                </li>
-              </ul>
-              <div class="project-item__btn-wrapper">
-                <a class="btn  ">
-                  Открыть проект
-                  <span>
-                    <svg>
-                      <use xlink:href="#arrows"></use>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-9.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Амбассадор</div>
-          </div>
-          <!-- item -->
-          <div class="project-item__content" style="background-image: url(img/foto/project-item-foto-10.jpg);">
-            <div class="project-item__desc">АВТОРСКИЙ ПРОЕКТ</div>
-            <div class="project-item__title">Амбассадор</div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="project-item__nav">
-            <button>
-              ПОКАЗАТЬ БОЛЬШЕ ПРОЕКТОВ
+          <picture class="about-item__picture">
+            <source srcset="img/content/team.webp" type="image/webp">
+            <img src="img/content/team.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+          </picture>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__name">
+            <a class="footer__logo" href="index.html" aria-label="Переход на главную">
               <svg>
-                <use xlink:href="#arrows"></use>
+                <use xlink:href="#logo"></use>
               </svg>
+            </a>
+            <div class="footer__title">Строим дома бизнес-класса в Москве и Московской области</div>
+            <div class="footer__bank">
+              <span>ООО «МАНСИО ГРУПП»</span>
+              <span>ИНН 7727435818</span>
+              <span>ОГРН 1197746734767</span>
+            </div>
+            <a class="footer__policy" href="##">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__center">
+            <nav class="footer__nav">
+              <a class="footer__link " href="./projects.html">Проекты</a>
+              <a class="footer__link " href="./services.html">Услуги</a>
+              <a class="footer__link " href="./technology.html">Технологии</a>
+              <a class="footer__link  footer__link--active ">О нас</a>
+              <a class="footer__link " href="./contacts.html">Контакты</a>
+            </nav>
+            <!-- <div class="footer__login">
+          <a href="##">
+            <svg>
+              <use xlink:href="#login"></use>
+            </svg>
+            Войти в личный кабинет
+          </a>
+        </div> -->
+          </div>
+          <div class="footer__contacts">
+            <div class="footer__wrap">
+              <div class="footer__item">
+                <div class="footer__item-wrap">
+                  <svg>
+                    <use xlink:href="#contacts-icon-2"></use>
+                  </svg>
+                  <div class="footer__text">
+                    <a class="footer__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
+                    <button>Получить консультацию</button>
+                  </div>
+                </div>
+                <div class="footer__social">
+                  <a href="##">
+                    <svg>
+                      <use xlink:href="#telegram"></use>
+                    </svg>
+                  </a>
+                  <a href="##">
+                    <svg>
+                      <use xlink:href="#whatsapp"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__item-wrap">
+                  <svg>
+                    <use xlink:href="#reviews-slider-icon-2"></use>
+                  </svg>
+                  <div class="footer__text">
+                    <div class="footer__subtitle">Адрес:</div>
+                    <span>г. Москва, ул. Шмидтов, д. 48, 3-й этаж</span>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__item-wrap">
+                  <svg>
+                    <use xlink:href="#footer-icon-1"></use>
+                  </svg>
+                  <div class="footer__text">
+                    <div class="footer__subtitle">Электронная почта:</div>
+                    <span>info@infoinfo.ru</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn  " type="button">
+              Обратный звонок
+              <span>
+                <svg>
+                  <use xlink:href="#arrows"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </div>
       </div>
-      <!-- contacts -->
-      <div class="contacts">
-        <div class="container">
-          <div class="contacts__inner">
-            <div class="contacts__content">
-              <div class="contacts__logo">
-                <svg width="103" height="16">
-                  <use xlink:href="#logo"></use>
-                </svg>
-              </div>
-              <div class="contacts__wrap">
-                <div class="contacts__name">
-                  <div class="contacts__title">Михаил Михайлов</div>
-                  <div class="contacts__subtitle">Архитектор Mansio</div>
-                </div>
-                <div class="contacts__foto">
-                  <picture>
-                    <source srcset="img/content/manager.webp 1x" type="image/webp">
-                    <img src="img/content/manager.png" width="651" alt="Фотография Архитектор Mansio Михаил Михайлов">
-                  </picture>
-                </div>
-                <!-- contacts-form -->
+      <div class="footer__bottom"></div>
+    </footer>
+    <!-- инклюд модалки -->
+    <div class="modal modal--preload modal--back-call   modal--fit-content   ">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <article class="action-call">
+            <div class="brand-flag">
+              <svg class="brand-flag__logo" width="103" height="16">
+                <use xlink:href="#logo"></use>
+              </svg>
+            </div>
+            <div class="action-call__content">
+              <div class="action-call__form-column">
                 <div class="contacts-form">
-                  <span>Не нашли подходящий проект?</span>
-                  <div class="contacts-form__title">Спроектируем ваше <br> индивидуальное решение</div>
+                  <span>Форма заявки</span>
+                  <div class="contacts-form__title">Мы&nbsp;вам перезвоним</div>
                   <form class="contacts-form__form" action="/">
                     <ul class="contacts-form__list">
                       <li>
@@ -1635,133 +1438,18 @@
                     </div>
                   </form>
                 </div>
-                <!-- contacts-form end -->
               </div>
             </div>
-          </div>
-          <!-- contacts-text -->
-          <div class="contacts-about">
-            <div class="contacts-about__content">
-              <div class="contacts-about__title">Узнайте больше о нас и нашем подходе!</div>
-              <a class="contacts-about__link" href="##">
-                ПЕРЕЙТИ В РАЗДЕЛ О НАС
-                <svg>
-                  <use xlink:href="#arrows"></use>
-                </svg>
-              </a>
-              <a class="contacts-about__btn" href="##">
-                Посетить наши готовые <br> объекты и пообщаться <br> с их владельцами
-                <svg>
-                  <use xlink:href="#arrows"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="contacts-about__foto">
-              <img src="img/foto/contacts-about-foto.jpg" alt="##">
-            </div>
-          </div>
-          <!-- contacts-text end -->
+          </article>
+          <!-- <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+        <svg width="15" height="15">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button> -->
         </div>
       </div>
-      <!-- footer -->
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__name">
-            <a class="footer__logo" href="index.html" aria-label="Переход на главную">
-              <svg>
-                <use xlink:href="#logo"></use>
-              </svg>
-            </a>
-            <div class="footer__title">Строим дома бизнес-класса в Москве и Московской области</div>
-            <div class="footer__bank">
-              <span>ООО «МАНСИО ГРУПП»</span>
-              <span>ИНН 7727435818</span>
-              <span>ОГРН 1197746734767</span>
-            </div>
-            <a class="footer__policy" href="##">Политика конфиденциальности</a>
-          </div>
-          <div class="footer__center">
-            <nav class="footer__nav">
-              <a class="footer__link  footer__link--active ">Проекты</a>
-              <a class="footer__link " href="./services.html">Услуги</a>
-              <a class="footer__link " href="./technology.html">Технологии</a>
-              <a class="footer__link " href="#">О нас</a>
-              <a class="footer__link " href="./contacts.html">Контакты</a>
-            </nav>
-            <div class="footer__login">
-              <a href="##">
-                <svg>
-                  <use xlink:href="#login"></use>
-                </svg>
-                Войти в личный кабинет
-              </a>
-            </div>
-          </div>
-          <div class="footer__contacts">
-            <div class="footer__wrap">
-              <div class="footer__item">
-                <div class="footer__item-wrap">
-                  <svg>
-                    <use xlink:href="#contacts-icon-2"></use>
-                  </svg>
-                  <div class="footer__text">
-                    <a class="footer__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
-                    <button>Получить консультацию</button>
-                  </div>
-                </div>
-                <div class="footer__social">
-                  <a href="##">
-                    <svg>
-                      <use xlink:href="#telegram"></use>
-                    </svg>
-                  </a>
-                  <a href="##">
-                    <svg>
-                      <use xlink:href="#whatsapp"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="footer__item">
-                <div class="footer__item-wrap">
-                  <svg>
-                    <use xlink:href="#reviews-slider-icon-2"></use>
-                  </svg>
-                  <div class="footer__text">
-                    <div class="footer__subtitle">Адрес:</div>
-                    <span>г. Москва, ул. Шмидтов, д. 48, 3-й этаж</span>
-                  </div>
-                </div>
-              </div>
-              <div class="footer__item">
-                <div class="footer__item-wrap">
-                  <svg>
-                    <use xlink:href="#footer-icon-1"></use>
-                  </svg>
-                  <div class="footer__text">
-                    <div class="footer__subtitle">Электронная почта:</div>
-                    <span>info@infoinfo.ru</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="btn  ">
-              Обратный звонок
-              <span>
-                <svg>
-                  <use xlink:href="#arrows"></use>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom"></div>
-    </footer>
+    </div>
   </div>
-  <!-- index scripts -->
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Project Name - описание">
-  <!-- генеририровать favicon тут - https://realfavicongenerator.net/ -->
-  <!-- ! в подключение фавикон манифеста обязательно добавить строчки crossorigin="use-credentials"-->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -17,11 +16,36 @@
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="msapplication-config" content="/favicon/browserconfig.xml">
   <meta name="theme-color" content="#0c1e2c">
-  <!-- использовать только для шрифта находящегося на первом экране -->
   <link rel="preload" href="fonts/Commissioner-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Commissioner-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Commissioner-Light.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    function cth(c) {
+      document.documentElement.classList.add(c)
+    }
+    'ontouchstart' in window ? cth('touch') : cth('no-touch');
+    if (typeof InstallTrigger !== 'undefined') cth('firefox');
+    if (/constructor/i.test(window.HTMLElement) || (function(p) {
+        return p.toString() === "[object SafariRemoteNotification]"
+      })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))) cth('safari');
+    if ( /*@cc_on!@*/ false || !!document.documentMode) cth('ie');
+    if (!( /*@cc_on!@*/ false || !!document.documentMode) && !!window.StyleMedia) cth('edge');
+    if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) cth('chrome');
+    if (~navigator.appVersion.indexOf("Win")) cth('windows');
+    if (~navigator.appVersion.indexOf("Mac")) cth('osx');
+    if (~['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform)) cth('ios');
+    if (~navigator.appVersion.indexOf("Linux")) cth('linux');
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  </script>
   <title>Mansio — Услуги</title>
 </head>
 
@@ -1031,18 +1055,18 @@
         </a>
         <div class="header__inner">
           <nav class="header__nav">
-            <a class="header__link " href="./project.html">Проекты</a>
+            <a class="header__link " href="./projects.html">Проекты</a>
             <a class="header__link  header__link--active ">Услуги</a>
             <a class="header__link " href="./technology.html">Технологии</a>
-            <a class="header__link " href="">О нас</a>
+            <a class="header__link " href="./about.html">О нас</a>
             <a class="header__link " href="./contacts.html">Контакты</a>
           </nav>
-          <a class="header__login" href="##">
-            <svg>
-              <use xlink:href="#login"></use>
-            </svg>
-            Войти
-          </a>
+          <!-- <a class="header__login" href="##">
+        <svg>
+          <use xlink:href="#login"></use>
+        </svg>
+        Войти
+      </a> -->
           <div class="header__social">
             <a class="header__telegram" href="#">
               <svg>
@@ -1057,7 +1081,7 @@
           </div>
           <div class="header__contacts">
             <a class="header__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
-            <a class="header__consultation " href="##">Получить консультацию</a>
+            <a class="header__consultation" href="##" data-modal="back-call">Получить консультацию</a>
           </div>
         </div>
         <!-- burger menu -->
@@ -1078,6 +1102,39 @@
           </div>
         </div>
       </div>
+      <section class="about-item  about-item--brand">
+        <div class="about-item__inner">
+          <div class="brand-flag">
+            <svg class="brand-flag__logo" width="103" height="16">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </div>
+          <div class="about-item__text">
+            <h2 class="about-item__title">Mansio Group</h2>
+            <p><b>Мы&nbsp;&mdash; строительная компания полного цикла.</b></p>
+            <p>Выполняем все виды работ от&nbsp;проектирования до&nbsp;ландшафтного <br>дизайна и&nbsp;комплектации мебелью.
+              Один подрядчик на&nbsp;все виды <br>работ&nbsp;&mdash; <b style="text-transform: uppercase;">единый центр ответственности!</b></p>
+            <ul style="margin-bottom: 25px;">
+              <li>Архитектурный стиль определяет конструктив;</li>
+              <li>Ландшафтный дизайн выполняется в&nbsp;гармонии с&nbsp;фасадами;</li>
+              <li>Дизайн фасада и&nbsp;интерьера взаимно дополняют друг друга;</li>
+              <li>Дизайн интерьера связан с&nbsp;монтажом всех коммуникаций;</li>
+              <li>Видеонаблюдению в&nbsp;режиме реального времени.</li>
+            </ul>
+            <p><b style="text-transform: uppercase;">Результат:</b></p>
+            <ul>
+              <li>Участок, экстерьер и&nbsp;интерьер дома выглядят единым целым;</li>
+              <li>Исключены ошибки в&nbsp;процессе строительства;</li>
+              <li>В&nbsp;построенном нами доме продуманы все детали;</li>
+              <li>Ваш дом полностью готов для комфортного проживания.</li>
+            </ul>
+          </div>
+          <picture class="about-item__picture">
+            <source srcset="img/content/about-content-1.webp" type="image/webp">
+            <img src="img/content/about-content-1.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+          </picture>
+        </div>
+      </section>
       <section class="services">
         <!-- item 1 -->
         <div class="services__item">
@@ -1141,14 +1198,14 @@
                 Наличие проходных комнат и&nbsp;др.
               </li>
             </ul>
-            <a class="btn btn--blue " data-modal="already-have">
+            <button class="btn btn--blue " data-modal="already-have" type="button">
               У&nbsp;меня уже есть проект
               <span>
                 <svg>
                   <use xlink:href="#arrows"></use>
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </div>
         <!-- item 2 -->
@@ -1566,20 +1623,20 @@
           </div>
           <div class="footer__center">
             <nav class="footer__nav">
-              <a class="footer__link " href="./project.html">Проекты</a>
+              <a class="footer__link " href="./projects.html">Проекты</a>
               <a class="footer__link  footer__link--active ">Услуги</a>
               <a class="footer__link " href="./technology.html">Технологии</a>
-              <a class="footer__link " href="#">О нас</a>
+              <a class="footer__link " href="./about.html">О нас</a>
               <a class="footer__link " href="./contacts.html">Контакты</a>
             </nav>
-            <div class="footer__login">
-              <a href="##">
-                <svg>
-                  <use xlink:href="#login"></use>
-                </svg>
-                Войти в личный кабинет
-              </a>
-            </div>
+            <!-- <div class="footer__login">
+          <a href="##">
+            <svg>
+              <use xlink:href="#login"></use>
+            </svg>
+            Войти в личный кабинет
+          </a>
+        </div> -->
           </div>
           <div class="footer__contacts">
             <div class="footer__wrap">
@@ -1629,14 +1686,14 @@
                 </div>
               </div>
             </div>
-            <a class="btn  ">
+            <button class="btn  " type="button">
               Обратный звонок
               <span>
                 <svg>
                   <use xlink:href="#arrows"></use>
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -1648,8 +1705,8 @@
         <div class="modal__overlay"></div>
         <div class="modal__content">
           <article class="action-call">
-            <div class="action-call__aside">
-              <svg class="action-call__logo" width="103" height="16">
+            <div class="brand-flag">
+              <svg class="brand-flag__logo" width="103" height="16">
                 <use xlink:href="#logo"></use>
               </svg>
             </div>
@@ -1658,6 +1715,93 @@
                 <div class="contacts-form">
                   <span>Форма заявки</span>
                   <div class="contacts-form__title">Мы&nbsp;вам перезвоним</div>
+                  <form class="contacts-form__form" action="/">
+                    <ul class="contacts-form__list">
+                      <li>
+                        Определите назначение дома
+                        <svg>
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Выберите архитектурный стиль
+                        <svg>
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Определите желаемую площадь дома
+                        <svg>
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Посмотрите образцы материалов
+                        <svg>
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </li>
+                      <li>
+                        Получите полную техническую консультацию
+                        <svg>
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="contacts-form__block">
+                      <div class="contacts-form__input">
+                        <svg>
+                          <use xlink:href="#contacts-icon-1"></use>
+                        </svg>
+                        <input type="text" placeholder="Введите ваше имя">
+                      </div>
+                      <div class="contacts-form__input">
+                        <svg>
+                          <use xlink:href="#contacts-icon-2"></use>
+                        </svg>
+                        <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
+                      </div>
+                      <div class="contacts-form__checkbox">
+                        <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
+                        <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно политике конфиденциальности</label>
+                      </div>
+                      <button class="contacts-form__btn" type="submit">
+                        Записаться на встречу с архитектором
+                        <span>
+                          <svg>
+                            <use xlink:href="#arrows"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+        <svg width="15" height="15">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button> -->
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--already-have   modal--fit-content   ">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <article class="action-call">
+            <div class="brand-flag">
+              <svg class="brand-flag__logo" width="103" height="16">
+                <use xlink:href="#logo"></use>
+              </svg>
+            </div>
+            <div class="action-call__content">
+              <div class="action-call__form-column">
+                <div class="contacts-form">
+                  <span>Форма заявки</span>
+                  <div class="contacts-form__title">У&nbsp;вас есть готовый проект?<br>Присылайте нам его.</div>
                   <form class="contacts-form__form" action="/">
                     <ul class="contacts-form__list">
                       <li>
