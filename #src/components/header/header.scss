@@ -205,10 +205,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1;
   }
   &__phone {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 20.8px;
     margin-bottom: 14px;
     color: $color-default-white;
     &:hover {
@@ -220,7 +221,7 @@
   }
   &__consultation {
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 16.7px;
     color: $color-default-white;
     text-decoration: underline;
     &:hover {
