@@ -93,3 +93,8 @@
     padding-right: 16px;
   }
 }
+
+@mixin vh100 {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}

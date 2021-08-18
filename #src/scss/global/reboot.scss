@@ -1,7 +1,7 @@
 *,
 *:before,
 *:after {
-   box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
@@ -14,8 +14,8 @@ html {
 
 body,
 html {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -33,8 +33,37 @@ body {
 }
 
 a {
-   text-decoration: none;
-   transition: $default-transition-settings;
+  color: $link-color;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: bold;
+  transition: color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $link-color--hover;
+  }
+
+  &[href^="tel:"] {
+    // На больших экранах телефоны-ссылки делаем обычным текстом
+    @media (min-width: $viewport--lg) {
+      white-space: nowrap;
+      pointer-events: none;
+      text-decoration: inherit;
+      color: inherit;
+    }
+  }
+}
+
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+textarea {
+  touch-action: manipulation; // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
+  margin: 0; // Убираем margin в Firefox и Safari
 }
 
 img,
@@ -110,12 +139,12 @@ input[type="number"] {
 select,
 textarea,
 input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"]) {
   appearance: none;
 }
 
@@ -126,7 +155,8 @@ button,
   appearance: none;
 }
 
-picture, source {
+picture,
+source {
   font-size: 0;
 }
 
@@ -140,9 +170,19 @@ picture, source {
   }
 } */
 
+// Коррекция для кликабельных элементов с указанной ролью в iOS
+[role="button"] {
+  cursor: pointer;
+}
+
 // hard reset
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -150,11 +190,9 @@ p {
   margin: 0;
 }
 
-
 li {
   list-style: none;
 }
-
 
 ul {
   padding-left: 0;
@@ -163,7 +201,7 @@ ul {
 
 input[type="number"]:hover,
 input[type="number"]:focus {
-   -moz-appearance: number-input
+  -moz-appearance: number-input;
 }
 
 input {

@@ -1,6 +1,8 @@
 .footer {
    background-image: url('../img/foto/footer-background.png');
    background-repeat: repeat;
+   background-color: #0c1e2c;
+   color: $color-default-white;
 
    padding-top: 79px;
    @media ( max-width: 991px ) {
