@@ -1,0 +1,24 @@
+.brand-flag {
+  align-self: stretch;
+  flex: none;
+  // padding-bottom: 80px;
+  display: flex;
+  align-items: flex-end;
+  width: 70px;
+  background-color: #dce6ed;
+  position: relative;
+
+  @include viewport--sm {
+    width: 48px;
+  }
+
+  &__logo {
+    width: 135px;
+    height: 20px;
+    position: absolute;
+    bottom: 93px;
+    left: 50%;
+    margin-left: calc(-135px / 2);
+    transform: rotate(-90deg);
+  }
+}

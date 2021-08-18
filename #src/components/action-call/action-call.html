@@ -1,9 +1,5 @@
 <article class="action-call">
-  <div class="action-call__aside">
-    <svg class="action-call__logo" width="103" height="16">
-      <use xlink:href="#logo"></use>
-    </svg>
-  </div>
+  @@include('../brand-flag/brand-flag.html')
   <div class="action-call__content">
     @@if (context.person) {
       @@include('../person/person.html', {

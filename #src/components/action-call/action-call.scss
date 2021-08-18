@@ -14,30 +14,6 @@ $left-offset: var(--action-call-left-offset);
   position: relative;
   overflow: hidden;
 
-  &__aside {
-    flex: none;
-    // padding-bottom: 80px;
-    display: flex;
-    align-items: flex-end;
-    width: 70px;
-    background-color: #dce6ed;
-    position: relative;
-
-    @include viewport--sm {
-      width: 48px;
-    }
-  }
-
-  &__logo {
-    width: 103px;
-    height: 16px;
-    position: absolute;
-    bottom: 93px;
-    left: 50%;
-    margin-left: -51.5px;
-    transform: rotate(-90deg);
-  }
-
   &__content {
     width: 100%;
     display: flex;
