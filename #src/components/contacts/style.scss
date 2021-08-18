@@ -117,7 +117,6 @@
       }
    }
    &__title {
-      font-family: $font-700;
       font-weight: 700;
       font-size: 1.6rem;
       color: $secondary-color;
@@ -145,7 +144,6 @@
       }
    }
    &__subtitle {
-      font-family: $font-400;
       font-size: 1.4rem;
       color: #999;
    }
@@ -156,7 +154,6 @@
       margin-top: -40px;
       padding-bottom: 148px;
       span {
-         font-family: $font-400;
          font-size: 1.4rem;
          line-height: 2rem;
          color: #7c97aa;
@@ -192,7 +189,6 @@
       }
    }
    &__social-title {
-      font-family: $font-700;
       font-weight: 700;
       font-size: 2.9rem;
       line-height: 3.7rem;

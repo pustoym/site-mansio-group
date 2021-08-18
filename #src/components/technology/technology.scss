@@ -43,8 +43,8 @@
   }
 
   &:hover {
-    .article-card__img:after {
 
+    .article-card__img:after {
       background: rgba(0, 0, 0, 0.15);
     }
 
@@ -54,7 +54,6 @@
   }
 
   &__title {
-    font-family: $font-600;
     font-size: 29.2px;
     font-weight: 600;
     z-index: 1;

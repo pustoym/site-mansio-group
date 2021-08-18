@@ -30,7 +30,7 @@
       padding-bottom: 40px;
     }
     & > span {
-      font-family: $font-300;
+      font-weight: 300;
       font-size: 1.6rem;
       color: #bebebe;
       margin: 0 45px;
@@ -41,7 +41,6 @@
   }
 
   &__link {
-    font-family: $font-400;
     font-size: 1.6rem;
     color: $secondary-color;
     text-decoration: underline;
@@ -87,7 +86,6 @@
       padding-top: 25px;
     }
     span {
-      font-family: $font-300;
       font-weight: 300;
       font-size: 1.6rem;
       line-height: 1.8rem;
@@ -101,7 +99,6 @@
         margin-bottom: 15px;
       }
       span {
-        font-family: $font-700;
         font-weight: 700;
         color: $primary-color;
       }
@@ -126,7 +123,6 @@
       margin-top: 0;
     }
     li {
-      font-family: $font-300;
       font-weight: 300;
       font-size: 1.6rem;
       line-height: 1.8rem;

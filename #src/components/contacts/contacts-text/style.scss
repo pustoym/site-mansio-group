@@ -23,7 +23,6 @@
     }
 
     span {
-      font-family: $font-400;
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 3rem;
@@ -42,7 +41,6 @@
   }
 
   &__title {
-    font-family: $font-700;
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.8rem;
@@ -104,7 +102,6 @@
   }
 
   &__desc {
-    font-family: $font-400;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.6rem;
@@ -160,7 +157,6 @@
     }
 
     span {
-      font-family: $font-400;
       font-weight: 400;
       font-size: 1.4rem;
       color: #999;
@@ -172,7 +168,6 @@
   }
 
   &__fio {
-    font-family: $font-500;
     font-weight: 500;
     font-size: 1.6rem;
     color: $primary-color;

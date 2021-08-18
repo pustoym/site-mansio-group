@@ -75,7 +75,6 @@
     }
   }
   &__link {
-    font-family: $font-500;
     font-weight: 500;
     font-size: 16.7px;
     color: $color-default-white;
@@ -140,7 +139,6 @@
     display: flex;
     align-items: center;
 
-    font-family: $font-300;
     font-weight: 300;
     font-size: 1.6rem;
     text-decoration: underline;
@@ -209,7 +207,6 @@
     align-items: center;
   }
   &__phone {
-    font-family: $font-700;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 14px;
@@ -222,7 +219,6 @@
     }
   }
   &__consultation {
-    font-family: $font-300;
     font-weight: 300;
     font-size: 1.6rem;
     color: $color-default-white;

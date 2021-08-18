@@ -66,7 +66,6 @@
     justify-content: center;
   }
   &__desc {
-    font-family: $font-400;
     font-weight: 400;
     font-size: 1.6rem;
     color: #999;
@@ -78,7 +77,6 @@
     }
   }
   &__title {
-    font-family: $font-700;
     font-weight: 700;
     font-size: 2.9rem;
     line-height: 2.9rem;
@@ -101,7 +99,6 @@
     }
   }
   &__subtitle {
-    font-family: $font-500;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.6rem;
@@ -126,7 +123,6 @@
       margin-bottom: 10px;
     }
     li {
-      font-family: $font-400;
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 2.8rem;
@@ -147,7 +143,6 @@
   }
 
   &__quote {
-    font-family: $font-500;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 2rem;
@@ -180,7 +175,6 @@
       fill: #dce6ed;
     }
     span {
-      font-family: $font-400;
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 2.8rem;
@@ -197,7 +191,6 @@
     display: flex;
     flex-direction: column;
     span {
-      font-family: $font-400;
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 2.7rem;

@@ -13,7 +13,6 @@
       }
    }
    &__btn {
-      font-family: $font-500;
       font-weight: 500;
       font-size: 1.3rem;
       color: #517489;
@@ -68,7 +67,6 @@
       }
    }
    &__title {
-      font-family: $font-700;
       font-weight: 700;
       font-size: 1.4rem;
       color: $secondary-color;
@@ -80,7 +78,6 @@
       }
    }
    &__label {
-      font-family: $font-300;
       font-weight: 300;
       font-size: 1.4rem;
       color: #898989;
@@ -97,7 +94,7 @@
          width: 16px;
          height: 16px;
          box-shadow: inset 0px 1px 8px 0 rgba(0, 0, 0, 0.2);
-         background-color: #fff;     
+         background-color: #fff;
       }
    }
    &__input:checked + .filter__label {
@@ -163,7 +160,6 @@
       }
    }
    &__submit {
-      font-family: $font-500;
       font-weight: 500;
       font-size: 1.3rem;
       color: #f7f7f7;
