@@ -33,7 +33,7 @@ const initModals = () => {
   if (modalRefForVie && modalRefForVieBtns.length) {
     setupModal(modalRefForVie, false, modalRefForVieBtns);
   }
-  if (modalAlreadyHave && modalRefForVieBtns.length) {
+  if (modalAlreadyHave && modalAlreadyHaveBtns.length) {
     setupModal(modalAlreadyHave, false, modalAlreadyHaveBtns);
   }
   if (modalBackCall && modalBackCallBtns.length) {
