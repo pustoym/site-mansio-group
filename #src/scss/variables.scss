@@ -11,13 +11,21 @@ $primary-color: #f9df8f; // hsl(45, 90%, 77%)
 $primary-color-desaturate: #f0d276; // hsl(45, 80%, 70%)
 $primary-color-lighten: #fcf7e6; // hsl(46, 79%, 95%)
 $secondary-color: #0c1e2c; // hsl(206, 57%, 11%)
+$secondary-color-desaturate: #0d1e2b; // hsl(206, 54%, 11%)
 $secondary-color-lighten: #153248; // hsl(206, 55%, 18%)
 $grey: #595959;
 
 // Typography
 //---------------------------------
 
-// $font-family--:                     $font-400;
+$font-family:                     "Commissioner", "Arial", sans-serif;
+$logo-font: "Radiotechnika", "Arial", sans-serif;
+$font-size: 16.7px;
+$font-size-h1: 37.5px;
+$font-size-h2: 33.3px;
+$font-size-h3: 29.2px;
+$line-height:  1.68;
+
 
 
 // Animation
