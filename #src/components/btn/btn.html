@@ -1,4 +1,6 @@
-<a @@if (context.href) {href="@@href"} class="btn @@if (context.mod) {btn--@@mod} @@if (context.bemElement) {@@bemElement}" @@if (context.modal) { data-modal="@@modal" }>
+@@if (context.href) {
+<a href="@@href" class="btn @@if (context.mod) {btn--@@mod} @@if (context.bemElement) {@@bemElement}" @@if
+  (context.modal) {data-modal="@@modal"}>
   @@text
   <span>
     <svg>
@@ -6,3 +8,16 @@
     </svg>
   </span>
 </a>
+}
+@@if (!context.href) {
+<button class="btn @@if (context.mod) {btn--@@mod} @@if (context.bemElement) {@@bemElement}"
+        @@if (context.modal) {data-modal="@@modal"}
+        type="button">
+  @@text
+  <span>
+    <svg>
+      <use xlink:href="#arrows"></use>
+    </svg>
+  </span>
+</button>
+}
