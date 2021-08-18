@@ -1,13 +1,13 @@
 .services {
-  padding-top: 142px;
+  margin: 0 auto;
+  margin-top: 142px;
   padding-bottom: 2px;
   max-width: 1920px;
-  margin: 0 auto;
   @media (max-width: 768px) {
-    padding-top: 80px;
+    margin-top: 80px;
   }
   @media (max-width: 567px) {
-    padding-top: 30px;
+    margin-top: 30px;
   }
   &__item {
     display: flex;
