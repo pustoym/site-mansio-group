@@ -15,7 +15,7 @@
   <div class="wrapper">
     <!-- header -->
     @@include('components/header/header.html', {
-    "activeLinkIndex": 0
+      "activeLinkIndex": 0
     })
     <main>
       <!-- intro-project -->
@@ -28,7 +28,10 @@
       <!-- filter -->
       @@include('components/filter/template.html')
       <!-- form -->
-      @@include('components/form/template.html')
+      @@include('components/row-form/row-form.html', {
+        "title": "У&nbsp;вас есть свой проект?",
+        "subtitle": "Загрузите его для расчёта. Проведем профессиональную экспертизу и&nbsp;сделаем подробную смету."
+      })
       <!-- project-item -->
       @@include('components/project-item/project-item.html')
       <!-- contacts -->
@@ -36,7 +39,7 @@
       <!-- footer -->
     </main>
     @@include('components/footer/footer.html', {
-    "activeLinkIndex": 0
+      "activeLinkIndex": 0
     })
   </div>
 

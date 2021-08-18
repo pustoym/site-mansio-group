@@ -19,6 +19,8 @@
 // Blocks
 //---------------------------------
 
+// @import "../components/*";
+
 /* header */
 @import "../components/header/header.scss";
 @import "../components/header/menu/style.scss";
@@ -44,7 +46,7 @@
 @import "../components/works/works-item/style.scss";
 
 /* about */
-@import "../components/about/about";
+@import "../components/approach/approach";
 
 /* product */
 @import "../components/product/product";
@@ -92,7 +94,7 @@
 @import "../components/filter/style.scss";
 
 /* form */
-@import "../components/form/style.scss";
+@import "../components/row-form/row-form";
 
 /* contacts */
 @import "../components/contacts/contacts-about/style.scss";
@@ -101,4 +103,8 @@
 @import "../components/project-item/project-item";
 
 // статьи технологии
-@import "../components/technology/technology.scss"
+@import "../components/technology/technology";
+
+
+// Страница о нас
+@import "../components/about/about"

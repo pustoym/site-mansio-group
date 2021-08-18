@@ -1,149 +1,90 @@
-.about {
-  background-image: url("../../img/foto/about-background.png");
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center;
+.about-item {
+  // padding: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 105px;
+  font-size: 16.7px;
+  line-height: 24px;
+  color: $grey;
 
-  padding-bottom: 127px;
-  @media (max-width: 991px) {
-    padding-bottom: 40px;
+  &__text {
+    width: 680px;
+    // max-width: 44%;
+    margin-right: 100px;
   }
-  @media (max-width: 576px) {
-    padding-bottom: 20px;
-  }
-  &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    padding-top: 108px;
-    padding-bottom: 147px;
-    @media (max-width: 991px) {
-      padding-top: 60px;
-      padding-bottom: 80px;
-    }
-    @media (max-width: 714px) {
-      flex-direction: column;
-    }
-    @media (max-width: 576px) {
-      padding-top: 30px;
-      padding-bottom: 40px;
-    }
-    & > span {
-      font-family: $font-300;
-      font-size: 1.6rem;
-      color: #bebebe;
-      margin: 0 45px;
-      @media (max-width: 714px) {
-        margin: 20px 0;
-      }
+  &__picture {
+    width: 885px;
+    // max-width: 46%;
+    flex: none;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 
-  &__link {
-    font-family: $font-400;
-    font-size: 1.6rem;
+  &__title,
+  h2 {
     color: $secondary-color;
-    text-decoration: underline;
+    font-size: 29.2px;
+    line-height: 37.5px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+  }
 
-    display: flex;
-    align-items: center;
-    transition: 0.2s;
-    &:hover {
-      color: $primary-color;
-    }
-    svg {
-      width: 48px;
-      height: 55px;
-      margin-right: 18px;
+  &__lead {
+    font-weight: bold;
+    color: #0d1e2b;
+  }
+
+  &__btn {
+    margin-top: 60px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  li {
+    h3 {
+      display: inline-block;
     }
   }
-  &__content {
-    display: flex;
-    @media (max-width: 991px) {
-      flex-direction: column;
-      align-items: center;
-    }
+
+  blockquote {
+    margin: 0;
+    font-style: italic;
+    padding-left: 28px;
+    border-left: 2px solid $primary-color;
+    margin-bottom: 40px;
   }
-  &__foto {
-    margin-right: 77px;
-    @media (max-width: 991px) {
+
+  &--invert {
+    flex-direction: row-reverse;
+
+    .about-item__text {
       margin-right: 0;
     }
-    img {
-      width: 100%;
-      max-width: 471px;
+
+    .about-item__picture {
+      margin-right: 100px;
     }
   }
-  &__text {
-    display: flex;
-    flex-direction: column;
 
-    width: 100%;
-    max-width: 513px;
+  &--blue {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background-color: #0d1e2b;
+    color: $color-default-white;
 
-    padding-top: 50px;
-    @media (max-width: 576px) {
-      padding-top: 25px;
-    }
-    span {
-      font-family: $font-300;
-      font-weight: 300;
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-      color: $secondary-color;
-
-      margin-bottom: 20px;
-      @media (max-width: 576px) {
-        font-size: 1.4rem;
-        line-height: 1.6rem;
-
-        margin-bottom: 15px;
-      }
-      span {
-        font-family: $font-700;
-        font-weight: 700;
-        color: $primary-color;
-      }
-    }
-  }
-  &__title {
-    font-family: $logo-font;
-    font-weight: 400;
-    font-size: 3.3rem;
-    color: $secondary-color;
-
-    margin-bottom: 34px;
-    @media (max-width: 576px) {
-      font-size: 2.4rem;
-
-      margin-bottom: 15px;
-    }
-  }
-  &__list {
-    margin-top: 12px;
-    @media (max-width: 576px) {
-      margin-top: 0;
-    }
-    li {
-      font-family: $font-300;
-      font-weight: 300;
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-      color: $secondary-color;
-
-      margin-bottom: 10px;
-      @media (max-width: 576px) {
-        font-size: 1.4rem;
-        line-height: 1.6rem;
-      }
-    }
-    svg {
-      width: 9px;
-      height: 12px;
-      fill: #7c97aa;
-
-      margin-right: 10px;
+    &__title,
+    h2 {
+      color: inherit;
     }
   }
 }

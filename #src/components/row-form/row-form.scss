@@ -1,4 +1,4 @@
-.form {
+.row-form {
    padding-top: 59px;
    padding-bottom: 55px;
    background-color: $primary-color;
@@ -44,7 +44,6 @@
       }
    }
    &__title {
-      font-family: $font-700;
       font-weight: 700;
       font-size: 2rem;
       color: $secondary-color;
@@ -57,7 +56,6 @@
       }
    }
    &__subtitle {
-      font-family: $font-300;
       font-weight: 300;
       font-size: 1.6rem;
       color: $secondary-color;
@@ -80,7 +78,7 @@
       @media ( max-width: 991px ) {
          width: 50%;
          flex-direction: column;
-      }  
+      }
       @media ( max-width: 576px ) {
          width: 100%;
       }
@@ -102,7 +100,6 @@
       z-index: -222;
    }
    &__file-label {
-      font-family: $font-300;
       font-weight: 300;
       font-size: 1.6rem;
       color: $secondary-color;
@@ -143,7 +140,6 @@
       }
    }
    &__input {
-      font-family: $font-400;
       font-weight: 400;
       font-size: 1.6rem;
       color: $secondary-color;
@@ -163,74 +159,6 @@
          max-width: 100%;
          font-size: 1.4rem;
          max-width: 100%;
-      }
-   }
-   &__btn {
-      font-family: $font-500;
-      font-weight: 500;
-      font-size: 1.3rem;
-      color: #f7f7f7;
-      cursor: pointer;
-      text-transform: uppercase;
-
-      height: 55px;
-      background-color: $secondary-color;
-      box-shadow: 0px 15px 34px 0 rgba(12, 30, 44, 0.2);
-
-      display: flex;
-      align-items: center;
-
-      padding-left: 71px;
-      width: 100%;
-      max-width: 380px;
-
-      transition: .2s;
-      margin-left: 20px;
-      svg {
-         width: 12px;
-         height: 10px;
-         fill: #f0d276;
-         transition: .2s;
-      }
-      span {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background-color: #153248;
-         height: 55px;
-         margin: 0;
-         margin-left: auto;
-         padding-left: 34px;
-         padding-right: 31px;
-         transition: .2s;
-      }
-      &:hover {
-         background-color: #153248;
-         span {
-            background-color: $secondary-color;
-         }
-         svg {
-            fill:  #fcf7e6;
-         }
-      }
-      @media ( max-width: 1520px ) {
-         padding-left: 25px;
-      }
-      @media ( max-width: 991px ) {
-         margin-top: 30px;
-         margin-left: 0;
-         padding-left: 40px;
-      }
-      @media ( max-width: 576px ) {
-         padding-left: 40px;
-         height: 48px;
-         margin-left: 0;
-         max-width: 100%;
-         span {
-            height: 48px;
-            padding-left: 24px;
-            padding-right: 21px;
-         }
       }
    }
 }
