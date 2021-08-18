@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html")
-  <title>Mansio — Технологии</title>
+  @@include("components/base/head.html", {
+  "title": "Mansio — Технологии",
+  "description": "",
+  "keywords": ""
+  })
 </head>
 
 <body>
@@ -20,17 +23,14 @@
     <main>
       <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
-        "title": "Технологии строительства",
-        "bgClass": "tech",
-        "dsc": {
-          "first-line": "Высокая степень качества и надежности домов компании «MANSIO GROUP» обусловлена использованием:",
-          "list": "<ul><li>Надежных и&nbsp;проверенных годами технологий строительства</li><li>Только качественных строительных материалов крупных заводов изготовителей</li></ul>"
-        }
+      "title": "Технологии строительства",
+      "bgClass": "tech",
+      "dsc": "<p style='text-transform: uppercase;'>Высокая степень качества и надежности домов компании «MANSIO GROUP» обусловлена использованием:</p><ul><li>Надежных и&nbsp;проверенных годами технологий строительства</li><li>Только качественных строительных материалов крупных заводов изготовителей</li></ul>"
       })
       <!-- Сетка технологий -->
       @@include('components/technology/technology.html')
       @@include('components/contacts/template-3.html', {
-        "person": "black-woman"
+      "person": "black-woman"
       })
     </main>
     <!-- footer -->
@@ -40,12 +40,13 @@
 
     <!-- инклюд модалки -->
     @@include("components/base/modal.html", {
-      "name": "back-call",
-      "fitContent": true,
+    "name": "back-call",
+    "fitContent": true,
     })
   </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
