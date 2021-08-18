@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  @@include("components/base/head.html", {
+    "title": "Mansio — Команда",
+    "description": "",
+    "keywords": ""
+  })
+</head>
+
+<body>
+
+  <div style="display: none;">
+    @@include("../build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    <!-- header -->
+    @@include('components/header/header.html')
+    <main>
+      <!-- intro-contacts -->
+      @@include('components/first-screen/first-screen.html', {
+        "title": "Наша команда",
+        "bgClass": "team"
+      })
+      <section class="division">
+        <div class="container">
+          <div class="division__team">
+            <h2 class="division__title">Администрация</h2>
+            <ul class="division__list">
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+            </ul>
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Отдел продаж</h2>
+            <ul class="division__list">
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+              @@include("components/card/card.html", {
+                "bemElement": "division__member",
+                "title": "Иванов Иван Александрович",
+                "subtitle": "Учредитель Mansio Group",
+                "imgSrc": "img/member-portret.jpg",
+                "imgW": "370"
+              })
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- footer -->
+    @@include('components/footer/footer.html')
+
+    <!-- инклюд модалки -->
+    @@include("components/base/modal.html", {
+      "name": "back-call",
+      "fitContent": true,
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

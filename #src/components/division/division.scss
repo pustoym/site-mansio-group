@@ -1,0 +1,30 @@
+.division {
+  padding-top: 135px;
+  padding-bottom: 20px;
+
+  &__team {
+    margin-bottom: 110px;
+  }
+
+  &__title {
+    font-size: $font-size-h3;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    gap: 25px 30px;
+  }
+
+  &__member {
+
+  }
+}

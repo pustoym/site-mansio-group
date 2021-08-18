@@ -123,6 +123,15 @@
       background-image: url("../img/bg/bg-first-screen--main@2x.webp");
     }
   }
+
+  &--team {
+    background-image: url("../img/bg/bg-first-screen--team.jpg");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--team@2x.jpg");
+    }
+  }
 }
 
 .webp .first-screen {
@@ -174,6 +183,15 @@
 
     @include retina {
       background-image: url("../img/bg/bg-first-screen--main@2x.webp");
+    }
+  }
+
+  &--team {
+    background-image: url("../img/bg/bg-first-screen--team.webp");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--team@2x.webp");
     }
   }
 }

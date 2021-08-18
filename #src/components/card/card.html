@@ -1,0 +1,11 @@
+<li class="card @@if (context.bemMod) {btn--@@bemMod} @@if (context.bemElement) {@@bemElement}">
+  <div class="card__content">
+    <dl class="card__headline">
+      <dt class="card__title">@@title</dt>
+      <dd class="card__subtitle">@@subtitle</dd>
+    </dl>
+  </div>
+  <picture class="card__img">
+    <img src="@@imgSrc" alt="@@title" width="@@imgW">
+  </picture>
+</li>
