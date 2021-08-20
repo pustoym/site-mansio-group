@@ -1122,8 +1122,8 @@
               и&nbsp;развитии строительной проектной компании, которая получила название MANSIO GROUP.</p>
           </div>
           <picture class="about-item__picture">
-            <source srcset="img/content/about-content-1.webp" type="image/webp">
-            <img src="img/content/about-content-1.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+            <source srcset="img/content/about-content-1.webp 1x" type="image/webp">
+            <img src="img/content/about-content-1.jpg" width="884" alt="Небольшая строительная монтажная фирма">
           </picture>
         </div>
       </section>
@@ -1366,50 +1366,50 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content">
-          <article class="action-call">
+          <div class="action-call">
             <div class="brand-flag">
               <svg class="brand-flag__logo" width="103" height="16">
                 <use xlink:href="#logo"></use>
               </svg>
             </div>
-            <div class="action-call__content">
+            <div class="action-call__inner">
               <div class="action-call__form-column">
                 <div class="contacts-form">
-                  <span>Форма заявки</span>
+                  <span class="contacts-form__subject">Форма заявки</span>
                   <div class="contacts-form__title">Мы&nbsp;вам перезвоним</div>
+                  <ul class="contacts-form__list">
+                    <li>
+                      Определите назначение дома
+                      <svg>
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </li>
+                    <li>
+                      Выберите архитектурный стиль
+                      <svg>
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </li>
+                    <li>
+                      Определите желаемую площадь дома
+                      <svg>
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </li>
+                    <li>
+                      Посмотрите образцы материалов
+                      <svg>
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </li>
+                    <li>
+                      Получите полную техническую консультацию
+                      <svg>
+                        <use xlink:href="#arrow-right"></use>
+                      </svg>
+                    </li>
+                  </ul>
                   <form class="contacts-form__form" action="/">
-                    <ul class="contacts-form__list">
-                      <li>
-                        Определите назначение дома
-                        <svg>
-                          <use xlink:href="#arrow-right"></use>
-                        </svg>
-                      </li>
-                      <li>
-                        Выберите архитектурный стиль
-                        <svg>
-                          <use xlink:href="#arrow-right"></use>
-                        </svg>
-                      </li>
-                      <li>
-                        Определите желаемую площадь дома
-                        <svg>
-                          <use xlink:href="#arrow-right"></use>
-                        </svg>
-                      </li>
-                      <li>
-                        Посмотрите образцы материалов
-                        <svg>
-                          <use xlink:href="#arrow-right"></use>
-                        </svg>
-                      </li>
-                      <li>
-                        Получите полную техническую консультацию
-                        <svg>
-                          <use xlink:href="#arrow-right"></use>
-                        </svg>
-                      </li>
-                    </ul>
                     <div class="contacts-form__block">
                       <div class="contacts-form__input">
                         <svg>
@@ -1425,10 +1425,11 @@
                       </div>
                       <div class="contacts-form__checkbox">
                         <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
-                        <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно политике конфиденциальности</label>
+                        <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно политике
+                          конфиденциальности</label>
                       </div>
                       <button class="contacts-form__btn" type="submit">
-                        Записаться на встречу с архитектором
+                        @@btnText
                         <span>
                           <svg>
                             <use xlink:href="#arrows"></use>
@@ -1440,7 +1441,7 @@
                 </div>
               </div>
             </div>
-          </article>
+          </div>
           <!-- <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
         <svg width="15" height="15">
           <use xlink:href="#icon-close"></use>
