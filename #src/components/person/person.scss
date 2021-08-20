@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
 
-  @include viewport--md {
+  @media (max-width: 992px) {
     display: none;
   }
 
@@ -18,7 +18,7 @@
     color: #153248;
     position: relative;
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       height: 2px;
@@ -31,5 +31,12 @@
 
   &__sub-name {
     color: #999999;
+  }
+
+  &__foto-wrap {
+    @media (max-width: 1280px) {
+      width: 440px;
+      left: 80px;
+    }
   }
 }

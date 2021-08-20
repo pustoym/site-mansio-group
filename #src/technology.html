@@ -29,8 +29,19 @@
       })
       <!-- Сетка технологий -->
       @@include('components/technology/technology.html')
-      @@include('components/contacts/template-3.html', {
-      "person": "black-woman"
+
+      @@include('components/contacts/contacts.html', {
+        "title": "Остались вопросы? <br>Мы&nbsp;проконсультируем Вас!",
+        "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
+        "person": {
+          "name": "Александра Бикова",
+          "employee": "Проектный консультант",
+          "imgSrc": "img/content/manager-w",
+          "imgWidth": "704",
+        },
+        "textSeo": true,
+        "external": "",
+        "btnText": "Получить консультацию"
       })
     </main>
     <!-- footer -->

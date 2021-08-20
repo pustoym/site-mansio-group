@@ -1,16 +1,19 @@
 .features {
-  background: url('../img/bg-features.jpg') no-repeat;
+  background: url("../img/bg-features.jpg") no-repeat;
   background-color: #f2f3f8;
   padding-top: 79px;
-  padding-bottom: 29px;
+  // padding-bottom: 75px;
+  padding-bottom: 290px;
 
   @media (max-width: 991px) {
     padding-top: 60px;
-    padding-bottom: 0;
+    // padding-bottom: 0;
   }
+
   @media (max-width: 576px) {
     padding-top: 30px;
   }
+
   &__title {
     font-weight: 700;
     font-size: 3.3rem;
@@ -21,6 +24,7 @@
     padding-left: 100px;
     border-left: 1px solid $secondary-color;
     margin-bottom: 111px;
+
     @media (max-width: 576px) {
       font-size: 2.2rem;
       line-height: 2.6rem;
@@ -30,9 +34,11 @@
       margin-bottom: 90px;
     }
   }
+
   &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 88px;
   }
 }

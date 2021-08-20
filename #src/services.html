@@ -50,15 +50,25 @@
               </ul>
           </div>
           <picture class="about-item__picture">
-            <source srcset="img/content/about-content-1.webp" type="image/webp">
-            <img src="img/content/about-content-1.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+            <source srcset="img/content/about-content-1.webp 1x" type="image/webp">
+            <img src="img/content/about-content-1.jpg" width="884" alt="Небольшая строительная монтажная фирма">
           </picture>
         </div>
       </section>
       @@include('components/services/services.html')
       <!-- contacts -->
-      @@include('components/contacts/template-3.html', {
-      "person": "black-woman"
+      @@include('components/contacts/contacts.html', {
+        "title": "Проконсультируем вас <br>по&nbsp;любой услуге!",
+        "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
+        "person": {
+          "name": "Александра Бикова",
+          "employee": "Проектный консультант",
+          "imgSrc": "img/content/manager-w",
+          "imgWidth": "704",
+        },
+        "textAbout": true,
+        "external": "",
+        "btnText": "Получить консультацию"
       })
     </main>
     <!-- footer -->
@@ -75,6 +85,11 @@
     @@include('components/base/modal.html', {
       "name": "already-have",
       "fitContent": true,
+    })
+
+    @@include("components/base/modal.html", {
+      "name": "registration-for-viewing",
+      "responsive": true,
     })
   </div>
 

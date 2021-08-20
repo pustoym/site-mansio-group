@@ -30,6 +30,7 @@ let path = {
 const { series, parallel, src, dest, watch, lastRun } = require("gulp");
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
+const notify = require('gulp-notify');
 const sourcemap = require("gulp-sourcemaps");
 const fileinclude = require("gulp-file-include");
 const browsersync = require("browser-sync").create();
@@ -54,7 +55,15 @@ const ghpages = require('gh-pages');
 
 const html = () => {
   return src(path.src.html)
-    .pipe(plumber())
+  .pipe(plumber({
+    errorHandler: function (err) {
+      notify.onError({
+        title: 'HTML compilation error',
+        message: err.message
+      })(err);
+      this.emit('end');
+    }
+  }))
     .pipe(
       fileinclude({
         prefix: "@@",
@@ -79,15 +88,21 @@ exports.html = html;
 
 const css = () => {
   return src(path.src.css)
-    .pipe(plumber())
+  .pipe(plumber({
+    errorHandler: function (err) {
+      notify.onError({
+        title: 'CSS compilation error',
+        message: err.message
+      })(err);
+      this.emit('end');
+    }
+  }))
     .pipe(sourcemap.init())
     .pipe(bulk())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(
       autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
         cascade: true,
-        grid: true,
       })
     )
     .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник

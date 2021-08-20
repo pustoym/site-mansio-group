@@ -1,24 +1,29 @@
 .container {
   width: 100%;
-  // max-width: 1170px;
-  max-width: 1290px;
-  padding: 0 60px;
+  max-width: 1170px;
+  // max-width: 1290px;
+  // padding: 0 60px;
   margin: 0 auto;
- @include viewport--lg {
-   padding: 0 32px;
- }
 
- @include viewport--md {
-   padding: 0 24px;
- }
+  @include viewport--lg {
+    padding: 0 32px;
+  }
 
- @include viewport--sm {
-   padding: 0 16px;
- }
+  @include viewport--md {
+    padding: 0 20px;
+  }
 
- &--xxl {
-   max-width: 1920px;
- }
+  @include viewport--sm {
+    padding: 0 16px;
+  }
+
+  @include viewport--xs {
+    padding: 0 5px;
+  }
+
+  &--xxl {
+    max-width: 1920px;
+  }
 }
 
 .visually-hidden {
@@ -75,26 +80,6 @@
   border: none;
   cursor: pointer;
 }
-
-// .main {
-//   width: 100%;
-//  //  max-width: 1920px;
-//   margin: 0 auto;
-//   overflow: hidden;
-//   &__background {
-//      // background-image: url('../img/foto/features-background.png');
-//      // background-repeat: no-repeat;
-//      // background-size: cover;
-//      &--project {
-//         background-image: url('../img/foto/project-background-foto.png');
-//         background-repeat: no-repeat;
-//         background-position: bottom;
-//      }
-//      @media (max-width: 1200px) {
-//         background-size: cover;
-//      }
-//   }
-// }
 
 @keyframes disableBreakpointAnimation {
   0% {

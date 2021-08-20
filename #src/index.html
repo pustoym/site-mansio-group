@@ -32,17 +32,43 @@
       <!-- features -->
       @@include('components/features/template.html')
       <!-- contacts -->
-      @@include('components/contacts/template.html', {
-      "textAfter": true
+      @@include('components/contacts/contacts.html', {
+        "noMarginTop": true,
+        "title": "Организуем встречу с&nbsp;нашим<br>архитектором, на которой&nbsp;вы<span>:</span>",
+        "dsc": "",
+        "person": {
+          "name": "Иванов Александр",
+          "employee": "Главный архитектор",
+          "imgSrc": "img/content/manager",
+          "imgWidth": "651",
+        },
+        "textAfter": true,
+        "external": "",
+        "btnText": "Записаться на&nbsp;встречу с&nbsp;архитектором"
       })
       <!-- услуги -->
-      @@include('components/services/services.html')
+      @@include('components/services/services.html', {
+        "main": true
+      })
       <!-- reviews -->
       @@include('components/reviews/template.html')
       <!-- reviews-slider -->
       @@include('components/reviews-slider/reviews-slider.html')
       <!-- contacts -->
-      @@include('components/contacts/template-2.html')
+
+      @@include('components/contacts/contacts.html', {
+        "title": "Мы&nbsp;готовы проконсультировать <br>Вас по&nbsp;любому вопросу",
+        "dsc": "",
+        "person": {
+          "name": "Александра Бикова",
+          "employee": "Проектный консультант",
+          "imgSrc": "img/content/manager-w",
+          "imgWidth": "704",
+        },
+        "textSeo": true,
+        "external": "",
+        "btnText": "Сделать первый шаг к&nbsp;вашей мечте"
+      })
     </main>
     <!-- footer -->
     @@include('components/footer/footer.html', {
@@ -52,12 +78,12 @@
     <!-- инклюд модалки -->
     @@include("components/base/modal.html", {
       "name": "discuss",
-      "fitContent": true,
+      "responsive": true,
     })
 
     @@include("components/base/modal.html", {
       "name": "registration-for-viewing",
-      "fitContent": true,
+      "responsive": true,
     })
 
     @@include("components/base/modal.html", {

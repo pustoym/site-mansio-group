@@ -41,6 +41,11 @@
     @include viewport--sm {
       padding: 60px 16px;
     }
+
+    @include viewport--xs {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 
   &__overlay {
@@ -77,6 +82,7 @@
   &--responsive {
     .modal__content {
       width: 100%;
+      max-width: 1170px;
     }
   }
 

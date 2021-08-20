@@ -1,0 +1,35 @@
+<div class="contacts" @@if (context.noMarginTop) {style="margin-top:0;"}>
+  <div class="contacts__bg">
+    <div class="container">
+      <div class="contacts__window">
+        @@include("../action-call/action-call.html", {
+          "title": "@@title",
+          "dsc": "@@dsc",
+          "person": {
+            "name": "@@person.name",
+            "employee": "@@person.employee",
+            "imgSrc": "@@person.imgSrc",
+            "imgWidth": "@@person.imgWidth"
+          },
+          "btnText": "@@btnText",
+          "external": '@@external',
+        })
+      </div>
+      <!-- contacts-text -->
+      @@if (context.textAfter) {
+        @@include('contacts-text/template.html')
+      }
+      @@if (context.textSeo) {
+        @@include('contacts-seo/contacts-seo.html')
+      }
+
+      @@if (context.textAbout) {
+        @@include('contacts-about/contacts-about.html')
+      }
+      @@if (context.textSocial) {
+        @@include('contacts-social/contacts-social.html')
+      }
+      <!-- contacts-text end -->
+    </div>
+  </div>
+</div>

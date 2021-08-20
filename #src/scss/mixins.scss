@@ -1,17 +1,17 @@
-@mixin font($font_name, $file_name, $weight, $style)  {
+@mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
-     font-family: $font_name;
-     font-display: swap;
-     font-style: #{$style};
-     font-weight: #{$weight};
-     src: local(#{$file_name}), url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-family: $font_name;
+    font-display: swap;
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src: local(#{$file_name}), url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
   }
 }
 
 @mixin retina {
- @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-   @content;
- }
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
 }
 
 // Desktop first

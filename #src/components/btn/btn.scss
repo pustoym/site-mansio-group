@@ -81,35 +81,36 @@
     fill: $primary-color-desaturate;
     transition: fill $default-transition-settings;
   }
+}
 
-  &--blue {
-    max-width: 390px;
-    background-color: $secondary-color;
-    color: $white;
+.btn--blue {
+  max-width: 390px;
+  background-color: $secondary-color;
+  color: $white;
 
-    span {
-      background-color: $secondary-color-lighten;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $secondary-color-lighten;
-      color: darken($white, 23);
-      span {
-         background-color: $secondary-color;
-      }
-    }
+  span {
+    background-color: $secondary-color-lighten;
   }
 
-  &--white {
-    background-color: $color-default-white;
+  &:hover,
+  &:focus {
+    background-color: $secondary-color-lighten;
+    color: darken($white, 23);
 
     span {
-      background-color: $color-default-white;
+      background-color: $secondary-color;
     }
+  }
+}
 
-    svg {
-      fill: $secondary-color;
-    }
+.btn--white {
+  background-color: $color-default-white;
+
+  span {
+    background-color: $color-default-white;
+  }
+
+  svg {
+    fill: $secondary-color;
   }
 }

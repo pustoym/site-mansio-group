@@ -15,7 +15,7 @@
   }
 
   &:hover {
-    .card__img:after {
+    .card__img::after {
       background: rgba(0, 0, 0, 0.15);
     }
 
@@ -23,6 +23,7 @@
       transform: scale(1.03);
     }
   }
+
   &__content {
     z-index: 1;
   }
@@ -58,8 +59,8 @@
       transition: all 1s ease-out;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: "";
       display: block;
       width: 100%;
@@ -77,7 +78,7 @@
       );
     }
 
-    &:after {
+    &::after {
       transition: all 0.3s ease;
     }
   }

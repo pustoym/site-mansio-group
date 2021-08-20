@@ -27,7 +27,6 @@
 
 /* footer */
 @import "../components/footer/footer";
-
 @import "../components/first-screen/first-screen";
 @import "blocks/modal";
 @import "../components/brand-flag/brand-flag";
@@ -57,8 +56,8 @@
 @import "../components/features/features-item/style.scss";
 
 /* contacts */
-@import "../components/contacts/style.scss";
-@import "../components/contacts/contacts-form/style.scss";
+@import "../components/contacts/contacts";
+@import "../components/contacts/contacts-form/contacts-form";
 @import "../components/contacts/contacts-text/style.scss";
 
 /* услуги */
@@ -109,6 +108,5 @@
 
 // Страница о нас
 @import "../components/about/about";
-
 @import "../components/division/division";
 @import "../components/card/card";
