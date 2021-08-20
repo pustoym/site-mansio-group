@@ -39,18 +39,6 @@
     }
   }
 
-  p {
-    color: #517489;
-    margin-bottom: 50px;
-    max-width: 458px;
-
-    @media (max-width: 992px) {
-      // max-width: 100%;
-      max-width: 610px;
-      text-align: center;
-    }
-  }
-
   &__list {
     display: flex;
     flex-direction: column;

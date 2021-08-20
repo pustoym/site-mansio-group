@@ -10,6 +10,10 @@
     padding-top: 150px;
     flex: none;
     text-align: right;
+
+    @media (max-width: 1280px) {
+      padding-top: 100px;
+    }
   }
 
   &__name {
@@ -36,7 +40,7 @@
   &__foto-wrap {
     @media (max-width: 1280px) {
       width: 440px;
-      left: 80px;
+      left: 30px;
     }
   }
 }
