@@ -10,16 +10,11 @@
 </head>
 
 <body>
-
-  <div style="display: none;">
-    @@include("../build/img/sprite_auto.svg", {
-      "activeLinkIndex": 3
-    })
-  </div>
-
   <div class="wrapper">
     <!-- header -->
-    @@include('components/header/header.html')
+    @@include('components/header/header.html', {
+      "activeLinkIndex": 3
+      })
     <main>
       <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
