@@ -50,7 +50,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper" data-scroll-container>
     <!-- header -->
     <header class="header">
       <div class="header__wrapper">
@@ -120,14 +120,6 @@
           <li class="tech__item">
             <article class="article-card">
               <h3 class="article-card__title">Строительство из&nbsp;газоблока</h3>
-              <a href="##" class="btn btn--white article-card__link">
-                Открыть страницу
-                <span>
-                  <svg>
-                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                  </svg>
-                </span>
-              </a>
               <picture class="article-card__img">
                 <img src="img/tech-card.jpg" alt="Строительство из газоблока">
               </picture>
@@ -136,14 +128,6 @@
           <li class="tech__item">
             <article class="article-card">
               <h3 class="article-card__title">Строительство из&nbsp;кирпича</h3>
-              <a href="##" class="btn btn--white article-card__link">
-                Открыть страницу
-                <span>
-                  <svg>
-                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                  </svg>
-                </span>
-              </a>
               <picture class="article-card__img">
                 <img src="img/tech-card-2.jpg" alt="Строительство из кирпича">
               </picture>
@@ -152,14 +136,6 @@
           <li class="tech__item">
             <article class="article-card">
               <h3 class="article-card__title">Строительство монолитное</h3>
-              <a href="##" class="btn btn--white article-card__link">
-                Открыть страницу
-                <span>
-                  <svg>
-                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                  </svg>
-                </span>
-              </a>
               <picture class="article-card__img">
                 <img src="img/tech-card-3.jpg" alt="Строительство монолитное">
               </picture>
@@ -168,14 +144,6 @@
           <li class="tech__item">
             <article class="article-card">
               <h3 class="article-card__title">Коммерческое строительство</h3>
-              <a href="##" class="btn btn--white article-card__link">
-                Открыть страницу
-                <span>
-                  <svg>
-                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                  </svg>
-                </span>
-              </a>
               <picture class="article-card__img">
                 <img src="img/tech-card-4.jpg" alt="Коммерческое строительство">
               </picture>
@@ -183,17 +151,7 @@
           </li>
           <li class="tech__item">
             <article class="article-card">
-              <h3 class="article-card__title">
-                Всё о&nbsp;проектах и&nbsp;архитектуре
-              </h3>
-              <a href="##" class="btn btn--white article-card__link">
-                Открыть страницу
-                <span>
-                  <svg>
-                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                  </svg>
-                </span>
-              </a>
+              <h3 class="article-card__title">Всё о&nbsp;проектах и&nbsp;архитектуре</h3>
               <picture class="article-card__img">
                 <img src="img/tech-card-5.jpg" alt="Всё о проектах и архитектуре">
               </picture>
@@ -202,14 +160,6 @@
           <li class="tech__item">
             <article class="article-card">
               <h3 class="article-card__title">Описание этапов строительства</h3>
-              <a href="##" class="btn btn--white article-card__link">
-                Открыть страницу
-                <span>
-                  <svg>
-                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                  </svg>
-                </span>
-              </a>
               <picture class="article-card__img">
                 <img src="img/tech-card-6.jpg" alt="Описание этапов строительства">
               </picture>
@@ -217,7 +167,7 @@
           </li>
         </ul>
       </section>
-      <div class="contacts">
+      <section class="contacts" data-scroll-section>
         <div class="contacts__bg">
           <div class="container">
             <div class="contacts__window">
@@ -244,65 +194,58 @@
                     <span class="contacts-form__subject">Форма заявки</span>
                     <div class="contacts-form__title">Остались вопросы? <br>Мы&nbsp;проконсультируем Вас!</div>
                     <p>Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию</p>
-                    <div class="action-call__form-wrap">
-                      <form class="contacts-form__form" action="/">
-                        <div class="contacts-form__block">
-                          <div class="contacts-form__input">
-                            <svg>
-                              <use xlink:href="/img/sprite_auto.svg#contacts-icon-1"></use>
-                            </svg>
-                            <input type="text" placeholder="Введите ваше имя">
-                          </div>
-                          <div class="contacts-form__input">
-                            <svg>
-                              <use xlink:href="/img/sprite_auto.svg#contacts-icon-2"></use>
-                            </svg>
-                            <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
-                          </div>
-                          <div class="contacts-form__checkbox">
-                            <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
-                            <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно
-                              политике
-                              конфиденциальности</label>
-                          </div>
-                          <button class="contacts-form__btn" type="submit">
-                            Получить консультацию
-                            <span>
-                              <svg>
-                                <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                              </svg>
-                            </span>
-                          </button>
-                        </div>
-                      </form>
+                    <div class="action-call__form-wrap  action-call__form-wrap--fit">
+                      <script>
+                        ! function(a, m, o, c, r, m) {
+                          a[o + c] = a[o + c] || {
+                            setMeta: function(p) {
+                              this.params = (this.params || []).concat([p])
+                            }
+                          }, a[o + r] = a[o + r] || function(f) {
+                            a[o + r].f = (a[o + r].f || []).concat([f])
+                          }, a[o + r]({
+                            id: "824449",
+                            hash: "82b1de926fdb7586c319326cd6a0c87f",
+                            locale: "ru"
+                          })
+                        }(window, 0, "amo_forms_", "params", "load");
+                      </script>
+                      <script id="amoforms_script_824449" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629710572"></script>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- contacts-text -->
-            <div class="contacts__text">
-              <span>SEO-текст. С другой стороны консультация с широким активом представляет собой интересный эксперимент
-                проверки дальнейших направлений развития. Разнообразный и богатый опыт сложившаяся структура организации
-                позволяет выполнять важные задания по разработке направлений прогрессивного развития. Не следует, однако
-                забывать, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций,
-                занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что
-                консультация с широким активом представляет собой интересный эксперимент проверки системы обучения кадров,
-                соответствует насущным потребностям. Идейные соображения высшего порядка, а также консультация с широким активом
-                требуют определения и уточнения дальнейших направлений развития.</span>
-              <span>С другой стороны дальнейшее развитие различных форм деятельности требуют определения и уточнения позиций,
-                занимаемых участниками в отношении поставленных задач. С другой стороны постоянное
-                информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации
-                систем массового участия. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает
-                широкому кругу (специалистов) участие в формировании модели развития.</span>
+            <div class="contacts-about">
+              <div class="contacts-about__content">
+                <div class="contacts-about__title">Узнайте больше о нас и нашем подходе!</div>
+                <a class="contacts-about__link" href="/about.html">
+                  Перейти в раздел о нас
+                  <svg>
+                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
+                  </svg>
+                </a>
+                <button class="btn btn--white contacts-about__btn" data-modal="registration-for-viewing" type="button">
+                  Посетить наши готовые объекты и&nbsp;пообщаться с&nbsp;их&nbsp;владельцами
+                  <span>
+                    <svg>
+                      <use xlink:href="/img/sprite_auto.svg#arrows"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="contacts-about__foto">
+                <img src="img/foto/contacts-about-foto.jpg" alt="##">
+              </div>
             </div>
             <!-- contacts-text end -->
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer" data-scroll-section>
       <div class="container">
         <div class="footer__inner">
           <div class="footer__name">
@@ -345,7 +288,7 @@
                   </svg>
                   <div class="footer__text">
                     <a class="footer__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
-                    <button>Получить консультацию</button>
+                    <button type="button" data-modal="back-call">Получить консультацию</button>
                   </div>
                 </div>
                 <div class="footer__social">
@@ -379,12 +322,12 @@
                   </svg>
                   <div class="footer__text">
                     <div class="footer__subtitle">Электронная почта:</div>
-                    <span>info@infoinfo.ru</span>
+                    <a style="color: inherit" href="mailto:info@infoinfo.ru">info@infoinfo.ru</a>
                   </div>
                 </div>
               </div>
             </div>
-            <button class="btn  " type="button">
+            <button class="btn  " data-modal="back-call" type="button">
               Обратный звонок
               <span>
                 <svg>
@@ -412,69 +355,24 @@
               <div class="action-call__right-col">
                 <span class="contacts-form__subject">Форма заявки</span>
                 <div class="contacts-form__title">Мы&nbsp;вам перезвоним</div>
-                <ul class="contacts-form__list">
-                  <li>
-                    Определите назначение дома
-                    <svg>
-                      <use xlink:href="/img/sprite_auto.svg#arrow-right"></use>
-                    </svg>
-                  </li>
-                  <li>
-                    Выберите архитектурный стиль
-                    <svg>
-                      <use xlink:href="/img/sprite_auto.svg#arrow-right"></use>
-                    </svg>
-                  </li>
-                  <li>
-                    Определите желаемую площадь дома
-                    <svg>
-                      <use xlink:href="/img/sprite_auto.svg#arrow-right"></use>
-                    </svg>
-                  </li>
-                  <li>
-                    Посмотрите образцы материалов
-                    <svg>
-                      <use xlink:href="/img/sprite_auto.svg#arrow-right"></use>
-                    </svg>
-                  </li>
-                  <li>
-                    Получите полную техническую консультацию
-                    <svg>
-                      <use xlink:href="/img/sprite_auto.svg#arrow-right"></use>
-                    </svg>
-                  </li>
-                </ul>
-                <div class="action-call__form-wrap">
-                  <form class="contacts-form__form" action="/">
-                    <div class="contacts-form__block">
-                      <div class="contacts-form__input">
-                        <svg>
-                          <use xlink:href="/img/sprite_auto.svg#contacts-icon-1"></use>
-                        </svg>
-                        <input type="text" placeholder="Введите ваше имя">
-                      </div>
-                      <div class="contacts-form__input">
-                        <svg>
-                          <use xlink:href="/img/sprite_auto.svg#contacts-icon-2"></use>
-                        </svg>
-                        <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
-                      </div>
-                      <div class="contacts-form__checkbox">
-                        <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
-                        <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно
-                          политике
-                          конфиденциальности</label>
-                      </div>
-                      <button class="contacts-form__btn" type="submit">
-                        Перезвоните мне
-                        <span>
-                          <svg>
-                            <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                  </form>
+                <p>В&nbsp;ближайшее время с&nbsp;вами свяжется персональный менеджер и&nbsp;ответит на&nbsp;интересующие вопросы</p>
+                <div class="action-call__form-wrap  ">
+                  <script>
+                    ! function(a, m, o, c, r, m) {
+                      a[o + c] = a[o + c] || {
+                        setMeta: function(p) {
+                          this.params = (this.params || []).concat([p])
+                        }
+                      }, a[o + r] = a[o + r] || function(f) {
+                        a[o + r].f = (a[o + r].f || []).concat([f])
+                      }, a[o + r]({
+                        id: "824308",
+                        hash: "eb4c8a02bc8d0e34f40c0bf6717e14c2",
+                        locale: "ru"
+                      })
+                    }(window, 0, "amo_forms_", "params", "load");
+                  </script>
+                  <script id="amoforms_script_824308" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629695953"></script>
                 </div>
               </div>
             </div>

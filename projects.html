@@ -204,7 +204,7 @@
                 Стоимость м2 в типовых проектах ниже
               </li>
             </ul>
-            <a class="works-item__link" href="projects.html">
+            <a class="works-item__link" href="##">
               Подробнее
               <svg>
                 <use xlink:href="/img/sprite_auto.svg#arrows"></use>
@@ -386,42 +386,7 @@
           </div>
         </div>
       </div>
-      <!-- form -->
-      <div class="row-form">
-        <div class="row-form__inner">
-          <div class="row-form__text">
-            <div class="row-form__title">У&nbsp;вас есть свой проект?</div>
-            <div class="row-form__subtitle">Загрузите его для расчёта. Проведем профессиональную экспертизу и&nbsp;сделаем подробную смету.</div>
-          </div>
-          <form class="row-form__content" action="/">
-            <div class="row-form__wrap">
-              <div class="row-form__item">
-                <svg>
-                  <use xlink:href="/img/sprite_auto.svg#form-icon"></use>
-                </svg>
-                <input class="row-form__file" type="file" name="formFile" id="formFile">
-                <label class="row-form__file-label" for="formFile">
-                  Прикрепите файлы
-                </label>
-              </div>
-              <div class="row-form__item">
-                <svg>
-                  <use xlink:href="/img/sprite_auto.svg#contacts-icon-2"></use>
-                </svg>
-                <input class="row-form__input" type="text" placeholder="Введите номер телефона">
-              </div>
-            </div>
-            <button class="btn  btn--blue row-form__btn" type="submit">
-              Рассчитать стоимость
-              <span>
-                <svg>
-                  <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                </svg>
-              </span>
-            </button>
-          </form>
-        </div>
-      </div>
+      <!-- TODO: написать нативный обработчик форм -->
       <!-- project-item -->
       <div class="project-item">
         <div class="project-item__inner">
@@ -568,19 +533,20 @@
             <div class="project-item__title">Амбассадор</div>
           </div>
         </div>
-        <div class="container">
-          <div class="project-item__nav">
-            <button>
-              ПОКАЗАТЬ БОЛЬШЕ ПРОЕКТОВ
-              <svg>
-                <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
+        <!-- TODO: сделать строкой на всю ширину -->
+        <!-- <div class="container">
+    <div class="project-item__nav">
+      <button>
+        ПОКАЗАТЬ БОЛЬШЕ ПРОЕКТОВ
+        <svg>
+          <use xlink:href="/img/sprite_auto.svg#arrows"></use>
+        </svg>
+      </button>
+    </div>
+  </div> -->
       </div>
       <!-- contacts -->
-      <div class="contacts">
+      <section class="contacts" data-scroll-section>
         <div class="contacts__bg">
           <div class="container">
             <div class="contacts__window">
@@ -638,77 +604,58 @@
                         </svg>
                       </li>
                     </ul>
-                    <div class="action-call__form-wrap">
-                      <form class="contacts-form__form" action="/">
-                        <div class="contacts-form__block">
-                          <div class="contacts-form__input">
-                            <svg>
-                              <use xlink:href="/img/sprite_auto.svg#contacts-icon-1"></use>
-                            </svg>
-                            <input type="text" placeholder="Введите ваше имя">
-                          </div>
-                          <div class="contacts-form__input">
-                            <svg>
-                              <use xlink:href="/img/sprite_auto.svg#contacts-icon-2"></use>
-                            </svg>
-                            <input class="contacts-form__input contacts-form__input--phone" type="text" placeholder="Введите номер телефона">
-                          </div>
-                          <div class="contacts-form__checkbox">
-                            <input type="checkbox" name="contactsCheckbox" id="contactsCheckbox">
-                            <label for="contactsCheckbox">Я даю согласие на обработку своих персональных <br> данных, согласно
-                              политике
-                              конфиденциальности</label>
-                          </div>
-                          <button class="contacts-form__btn" type="submit">
-                            Записаться на&nbsp;встречу с&nbsp;архитектором
-                            <span>
-                              <svg>
-                                <use xlink:href="/img/sprite_auto.svg#arrows"></use>
-                              </svg>
-                            </span>
-                          </button>
-                        </div>
-                      </form>
+                    <div class="action-call__form-wrap  action-call__form-wrap--fit">
+                      <script>
+                        ! function(a, m, o, c, r, m) {
+                          a[o + c] = a[o + c] || {
+                            setMeta: function(p) {
+                              this.params = (this.params || []).concat([p])
+                            }
+                          }, a[o + r] = a[o + r] || function(f) {
+                            a[o + r].f = (a[o + r].f || []).concat([f])
+                          }, a[o + r]({
+                            id: "823744",
+                            hash: "3e5bddc0ee041117a0393f68b52f5c00",
+                            locale: "ru"
+                          })
+                        }(window, 0, "amo_forms_", "params", "load");
+                      </script>
+                      <script id="amoforms_script_823744" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629471665"></script>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- contacts-text -->
-            <div class="contacts-text">
-              <div class="contacts-text__content">
-                <div class="contacts-text__title">Мы хотим окружить вас заботой и вниманием в таком непростом деле, как проектирование и строительство дома.</div>
-                <span>«MANSIO GROUP» одна из немногих компаний, которая имеет полный штат специалистов, выполняет все работы от проектирования до ландшафтного дизайна и комплектации мебелью под ключ.</span>
-                <span>Практическая польза комплексного подхода на самом деле очень высока, как для заказчика, так и для строительной компании.</span>
-              </div>
-              <div class="contacts-text__wrap">
-                <div class="contacts-text__foto">
-                  <picture>
-                    <source srcset="img/content/after-contacts.webp 1x, img/content/after-contacts@2x.webp 2x, img/content/after-contacts@3x.webp 3x" type="image/webp" width="349">
-                    <img src="img/content/after-contacts.jpg" width="349" alt="Фотография офиса" srcset="img/content/after-contacts@2x.jpg 2x, img/content/after-contacts@3x.jpg 3x">
-                </div>
-                <div class="contacts-text__about">
-                  <div class="contacts-text__logo">
+            <div class="contacts-about">
+              <div class="contacts-about__content">
+                <div class="contacts-about__title">Узнайте больше о нас и нашем подходе!</div>
+                <a class="contacts-about__link" href="/about.html">
+                  Перейти в раздел о нас
+                  <svg>
+                    <use xlink:href="/img/sprite_auto.svg#arrows"></use>
+                  </svg>
+                </a>
+                <button class="btn btn--white contacts-about__btn" data-modal="registration-for-viewing" type="button">
+                  Посетить наши готовые объекты и&nbsp;пообщаться с&nbsp;их&nbsp;владельцами
+                  <span>
                     <svg>
-                      <use xlink:href="/img/sprite_auto.svg#logo"></use>
+                      <use xlink:href="/img/sprite_auto.svg#arrows"></use>
                     </svg>
-                  </div>
-                  <div class="contacts-text__desc">В нашей компании архитекторы, инженеры, дизайнеры работают над проектом совместно, чтобы сразу учитывать нужды и задачи друг друга.</div>
-                  <div class="contacts-text__desc contacts-text__desc--white">Заказчик получает одно гармоничное целое, а не набор разных элементов, которые не согласованны между собой.</div>
-                  <div class="contacts-text__name">
-                    <div class="contacts-text__fio">Иванов Иван Иванович</div>
-                    <span>Директор Mansio</span>
-                  </div>
-                </div>
+                  </span>
+                </button>
+              </div>
+              <div class="contacts-about__foto">
+                <img src="img/foto/contacts-about-foto.jpg" alt="##">
               </div>
             </div>
             <!-- contacts-text end -->
           </div>
         </div>
-      </div>
-      <!-- footer -->
+      </section>
     </main>
-    <footer class="footer">
+    <!-- footer -->
+    <footer class="footer" data-scroll-section>
       <div class="container">
         <div class="footer__inner">
           <div class="footer__name">
@@ -751,7 +698,7 @@
                   </svg>
                   <div class="footer__text">
                     <a class="footer__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
-                    <button>Получить консультацию</button>
+                    <button type="button" data-modal="back-call">Получить консультацию</button>
                   </div>
                 </div>
                 <div class="footer__social">
@@ -785,12 +732,12 @@
                   </svg>
                   <div class="footer__text">
                     <div class="footer__subtitle">Электронная почта:</div>
-                    <span>info@infoinfo.ru</span>
+                    <a style="color: inherit" href="mailto:info@infoinfo.ru">info@infoinfo.ru</a>
                   </div>
                 </div>
               </div>
             </div>
-            <button class="btn  " type="button">
+            <button class="btn  " data-modal="back-call" type="button">
               Обратный звонок
               <span>
                 <svg>
@@ -830,7 +777,7 @@
                 <span class="contacts-form__subject">Форма заявки</span>
                 <div class="contacts-form__title">Запись на&nbsp;просмотр строящихся<br>или готовых домов Mansio Group</div>
                 <p>Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведем экскурсию по&nbsp;нашим объекта</p>
-                <div class="action-call__form-wrap">
+                <div class="action-call__form-wrap  action-call__form-wrap--fit">
                   <script>
                     ! function(a, m, o, c, r, m) {
                       a[o + c] = a[o + c] || {
