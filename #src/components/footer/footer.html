@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" data-scroll-section>
   <div class="container">
     <div class="footer__inner">
       <div class="footer__name">
@@ -41,7 +41,7 @@
               </svg>
               <div class="footer__text">
                 <a class="footer__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
-                <button>Получить консультацию</button>
+                <button type="button" data-modal="back-call">Получить консультацию</button>
               </div>
             </div>
             <div class="footer__social">
@@ -75,13 +75,14 @@
               </svg>
               <div class="footer__text">
                 <div class="footer__subtitle">Электронная почта:</div>
-                <span>info@infoinfo.ru</span>
+                <a style="color: inherit" href="mailto:info@infoinfo.ru">info@infoinfo.ru</a>
               </div>
             </div>
           </div>
         </div>
         @@include('../btn/btn.html', {
-        "text": "Обратный звонок"
+        "text": "Обратный звонок",
+        "modal": "back-call"
         })
       </div>
     </div>

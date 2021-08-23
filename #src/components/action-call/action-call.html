@@ -52,7 +52,7 @@
         </li>
       </ul>
       }
-      <div class="action-call__form-wrap">
+      <div class="action-call__form-wrap  @@if (context.person) {action-call__form-wrap--fit}">
         @@if (context.external) {@@external}
         @@if (!context.external) {
         @@include('../contacts/contacts-form/contacts-form.html', {

@@ -16,21 +16,25 @@
       "activeLinkIndex": 0
     })
     <main>
+
       <!-- intro-project -->
       @@include('components/first-screen/first-screen.html', {
         "title": "Наши проекты",
         "bgClass": "projects"
       })
+
       <!-- works -->
       @@include('components/works/template-2.html')
+
       <!-- filter -->
       @@include('components/filter/template.html')
-      <!-- form -->
-      @@include('components/row-form/row-form.html', {
+      <!-- TODO: написать нативный обработчик форм -->
+      <!-- @@include('components/row-form/row-form.html', {
         "title": "У&nbsp;вас есть свой проект?",
         "subtitle": "Загрузите его для расчёта. Проведем профессиональную экспертизу и&nbsp;сделаем подробную смету.",
         "buttonText": "Рассчитать стоимость"
-      })
+      }) -->
+
       <!-- project-item -->
       @@include('components/project-item/project-item.html')
       <!-- contacts -->
@@ -43,12 +47,13 @@
           "imgSrc": "img/content/manager",
           "imgWidth": "651",
         },
-        "textAfter": true,
-        "external": "",
+        "textAbout": true,
+        "external": '<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"823744",hash:"3e5bddc0ee041117a0393f68b52f5c00",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_823744" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629471665"></script>',
         "btnText": "Записаться на&nbsp;встречу с&nbsp;архитектором"
       })
-      <!-- footer -->
+
     </main>
+    <!-- footer -->
     @@include('components/footer/footer.html', {
       "activeLinkIndex": 0
     })

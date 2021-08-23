@@ -85,11 +85,12 @@
     </picture>
   </div>
 </section>
-@@include('../row-form/row-form.html', {
+<!-- TODO: сетка формы не выдержит внешние подключение, необходимо -->
+<!-- @@include('../row-form/row-form.html', {
   "title": "Мы&nbsp;готовы к&nbsp;сотрудничеству!",
   "subtitle": "Обратитесь к&nbsp;нашим специалистам за&nbsp;консультацией",
   "buttonText": "Назначить встречу"
-})
+}) -->
 <section class="about-item about-item--blue">
   <div class="about-item__inner">
     <div class="about-item__text">
@@ -105,7 +106,7 @@
       @@include('../btn/btn.html', {
         "text": "Подробнее о сотрудниках",
         "bemElement": "about-item__btn",
-        "href": "/team.html"
+        "href": "team.html"
       })
     </div>
     <picture class="about-item__picture">

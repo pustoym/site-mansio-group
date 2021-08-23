@@ -89,7 +89,7 @@
   &--fit-content {
     .modal__content {
       width: auto;
-      max-width: 1170px;
+      max-width: 600px;
 
       @include viewport--sm {
         width: 100%;

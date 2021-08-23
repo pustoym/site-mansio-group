@@ -4,7 +4,7 @@
   box-shadow: 0 15px 34px 0 rgba(124, 151, 170, 0.2);
   position: relative;
 
-  @media (max-width: 992px) {
+  @media (max-width: 992px - 0.02) {
     min-height: auto;
   }
 
@@ -44,11 +44,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
 
     text-align: end;
     z-index: 1;
 
-    @media (max-width: 992px) {
+    @media (max-width: 992px - 0.02) {
       align-items: center;
       max-width: 100%;
       margin-left: 0;
@@ -60,7 +61,7 @@
     margin-bottom: 50px;
     max-width: 458px;
 
-    @media (max-width: 992px) {
+    @media (max-width: 992px - 0.02) {
       // max-width: 100%;
       max-width: 610px;
       text-align: center;
@@ -69,6 +70,9 @@
 
   &__form-wrap {
     width: 100%;
-    max-width: 400px;
+  }
+
+  &__form-wrap--fit {
+    max-width: 360px;
   }
 }

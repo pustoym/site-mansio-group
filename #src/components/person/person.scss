@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
 
-  @media (max-width: 992px) {
+  @media (max-width: 992px - 0.02) {
     display: none;
   }
 
@@ -11,7 +11,7 @@
     flex: none;
     text-align: right;
 
-    @media (max-width: 1280px) {
+    @media (max-width: 1280px - 0.02) {
       padding-top: 100px;
     }
   }
@@ -38,7 +38,12 @@
   }
 
   &__foto-wrap {
-    @media (max-width: 1280px) {
+    @media (max-width: 1280px - 0.02) {
+      width: 590px;
+      left: 50px;
+    }
+
+    @media (max-width: 1152px - 0.02) {
       width: 440px;
       left: 30px;
     }
