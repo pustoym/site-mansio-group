@@ -1,26 +1,32 @@
 .card {
   min-height: 560px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   padding: 50px;
   position: relative;
   background-color: $secondary-color-desaturate;
   color: $color-default-white;
   font-size: $font-size;
   line-height: 1.75;
+  overflow: hidden;
 
   @include viewport--lg {
     padding: 70px 30px;
   }
 
-  &:hover {
-    .card__img::after {
-      background: rgba(0, 0, 0, 0.15);
-    }
+  &__link-wrapper {
+    color: $color-default-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-    img {
-      transform: scale(1.03);
+    &:hover,
+    &:focus {
+      .card__picture::after {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        transform: scale(1.03);
+      }
     }
   }
 
@@ -29,6 +35,8 @@
   }
 
   &__headline {
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -41,7 +49,7 @@
     color: $primary-color;
   }
 
-  &__img {
+  &__picture {
     position: absolute;
     left: 0;
     top: 0;
@@ -50,14 +58,6 @@
     height: 100%;
     overflow: hidden;
     transition: all 1s ease-out;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 1s ease-out;
-    }
 
     &::before,
     &::after {
@@ -80,7 +80,62 @@
 
     &::after {
       background: rgba(0, 0, 0, 0);
-      transition: all 0.3s ease;
+      transition: all $default-transition-settings;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: inherit;
+  }
+}
+
+.card--catalog {
+  .card__headline {
+    flex-direction: column-reverse;
+    line-height: 1.5;
+  }
+
+  .card__title {
+    font-size: $font-size-h3;
+  }
+
+  .card__subtitle {
+    color: $color-default-white;
+    font-size: 16px;
+    letter-spacing: 7.5px;
+  }
+
+  .card__picture::after {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    opacity: 0.6;
+  }
+
+  .card__link-wrapper:hover,
+  .card__link-wrapper:focus {
+    .card__subtitle {
+      color: $primary-color;
+    }
+
+    .card__subtitle {
+      margin-left: -999px;
+      transition: margin-left 1s ease-out;
+    }
+
+    .card__picture::after,
+    .card__picture::before, {
+      background: rgba(0, 0, 0, 0);
+    }
+
+    img {
+      opacity: 1;
     }
   }
 }

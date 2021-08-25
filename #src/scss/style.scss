@@ -102,9 +102,11 @@
 @import "../components/contacts/contacts-about/style.scss";
 
 /* project-item */
-@import "../components/project-item/project-item";
+// @import "../components/project-item/project-item";
 
-// статьи технологии
+@import "../components/catalog/catalog";
+
+// Page technology
 @import "../components/technology/technology";
 
 
