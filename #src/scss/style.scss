@@ -4,6 +4,8 @@
 @import "vendor/normalize";
 @import "node_modules/glightbox/dist/css/glightbox";
 @import "node_modules/locomotive-scroll/dist/locomotive-scroll";
+// @import "node_modules/animate.css/animate.compat";
+
 
 // Модуль для тестирования, не должен быть в финальной версии и версии для клиента
 // @import "vendor/test";
@@ -16,6 +18,7 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
+@import "global/loader";
 @import "../components/btn/btn";
 
 // Blocks

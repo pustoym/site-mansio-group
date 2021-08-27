@@ -1,5 +1,14 @@
 require('./vendor/modernizr-webp.js');
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll';
+import GLightbox from 'glightbox';
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+require('../../node_modules/slick-carousel/slick/slick.min.js');
+require('./vendor/jquery.smoothState.js');
+require('../../node_modules/imagesloaded/imagesloaded.pkgd.min.js');
+
+const lightbox = GLightbox({});
 // const scroll = new LocomotiveScroll();
 // const scroll = new LocomotiveScroll({
 //   el: document.querySelector('[data-scroll-container]'),
@@ -7,11 +16,6 @@ import LocomotiveScroll from 'locomotive-scroll';
 //   class: "is-inview",
 //   inertia: 0.7,
 // });
-
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-require('../../node_modules/slick-carousel/slick/slick.min.js')
 
 // lighthouse fix  Does not use passive listeners to improve scrolling performance
 // more https://stackoverflow.com/questions/60357083/does-not-use-passive-listeners-to-improve-scrolling-performance-lighthouse-repo
@@ -134,6 +138,7 @@ $(function(){
   });
 
   /* -- slider foto end -- */
+  /* ---- SLIDER END ---- */
 
   /* filter */
 
@@ -147,11 +152,7 @@ $(function(){
 
   /* -- filter -- */
 
-  /* ---- SLIDER END ---- */
 });
-
-import GLightbox from 'glightbox';
-const lightbox = GLightbox({});
 
 //-- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
 // import {testInstruments} from './vendor/testInstruments';
