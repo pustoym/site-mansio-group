@@ -47,11 +47,13 @@ const svgstore = require("gulp-svgstore");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const htmlbeautify = require("gulp-html-beautify");
-const rsync = require("gulp-rsync");
 const fonter = require("gulp-fonter");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 const ghpages = require('gh-pages');
+const ftp = require('vinyl-ftp');
+const ftpSettings = require('./ftp_settings.json');
+const connect = ftp.create(ftpSettings);
 
 const html = () => {
   return src(path.src.html)
@@ -157,8 +159,8 @@ const syncserver = () => {
     open: true,
     cors: true,
     ui: false,
-    ghostMode: { clicks: false },
-    // tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
+    ghostMode: false,
+    tunnel: 'mansio-dev-preview', // Attempt to use the URL https://yousutename.loca.lt
   });
 
   gulp.watch(path.watch.html, series(html, refresh));
@@ -260,22 +262,9 @@ const optimizeImages = () => {
 };
 
 const deployFtp = () => {
-  return src("build/").pipe(
-    rsync({
-      root: "build/",
-      hostname: "cl315565@fortuna.timeweb.ru",
-      destination: "preview-mg/public_html",
-      // clean: true, // Mirror copy with file deletion
-      include: [
-        /* '*.htaccess' */
-      ], // Included files to deploy,
-      exclude: ["**/Thumbs.db", "**/*.DS_Store"],
-      recursive: true,
-      archive: true,
-      silent: false,
-      compress: true,
-    })
-  );
+  return src(['build/**/*.*', '!build/**/*.map'])
+    .pipe(connect.newer('/mansio-group/public_html/'))
+		.pipe(connect.dest('/mansio-group/public_html/'))
 };
 
 exports.build = build;

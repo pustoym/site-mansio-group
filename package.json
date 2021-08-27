@@ -10,7 +10,8 @@
     "stylelint": "stylelint \"#src/scss/**/*.scss\" \"#src/components/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig & npm run stylelint",
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
-    "deploy": "cross-env NODE_ENV=production gulp build & gulp imagemin && gulp deploy",
+    "deploy": "cross-env NODE_ENV=production gulp build & gulp imagemin && gulp deployFtp",
+    "gh": "cross-env NODE_ENV=production gulp build & gulp imagemin && gulp deploy",
     "start": "cross-env NODE_ENV=development gulp start",
     "webp": "gulp webp",
     "imagemin": "gulp imagemin"
@@ -47,7 +48,6 @@
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
-    "gulp-rsync": "^0.0.9",
     "gulp-sass": "^4.1.0",
     "gulp-sass-bulk-importer": "^3.0.1",
     "gulp-sourcemaps": "2.6.x",
@@ -57,11 +57,14 @@
     "gulp-webp": "^4.0.1",
     "stylelint": "13.5.0",
     "stylelint-config-htmlacademy": "0.1.x",
+    "vinyl-ftp": "^0.6.1",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "glightbox": "^3.0.9",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.6.0",
     "locomotive-scroll": "^4.1.1",
     "slick-carousel": "^1.8.1"
