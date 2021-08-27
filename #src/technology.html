@@ -9,14 +9,14 @@
   })
 </head>
 
-<body>
-  <div class="wrapper" data-scroll-container>
+<body id="pageBody">
+  <div id="loadcontent" class="wrapper" data-scroll-container>
     <!-- header -->
     @@include('components/header/header.html', {
     "activeLinkIndex": 2
     })
 
-    <main>
+    <main id="pageMain">
       <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
       "title": "Технологии строительства",

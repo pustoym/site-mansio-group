@@ -9,14 +9,14 @@
   })
 </head>
 
-<body>
-  <div class="wrapper" data-scroll-container>
+<body id="pageBody">
+  <div id="loadcontent" class="wrapper" data-scroll-container>
 
     <!-- header -->
     @@include('components/header/header.html', {
       "main": true
     })
-    <main>
+    <main id="pageMain">
       <!-- intro -->
       @@include('components/intro/intro.html')
       <!-- works -->
@@ -70,7 +70,6 @@
     @@include('components/footer/footer.html', {
       "main": true
     })
-  </div>
 
     <!-- инклюд модалки -->
     @@include("components/base/modal.html", {
@@ -92,6 +91,7 @@
       "name": "back-call",
       "fitContent": true,
     })
+  </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

@@ -9,13 +9,13 @@
   })
 </head>
 
-<body>
-  <div class="wrapper">
+<body id="pageBody">
+  <div id="loadcontent" class="wrapper">
     <!-- header -->
     @@include('components/header/header.html', {
     "activeLinkIndex": 4
     })
-    <main>
+    <main id="pageMain">
       <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
         "title": "Контакты",

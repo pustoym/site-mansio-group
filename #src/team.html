@@ -9,11 +9,11 @@
   })
 </head>
 
-<body>
-  <div class="wrapper">
+<body id="pageBody">
+  <div id="loadcontent" class="wrapper">
     <!-- header -->
     @@include('components/header/header.html')
-    <main>
+    <main id="pageMain">
       <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
       "title": "Наша команда",
@@ -113,7 +113,7 @@
           </div>
           <picture class="about-item__picture">
             <source srcset="img/content/content-team.webp" type="image/webp">
-            <img src="img/content/content-team.jpg" width="885" alt="Небольшая строительная монтажная фирма">
+            <img src="img/content/content-team.jpg" width="885" alt="Небольшая строительная монтажная фирма" loading="lazy">
           </picture>
       </section>
 
