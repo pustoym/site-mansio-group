@@ -4,10 +4,10 @@
 
   &__list {
     margin: 0;
-    padding: 0;
+    padding: 30px 0 0;
     list-style: none;
     display: grid;
-    gap: 1px;
+    gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: min-content;
 

@@ -4,7 +4,7 @@
     font-display: swap;
     font-style: #{$style};
     font-weight: #{$weight};
-    src: local(#{$file_name}), url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    src: local("#{$file_name}"), url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
   }
 }
 
@@ -17,7 +17,7 @@
 // Desktop first
 
 @mixin viewport--xl {
-  @media (max-width: $viewport--xxl - 0.02) {
+  @media (max-width: $viewport--xxl) {
     @content;
   }
 }

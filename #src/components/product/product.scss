@@ -1,39 +1,23 @@
 .product {
-  padding-top: 86px;
+  padding-top: 40px;
   padding-bottom: 135px;
 
   background-color: $color-default-white;
+  font-size: 20px;
 
-  @media (max-width: 767px) {
-    padding-top: 40px;
+  @include viewport--md {
+    font-size: $font-size;
+  }
+
+  @include viewport--sm {
+    padding-top: 20px;
     padding-bottom: 40px;
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
-  }
-
-  &__title {
-    font-weight: 700;
-    font-size: 3.3rem;
-    color: $secondary-color;
-    text-transform: uppercase;
-
-    padding: 38px 0;
-    padding-left: 100px;
-    border-left: 1px solid $secondary-color;
-
-    @media (max-width: 576px) {
-      font-size: 2.2rem;
-      line-height: 2.6rem;
-      border-left: none;
-      padding: 0;
-    }
-
-    span {
-      color: $primary-color;
-    }
+    position: relative;
   }
 
   &__nav {
@@ -44,7 +28,7 @@
     margin-top: 45px;
     margin-bottom: 75px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1279px) {
       flex-wrap: wrap;
       margin-top: 35px;
       margin-bottom: 25px;
@@ -72,7 +56,7 @@
     cursor: pointer;
     transition: 0.2s;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1279px) {
       width: calc(50% - 17px);
       margin-bottom: 15px;
     }
@@ -107,161 +91,62 @@
 
   &__content {
     display: none;
+    justify-content: space-between;
+    // align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
 
     &--active {
       display: flex;
-      justify-content: space-between;
+      animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
 
-    @media (max-width: 1200px) {
-      flex-wrap: wrap;
+    @keyframes slide-in-bottom {
+      0% {
+        transform: translateY(1000px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   }
 
   &__text {
+    min-height: 100%;
+    width: 320px;
+    max-width: calc(100% / 3 - 30px);
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
-    width: 100%;
-    max-width: 313px;
-
-    @media (max-width: 1200px) {
-      max-width: 100%;
-      margin-bottom: 60px;
-    }
-
-    @media (max-width: 767px) {
-      margin-bottom: 20px;
-    }
-
-    span {
-      // TODO UGLY привязка к тегу в редактируемой области, необходимо переписать!
-      font-weight: 300;
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-      color: $secondary-color;
-      margin-bottom: 20px;
-      max-width: 298px;
-
-      @media (max-width: 1200px) {
-        max-width: 100%;
-      }
-
-      @media (max-width: 576px) {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        margin-bottom: 15px;
-      }
-    }
-  }
-
-  &__link {
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 2rem;
-    color: #f7f7f7;
-    cursor: pointer;
-    text-transform: uppercase;
-
-    height: 114px;
-    background-color: $secondary-color;
-    box-shadow: 0 15px 34px 0 rgba(12, 30, 44, 0.2);
-
-    display: flex;
-    align-items: center;
-
-    padding-left: 50px;
-    margin-top: 40px;
-
-    transition: 0.2s;
-    max-width: 314px;
-
-    @media (max-width: 1200px) {
-      margin-top: 0;
-      width: 100%;
-      max-width: 50%;
-      height: 55px;
-
-      br {
-        display: none;
-      }
-    }
-
-    @media (max-width: 767px) {
-      font-size: 1.2rem;
+    @include viewport--lg {
       max-width: 100%;
     }
 
-    @media (max-width: 576px) {
-      padding-left: 20px;
-      height: 48px;
-
-      span {
-        height: 48px;
-        padding-left: 24px;
-        padding-right: 21px;
-      }
+    @include viewport--sm {
+      order: 1;
     }
 
-    svg {
-      width: 12px;
-      height: 10px;
-      fill: #f0d276;
-      transition: 0.2s;
-    }
-
-    span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #153248;
-      height: 114px;
-      margin: 0;
-      margin-left: 72px;
-      padding-left: 34px;
-      padding-right: 31px;
-      transition: 0.2s;
-
-      @media (max-width: 1200px) {
-        margin-left: auto;
-        height: 55px;
-      }
-
-      @media (max-width: 767px) {
-        margin-bottom: 0;
-      }
-
-      @media (max-width: 576px) {
-        margin-left: auto;
-        margin-bottom: 0;
-      }
-    }
-
-    &:hover {
-      background-color: #153248;
-
-      span {
-        background-color: $secondary-color;
-      }
-
-      svg {
-        fill: #fcf7e6;
-      }
+    p {
+      margin-bottom: 20px;
     }
   }
 
-  &__foto {
+  &__picture {
+    flex: none;
+    width: 464px;
+    max-width: calc(100% / 3 - 30px);
+
+    @include viewport--lg {
+      max-width: 100%;
+    }
+
     img {
       border-radius: 15px;
-
-      @media (max-width: 1200px) {
-        max-height: 430px;
-        object-fit: cover;
-      }
-
-      @include viewport--md {
-        max-width: 360px;
-      }
 
       @include viewport--sm {
         display: none;
@@ -269,32 +154,33 @@
     }
   }
 
-  &__wrap {
+  &__description-list {
+    min-height: 100%;
+    width: 280px;
+    max-width: calc(100% / 3 - 30px);
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 
-    width: 100%;
-    max-width: 272px;
-
-    @media (max-width: 1200px) {
-      width: 48%;
-      max-width: 550px;
+    @include viewport--lg {
+      max-width: 100%;
     }
 
-    @include viewport--sm {
-      width: auto;
-      max-width: none;
+    dd {
+      margin-left: 0;
     }
   }
 
-  &__item {
+  &__list-item {
     display: flex;
     flex-direction: column;
 
     margin-bottom: 15px;
 
-    font-size: 14.6px;
-    line-height: 1.5;
+    // font-size: 14.6px;
     color: #999999;
 
     @media (max-width: 950px) {
@@ -317,9 +203,6 @@
     margin-bottom: 5px;
 
     @media (max-width: 576px) {
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-
       margin-bottom: 5px;
     }
   }

@@ -1,0 +1,143 @@
+.we-do {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    color: $color-default-white;
+    background-color: $secondary-color;
+  }
+
+  &__item {
+    padding-top: 431px;
+    padding-bottom: 96px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 33.3333%;
+    min-height: 867px;
+    padding-left: 111px;
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    transition: all $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.3);
+      // color: #f5ca46;
+    }
+
+    @media (max-width: 1450px) {
+      padding-left: 50px;
+    }
+
+    @media (max-width: 1250px) {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 1020px) {
+      width: 100%;
+      min-height: auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+    }
+
+    @media (max-width: 576px) {
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    .we-do__item-icon {
+      fill: $color-default-white;
+
+      // @media (max-width: 576px) {
+      //   width: 48px;
+      //   height: 38px;
+      // }
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: $font-size-h3;
+    line-height: 1;
+    padding: 38px 0;
+
+    @media (max-width: 1250px) {
+      font-size: 2.2rem;
+      padding: 26px 0;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding: 18px 0;
+    }
+  }
+
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 51px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-link {
+    font-size: 13.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff;
+    border: solid 3px rgba(251, 251, 251, 0.15);
+
+    padding: 15px 69px;
+    padding-right: 35px;
+
+    position: relative;
+    z-index: 3;
+    transition: 0.2s;
+
+    @media (max-width: 576px) {
+      padding: 9px 48px;
+      padding-right: 24px;
+    }
+
+    svg {
+      width: 12px;
+      height: 10px;
+      fill: $color-default-white;
+      opacity: 0.15;
+      transition: 0.4s;
+
+      margin-left: 50px;
+
+      @media (max-width: 576px) {
+        width: 12px;
+        height: 10px;
+      }
+    }
+
+    &:hover {
+      border: solid 3px $color-default-white;
+      background-color: $color-default-white;
+      color: $secondary-color;
+
+      svg {
+        opacity: 1;
+        fill: $secondary-color;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

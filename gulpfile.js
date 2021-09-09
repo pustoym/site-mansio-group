@@ -100,8 +100,8 @@ const css = () => {
     }
   }))
     .pipe(sourcemap.init())
-    .pipe(bulk())
-    .pipe(sass({ outputStyle: "expanded" }))
+    // .pipe(bulk())
+    .pipe(sass())
     .pipe(
       autoprefixer({
         cascade: true,
@@ -110,7 +110,7 @@ const css = () => {
     .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
     .pipe(dest(path.build.css))
     .pipe(csso())
-    .pipe(rename({ extname: ".min.css" }))
+    .pipe(rename('style.min.css'))
     .pipe(sourcemap.write("."))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
@@ -154,13 +154,13 @@ exports.sprite = sprite;
 const syncserver = () => {
   browsersync.init({
     server: { baseDir: "./" + buildFolder + "/" },
-    port: 3000,
+    port: 8080,
     notify: false,
     open: true,
     cors: true,
     ui: false,
     ghostMode: false,
-    tunnel: 'mansio-dev-preview', // Attempt to use the URL https://yousutename.loca.lt
+    // tunnel: 'mansio-dev-preview', // Attempt to use the URL https://yousutename.loca.lt
   });
 
   gulp.watch(path.watch.html, series(html, refresh));

@@ -1,7 +1,7 @@
 .about-item {
   // padding: 60px;
   margin-bottom: 105px;
-  font-size: 16.7px;
+  font-size: $font-size;
   line-height: 1.44;
   color: $grey;
 
@@ -61,8 +61,8 @@
   &__title,
   h2 {
     color: $secondary-color;
-    font-size: 29.2px;
-    line-height: 1.29;
+    font-size: $line-height-title;
+    line-height: $line-height-title;
     font-weight: bold;
     margin-bottom: 45px;
     text-transform: uppercase;
@@ -162,7 +162,7 @@
   h2 {
     font-family: $logo-font;
     font-size: $font-size-h2;
-    line-height: 1.29;
+    line-height: $line-height-title;
     font-weight: normal;
   }
 }

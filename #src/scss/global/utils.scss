@@ -1,3 +1,19 @@
+:root {
+  --font-size: 18px;
+
+  @include viewport--xl {
+    --font-size: 1vw;
+  }
+
+  @include viewport--md {
+    --font-size: 16.7px;
+  }
+
+  @include viewport--xs {
+    --font-size: 14px;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
@@ -14,15 +30,12 @@
   }
 
   @include viewport--sm {
-    padding: 0 16px;
-  }
-
-  @include viewport--xs {
-    padding: 0 5px;
+    padding: 0 15px;
   }
 
   &--xxl {
     max-width: 1920px;
+    padding: 0 60px;
   }
 }
 

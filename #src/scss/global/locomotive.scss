@@ -1,0 +1,101 @@
+html.has-scroll-smooth,
+.has-scroll-smooth body,
+.has-scroll-smooth main {
+  overflow: hidden;
+  // height: 100vh;
+}
+
+
+.has-scroll-smooth img.bigTranslatedImg {
+  --overflow: 80px;
+}
+
+.has-scroll-smooth img.midTranslatedImg {
+  --overflow: 60px;
+}
+
+@media screen and (min-width: 1900px) {
+  .has-scroll-smooth img.bigTranslatedImg {
+    --overflow: 120px;
+  }
+
+  .has-scroll-smooth img.midTranslatedImg {
+    --overflow: 80px;
+  }
+}
+
+.has-scroll-smooth .js-picture__img {
+  position: relative;
+  will-change: transform;
+  height: calc(100% + (2 * var(--overflow)));
+  top: calc(-1 * var(--overflow));
+  will-change: transform;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+.animated-text,
+.animated-text.is-inview.hideFb {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(1vw);
+}
+
+.animated-text.animated-text-active,
+.animated-text.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.has-scroll-dragging {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.js-picture {
+  overflow: hidden;
+  will-change: transform;
+}

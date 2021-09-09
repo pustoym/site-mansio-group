@@ -9,7 +9,7 @@
   background-size: cover;
   background-color: #36434e;
 
-  @media (max-width: 1100px) {
+  @include viewport--md {
     padding-top: 120px;
   }
 
@@ -29,7 +29,9 @@
     margin: 0 auto;
     border-left: 1px solid rgba($color-default-white, 0.5);
 
-    @media (max-width: 1100px) {
+    @include viewport--md {
+      align-items: center;
+      text-align: center;
       border-left: none;
       padding-left: 0;
     }
@@ -37,8 +39,8 @@
 
   &__title {
     font-weight: 700;
-    font-size: 3.8rem;
-    line-height: 5rem;
+    font-size: $font-size-h1;
+    line-height: 1.33;
     color: $color-default-white;
     max-width: 878px;
     text-transform: uppercase;
@@ -49,13 +51,12 @@
       color: $primary-color;
     }
 
-    @media (max-width: 1100px) {
+    @include viewport--md {
       margin-bottom: 50px;
     }
 
     @media (max-width: 576px) {
-      font-size: 2.2rem;
-      line-height: 2.6rem;
+      font-size: 22px;
 
       margin-bottom: 40px;
     }
@@ -63,42 +64,29 @@
 
   &__subtitle {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 24px;
     color: $color-default-white;
 
     margin-bottom: 34px;
 
-    @media (max-width: 576px) {
-      font-size: 1.4rem;
-      line-height: 1.6rem;
+    @include viewport--xl {
+      font-size: 1.6vw;
+    }
 
+    @include viewport--md {
+      font-size: 18px;
+    }
+
+    @include viewport--xs {
       margin-bottom: 20px;
     }
   }
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-
-    margin-top: 91px;
-    margin-bottom: 151px;
-
-    @media (max-width: 1100px) {
-      margin-top: 40px;
-      margin-bottom: 80px;
-    }
-
-    @media (max-width: 576px) {
-      margin-top: 30px;
-      margin-bottom: 40px;
-    }
-  }
   &__mouse {
     display: flex;
     justify-content: center;
   }
+
   &__btn-mouse {
     cursor: pointer;
 

@@ -1,7 +1,7 @@
 <div class="person  @@if (context.actionCall) {action-call__person}">
   @@if (!(context.person.name === '@@person.name') && !(context.person.employee === '@@person.employee')) {
     <div class="person__name-wrap">
-      <h1 class="person__name">@@person.name</h1>
+      <p class="person__name">@@person.name</p>
       <p class="person__sub-name">@@person.employee</p>
     </div>
   }

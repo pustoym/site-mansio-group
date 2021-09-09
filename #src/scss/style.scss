@@ -18,22 +18,28 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
+
+
+// @import "global/locomotive";
 @import "global/loader";
+@import "global/webp";
 @import "../components/btn/btn";
 
 // Blocks
 //---------------------------------
 
-// @import "../components/*";
 
 /* header */
-@import "../components/header/header.scss";
-@import "../components/header/menu/style.scss";
+@import "../components/header/header";
+@import "../components/header/menu/menu";
+@import "../components/first-screen/first-screen";
+@import "../components/benefits-list/benefits-list";
 
 /* footer */
 @import "../components/footer/footer";
-@import "../components/first-screen/first-screen";
 @import "blocks/modal";
+
+// modal
 @import "../components/brand-flag/brand-flag";
 @import "../components/action-call/action-call";
 @import "../components/person/person";
@@ -43,12 +49,12 @@
 /* -- index -- */
 
 /* intro */
-@import "../components/intro/intro.scss";
-@import "../components/intro/intro-item/style.scss";
+@import "../components/intro/intro";
 
 /* works */
-@import "../components/works/style.scss";
-@import "../components/works/works-item/style.scss";
+
+@import "../components/headline/headline";
+@import "../components/we-do/we-do.scss";
 
 /* about */
 @import "../components/approach/approach";
@@ -79,7 +85,7 @@
 /* -- page-contacts -- */
 
 /* connection */
-@import "../components/connection/style.scss";
+@import "../components/connection/connection";
 
 /* connection */
 @import "../components/members/style.scss";
@@ -88,7 +94,7 @@
 @import "../components/info/style.scss";
 
 /* map */
-@import "../components/map/style.scss";
+@import "../components/map/map";
 
 /* info-foto */
 @import "../components/info-foto/style.scss";
@@ -96,7 +102,7 @@
 /* --  page-project -- */
 
 /* filter */
-@import "../components/filter/style.scss";
+@import "../components/filter/filter";
 
 /* form */
 @import "../components/row-form/row-form";
@@ -115,5 +121,6 @@
 
 // Страница о нас
 @import "../components/about/about";
+@import "../components/row-alert/row-alert";
 @import "../components/division/division";
 @import "../components/card/card";

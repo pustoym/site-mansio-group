@@ -34,6 +34,36 @@
   if (~['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform)) cth('ios');
   if (~navigator.appVersion.indexOf("Linux")) cth('linux');
 
+  var isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function () {
+      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+  };
+
+  // if (isTouch && isMobile.any() && window.innerWidth < 1049) {
+  //   _html.classList.add("disable-effects");
+  //   var b_element = document.getElementById("body");
+  //   b_element.classList.remove("loading");
+
+  //   c_mainelement = document.querySelector("main");
+  //   c_mainelement.classList.add("page-loaded");
+  // }
+
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
   window.addEventListener('resize', () => {
