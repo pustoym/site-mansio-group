@@ -7,8 +7,6 @@ require('../../node_modules/slick-carousel/slick/slick.min.js');
 require('./vendor/jquery.smoothState.js');
 require('../../node_modules/imagesloaded/imagesloaded.pkgd.min.js');
 
-
-
 // lighthouse fix  Does not use passive listeners to improve scrolling performance
 // more https://stackoverflow.com/questions/60357083/does-not-use-passive-listeners-to-improve-scrolling-performance-lighthouse-repo
 jQuery.event.special.touchstart = {
@@ -41,16 +39,16 @@ $(function(){
 
   /* scroll mouse */
 
-  $("[data-scroll]").on('click', function (event) {
-     event.preventDefault();
+  // $("[data-scroll]").on('click', function (event) {
+  //    event.preventDefault();
 
-     const elementID = $(this).data('scroll');
-     const elementOffset = $(elementID).offset().top;
+  //    const elementID = $(this).data('scroll');
+  //    const elementOffset = $(elementID).offset().top;
 
-     $("html,body").animate({
-        scrollTop: elementOffset
-     }, 700);
-  });
+  //    $("html,body").animate({
+  //       scrollTop: elementOffset
+  //    }, 700);
+  // });
 
   /* -- scroll mouse end -- */
 });

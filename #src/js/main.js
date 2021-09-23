@@ -6,32 +6,35 @@ import { textAnimate } from "./modules/animate";
 import { showSideMenu } from "./modules/show-side-menu";
 import { showFilter } from "./modules/catalog-filter";
 import { tabs } from "./modules/product-tabs";
+import { tabGallery } from "./modules/tabgallery";
+import { Tab } from 'bootstrap';
 // import { scroll } from "./vendor/locomotive-scroll";
 
 document.addEventListener("DOMContentLoaded", function () {
   jqSlick();
   tabs();
+  // tabGallery();
   showSideMenu();
   showFilter();
   initModals();
-  // textAnimate();
+  textAnimate();
 
   // ajax links
   if (!$("body").hasClass("disable-effects")) {
-    $("#loadcontent").smoothState(smParams);
+    $("#siteWrapper").smoothState(smParams);
 
-    // $(".header__link a, .footer__link, .header__logo[href], .footer__logo[href]").on("click", function (e) {
+    // $(".header__link a, .footer__link a, .header__logo[href], .footer__logo[href]").on("click", function (e) {
     //   createOnAjaxLoader();
     //   e.preventDefault();
-    //   var content = $("#loadcontent").smoothState(smParams).data("smoothState");
-    //   var href = $(this).attr("href");
+    //   let content = $("#siteWrapper").smoothState(smParams).data("smoothState");
+    //   let href = $(this).attr("href");
     //   content.load(href);
     // });
 
     // $('.go_ajax').click(function(e) {
     //     close_menu();
     //     e.preventDefault();
-    //     var content = $('#loadcontent').smoothState(smParams).data('smoothState');
+    //     var content = $('#siteWrapper').smoothState(smParams).data('smoothState');
     //     var href = $(this).attr('href');
     //     content.load(href);
     // });

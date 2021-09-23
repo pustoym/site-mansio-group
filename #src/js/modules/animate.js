@@ -1,6 +1,6 @@
-const textAnimate = () => {
+export const textAnimate = () => {
   let animated_blocks = $(
-    "h1, h2, h3, p"
+    "h1, h2, h3, p, li, .btn"
   );
 
   animated_blocks.addClass("animated-text");
@@ -8,7 +8,7 @@ const textAnimate = () => {
   animated_blocks.attr("data-scroll-offset", "50");
 };
 
-function img_data_attr() {
+const addAttrScrollToImg = ()  => {
   $(".content-picture").attr("data-scroll", "");
   $(".tmb-media").attr("data-scroll-repeat", "");
 
@@ -17,6 +17,3 @@ function img_data_attr() {
   $(".bigTranslatedImg").attr("data-scroll-speed", "-1.5");
   $(".midTranslatedImg").attr("data-scroll-speed", "-1");
 }
-
-export { textAnimate };
-

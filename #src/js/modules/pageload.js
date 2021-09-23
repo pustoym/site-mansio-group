@@ -5,16 +5,18 @@ import { textAnimate } from "./animate";
 import { showSideMenu } from "./show-side-menu";
 import { showFilter } from "./catalog-filter";
 import { tabs } from "./product-tabs";
+import { tabGallery } from "./tabgallery";
 // import {initScroll, update_scroll, destroy_scroll} from "../vendor/locomotive-scroll";
 
 const reinitOnAfter = () => {
   lightbox.init();
   // initScroll();
   initModals();
-  // textAnimate();
+  textAnimate();
   showSideMenu();
   showFilter();
   tabs();
+  // tabGallery();
 };
 
 export const createLoader = () => {
@@ -77,7 +79,8 @@ export const smParams = {
   scroll: true,
   autoScrolling: false,
   repeatDelay: 500,
-  blacklist: "a.glightbox, a.header__consultation, .pageFirstScreen btn",
+  blacklist:
+    "a.js-no-smoothState, a.glightbox, a.header__consultation, .pageFirstScreen btn, a:not([href]), a[download]",
   anchors: "a",
   onBefore: ($currentTarget, $container) => {
     createOnAjaxLoader();
@@ -89,7 +92,7 @@ export const smParams = {
       setTimeout(() => {
         // destroy_scroll();
         // $('html').addClass('has-scroll-smooth');
-        // $('#js-scroll').removeAttr('style');
+        // $('#siteWrapper').removeAttr('style');
       }, 600);
 
       // $(window).scrollTop(0);
