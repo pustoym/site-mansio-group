@@ -30,6 +30,7 @@
   }
 
   &--services {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--services.jpg");
     background-blend-mode: darken;
 
@@ -39,6 +40,7 @@
   }
 
   &--about {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--about.jpg");
     background-blend-mode: darken;
 
@@ -48,6 +50,7 @@
   }
 
   &--thankyou {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--main.webp");
     background-blend-mode: darken;
 
@@ -57,11 +60,22 @@
   }
 
   &--team {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--team.jpg");
     background-blend-mode: darken;
 
     @include retina {
       background-image: url("../img/bg/bg-first-screen--team@2x.jpg");
+    }
+  }
+
+  &--scandica {
+    background-color: rgba(13, 30, 43, 0.2);
+    background-image: url("../img/catalog/scandica/scandica1-xxl.jpg");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/catalog/scandica/scandica1-xxl@2x.jpg");
     }
   }
 }
@@ -92,6 +106,7 @@
   }
 
   &--services {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--services.webp");
     background-blend-mode: darken;
 
@@ -101,6 +116,7 @@
   }
 
   &--about {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--about.webp");
     background-blend-mode: darken;
 
@@ -110,6 +126,7 @@
   }
 
   &--thankyou {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--main.webp");
     background-blend-mode: darken;
 
@@ -119,11 +136,22 @@
   }
 
   &--team {
+    background-color: rgba(13, 30, 43, 0.6);
     background-image: url("../img/bg/bg-first-screen--team.webp");
     background-blend-mode: darken;
 
     @include retina {
       background-image: url("../img/bg/bg-first-screen--team@2x.webp");
+    }
+  }
+
+  &--scandica {
+    background-color: rgba(13, 30, 43, 0.2);
+    background-image: url("../img/catalog/scandica/scandica1-xxl.webp");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/catalog/scandica/scandica1-xxl@2x.webp");
     }
   }
 }
