@@ -98,3 +98,11 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
+
+@mixin h2 {
+  font-size: $font-size-h2;
+  line-height: $line-height-title;
+  font-weight: bold;
+  color: $secondary-color;
+  text-transform: uppercase;
+}
