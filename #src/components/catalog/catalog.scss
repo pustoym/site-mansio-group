@@ -1,8 +1,14 @@
 .catalog {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1px;
+
+    @include viewport--sm {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -10,7 +16,6 @@
     // height: 529px;
     min-height: 30%;
     padding-left: 55px;
-    width: calc(50% - 1px);
 
     @include viewport--sm {
       width: 100%;
@@ -20,4 +25,8 @@
       // height: 420px;
     }
   }
+}
+
+.catalog__list--gap-solid {
+  gap: $gap;
 }

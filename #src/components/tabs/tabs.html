@@ -1,0 +1,35 @@
+<!-- В разработке -->
+<!-- https://github.com/pandaprofit/html-starter-template/blob/master/GUIDE.md -->
+<div class="tabs">
+  <ul
+    class="@@bemParent__tabs-list  tabs__list nav nav-tabs"
+    id="${@@idName}NavTabsList"
+    role="tablist"
+  >
+    <li class="tabs__list-item @@bemParent__tab-wrap" role="presentation">
+      <button
+        class="tabs__btn @@bemParent__tab active"
+        id="@@idNameTab"
+        type="button"
+        role="tab"
+        aria-controls="@@idNamePane"
+        aria-selected="true"
+        data-bs-toggle="tab"
+        data-bs-target="#@@idNamePane"
+      >
+        Тёплая керамика porotherm
+      </button>
+    </li>
+  </ul>
+
+  <div class="@@bemParent__content">
+    <section
+      class="tabs__pane active"
+      id="@@idNamePane"
+      role="tabpanel"
+      aria-labelledby="@@idNameTab"
+    >
+      <div class="@@bemParent__section"></div>
+    </section>
+  </div>
+</div>

@@ -28,24 +28,24 @@
   @media (max-width: 1100px) {
     display: flex;
   }
+}
 
-  &--active {
-    position: fixed;
-    right: 25px;
-    top: 25px;
+.menu--active {
+  position: fixed;
+  right: 25px;
+  top: 25px;
 
-    span {
-      transform: rotate(45deg);
+  span {
+    transform: rotate(45deg);
+    top: 22px;
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
       top: 22px;
-
-      &:nth-child(2) {
-        display: none;
-      }
-
-      &:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 22px;
-      }
     }
   }
 }

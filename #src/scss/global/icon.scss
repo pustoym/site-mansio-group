@@ -1,0 +1,98 @@
+.icon::before {
+  // grid-area: 1 / 1 / -1 / 2;
+  grid-area: icon;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-position: right center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  //  TODO: Сделать png-спрайт и добавить поддержку webp и ретины.
+}
+
+.webp {
+  .icon--wall::before {
+    background-image: url("../img/sprite-png/wall.webp");
+  }
+
+  .icon--bed::before {
+    background-image: url("../img/sprite-png/bed.webp");
+  }
+
+  .icon--bathtub::before {
+    background-image: url("../img/sprite-png/bathtub.webp");
+  }
+
+  .icon--balcony::before {
+    background-image: url("../img/sprite-png/balcony.webp");
+  }
+
+  .icon--closet::before {
+    background-image: url("../img/sprite-png/closet.webp");
+  }
+
+  .icon--foundation::before {
+    background-image: url("../img/sprite-png/foundation.webp");
+  }
+
+  .icon--measurement::before {
+    background-image: url("../img/sprite-png/measurement.webp");
+  }
+
+  .icon--roof::before {
+    background-image: url("../img/sprite-png/roof.webp");
+  }
+
+  .icon--wall-big::before {
+    background-image: url("../img/sprite-png/wall-big.webp");
+  }
+
+  .icon--window::before {
+    background-image: url("../img/sprite-png/window.webp");
+  }
+}
+
+.no-webp,
+.no-js {
+  .icon--wall::before {
+    background-image: url("../img/sprite-png/wall.png");
+  }
+
+  .icon--bed::before {
+    background-image: url("../img/sprite-png/bed.png");
+  }
+
+  .icon--bathtub::before {
+    background-image: url("../img/sprite-png/bathtub.png");
+  }
+
+  .icon--balcony::before {
+    background-image: url("../img/sprite-png/balcony.png");
+  }
+
+  .icon--closet::before {
+    background-image: url("../img/sprite-png/closet.png");
+  }
+
+  .icon--foundation::before {
+    background-image: url("../img/sprite-png/foundation.png");
+  }
+
+  .icon--measurement::before {
+    background-image: url("../img/sprite-png/measurement.png");
+  }
+
+  .icon--roof::before {
+    background-image: url("../img/sprite-png/roof.png");
+  }
+
+  .icon--wall-big::before {
+    background-image: url("../img/sprite-png/wall-big.png");
+  }
+
+  .icon--window::before {
+    background-image: url("../img/sprite-png/window.png");
+  }
+}

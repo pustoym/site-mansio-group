@@ -1,4 +1,4 @@
-<section class="contacts" @@if (context.noMarginTop) {style="margin-top:0;"} data-scroll-section>
+<section class="contacts" @@if (context.noMarginTop) {style="margin-top:0;"} >
   <div class="contacts__bg">
     <div class="container">
       <div class="contacts__window">
@@ -19,6 +19,7 @@
       @@if (context.textAfter) {
         @@include('contacts-text/template.html')
       }
+
       @@if (context.textSeo) {
         @@include('contacts-seo/contacts-seo.html')
       }
@@ -26,6 +27,7 @@
       @@if (context.textAbout) {
         @@include('contacts-about/contacts-about.html')
       }
+
       @@if (context.textSocial) {
         @@include('contacts-social/contacts-social.html')
       }

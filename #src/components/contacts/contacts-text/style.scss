@@ -83,6 +83,7 @@
       //  max-width: 100%;
 
       margin-bottom: 20px;
+
       img {
         // max-width: 380px;
       }
@@ -159,7 +160,7 @@
     span {
       font-weight: 400;
       font-size: 1.4rem;
-      color: #999;
+      color: #999999;
 
       @media (max-width: 567px) {
         font-size: 1.2rem;
@@ -187,7 +188,7 @@
 
       width: 18px;
       height: 1px;
-      background-color: #999;
+      background-color: #999999;
 
       @media (max-width: 567px) {
         top: -15px;

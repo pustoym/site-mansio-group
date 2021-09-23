@@ -36,22 +36,16 @@
   transform: translateY(-100%);
 }
 
-.animMenuEL {
-  transition: all 0.5s ease;
-}
 
-.hideMenuEl {
-  opacity: 0;
-  transform: translateX(10px);
-}
-
+.animMenuEL,
 .animFb,
-.animated-text.animated-text-active.animFb {
+.animated-text.animFb {
   transition: all 0.5s ease;
 }
 
+.hideMenuEl,
 .hideFb,
-.animated-text.animated-text-active.hideFb {
+.animated-text.hideFb {
   opacity: 0;
   transform: translateY(10px);
 }

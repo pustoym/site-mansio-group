@@ -1,0 +1,112 @@
+.tabs {
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: $gap;
+
+    // @include viewport--sm {
+    //   flex-wrap: wrap;
+    // }
+
+    @include viewport--xs {
+      flex-flow: column nowrap;
+      gap: 10px;
+    }
+  }
+
+  &__list-item {
+    list-style: none;
+    width: 100%;
+
+    // @include viewport--sm {
+    //   width: auto;
+    // }
+  }
+
+  &__btn {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    // min-width: 350px;
+    // max-width: 440px;
+    min-height: 55px;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    font-size: 13.5px;
+    line-height: 1;
+    color: $grey;
+    text-transform: uppercase;
+    background-color: inherit;
+    background-image: none;
+    transition: background-color $default-transition-settings;
+    cursor: pointer;
+    overflow: hidden;
+    border: 3px solid $grey;
+
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+
+    @include viewport--xs {
+      min-width: auto;
+      max-width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      color: saturate($secondary-color, 50);
+      text-decoration: none;
+      background-color: $primary-color-lighten;
+    }
+
+    &--disabled,
+    &:disabled {
+      // opacity: $opacity;
+      cursor: not-allowed;
+      // color: $text-color;
+      // background-color: $gray-lightest;
+      // border-color: $gray-lighter;
+    }
+  }
+
+  &__btn.active,
+  &__btn.active:hover,
+  &__btn.active:focus,
+  &__btn--active,
+  &__btn--active:hover,
+  &__btn--active:active {
+    border: $metalic-blue;
+    color: $color-default-white;
+    background-color: $metalic-blue;
+    cursor: default;
+    outline: none;
+  }
+
+  // &__btn.active:focus,
+  // &__btn--active:focus {
+  //   color: $color-default-white;
+  //   background-color: $metalic-blue;
+  //   outline: $primary-color solid 3px;
+  // }
+
+  &__pane {
+    display: none;
+  }
+
+  &__pane--active,
+  &__pane.active {
+    display: block;
+  }
+}
+
+.no-js .tabs__pane {
+  display: block;
+}

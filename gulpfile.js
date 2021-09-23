@@ -30,42 +30,45 @@ let path = {
 const { series, parallel, src, dest, watch, lastRun } = require("gulp");
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
-const notify = require('gulp-notify');
+const notify = require("gulp-notify");
 const sourcemap = require("gulp-sourcemaps");
 const fileinclude = require("gulp-file-include");
 const browsersync = require("browser-sync").create();
 const del = require("del");
 const sass = require("gulp-sass");
-const bulk = require('gulp-sass-bulk-importer');
+const bulk = require("gulp-sass-bulk-importer");
 const autoprefixer = require("gulp-autoprefixer");
 const group_media = require("gulp-group-css-media-queries");
-const csso = require('gulp-csso');
+const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const spritesmith = require("gulp.spritesmith");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const htmlbeautify = require("gulp-html-beautify");
 const fonter = require("gulp-fonter");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
-const ghpages = require('gh-pages');
-const ftp = require('vinyl-ftp');
-const ftpSettings = require('./ftp_settings.json');
+const ghpages = require("gh-pages");
+const ftp = require("vinyl-ftp");
+const ftpSettings = require("./ftp_settings.json");
 const connect = ftp.create(ftpSettings);
 
 const html = () => {
   return src(path.src.html)
-  .pipe(plumber({
-    errorHandler: function (err) {
-      notify.onError({
-        title: 'HTML compilation error',
-        message: err.message
-      })(err);
-      this.emit('end');
-    }
-  }))
+    .pipe(
+      plumber({
+        errorHandler: function (err) {
+          notify.onError({
+            title: "HTML compilation error",
+            message: err.message,
+          })(err);
+          this.emit("end");
+        },
+      })
+    )
     .pipe(
       fileinclude({
         prefix: "@@",
@@ -89,31 +92,35 @@ const html = () => {
 exports.html = html;
 
 const css = () => {
-  return src(path.src.css)
-  .pipe(plumber({
-    errorHandler: function (err) {
-      notify.onError({
-        title: 'CSS compilation error',
-        message: err.message
-      })(err);
-      this.emit('end');
-    }
-  }))
-    .pipe(sourcemap.init())
-    // .pipe(bulk())
-    .pipe(sass())
-    .pipe(
-      autoprefixer({
-        cascade: true,
-      })
-    )
-    .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
-    .pipe(dest(path.build.css))
-    .pipe(csso())
-    .pipe(rename('style.min.css'))
-    .pipe(sourcemap.write("."))
-    .pipe(dest(path.build.css))
-    .pipe(browsersync.stream());
+  return (
+    src(path.src.css)
+      .pipe(
+        plumber({
+          errorHandler: function (err) {
+            notify.onError({
+              title: "CSS compilation error",
+              message: err.message,
+            })(err);
+            this.emit("end");
+          },
+        })
+      )
+      .pipe(sourcemap.init())
+      // .pipe(bulk())
+      .pipe(sass())
+      .pipe(
+        autoprefixer({
+          cascade: true,
+        })
+      )
+      .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
+      .pipe(dest(path.build.css))
+      .pipe(csso())
+      .pipe(rename("style.min.css"))
+      .pipe(sourcemap.write())
+      .pipe(dest(path.build.css))
+      .pipe(browsersync.stream())
+  );
 };
 exports.css = css;
 
@@ -151,6 +158,10 @@ const sprite = () => {
 };
 exports.sprite = sprite;
 
+const generatePngSprite = () => {
+  // TODO: написать генератор png-спрайта
+};
+
 const syncserver = () => {
   browsersync.init({
     server: { baseDir: "./" + buildFolder + "/" },
@@ -159,8 +170,8 @@ const syncserver = () => {
     open: true,
     cors: true,
     ui: false,
-    ghostMode: false,
-    // tunnel: 'mansio-dev-preview', // Attempt to use the URL https://yousutename.loca.lt
+    ghostMode: true,
+    tunnel: "mansio-dev-preview2", // Attempt to use the URL https://yousutename.loca.lt
   });
 
   gulp.watch(path.watch.html, series(html, refresh));
@@ -242,11 +253,11 @@ const start = series(build, syncserver);
 // root = `content/` - webp добавляются и обновляются только в source/img/content/
 
 const createWebp = () => {
-  const root = ``;
+  const root = `catalog/scandica/`;
   return gulp
-    .src(srcFolder + `/img/${root}**/*.{png,jpg}`)
+    .src(`${srcFolder}/img/${root}**/*.{png,jpg}`)
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest(srcFolder + `/img/${root}`));
+    .pipe(gulp.dest(`${srcFolder}/img/${root}`));
 };
 
 const optimizeImages = () => {
@@ -262,9 +273,9 @@ const optimizeImages = () => {
 };
 
 const deployFtp = () => {
-  return src(['build/**/*.*', '!build/**/*.map'])
-    .pipe(connect.newer('/mansio-group/public_html/'))
-		.pipe(connect.dest('/mansio-group/public_html/'))
+  return src(["build/**/*.*", "!build/**/*.map"])
+    .pipe(connect.newer("/mansio-group/public_html/"))
+    .pipe(connect.dest("/mansio-group/public_html/"));
 };
 
 exports.build = build;

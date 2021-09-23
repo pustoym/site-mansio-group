@@ -5,10 +5,11 @@
   justify-content: center;
   padding: 50px 80px;
   margin-bottom: 105px;
-  align-items:  center;
+  align-items: center;
   background-color: #dce6ed;
   color: $secondary-color-desaturate;
-  font-size: 16.7px;
+  // font-size: 16.7px;
+  font-size: $font-size-sm;
   line-height: 1.68;
   text-align: center;
 

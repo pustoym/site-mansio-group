@@ -1,16 +1,25 @@
 :root {
-  --font-size: 18px;
+  --font-size: 20px;
+  --font-size-sm: 18px;
+  --gap: 30px;
 
   @include viewport--xl {
-    --font-size: 1vw;
+    --font-size: 1.25vw;
+    --font-size-sm: 1vw;
+  }
+
+  @include viewport--lg {
+    --font-size: 16.7px;
+    --font-size-sm: 16px;
   }
 
   @include viewport--md {
-    --font-size: 16.7px;
+    --gap: 15px;
   }
-
   @include viewport--xs {
     --font-size: 14px;
+    --font-size-sm: var(--font-size);
+    --gap: 10px;
   }
 }
 
@@ -172,5 +181,59 @@
   100% {
     opacity: 1;
     transform: none;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes shadow-drop-2-center {
+  0% {
+    transform: translateZ(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
   }
 }

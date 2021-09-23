@@ -1,7 +1,7 @@
 .headline {
   padding-top: 45px;
   padding-bottom: 45px;
-  background-color: $color-default-white;
+  background-color: inherit;
 
   @include viewport--xs {
     padding: 0;

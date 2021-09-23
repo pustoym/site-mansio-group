@@ -2,13 +2,13 @@
   // padding: 60px;
   margin-bottom: 105px;
   font-size: $font-size;
-  line-height: 1.44;
+  // line-height: 1.44;
   color: $grey;
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
 
     width: 100%;
     max-width: 1920px;
@@ -103,7 +103,7 @@
     margin-top: 60px;
   }
 
-  p {
+  p:not(:last-child) {
     margin-bottom: 20px;
   }
 

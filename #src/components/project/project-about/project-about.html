@@ -1,0 +1,136 @@
+<section class="project-about">
+  <div class="container container--xxl">
+    @@include('../../headline/headline.html', { "headline": "Из&nbsp;какого
+    камня мы&nbsp;строим?" })
+  </div>
+  <div class="container">
+    <div class="tabs">
+      <ul
+        class="__tabs-list tabs__list nav nav-tabs"
+        id="projectAboutNavTabsList"
+        role="tablist"
+      >
+        <li class="tabs__list-item __tab-wrap" role="presentation">
+          <button
+            class="tabs__btn __tab active"
+            id="ceramicsTab"
+            type="button"
+            role="tab"
+            aria-controls="ceramics"
+            aria-selected="true"
+            data-bs-toggle="tab"
+            data-bs-target="#ceramics"
+          >
+            Тёплая керамика porotherm
+          </button>
+        </li>
+
+        <li class="tabs__list-item __tab-wrap" role="presentation">
+          <button
+            class="tabs__btn __tab"
+            id="aerocreteTab"
+            type="button"
+            role="tab"
+            aria-controls="aerocrete"
+            aria-selected="false"
+            data-bs-toggle="tab"
+            data-bs-target="#aerocrete"
+          >
+            Газобетонный блок
+          </button>
+        </li>
+      </ul>
+
+      <div class="project-about__content">
+        <section
+          class="tabs__pane active"
+          id="ceramics"
+          role="tabpanel"
+          aria-labelledby="ceramicsTab"
+        >
+          <div class="project-about__section">
+            <h3 class="project-about__section-title">
+              Тёплая керамика porotherm
+            </h3>
+
+            <ul class="project-about__list">
+              <li>Доступность и&nbsp;быстрота возведения</li>
+              <li>Полная архитектурная свобода</li>
+              <li>Эффективное теплосбережение</li>
+              <li>Максимальный уровень шумоизоляции</li>
+              <li>Разнообразие отделки фасадов</li>
+              <li>Долговечность</li>
+            </ul>
+
+            <picture class="project-about__picture">
+              <!-- <source srcset="" type="image/webp"> -->
+              <img
+                src="./img/ceramics.png"
+                width="506"
+                alt="Фактура керамического блока"
+              />
+            </picture>
+
+            <h4 class="project-about__sub-title">
+              Чем блок Porotherm лучше традиционного кирпича:
+            </h4>
+
+            <dl class="project-about__dl">
+              <div>
+                <dt>1. Оптимизация расходов</dt>
+                <dd>
+                  Соединение паз-гребень оптимизирует расходы
+                  на&nbsp;дополнительные материалы&nbsp;&mdash; вертикальные швы
+                  не&nbsp;заполняются кладочным раствором и&nbsp;его расход
+                  сокращается на&nbsp;30%.
+                </dd>
+              </div>
+
+              <div>
+                <dt>2. Скорость возведения стен</dt>
+                <dd>
+                  Один блок заменяет от&nbsp;10&nbsp;до&nbsp;14&nbsp;кирпичей
+                  в&nbsp;кладке, что существенно ускоряет процесс возведения
+                  стен. Каркас индивидуального жилого дома из&nbsp;керамических
+                  блоков может быть возведён за&nbsp;две недели без применения
+                  сложной строительной техники.
+                </dd>
+              </div>
+
+              <div>
+                <dt>3. Экономия денег</dt>
+                <dd>
+                  Снижение трудозатрат по&nbsp;сравнению и&nbsp;экономия
+                  на&nbsp;оплате работ&nbsp;&mdash; рабочему при кладке кирпича
+                  потребуется в&nbsp;три раза больше времени, следовательно,
+                  вы&nbsp;заплатите в&nbsp;три раза выше мастерам
+                  за&nbsp;работу.
+                </dd>
+              </div>
+
+              <div>
+                <dt>4. Теплоизоляция</dt>
+                <dd>
+                  Высокие теплоизоляционные свойства, которые дают возможность
+                  обойтись без утепления стен в&nbsp;сравнении одинаковой
+                  толщины стен.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section
+          class="tabs__pane"
+          id="aerocrete"
+          role="tabpanel"
+          aria-labelledby="aerocreteTab"
+        >
+          <div class="project-about__section">
+            <h3 class="project-about__section-title">Газобетонный блок</h3>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

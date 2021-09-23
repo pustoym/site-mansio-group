@@ -2,7 +2,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 export const scroll = new LocomotiveScroll({
   // el: document.querySelector('[]'),
-  el: document.getElementById('js-scroll'),
+  el: document.getElementById("siteWrapper"),
   smooth: true,
   class: "is-inview",
   inertia: 0.7,

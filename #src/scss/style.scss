@@ -18,28 +18,22 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-
-
-// @import "global/locomotive";
+// js helpers
+@import "global/locomotive";
 @import "global/loader";
+// webp global
 @import "global/webp";
+// components
+@import "global/icon";
 @import "../components/btn/btn";
-
-// Blocks
-//---------------------------------
-
-
-/* header */
+@import "../components/tabs/tabs";
 @import "../components/header/header";
 @import "../components/header/menu/menu";
 @import "../components/first-screen/first-screen";
 @import "../components/benefits-list/benefits-list";
-
-/* footer */
 @import "../components/footer/footer";
-@import "blocks/modal";
-
 // modal
+@import "blocks/modal";
 @import "../components/brand-flag/brand-flag";
 @import "../components/action-call/action-call";
 @import "../components/person/person";
@@ -124,3 +118,9 @@
 @import "../components/row-alert/row-alert";
 @import "../components/division/division";
 @import "../components/card/card";
+
+// Страница проекта
+@import "../components/project/project";
+@import "../components/house-gallery/house-gallery";
+@import "../components/project/project-benefits/project-benefits";
+@import "../components/project/project-about/project-about";
