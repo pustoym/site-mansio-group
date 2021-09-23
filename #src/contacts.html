@@ -10,7 +10,7 @@
 </head>
 
 <body id="pageBody">
-  <div id="loadcontent" class="wrapper">
+  <div id="siteWrapper" class="wrapper">
 
     @@include('components/header/header.html', {
     "activeLinkIndex": 4
@@ -58,11 +58,11 @@
     "activeLinkIndex": 4
     })
 
-    <!-- инклюд модалки -->
-    @@include("components/base/modal.html", {
-      "name": "back-call",
-      "fitContent": true,
-    })
+          <!-- инклюд модалки -->
+          @@include("components/base/modal.html", {
+          "name": "back-call",
+          "fitContent": true,
+          })
   </div>
 
   <script src="js/vendor.min.js"></script>
