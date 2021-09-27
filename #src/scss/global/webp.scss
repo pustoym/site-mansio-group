@@ -69,6 +69,22 @@
     }
   }
 
+  /* $Services
+     ====================================== */
+
+  &--construction {
+    background-color: rgba(13, 30, 43, 0.6);
+    background-image: url("../img/bg/bg-fs--construction.jpg");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--construction@2x.jpg");
+    }
+  }
+
+  /* $Projects
+     ====================================== */
+
   &--scandica {
     background-color: rgba(13, 30, 43, 0.2);
     background-image: url("../img/catalog/scandica/scandica1-xxl.jpg");
@@ -144,6 +160,22 @@
       background-image: url("../img/bg/bg-first-screen--team@2x.webp");
     }
   }
+
+  /* $Services
+     ====================================== */
+
+  &--construction {
+    background-color: rgba(13, 30, 43, 0.6);
+    background-image: url("../img/bg/bg-fs--construction.webp");
+    background-blend-mode: darken;
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--construction@2x.webp");
+    }
+  }
+
+  /* $Projects
+     ====================================== */
 
   &--scandica {
     background-color: rgba(13, 30, 43, 0.2);

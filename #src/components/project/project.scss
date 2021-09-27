@@ -17,11 +17,12 @@
   }
 
   &__left-col {
-    // width: 55%;
+    // width: 60%;
   }
 
   &__right-col {
-    // width: 45%;
+    // width: 40%;
+    max-width: 40%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;

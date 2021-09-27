@@ -171,7 +171,7 @@ const syncserver = () => {
     cors: true,
     ui: false,
     ghostMode: true,
-    tunnel: "mansio-dev-preview2", // Attempt to use the URL https://yousutename.loca.lt
+    // tunnel: "mansio-dev-preview2", // Attempt to use the URL https://yousutename.loca.lt
   });
 
   gulp.watch(path.watch.html, series(html, refresh));
