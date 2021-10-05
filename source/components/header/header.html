@@ -1,0 +1,43 @@
+<header class="header" id="pageHeader">
+  <div class="header__wrapper">
+    <a class="header__logo" @@if (!context.main) {href="index.html" } aria-label="Переход на главную">
+      <svg width="169">
+        <use xlink:href="/img/sprite_auto.svg#logo"></use>
+      </svg>
+    </a>
+    <div id="pageMenuWrapper" class="header__inner">
+      <nav class="header__nav">
+        <a class="header__link @@if (context.activeLinkIndex === 0) { header__link--active }" @@if (context.activeLinkIndex !==0) { href="./projects.html" }>Проекты</a>
+        <a class="header__link @@if (context.activeLinkIndex === 1) { header__link--active }" @@if (context.activeLinkIndex !==1) { href="./services.html" }>Услуги</a>
+        <a class="header__link @@if (context.activeLinkIndex === 2) { header__link--active }" @@if (context.activeLinkIndex !==2) { href="./technology.html" }>Технологии</a>
+        <a class="header__link @@if (context.activeLinkIndex === 3) { header__link--active }" @@if (context.activeLinkIndex !==3) { href="./about.html" }>О нас</a>
+        <a class="header__link @@if (context.activeLinkIndex === 4) { header__link--active }" @@if (context.activeLinkIndex !==4) { href="./contacts.html" }>Контакты</a>
+      </nav>
+      <!-- <a class="header__login" href="##">
+        <svg>
+          <use xlink:href="/img/sprite_auto.svg#login"></use>
+        </svg>
+        Войти
+      </a> -->
+      <div class="header__social">
+        <a class="header__telegram" href="https://t.me/mansio_group" target="_blank">
+          <svg>
+            <use xlink:href="/img/sprite_auto.svg#telegram"></use>
+          </svg>
+        </a>
+        <a class="header__whatsapp" href="https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20" target="_blank">
+          <svg>
+            <use xlink:href="/img/sprite_auto.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header__contacts">
+        <a class="header__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
+        <button class="header__consultation" type="button" data-modal="back-call">Получить консультацию</button>
+      </div>
+    </div>
+    <!-- burger menu -->
+    @@include('menu/menu.html')
+    <!-- burger menu end -->
+  </div>
+</header>

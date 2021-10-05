@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  @@include("components/base/head.html", {
+  "title": "Mansio — Спасибо за заявку",
+  "description": "",
+  "keywords": ""
+  })
+</head>
+
+<body id="pageBody">
+  <div id="siteWrapper" class="wrapper">
+    <!-- header -->
+    @@include('components/header/header.html')
+    <main id="pageMain">
+      <div class="first-screen  first-screen--thankyou">
+        <div class="container">
+          <div class="first-screen__inner">
+            <h1 class="first-screen__title">Спасибо за заявку!</h1>
+            <p>Наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время!</p>
+            <p>Если нет времени ждать, то&nbsp;позвоните нам по&nbsp;номеру: <a href='tel:+74951820242'>+7 (495)
+                182-02-42</a> или напишите в&nbsp;мессенджер: <a href='##'>Whatsapp</a> или <a href='##'>Telegram</a>
+            </p>
+            @@include("components/btn/btn.html", {
+              "text": "Вернуться на главную",
+              "href": "/index.html"
+            })
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    @@include('components/footer/footer.html')
+
+    <!-- инклюд модалки -->
+    @@include("components/base/modal.html", {
+      "name": "back-call",
+      "fitContent": true,
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

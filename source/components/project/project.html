@@ -1,0 +1,169 @@
+<article class="project  container  container--xxl">
+
+  <div class="project__left-col">
+    <div class="project-gallery">
+
+      <!-- TODO: Написать скрипт для галлереи табов с поддержкой webp -->
+      <!-- <picture  class="project-gallery__main-picture-wrap">
+                <source srcset="./img/catalog/scandica/scandica1.webp 1x" >
+                <img id="expandImg" src="./img/catalog/scandica/scandica1.jpg" alt="Скандика: дворовой фасад" width="885">
+              </picture>
+
+              <ul class="project-gallery__thumbnails">
+
+                <li class="project-gallery__thumbnails-item">
+                  <picture>
+                    <source onclick="tabGallery(this);" srcset="./img/catalog/scandica/scandica1.webp 1x" >
+                    <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica1.jpg" alt="Скандика: дворовой фасад" width="200">
+                  </picture>
+                </li>
+
+                <li class="project-gallery__thumbnails-item">
+                  <picture>
+                    <source onclick="tabGallery(this);" srcset="./img/catalog/scandica/scandica2.webp 1x" >
+                    <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica2.jpg" alt="Скандика: главный фасад" width="200">
+                  </picture>
+                </li>
+
+                <li class="project-gallery__thumbnails-item">
+                  <picture>
+                    <source onclick="tabGallery(this);" srcset="./img/catalog/scandica/scandica3.webp 1x" >
+                    <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica3.jpg" alt="Скандика: главный фасад под углом" width="200">
+                  </picture>
+                </li>
+
+                <li class="project-gallery__thumbnails-item">
+                  <picture>
+                    <source onclick="tabGallery(this);" srcset="./img/catalog/scandica/scandica4.webp 1x">
+                    <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica4.jpg" alt="Скандика: дворовой фасад под углом"
+                      width="200">
+                  </picture>
+                </li> -->
+
+      <script>
+        function tabGallery(imgs) {
+          let expandImg = document.getElementById("expandImg");
+          expandImg.src = imgs.src;
+          expandImg.alt = imgs.alt;
+        }
+      </script>
+      <picture class="project-gallery__main-picture-wrap">
+        <img class="project-gallery__main-picture" id="expandImg" src="./img/catalog/scandica/scandica1.jpg" alt="Скандика: дворовой фасад" width="885">
+      </picture>
+      <ul class="project-gallery__thumbnails">
+        <li class="project-gallery__thumbnails-item">
+          <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica1.jpg" alt="Скандика: дворовой фасад"
+            width="200">
+        </li>
+        <li class="project-gallery__thumbnails-item">
+          <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica2.jpg" alt="Скандика: главный фасад"
+            width="200">
+        </li>
+        <li class="project-gallery__thumbnails-item">
+          <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica3.jpg"
+            alt="Скандика: главный фасад под углом" width="200">
+        </li>
+        <li class="project-gallery__thumbnails-item">
+          <img onclick="tabGallery(this);" src="./img/catalog/scandica/scandica4.jpg"
+            alt="Скандика: дворовой фасад под углом" width="200">
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="project__right-col">
+    <table class="project__table">
+
+      <tbody class="project__table-inner">
+
+        <tr class="project__table-row">
+          <th class="project__table-th  project__table-th--blue">Название проекта:</th>
+          <td class="project__table-td">
+            <h3 class="project__title">Скандика</h3>
+          </td>
+        </tr>
+
+        <tr class="project__table-row">
+          <th class="project__table-th  project__table-th--tablet-hide  project__table-th--blue">Площадь проекта:</th>
+          <td class="project__table-td  project__table-td--big project__table-td--blue">174&nbsp;м2</td>
+        </tr>
+
+        <tr class="project__table-row icon  icon--wall">
+          <th class="project__table-th">Материал стен:</th>
+          <td class="project__table-td">Кирпич + Клееный брус</td>
+        </tr>
+
+        <tr class="project__table-row icon  icon--bed">
+          <th class="project__table-th">Спальни:</th>
+          <td class="project__table-td">5</td>
+        </tr>
+
+        <tr class="project__table-row icon  icon--bathtub">
+          <th class="project__table-th">Ванные:</th>
+          <td class="project__table-td">4</td>
+        </tr>
+
+        <tr class="project__table-row  icon  icon--balcony">
+          <th class="project__table-th">Балконы:</th>
+          <td class="project__table-td">2</td>
+        </tr>
+
+        <tr class="project__table-row  icon  icon--closet">
+          <th class="project__table-th">Гардеробные:</th>
+          <td class="project__table-td">2</td>
+        </tr>
+
+        <tr class="project__table-row">
+          <th class="project__table-th  project__table-th--bold  project__table-th--blue">О проекте:</th>
+          <td class="project__table-td  project__table-td--text">Скоро расскажем подробней 😉</td>
+        </tr>
+
+        @@if (context.type == "Авторский проект") {
+          <tr class="project__table-row">
+            <th class="project__table-th  project__table-th--bold  project__table-th--blue">Автор проекта:</th>
+            <td class="project__table-td  project__author-row">
+
+                <div class="project__author-content author">
+                  <picture class="author__picture-wrap">
+                    <img class="author__img" src="./img/user-slider.jpg" width="102" alt="Автор проекта: Ирина Иванова">
+                  </picture>
+                  <div class="author__text-wrap">
+                    <p class="author__name">Ирина Иванова</p>
+                    <p class="author__employee">Должность: Архитектор</p>
+                    <p class="author__experience">Опыт: 120 проектов</p>
+                  </div>
+                </div>
+                @@include('../btn/btn.html', {
+                  "href": "@@presentation",
+                  "text": "Получить презентацию",
+                  "mod": "blue",
+                  "bemElement": "project__btn",
+                  "download": true
+                })
+            </td>
+          </tr>
+        }
+
+        <!-- Блок выводится у типового проекта вместо автора проекта -->
+        @@if (context.type == "Типовой проект") {
+          <tr class="project__table-row">
+            <th class="project__table-th  project__table-th--bold  project__table-th--blue">Стоимость проекта:</th>
+            <td class="project__table-td  project__table-td--big">6,97 млн. ₽</td>
+          </tr>
+        }
+    </table>
+
+    @@if (context.type == "Типовой проект") {
+    @@include('../btn/btn.html', {
+      "href": "@@presentation",
+      "text": "Получить презентацию",
+      "mod": "blue",
+      "bemElement": "project__btn",
+      "download": true
+
+    })
+  }
+  </div>
+
+</article>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+  <head>
+    @@include("components/base/head.html", {
+      "title": "Индивидуальное проектирование от Mansio group",
+      "description": "",
+      "keywords": "" })
+  </head>
+
+  <body id="pageBody">
+    <div id="siteWrapper" class="wrapper">
+      @@include('components/header/header.html')
+
+      <main id="pageMain">
+        @@include('components/first-screen/first-screen.html', {
+          "title": "Индивидуальное проектирование",
+          "dsc": '<p>С&nbsp;каждым заказчиком мы&nbsp;работаем индивидуально.<br>Каждый проект уникален, как отпечатки пальцев.</p><p>Наши лучшие архитекторы, конструктора, инженеры и&nbsp;дизайнеры создадут ваш индивидуальный дом с&nbsp;учетом ваших пожеланий, особенностей рельефа и&nbsp;требований местных инстанций, норм и&nbsp;правил.</p>',
+          "bgClass": "engineering"})
+
+        <section class="service-features container" style="max-width: 1520px">
+          <h2 class="visually-hidden">Особенности индивидуального проектирования от Mansio</h2>
+          <ul class="benefits-list benefits-list--bg-white">
+            <li class="benefits-list__item">
+              <div class="benefits-list__item-icon">
+                <svg width="51" height="51">
+                  <use xlink:href="/img/sprite_auto.svg#intro-icon-1"></use>
+                </svg>
+              </div>
+              <h3 class="benefits-list__item-title">11 лет в отрасли</h3>
+              <div class="benefits-list__item-subtitle">
+                Строим дома в Москве
+              </div>
+            </li>
+
+            <li class="benefits-list__item">
+              <div class="benefits-list__item-icon">
+                <svg width="52" height="46">
+                  <use xlink:href="/img/sprite_auto.svg#intro-icon-2"></use>
+                </svg>
+              </div>
+
+              <h3 class="benefits-list__item-title">Контроль качества</h3>
+              <div class="benefits-list__item-subtitle">
+                Независимый технадзор
+              </div>
+            </li>
+
+            <li class="benefits-list__item">
+              <div class="benefits-list__item-icon">
+                <svg width="45" height="45">
+                  <use xlink:href="/img/sprite_auto.svg#intro-icon-3"></use>
+                </svg>
+              </div>
+              <h3 class="benefits-list__item-title">Гарантия 15 лет</h3>
+              <div class="benefits-list__item-subtitle">
+                Установленная в договоре
+              </div>
+            </li>
+
+            <li class="benefits-list__item">
+              <div class="benefits-list__item-icon">
+                <svg width="46" height="46">
+                  <use xlink:href="/img/sprite_auto.svg#intro-icon-4"></use>
+                </svg>
+              </div>
+              <h3 class="benefits-list__item-title">Поэтапная оплата</h3>
+              <div class="benefits-list__item-subtitle">Прозрачная смета</div>
+            </li>
+
+            <li class="benefits-list__item">
+              <div class="benefits-list__item-icon">
+                <svg width="52" height="46">
+                  <use xlink:href="/img/sprite_auto.svg#intro-icon-2"></use>
+                </svg>
+              </div>
+
+              <h3 class="benefits-list__item-title">Контроль качества</h3>
+              <div class="benefits-list__item-subtitle">
+                Независимый технадзор
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        @@include('components/about/about-item.html', {
+          "text": "<p>Мы&nbsp;собрали портфолио проектов домов из&nbsp;газоблока, керамического блока, кирпича и&nbsp;монолита. Каждый из&nbsp;этих проектов разрабатывался для определенной семьи или человека.</p><p>Индивидуальный проект&nbsp;&mdash; это момент, история, повод для гордости и&nbsp;радости, но&nbsp;часто наши заказчики на&nbsp;первое место ставят простые мелочи и&nbsp;функциональность.</p><p>Куда складывать игрушки? Где разместить спорт уголок ребенку? Где и&nbsp;как помыть лапы любимому питомцу, где он&nbsp;будет спать? Куда деть спорт инвентарь? Жена любит готовить, куда деть огромное кол-во бытовых приборов? Вопросов которые стоят перед архитектором в&nbsp;процессе проектирования огромное количество. Из&nbsp;простых мелочей и&nbsp;состоит комфорт, гармония.</p>",
+          "title": "Кому необходимо индивидуальное проектирование",
+          "titleHide": true,
+          "imgName": "content-1",
+          "imgWidth": "885",
+          "imgAlt": "Архитектор Mansio за работой"
+        })
+
+        @@include('components/about/about-item.html', {
+        "text": "@@text.individual-design.2",
+        "title": "Польза портфолио",
+        "titleHide": true,
+        "imgName": "content-2",
+        "imgWidth": "885",
+        "imgAlt": "Фотография проекта «Скандика» из портфолио Mansio group",
+        "invert": true,
+        })
+
+        @@include('components/about/about-item.html', {
+        "text": "@@text.individual-design.3",
+        "title": "Этапы работ",
+        "imgName": "content-3",
+        "imgWidth": "885",
+        "imgAlt": "Фотография проекта из портфолио Mansio group",
+        })
+
+        <section class="division  division--bg-pale-grey">
+          <div class="container">
+            <div class="division__team">
+              <h2 class="division__title">Архитекторы</h2>
+              <p class="division__subtitle">Представляем команду Архитектурного отдела, работаем с&nbsp;любовью для вас</p>
+              <ul class="division__list">
+                @@loop('components/division/division.html', [
+                {"bemElement": "division__member",
+                "memberName": "Скоро представим",
+                "memberPost": "Со всеми должностями",
+                "imgSrc": "",
+                "imgW": "370"},
+                {"bemElement": "division__member",
+                "memberName": "Скоро представим",
+                "memberPost": "Со всеми должностями",
+                "imgSrc": "",
+                "imgW": "370"},
+                {"bemElement": "division__member",
+                "memberName": "Скоро представим",
+                "memberPost": "Со всеми должностями",
+                "imgSrc": "",
+                "imgW": "370"},
+                {"bemElement": "division__member",
+                "memberName": "Скоро представим",
+                "memberPost": "Со всеми должностями",
+                "imgSrc": "",
+                "imgW": "370"},
+                {"bemElement": "division__member",
+                "memberName": "Скоро представим",
+                "memberPost": "Со всеми должностями",
+                "imgSrc": "",
+                "imgW": "370"},
+                {"bemElement": "division__member",
+                "memberName": "Скоро представим",
+                "memberPost": "Со всеми должностями",
+                "imgSrc": "",
+                "imgW": "370"},
+                ])
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        @@include('components/contacts/contacts.html', {
+          "title": "Получить консультацию<br> специалистов Mansio Group",
+          "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
+          "person": {
+            "name": "Александра Бикова",
+            "employee": "Проектный консультант",
+            "imgSrc": "img/content/manager-w",
+            "imgWidth": "704",
+          },
+          "external": '@@externalForm.discussBody2',
+          "btnText": "Получить консультацию"
+        })
+      </main>
+
+      @@include('components/footer/footer.html')
+
+      <!-- инклюд модалки -->
+      @@include("components/base/modal.html", { "name": "back-call",
+      "fitContent": true, })
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

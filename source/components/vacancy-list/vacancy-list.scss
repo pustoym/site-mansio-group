@@ -1,0 +1,70 @@
+.vacancy {
+  padding-top: 105px;
+  padding-bottom: 150px;
+
+  @include viewport--md {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  &__tabs-content {
+    padding-top: 50px;
+
+    @include viewport--md {
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: $font-size-h1;
+    line-height: 1;
+    color: $secondary-color;
+    padding-bottom: 1.2em;
+
+    @include viewport--md {
+      font-size: 24px;
+      line-height: $line-height-title;
+    }
+  }
+
+  &__modal-content {
+    padding: 45px;
+
+    h4 {
+      margin-bottom: 1.1em;
+    }
+
+    ul {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.vacancy-list {
+  @include list-reset;
+  display: grid;
+  row-gap: 30px;
+
+  &__item {
+    // display: flex;
+
+    list-style: none;
+    box-shadow: 0 15px 34px 0 rgba(13, 30, 43, 0.2);
+    padding: 70px;
+    padding-bottom: 80px;
+
+    @include viewport--md {
+      padding: 30px 35px 35px;
+    }
+
+    @include viewport--xs {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &__dsc {
+    padding-bottom: 1.5em;
+  }
+}

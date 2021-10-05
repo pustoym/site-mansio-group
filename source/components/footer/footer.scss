@@ -1,0 +1,391 @@
+.footer {
+  background-image: url("../img/foto/footer-background.png");
+  background-repeat: repeat;
+  background-color: #0c1e2c;
+  color: $color-default-white;
+  border-bottom: 17px solid $primary-color;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include viewport--sm {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 267px;
+
+    @include viewport--md {
+      max-width: 250px;
+    }
+
+    @include viewport--sm {
+      max-width: 100%;
+      align-items: center;
+    }
+
+    @include viewport--xs {
+      max-width: 100%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include viewport--sm {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    // padding-bottom: 36px;
+    transition: fill $default-transition-settings;
+    display: flex;
+
+    @include viewport--sm {
+      padding-bottom: 10px;
+    }
+
+    svg {
+      width: 208px;
+      height: 58px;
+      fill: $color-default-white;
+      transition: inherit;
+    }
+
+    &[href]:hover svg,
+    &[href]:focus svg {
+      fill: $primary-color;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: $color-default-white;
+
+    // margin-bottom: 94px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+
+    @include viewport--sm {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  &__bank {
+    display: flex;
+    flex-direction: column;
+
+    // margin-bottom: 30px;
+
+    span {
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      color: #9f9fa0;
+
+      @media (max-width: 576px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+
+    @include viewport--sm {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__policy {
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: $color-default-white;
+    text-decoration: underline;
+
+    @include viewport--sm {
+      font-size: 1.3rem;
+      line-height: 1;
+      padding-top: 17.5px;
+      padding-bottom: 17.5px;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+
+    // width: 100%;
+    // max-width: 250px;
+
+    @include viewport--md {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include viewport--md {
+      align-items: center;
+    }
+
+    @include viewport--sm {
+      padding-top: 15px;
+      padding-bottom: 20px;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    @include viewport--xs {
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: $font-size-sm;
+    line-height: 1;
+    color: $color-default-white;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    @include viewport--md {
+      // margin-right: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include viewport--sm {
+      margin-bottom: 0;
+      padding-bottom: 13.5px;
+      padding-top: 13.5px;
+    }
+
+    @include viewport--xs {
+      font-size: 1.4rem;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &--active {
+      color: $primary-color;
+    }
+  }
+
+  &__login {
+    a {
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: $color-default-white;
+
+      svg {
+        width: 27px;
+        height: 27px;
+        fill: $color-default-white;
+
+        margin-right: 15px;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        svg {
+          fill: $primary-color;
+        }
+      }
+
+      @media (max-width: 576px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+
+    margin-bottom: 30px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+
+    @include viewport--sm {
+      flex-direction: row;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: $color-default-white;
+
+      margin-top: 3px;
+      margin-right: 19px;
+    }
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: $font-size;
+    color: $color-default-white;
+    line-height: 1;
+
+    margin-bottom: 14px;
+
+    @include viewport--sm {
+      font-size: 1.6rem;
+      // padding-top: 16px;
+      // padding-bottom: 16px;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+
+    button {
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: $color-default-white;
+      text-decoration: underline;
+      transition: 0.2s;
+      cursor: pointer;
+      margin-bottom: 21px;
+      padding: 0;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      @media (max-width: 991px) {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      color: $color-default-white;
+
+      @media (max-width: 576px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__social {
+    // margin-left: 52px;
+
+    a {
+      // margin-right: 23px;
+      padding: 5px;
+
+      @include viewport--sm {
+        display: inline-flex;
+        padding: 10px;
+      }
+    }
+
+    svg {
+      width: 27px;
+      height: 23px;
+      fill: #7c97aa;
+
+      margin-right: 0;
+      transition: 0.2s;
+
+      &:hover {
+        fill: $primary-color;
+      }
+    }
+
+    @include viewport--sm {
+      margin-left: auto;
+      // margin-top: 20px;
+      margin-top: 0;
+      // padding: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $color-default-white;
+    margin-bottom: 5px;
+  }
+
+  &__item-wrap {
+    display: flex;
+  }
+}
+
+.footer__item .phone-icon {
+  @include viewport--sm {
+    margin-right: 15px;
+  }
+}

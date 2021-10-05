@@ -1,0 +1,64 @@
+<li
+  class=" card
+    @@if (context.bemMod) {card--@@bemMod}
+    @@if (context.bemElement) {@@bemElement}
+    @@if (context.bemElementMod) {@@bemElementMod}">
+
+  <a class="card__link-wrapper"
+    @@if (context.href) {href="@@href"}
+    @@if (context.modal) {data-modal="@@modal"}>
+
+    <div class="card__content">
+      <dl class="card__headline">
+        <dt class="card__title">@@title</dt>
+        <dd class="card__subtitle">@@subtitle</dd>
+      </dl>
+    </div>
+
+    <picture class="card__picture">
+      <source srcset="@@imgSrc.webp 1x" type="image/webp">
+      <img src="@@imgSrc.jpg" alt="@@title" width="@@imgW">
+    </picture>
+
+  </a>
+
+  @@if (context.bemMod === "catalog") {
+    <div class="card__info-pane  card-pane">
+
+      <dl class="card-pane__name-wrapper">
+        <dt class="card__title  card-pane__title">@@title</dt>
+        <dd class="card__subtitle  card-pane__subtitle">@@subtitle</dd>
+      </dl>
+
+      <dl class="card-pane__property-list">
+        <div class="card-pane__property">
+          <dt>Площадь:</dt>
+          <dd>@@propSquare&nbsp;м2</dd>
+        </div>
+        <div class="card-pane__property">
+          <dt>Этажность</dt>
+          <dd>@@propfloors</dd>
+        </div>
+        <div class="card-pane__property  card-pane__property--label">
+          <dt>Материал</dt>
+          <dd>@@propMaterial</dd>
+        </div>
+
+      </dl>
+      @@include("../btn/btn.html", {
+      "href": "@@href",
+      "bemElement": "card-pane__btn",
+      "text": "Открыть проект"
+      })
+    </div>
+  }
+
+  @@if (context.bemMod === "modal") {
+    @@include("../btn/btn.html", {
+    "modal": "@@btnModal",
+    "mod": "white",
+    "bemElement": "card__modal-btn",
+    "text": "@@btnText"
+    })
+  }
+</li>

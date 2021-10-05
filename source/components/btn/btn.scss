@@ -1,0 +1,115 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  // min-width: 350px;
+  max-width: 440px;
+  min-height: 55px;
+  padding: 17px 50px;
+  padding-right: 130px;
+  margin: 0;
+  border: 0;
+  user-select: none;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 1.54;
+  color: $secondary-color;
+  text-transform: uppercase;
+  background-color: $primary-color;
+  background-image: none;
+  transition: background-color $default-transition-settings;
+  cursor: pointer;
+  overflow: hidden;
+
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+
+  @include viewport--xs {
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 88px;
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: saturate($secondary-color, 50);
+    text-decoration: none;
+    background-color: $primary-color-lighten;
+
+    span {
+      background-color: $primary-color;
+    }
+
+    svg {
+      fill: $primary-color-lighten;
+    }
+  }
+
+  &--disabled,
+  &:disabled {
+    // opacity: $opacity;
+    cursor: not-allowed;
+    // color: $text-color;
+    // background-color: $gray-lightest;
+    // border-color: $gray-lighter;
+  }
+
+  span {
+    height: 100%;
+    width: 78px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color-lighten;
+    transition: background-color $default-transition-settings;
+  }
+
+  svg {
+    position: relative;
+    width: 12px;
+    height: 10px;
+    fill: $primary-color-desaturate;
+    transition: fill $default-transition-settings;
+  }
+}
+
+.btn--blue {
+  max-width: 390px;
+  background-color: $secondary-color;
+  color: $white;
+
+  span {
+    background-color: $secondary-color-lighten;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color-lighten;
+    color: darken($white, 23);
+
+    span {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.btn--white {
+  background-color: $color-default-white;
+
+  span {
+    background-color: $color-default-white;
+  }
+
+  svg {
+    fill: $secondary-color;
+  }
+}

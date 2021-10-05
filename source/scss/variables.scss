@@ -1,0 +1,72 @@
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+$white: #f7f7f7; // hsl(0, 0%, 97%)
+$primary-color: #f9df8f; // hsl(45, 90%, 77%)
+$primary-color-desaturate: #f0d276; // hsl(45, 80%, 70%)
+$primary-color-lighten: #fcf7e6; // hsl(46, 79%, 95%)
+$secondary-color: #0c1e2c; // hsl(206, 57%, 11%)
+$secondary-color-desaturate: #0d1e2b; // hsl(206, 54%, 11%)
+$secondary-color-lighten: #153248; // hsl(206, 55%, 18%)
+
+$grey: #595959;
+$pale-grey: #dce6ed;
+
+$metalic-blue: #517489;
+
+
+$link-color:                  $primary-color;
+$link-color--hover:           darken($primary-color, 15%);
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$gradient-custom: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(37, 37, 37, 0) 100%);
+
+
+// Typography
+//---------------------------------
+
+$font-family: "Commissioner",  "Arial", sans-serif;
+$logo-font  : "Radiotechnika", "Arial", sans-serif;
+$font-size   : var(--font-size);
+$font-size-sm: var(--font-size-sm);
+$font-size-h1: 37.5px;
+$font-size-h2: 33.3px;
+$font-size-h3: 29.2px; // viewport--xs 25px
+$font-size-h4: 20.8px;
+// $line-height:  1.68;
+$line-height      : 1.5;
+$line-height-title: 1.29;
+
+
+$gap: var(--gap);
+
+// Animation
+//---------------------------------
+
+$default-transition-settings:       0.3s ease;
+$modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
+// также для любых transition обязательно указывайте transition-property
+// transition: color $default-transition-settings, а не transition: $default-transition-settings
+
+// Viewports
+//---------------------------------
+
+$viewport--sm:                      576px;
+$viewport--md:                      768px;
+$viewport--lg:                      1024px;
+$viewport--xl:                      1440px;
+$viewport--xxl:                     1900px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

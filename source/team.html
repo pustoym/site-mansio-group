@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  @@include("components/base/head.html", {
+  "title": "Mansio — Команда",
+  "description": "",
+  "keywords": ""
+  })
+</head>
+
+<body id="pageBody">
+  <div id="siteWrapper" class="wrapper">
+    <!-- header -->
+    @@include('components/header/header.html')
+    <main id="pageMain">
+      <!-- intro-contacts -->
+      @@include('components/first-screen/first-screen.html', {
+      "title": "Наша команда",
+      "bgClass": "team"
+      })
+      <section class="division">
+        <div class="container">
+          <div class="division__team">
+            <h2 class="division__title">Администрация</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Отдел продаж</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Екатерина Дмитренко",
+              "memberPost": "Маркетолог",
+              "imgSrc": "/img/person/Маркетолог_Екатерина_Дмитренко",
+              "imgW": "418",
+              "memberModal":"memberED"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+
+            @@include("components/base/modal.html", {
+            "name": "memberED",
+            "responsive": true,
+            })
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Архитектурный отдел</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Елизавета Труб",
+              "memberPost": "Ведущий Архитектор",
+              "imgSrc": "/img/person/Ведущий_Архитектор_Елизавета_Труб",
+              "imgW": "418",
+              "memberModal":"memberET"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+
+                @@include("components/base/modal.html", {
+                "name": "memberET",
+                "responsive": true,
+                })
+
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Конструкторский отдел</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Проектный отдел</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Строительный отдел</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Клиентский отдел</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+          </div>
+          <div class="division__team">
+            <h2 class="division__title">Отдел снабжения</h2>
+            <ul class="division__list">
+              @@loop('components/division/division.html', [
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              {"bemElement": "division__member",
+              "memberName": "Скоро представим",
+              "memberPost": "Со всеми должностями",
+              "imgSrc": "",
+              "imgW": "370"},
+              ])
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="about-item about-item--pale-grey">
+        <div class="about-item__inner">
+          <div class="about-item__text">
+            <h2 class="about-item__title">Cтаньте частью нашей<br> дружной команды!</h2>
+            <p>Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности представляет
+              собой интересный эксперимент проверки систем массового участия. Равным образом рамки и&nbsp;место обучения
+              кадров требуют определения и&nbsp;уточнения позиций, занимаемых участниками в&nbsp;отношении поставленных
+              задач.</p>
+            <div class="about-item__btn-wrap">
+              @@include('components/btn/btn.html', {
+                "text": "Отправить резюме",
+                "mod": "blue",
+                "bemElement": "about-item__btn",
+                "modal": "vacancyResponse"
+                })
+                @@include('components/btn/btn.html', {
+                  "text": "Смотреть вакансии",
+                  "bemElement": "about-item__btn",
+                  "href": "vacancy.html"
+                  })
+            </div>
+          </div>
+          <picture class="about-item__picture">
+            <source srcset="img/content/content-team.webp" type="image/webp">
+            <img src="img/content/content-team.jpg" width="885" alt="Небольшая строительная монтажная фирма" loading="lazy">
+          </picture>
+          </div>
+      </section>
+
+    </main>
+    <!-- footer -->
+    @@include('components/footer/footer.html')
+
+    <!-- инклюд модалки -->
+    @@include("components/base/modal.html", {
+      "name": "back-call",
+      "fitContent": true,
+    })
+
+    @@include("components/base/modal.html", {
+      "name": "vacancyResponse",
+      "fitContent": true,
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

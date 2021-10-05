@@ -1,0 +1,106 @@
+.tech {
+  padding: 1px 0;
+  padding-bottom: 60px;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0 0;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+
+    @include viewport--lg {
+      grid-template-columns: repeat(auto, minmax(320px, 1fr));
+    }
+
+    @include viewport--md {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+  }
+
+  &__item {
+    list-style: none;
+    min-height: 500px;
+
+    @include viewport--sm {
+      min-height: 300px;
+    }
+  }
+}
+
+.article-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 70px;
+  background-color: $secondary-color;
+  color: $color-default-white;
+  position: relative;
+
+  @include viewport--lg {
+    padding: 70px 30px;
+  }
+
+  &:hover {
+    .article-card__img::after {
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      transform: scale(1.03);
+    }
+  }
+
+  &__title {
+    font-size: 29.2px;
+    font-weight: 600;
+    z-index: 1;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    z-index: 1;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 1s ease-out;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 1s ease-out;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 80%);
+    }
+
+    &::after {
+      background: rgba(0, 0, 0, 0);
+      transition: all 0.3s ease;
+    }
+  }
+}

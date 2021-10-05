@@ -1,0 +1,101 @@
+.contacts-text {
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  font-size: $font-size-sm;
+  color: #7c97aa;
+
+  @include viewport--md {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    justify-items: center;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contacts-text__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include viewport--md {
+    text-align: center;
+    align-items: center;
+  }
+
+  &--right {
+    @include viewport--md {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--center {
+    @include viewport--sm {
+      @include hidden;
+    }
+  }
+}
+
+.contacts-text__svg-logo {
+  fill: $color-default-white;
+  margin-bottom: 1em;
+}
+
+.contacts-text__p {
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--title {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: $font-size;
+  }
+
+  &--white {
+    color: $color-default-white;
+    font-weight: bold;
+  }
+
+  &--name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 25px;
+
+    @include viewport--md {
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 18px;
+      background-color: #ffffff;
+
+      @include viewport--md {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contacts-text__name {
+  color: $primary-color;
+}

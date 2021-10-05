@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  @@include("components/base/head.html", {
+    "title": "Mansio — Услуги",
+    "description": "",
+    "keywords": ""
+  })
+</head>
+
+<body id="pageBody">
+  <div id="siteWrapper" class="wrapper">
+    <!-- header -->
+    @@include('components/header/header.html', {
+    "activeLinkIndex": 1
+    })
+    <main id="pageMain">
+      <!-- intro-contacts -->
+      @@include('components/first-screen/first-screen.html', {
+      "title": "Услуги",
+      "bgClass": "services"
+      })
+      <section class="about-item  about-item--brand">
+        <div class="about-item__inner">
+          @@include('components/brand-flag/brand-flag.html')
+          <div class="about-item__text">
+            <h2 class="about-item__title">Mansio Group</h2>
+            <p><b>Мы&nbsp;&mdash; строительная компания полного цикла.</b></p>
+            <p>Выполняем все виды работ от&nbsp;проектирования до&nbsp;ландшафтного дизайна и&nbsp;комплектации мебелью. Один подрядчик на&nbsp;все виды работ&nbsp;&mdash; <b style="text-transform: uppercase;">единый центр ответственности!</b>
+            </p>
+              <ul style="margin-bottom: 25px;">
+                <li>Архитектурный стиль определяет конструктив;</li>
+                <li>Ландшафтный дизайн выполняется в&nbsp;гармонии с&nbsp;фасадами;</li>
+                <li>Дизайн фасада и&nbsp;интерьера взаимно дополняют друг друга;</li>
+                <li>Дизайн интерьера связан с&nbsp;монтажом всех коммуникаций;</li>
+                <li>Видеонаблюдению в&nbsp;режиме реального времени.</li>
+              </ul>
+              <p><b style="text-transform: uppercase;">Результат:</b></p>
+              <ul>
+                <li>Участок, экстерьер и&nbsp;интерьер дома выглядят единым целым;</li>
+                <li>Исключены ошибки в&nbsp;процессе строительства;</li>
+                <li>В&nbsp;построенном нами доме продуманы все детали;</li>
+                <li>Ваш дом полностью готов для комфортного проживания.</li>
+              </ul>
+          </div>
+          <picture class="about-item__picture">
+            <source srcset="img/content/about-content-1.webp 1x" type="image/webp">
+            <img src="img/content/about-content-1.jpg" width="884" alt="Небольшая строительная монтажная фирма" loading="lazy">
+          </picture>
+        </div>
+      </section>
+
+      @@include('components/services/services.html')
+
+      @@include('components/contacts/contacts.html', {
+        "title": "Проконсультируем вас <br>по&nbsp;любой услуге!",
+        "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
+        "person": {
+          "name": "Александра Бикова",
+          "employee": "Проектный консультант",
+          "imgSrc": "img/content/manager-w",
+          "imgWidth": "704",
+        },
+        "textAbout": true,
+        "external": '<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"824449",hash:"82b1de926fdb7586c319326cd6a0c87f",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_824449" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629710572"></script>',
+        "btnText": "Получить консультацию"
+      })
+    </main>
+
+    @@include('components/footer/footer.html', {
+    "activeLinkIndex": 1
+    })
+
+    <!-- инклюд модалки -->
+    @@include("components/base/modal.html", {
+    "name": "back-call",
+    "fitContent": true,
+    })
+
+    @@include('components/base/modal.html', {
+      "name": "already-have",
+      "fitContent": true,
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

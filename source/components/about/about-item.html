@@ -1,0 +1,18 @@
+<section class="about-item
+  @@if (context.brand) {about-item--brand}
+  @@if (context.invert) {about-item--invert}
+  @@if (context.blue) {about-item--blue}
+  @@if (context.pb0) {about-item--md-pb-0}">
+  <div class="about-item__inner">
+    @@if (context.brand) {@@include('../brand-flag/brand-flag.html')}
+    <div class="about-item__text">
+      @@if (context.title) {<h2 class="about-item__title  @@if (context.titleHide) {visually-hidden}">@@title</h2>}
+      @@text
+    </div>
+    <picture class="about-item__picture">
+      <source srcset="img/content/@@imgName.webp 1x" type="image/webp">
+      <img src="img/content/@@imgName.jpg" width="@@imgWidth" alt="@@imgAlt"
+        loading="lazy">
+    </picture>
+  </div>
+</section>

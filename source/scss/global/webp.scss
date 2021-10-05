@@ -1,0 +1,620 @@
+.no-webp .intro,
+.no-js .intro {
+  background-image: url("../img/bg/bg-first-screen--main.jpg");
+
+  @include retina {
+    background-image: url("../img/bg/bg-first-screen--main@2x.jpg");
+  }
+
+  @include viewport--xs {
+    background-image: url("../img/catalog/scandica/scandica1-cut.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/scandica/scandica1-cut@2x.jpg");
+      // background-image: url("../img/catalog/scandica/scandica1-cut.jpg");
+    }
+  }
+}
+
+.webp .intro {
+  background-image: url("../img/bg/bg-first-screen--main.webp");
+
+  @include retina {
+    background-image: url("../img/bg/bg-first-screen--main@2x.webp");
+  }
+
+  @include viewport--xs {
+    background-image: url("../img/catalog/scandica/scandica1-cut.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/scandica/scandica1-cut@2x.webp");
+      // background-image: url("../img/catalog/scandica/scandica1-cut.webp");
+    }
+  }
+}
+
+
+/* ======================================
+   $First-screen
+   ====================================== */
+
+.no-webp .first-screen,
+.no-js .first-screen {
+  &--tech {
+    background-image: url("../img/bg/bg-fs--tech.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--tech@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs--tech320.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs--tech320@2x.jpg");
+      }
+    }
+  }
+
+  &--contacts {
+    background-image: url("../img/bg/bg-first-screen--contacts.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--contacts@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-contacts-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-contacts-mob@2x.jpg");
+      }
+    }
+  }
+
+  &--projects {
+    background-image: url("../img/bg/bg-first-screen--projects.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--projects@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-projects-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-projects-mob@2x.jpg");
+      }
+    }
+  }
+
+  &--services {
+    background-image: url("../img/bg/bg-first-screen--services.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--services@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-services-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-services-mob@2x.jpg");
+      }
+    }
+  }
+
+  &--about {
+    background-image: url("../img/bg/bg-first-screen--about.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--about@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-about-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-about-mob@2x.jpg");
+      }
+    }
+  }
+
+  &--thankyou {
+    background-image: url("../img/bg/bg-first-screen--main.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--main@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-main-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-main-mob@2x.jpg");
+      }
+    }
+  }
+
+  &--team {
+    background-image: url("../img/bg/bg-first-screen--team.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--team@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-team-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-team-mob@2x.jpg");
+      }
+    }
+  }
+
+  &--vacancy {
+    background-image: url("../img/bg/bg-first-screen-vacancy.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen-vacancy@2x.jpg");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-vacancy-mob.jpg");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-vacancy-mob@2x.jpg");
+      }
+    }
+  }
+
+  /* $Services
+     ====================================== */
+
+  &--construction {
+    background-image: url("../img/bg/bg-fs--construction.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--construction@2x.jpg");
+    }
+  }
+
+  &--engineering {
+    background-image: url("../img/bg/bg-fs--service-id.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--service-id@2x.jpg");
+    }
+  }
+
+  /* $Projects
+     ====================================== */
+
+  &--scandica {
+    background-image: url("../img/catalog/scandica/scandica1-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/scandica/scandica1-xxl@2x.jpg");
+    }
+  }
+
+  &--kanny {
+    background-image: url("../img/catalog/kanny/bg-xxl.jpg");
+
+
+    @include retina {
+      background-image: url("../img/catalog/kanny/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--keln {
+    background-image: url("../img/catalog/keln/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/keln/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--amsterdam {
+    background-image: url("../img/catalog/amsterdam/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/amsterdam/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--kataloniya {
+    background-image: url("../img/catalog/kataloniya/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/kataloniya/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--zheneva {
+    background-image: url("../img/catalog/zheneva/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/zheneva/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--khelsinki {
+    background-image: url("../img/catalog/khelsinki/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/khelsinki/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--bremen {
+    background-image: url("../img/catalog/bremen/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/bremen/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--nitstsa {
+    background-image: url("../img/catalog/nitstsa/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/nitstsa/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--bratislava {
+    background-image: url("../img/catalog/bratislava/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/bratislava/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--keyptaun {
+    background-image: url("../img/catalog/keyptaun/bg-xxl.jpg");
+
+
+    @include retina {
+      background-image: url("../img/catalog/keyptaun/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--larnaka {
+    background-image: url("../img/catalog/larnaka/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/larnaka/bg-xxl@2x.jpg");
+    }
+  }
+
+  &--toronto {
+    background-image: url("../img/catalog/toronto/bg-xxl.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/toronto/bg-xxl@2x.jpg");
+    }
+  }
+}
+
+.webp .first-screen {
+  &--tech {
+    background-image: url("../img/bg/bg-fs--tech.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--tech@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs--tech320.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs--tech320@2x.webp");
+      }
+    }
+  }
+
+
+  &--contacts {
+    background-image: url("../img/bg/bg-first-screen--contacts.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--contacts@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-contacts-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-contacts-mob@2x.webp");
+      }
+    }
+  }
+
+  &--projects {
+    background-image: url("../img/bg/bg-first-screen--projects.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--projects@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-projects-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-projects-mob@2x.webp");
+      }
+    }
+  }
+
+  &--services {
+    background-image: url("../img/bg/bg-first-screen--services.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--services@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-services-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-services-mob@2x.webp");
+      }
+    }
+  }
+
+  &--about {
+    background-image: url("../img/bg/bg-first-screen--about.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--about@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-about-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-about-mob@2x.webp");
+      }
+    }
+  }
+
+  &--thankyou {
+    background-image: url("../img/bg/bg-first-screen--main.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--main@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-main-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-main-mob@2x.webp");
+      }
+    }
+  }
+
+  &--team {
+    background-image: url("../img/bg/bg-first-screen--team.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen--team@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-team-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-team-mob@2x.webp");
+      }
+    }
+  }
+
+  &--vacancy {
+    background-image: url("../img/bg/bg-first-screen-vacancy.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-first-screen-vacancy@2x.webp");
+    }
+
+    @include viewport--xs {
+      background-image: url("../img/bg/bg-fs-vacancy-mob.webp");
+
+      @include retina {
+        background-image: url("../img/bg/bg-fs-vacancy-mob@2x.webp");
+      }
+    }
+  }
+  /* $Services
+     ====================================== */
+
+  &--construction {
+
+    background-image: url("../img/bg/bg-fs--construction.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--construction@2x.webp");
+    }
+  }
+
+  &--engineering {
+    background-image: url("../img/bg/bg-fs--service-id.webp");
+
+    @include retina {
+      background-image: url("../img/bg/bg-fs--service-id@2x.webp");
+    }
+  }
+
+  /* $Projects
+     ====================================== */
+
+  &--scandica {
+    background-image: url("../img/catalog/scandica/scandica1-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/scandica/scandica1-xxl@2x.webp");
+    }
+  }
+
+  &--kanny {
+    background-image: url("../img/catalog/kanny/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/kanny/bg-xxl@2x.webp");
+    }
+  }
+
+  &--skandika {
+    background-image: url("../img/catalog/skandika/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/skandika/bg-xxl@2x.webp");
+    }
+  }
+
+  &--keln {
+    background-image: url("../img/catalog/keln/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/keln/bg-xxl@2x.webp");
+    }
+  }
+
+  &--amsterdam {
+    background-image: url("../img/catalog/amsterdam/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/amsterdam/bg-xxl@2x.webp");
+    }
+  }
+
+  &--kataloniya {
+    background-image: url("../img/catalog/kataloniya/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/kataloniya/bg-xxl@2x.webp");
+    }
+  }
+
+  &--zheneva {
+    background-image: url("../img/catalog/zheneva/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/zheneva/bg-xxl@2x.webp");
+    }
+  }
+
+  &--khelsinki {
+    background-image: url("../img/catalog/khelsinki/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/khelsinki/bg-xxl@2x.webp");
+    }
+  }
+
+  &--bremen {
+    background-image: url("../img/catalog/bremen/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/bremen/bg-xxl@2x.webp");
+    }
+  }
+
+  &--nitstsa {
+    background-image: url("../img/catalog/nitstsa/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/nitstsa/bg-xxl@2x.webp");
+    }
+  }
+
+  &--bratislava {
+    background-image: url("../img/catalog/bratislava/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/bratislava/bg-xxl@2x.webp");
+    }
+  }
+
+  &--keyptaun {
+    background-image: url("../img/catalog/keyptaun/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/keyptaun/bg-xxl@2x.webp");
+    }
+  }
+
+  &--larnaka {
+    background-image: url("../img/catalog/larnaka/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/larnaka/bg-xxl@2x.webp");
+    }
+  }
+
+  &--toronto {
+    background-image: url("../img/catalog/toronto/bg-xxl.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/toronto/bg-xxl@2x.webp");
+    }
+  }
+}
+
+/* ======================================
+   $We-do
+   ====================================== */
+
+.no-webp .we-do__item,
+.no-js .we-do__item {
+  &--bg-first {
+    background-image: url("../img/bg/works-item-1.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/works-item-1@2x.jpg");
+    }
+  }
+
+  &--bg-second {
+    background-image: url("../img/bg/works-item-2.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/works-item-2@2x.jpg");
+    }
+  }
+
+  &--bg-third {
+    background-image: url("../img/bg/works-item-3.jpg");
+
+    @include retina {
+      background-image: url("../img/bg/works-item-3@2x.jpg");
+    }
+  }
+}
+
+.webp .we-do__item {
+  &--bg-first {
+    background-image: url("../img/bg/works-item-1.webp");
+
+    @include retina {
+      background-image: url("../img/bg/works-item-1@2x.webp");
+    }
+  }
+
+  &--bg-second {
+    background-image: url("../img/bg/works-item-2.webp");
+
+    @include retina {
+      background-image: url("../img/bg/works-item-2@2x.webp");
+    }
+  }
+
+  &--bg-third {
+    background-image: url("../img/bg/works-item-3.webp");
+
+    @include retina {
+      background-image: url("../img/bg/works-item-3@2x.webp");
+    }
+  }
+}

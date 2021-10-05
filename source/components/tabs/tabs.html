@@ -1,0 +1,35 @@
+<!-- В разработке -->
+<!-- https://github.com/pandaprofit/html-starter-template/blob/master/GUIDE.md -->
+<div class="tabs">
+  <ul
+    class="tabs__list nav nav-tabs  @@if (context.bemParent) {@@bemParent__tabs-list} "
+    id="navTabsList"
+    role="tablist"
+  >
+    <li class="tabs__list-item  @@if (context.bemParent) {@@bemParent__tab-wrap}" role="presentation">
+      <button
+        class="tabs__btn active @@if (context.bemParent) {@@bemParent__tab}"
+        id="@@idNameTab"
+        type="button"
+        role="tab"
+        aria-controls="@@idNamePane"
+        aria-selected="true"
+        data-bs-toggle="tab"
+        data-bs-target="#@@idNamePane"
+      >
+        @@btnText
+      </button>
+    </li>
+  </ul>
+
+  <div class="@@if (context.bemParent) {@@bemParent__content}">
+    <section
+      class="tabs__pane active"
+      id="@@idNamePane"
+      role="tabpanel"
+      aria-labelledby="@@idNameTab"
+    >
+      <div class=" @@if (context.bemParent) {@@bemParent__section}">@@content</div>
+    </section>
+  </div>
+</div>

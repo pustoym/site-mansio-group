@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+  <head>
+    @@include("components/base/head.html", {
+      "title": "«@@projectsList.kanny.name» — Авторский проект Mansio group",
+      "description": "",
+      "keywords": ""
+    })
+  </head>
+
+  <body id="pageBody">
+    <div id="siteWrapper" class="wrapper">
+      @@include('components/header/header.html')
+
+      <main id="pageMain">
+        @@include('components/first-screen/first-screen.html', {
+          "title": "@@projectsList.kanny.name",
+          "bgClass": "kanny"
+        })
+
+        <section class="details">
+          <div class="container container--xxl">
+            @@include('components/headline/headline.html', {
+              "headline": "Детали проекта" })
+          </div>
+
+          <article class="project container container--xxl">
+            <div class="project__left-col">
+              <div class="project-gallery">
+                <script>
+                  function tabGallery(imgs) {
+                    let expandImg = document.getElementById("expandImg");
+                    expandImg.src = imgs.src;
+                    expandImg.alt = imgs.alt;
+                  }
+                </script>
+                <picture class="project-gallery__main-picture-wrap">
+                  <img
+                    class="project-gallery__main-picture"
+                    id="expandImg"
+                    src="./img/catalog/kanny/1.jpg"
+                    alt="@@projectsList.kanny.name: дворовой фасад"
+                    width="885"
+                  />
+                </picture>
+                <ul class="project-gallery__thumbnails">
+                  <li class="project-gallery__thumbnails-item">
+                    <img
+                      onclick="tabGallery(this);"
+                      src="./img/catalog/kanny/1.jpg"
+                      alt="@@projectsList.kanny.name: дворовой фасад"
+                      width="200"
+                    />
+                  </li>
+                  <li class="project-gallery__thumbnails-item">
+                    <img
+                      onclick="tabGallery(this);"
+                      src="./img/catalog/kanny/2.jpg"
+                      alt="@@projectsList.kanny.name: главный фасад"
+                      width="200"
+                    />
+                  </li>
+                  <li class="project-gallery__thumbnails-item">
+                    <img
+                      onclick="tabGallery(this);"
+                      src="./img/catalog/kanny/3.jpg"
+                      alt="@@projectsList.kanny.name: главный фасад под углом"
+                      width="200"
+                    />
+                  </li>
+                  <li class="project-gallery__thumbnails-item">
+                    <img
+                      onclick="tabGallery(this);"
+                      src="./img/catalog/kanny/4.jpg"
+                      alt="@@projectsList.kanny.name: дворовой фасад под углом"
+                      width="200"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project__right-col">
+              <table class="project__table">
+                <tbody class="project__table-inner">
+                  <tr class="project__table-row">
+                    <th class="project__table-th project__table-th--blue">Название проекта:</th>
+                    <td class="project__table-td"><h3 class="project__title">@@projectsList.kanny.name</h3></td>
+                  </tr>
+
+                  <tr class="project__table-row">
+                    <th
+                      class="
+                        project__table-th
+                        project__table-th--tablet-hide
+                        project__table-th--blue
+                      ">Площадь проекта:</th>
+                    <td
+                      class="
+                        project__table-td
+                        project__table-td--big
+                        project__table-td--blue
+                      ">@@projectsList.kanny.square&nbsp;м2</td>
+                  </tr>
+
+                  <tr class="project__table-row icon icon--wall">
+                    <th class="project__table-th">Материал стен:</th>
+                    <td class="project__table-td">@@projectsList.kanny.material</td>
+                  </tr>
+
+                  <tr class="project__table-row icon icon--bed">
+                    <th class="project__table-th">Спальни:</th>
+                    <td class="project__table-td">@@projectsList.kanny.bedrooms</td>
+                  </tr>
+
+                  <tr class="project__table-row icon icon--bathtub">
+                    <th class="project__table-th">Ванные:</th>
+                    <td class="project__table-td">@@projectsList.kanny.bathrooms</td>
+                  </tr>
+
+                  <tr class="project__table-row icon icon--balcony">
+                    <th class="project__table-th">Балконы:</th>
+                    <td class="project__table-td">@@projectsList.kanny.balconies</td>
+                  </tr>
+
+                  <tr class="project__table-row icon icon--closet">
+                    <th class="project__table-th">Гардеробные:</th>
+                    <td class="project__table-td">@@projectsList.kanny.closet</td>
+                  </tr>
+
+                  <tr class="project__table-row">
+                    <th
+                      class="
+                        project__table-th
+                        project__table-th--bold
+                        project__table-th--blue
+                      ">О проекте:</th>
+                    <td class="project__table-td project__table-td--text">Скоро расскажем подробней 😉</td>
+                  </tr>
+
+                  @@if (projectsList.kanny.type == "Авторский проект") {
+                  <tr class="project__table-row">
+                    <th
+                      class="
+                        project__table-th
+                        project__table-th--bold
+                        project__table-th--blue
+                      ">Автор проекта:</th>
+                    <td class="project__table-td project__author-row">
+                      <div class="project__author-content author">
+                        <picture class="author__picture-wrap">
+                          <img
+                            class="author__img"
+                            src="./img/user-slider.jpg"
+                            width="102"
+                            alt="Автор проекта: Ирина Иванова"
+                          />
+                        </picture>
+                        <div class="author__text-wrap">
+                          <p class="author__name">Ирина Иванова</p>
+                          <p class="author__employee">Должность: Архитектор</p>
+                          <p class="author__experience">Опыт: 120 проектов</p>
+                        </div>
+                      </div>
+                      @@include('components/btn/btn.html', {
+                        "href": "@@projectsList.kanny.pdfHref",
+                        "text": "Получить презентацию",
+                        "mod": "blue",
+                        "bemElement": "project__btn",
+                        "download": true })
+                    </td>
+                  </tr>
+                  }
+
+                  <!-- Блок выводится у типового проекта вместо автора проекта -->
+                  @@if (projectsList.kanny.type == "Типовой проект") {
+                  <tr class="project__table-row">
+                    <th
+                      class="
+                        project__table-th
+                        project__table-th--bold
+                        project__table-th--blue
+                      ">Стоимость проекта:
+                    </th>
+                    <td class="project__table-td project__table-td--big">@@projectsList.kanny.cost&nbsp;₽</td>
+                  </tr>
+                  }
+                </tbody>
+              </table>
+
+              @@if (projectsList.kanny.type == "Типовой проект") {
+                @@include('components/btn/btn.html', {
+                  "href": "@@projectsList.kanny.pdfHref",
+                  "text": "Получить презентацию",
+                  "mod": "blue",
+                  "bemElement": "project__btn",
+                  "download": true })
+              }
+            </div>
+          </article>
+        </section>
+
+        <!-- @@include('components/house-gallery/house-gallery.html') -->
+
+        <!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
+        <!-- @@include('components/row-form/row-form.html', {
+        "title": "Понравился проект или хотите его изменить, дополнить?",
+        "subtitle": "Напишите ваш номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы обсудить детали.",
+        "buttonText": "Рассчитать стоимость"
+        }) -->
+
+        <section class="catalog">
+          <div class="container container--xxl">
+            @@include('components/headline/headline.html', {
+              "headline": "Посмотрите похожие проекты" })
+
+            <ul class="catalog__list catalog__list--gap-solid">
+@@include("components/card/card.html", {
+  "href": "/project-keln.html",
+  "bemElement": "catalog__item",
+  "bemMod": "catalog",
+  "title": "@@projectsList.keln.name",
+  "subtitle": "@@projectsList.keln.type",
+  "propSquare": "@@projectsList.keln.square",
+  "propfloors": "@@projectsList.keln.floors",
+  "propMaterial": "@@projectsList.keln.material",
+  "imgSrc": "img/catalog/keln/1",
+  "imgW": "950"
+})
+@@include("components/card/card.html", {
+  "href": "/project-zheneva.html",
+  "bemElement": "catalog__item",
+  "bemMod": "catalog",
+  "title": "@@projectsList.zheneva.name",
+  "subtitle": "@@projectsList.zheneva.type",
+  "propSquare": "@@projectsList.zheneva.square",
+  "propfloors": "@@projectsList.zheneva.floors",
+  "propMaterial": "@@projectsList.zheneva.material",
+  "imgSrc": "img/catalog/zheneva/1",
+  "imgW": "950"
+})
+    @@include("components/card/card.html", {
+      "href": "/project-bremen.html",
+      "bemElement": "catalog__item",
+      "bemMod": "catalog",
+      "title": "@@projectsList.bremen.name",
+      "subtitle": "@@projectsList.bremen.type",
+      "propSquare": "@@projectsList.bremen.square",
+      "propfloors": "@@projectsList.bremen.floors",
+      "propMaterial": "@@projectsList.bremen.material",
+      "imgSrc": "img/catalog/bremen/1",
+      "imgW": "950"
+    })
+    @@include("components/card/card.html", {
+      "href": "/project-nitstsa.html",
+      "bemElement": "catalog__item",
+      "bemMod": "catalog",
+      "title": "@@projectsList.nitstsa.name",
+      "subtitle": "@@projectsList.nitstsa.type",
+      "propSquare": "@@projectsList.nitstsa.square",
+      "propfloors": "@@projectsList.nitstsa.floors",
+      "propMaterial": "@@projectsList.nitstsa.material",
+      "imgSrc": "img/catalog/nitstsa/1",
+      "imgW": "950"
+    })
+            </ul>
+          </div>
+        </section>
+
+        @@include('components/contacts/contacts.html', {
+          "title": "Спроектируем ваш <br />индивидуальный дом",
+          "dsc": "",
+          "person": {
+            "name": "Иванов Александр",
+            "employee": "Главный архитектор",
+            "imgSrc": "img/content/manager",
+            "imgWidth": "651",
+          },
+          "textAbout": true,
+          "external": '@@externalForm.discussBody',
+          "btnText": "Записаться на&nbsp;встречу с&nbsp;архитектором", })
+      </main>
+
+      @@include('components/footer/footer.html')
+
+      @@include("components/base/modal.html", {
+        "name": "back-call",
+        "fitContent": true, })
+
+      @@include("components/base/modal.html", {
+        "name": "registration-for-viewing",
+        "responsive": true, })
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__name">
+        <a class="footer__logo" @@if (!context.main) {href="index.html" } aria-label="Переход на главную">
+          <svg>
+            <use xlink:href="/img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
+        <p class="footer__title">Строим дома бизнес-класса в Москве и Московской области</p>
+        <div class="footer__bank">
+          <span>ООО «МАНСИО ГРУПП»</span>
+          <span>ИНН 7727435818</span>
+          <span>ОГРН 1197746734767</span>
+        </div>
+        <a class="footer__policy" href="privacy.html">Политика конфиденциальности</a>
+        <p style="font-size:12px;">Информация, представленная на сайте, не является публичной офертой.</p>
+      </div>
+      <div class="footer__center">
+        <nav class="footer__nav">
+               <a class="footer__link @@if (context.activeLinkIndex === 0) { footer__link--active }" @@if (context.activeLinkIndex !== 0) { href="./projects.html" }>Проекты</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 1) { footer__link--active }" @@if (context.activeLinkIndex !== 1) { href="./services.html" }>Услуги</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 2) { footer__link--active }" @@if (context.activeLinkIndex !== 2) { href="./technology.html" }>Технологии</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 3) { footer__link--active }" @@if (context.activeLinkIndex !== 3) { href="./about.html" }>О нас</a>
+               <a class="footer__link @@if (context.activeLinkIndex === 4) { footer__link--active }" @@if (context.activeLinkIndex !== 4) { href="./contacts.html" }>Контакты</a>
+        </nav>
+        <!-- <div class="footer__login">
+          <a href="##">
+            <svg>
+              <use xlink:href="/img/sprite_auto.svg#login"></use>
+            </svg>
+            Войти в личный кабинет
+          </a>
+        </div> -->
+      </div>
+      <div class="footer__contacts">
+        <address class="footer__wrap">
+          <div class="footer__item">
+            <div class="footer__item-wrap">
+              <svg class="phone-icon">
+                <use xlink:href="/img/sprite_auto.svg#contacts-icon-2"></use>
+              </svg>
+              <div class="footer__text">
+                <a class="footer__phone" href="tel:+74951820242">+7 (495) 182-02-42</a>
+                <button type="button" data-modal="back-call">Получить консультацию</button>
+              </div>
+            </div>
+            <div class="footer__social">
+              <a href="https://t.me/mansio_group" target="_blank">
+                <svg>
+                  <use xlink:href="/img/sprite_auto.svg#telegram"></use>
+                </svg>
+              </a>
+              <a href="https://wa.me/79175432263?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20" target="_blank">
+                <svg>
+                  <use xlink:href="/img/sprite_auto.svg#whatsapp"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__item">
+            <div class="footer__item-wrap">
+              <svg>
+                <use xlink:href="/img/sprite_auto.svg#reviews-slider-icon-2"></use>
+              </svg>
+              <div class="footer__text">
+                <div class="footer__subtitle">Адрес:</div>
+                <span>Рублево-Успенское шоссе 1 км, д 6, офис 512</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__item">
+            <div class="footer__item-wrap">
+              <svg>
+                <use xlink:href="/img/sprite_auto.svg#footer-icon-1"></use>
+              </svg>
+              <div class="footer__text">
+                <div class="footer__subtitle">Электронная почта:</div>
+                <a style="color: inherit" href="mailto:info@mansio-group.ru">info@mansio-group.ru</a>
+              </div>
+            </div>
+          </div>
+        </address>
+        @@include('../btn/btn.html', {
+        "text": "Обратный звонок",
+        "modal": "back-call"
+        })
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KQWSGF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

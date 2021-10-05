@@ -1,0 +1,52 @@
+
+.loader {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #323137;
+  transition: all 0.5s cubic-bezier(0.14, 0.13, 0.9, 0.07);
+}
+
+.loader.startanimate {
+  transform: translateY(-100%);
+}
+
+.ajaxloader {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  // background: #323137;
+  background: rgb(124, 151, 170);
+  background: linear-gradient(180deg, rgba(124, 151, 170, 1) 0%, rgba(12, 30, 44, 1) 100%);
+  transition: all 0.5s cubic-bezier(0.14, 0.13, 0.9, 0.07);
+  transform: translateY(100%);
+}
+
+.ajaxloader.startanimate {
+  transform: translateY(0%);
+}
+
+.ajaxloader.startanimate.processanimate {
+  transform: translateY(-100%);
+}
+
+
+.animMenuEL,
+.animFb,
+.animated-text.animFb {
+  transition: all 0.5s ease;
+}
+
+.hideMenuEl,
+.hideFb,
+.animated-text.hideFb {
+  opacity: 0;
+  transform: translateY(10px);
+}
+

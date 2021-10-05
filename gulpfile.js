@@ -1,5 +1,5 @@
 let buildFolder = "build";
-let srcFolder = "#src";
+let srcFolder = "source";
 
 // let fs = require('fs');
 

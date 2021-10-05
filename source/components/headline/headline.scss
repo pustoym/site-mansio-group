@@ -1,0 +1,40 @@
+.headline {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: inherit;
+
+  @include viewport--xs {
+    padding: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: $font-size-h2;
+    line-height: $line-height-title;
+    color: $secondary-color;
+    text-transform: uppercase;
+
+    padding: 35px 0;
+    padding-left: 100px;
+
+    border-left: 1px solid  #0c1e2c;
+
+    @include viewport--sm {
+      padding-left: 50px;
+    }
+
+    @include viewport--xs {
+      text-align: center;
+      font-size: 6vw;
+      // font-size: 2.2rem;
+      // line-height: 2.6rem;
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  span {
+    color: $primary-color;
+  }
+}
+

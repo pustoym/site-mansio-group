@@ -1,0 +1,132 @@
+.first-screen {
+  display: flex;
+  align-items: center;
+
+  font-size: $font-size;
+  line-height: 1.68;
+  color: #dce6ed;
+  background-color: rgba(13, 30, 43, 0.6);
+  height: 100vh;
+
+  min-height: 750px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include viewport--md {
+    height: auto;
+    min-height: 60vh;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  @include viewport--sm {
+    min-height: 150px;
+    padding-top: 85px;
+    padding-bottom: 0;
+    background-position: center;
+  }
+
+  @include viewport--xs {
+    background-size: 576px;
+    background-position: center top;
+
+    @include retina {
+      // background-size: 576px;
+    }
+  }
+
+  &--tech {
+    @include viewport--xs {
+
+      @include retina {
+        background-size: auto 15%;
+      }
+    }
+  }
+
+  &--services,
+  &--tech,
+  &--about,
+  &--thankyou,
+  &--team,
+  &--vacancy,
+  &--construction,
+  &--engineering {
+    background-color: rgba(13, 30, 43, 0.6);
+    background-blend-mode: darken;
+  }
+
+  &--scandica,
+  &--kanny,
+  &--keln,
+  &--amsterdam,
+  &--kataloniya,
+  &--zheneva,
+  &--khelsinki,
+  &--bremen,
+  &--nitstsa,
+  &--bratislava,
+  &--keyptaun,
+  &--larnaka,
+  &--toronto {
+    background-color: rgba(13, 30, 43, 0.2);
+    background-blend-mode: darken;
+  }
+
+  &__inner {
+    padding-left: 100px;
+
+    @include viewport--md {
+      padding-left: 0;
+    }
+
+    @include viewport--xs {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 37.5px;
+    line-height: 1.33;
+    color: $color-default-white;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 65px;
+
+    @include viewport--xs {
+      font-size: 2.2rem;
+      margin-bottom: 1.2em;
+    }
+  }
+
+  p {
+    max-width: 650px;
+    margin-bottom: 35px;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+
+    @include viewport--sm {
+      margin-bottom: 1.1em;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &__breadcrumbs {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #7c97aa;
+
+    @media (max-width: 576px) {
+      font-size: 1.4rem;
+    }
+  }
+}
