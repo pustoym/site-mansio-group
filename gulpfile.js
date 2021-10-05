@@ -36,8 +36,9 @@ const fileinclude = require("gulp-file-include");
 const browsersync = require("browser-sync").create();
 const del = require("del");
 const sass = require("gulp-sass");
+const postcss = require('gulp-postcss');
 const bulk = require("gulp-sass-bulk-importer");
-const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require("autoprefixer");
 const group_media = require("gulp-group-css-media-queries");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
@@ -69,16 +70,11 @@ const html = () => {
         },
       })
     )
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file",
-        context: {
-          // глобальные переменные для include
-          test: "text",
-        },
-      })
-    )
+    .pipe(fileinclude({
+      prefix: "@@",
+      basepath: "@file",
+      context: require("./file-include-context")
+    }))
     .pipe(
       htmlbeautify({
         indent_size: 2,
@@ -92,10 +88,8 @@ const html = () => {
 exports.html = html;
 
 const css = () => {
-  return (
-    src(path.src.css)
-      .pipe(
-        plumber({
+  return src(path.src.css)
+      .pipe(plumber({
           errorHandler: function (err) {
             notify.onError({
               title: "CSS compilation error",
@@ -103,24 +97,20 @@ const css = () => {
             })(err);
             this.emit("end");
           },
-        })
-      )
+        }))
       .pipe(sourcemap.init())
       // .pipe(bulk())
       .pipe(sass())
-      .pipe(
-        autoprefixer({
-          cascade: true,
-        })
-      )
+      .pipe(postcss([autoprefixer({
+        // grid: true,
+      })]))
       .pipe(group_media()) // выключитmь, если в проект импортятся шрифты через ссылку на внешний источник
       .pipe(dest(path.build.css))
       .pipe(csso())
       .pipe(rename("style.min.css"))
-      .pipe(sourcemap.write())
+      .pipe(sourcemap.write("."))
       .pipe(dest(path.build.css))
       .pipe(browsersync.stream())
-  );
 };
 exports.css = css;
 
@@ -164,8 +154,7 @@ const generatePngSprite = () => {
 
 const syncserver = () => {
   browsersync.init({
-    server: { baseDir: "./" + buildFolder + "/" },
-    port: 8080,
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -175,22 +164,13 @@ const syncserver = () => {
   });
 
   gulp.watch(path.watch.html, series(html, refresh));
-  gulp.watch(
-    [path.watch.css, srcFolder + "/components/**/*.scss"],
-    series(css)
-  );
+  gulp.watch([path.watch.css, srcFolder + "/components/**/*.scss"], series(css));
   gulp.watch(path.watch.js, series(js, refresh));
-  gulp.watch(
-    srcFolder + "/img/**/*.svg",
-    series(copysvg, sprite, html, refresh)
-  );
-  gulp.watch(
-    srcFolder + "/img/**/*.{png,jpg,webp}",
-    series(copypngjpg, html, refresh)
-  );
-
-  gulp.watch(srcFolder + "/favicon/**", gulp.series(copy, refresh));
-  gulp.watch(srcFolder + "/video/**", gulp.series(copy, refresh));
+  gulp.watch(`${srcFolder}/img/**/*.svg`, series(copysvg, sprite, html, refresh));
+  gulp.watch(`${srcFolder}/img/**/*.{png,jpg,webp}`, series(copypngjpg, html, refresh));
+  gulp.watch(`${srcFolder}/favicon/**`, gulp.series(copy, refresh));
+  gulp.watch(`${srcFolder}/video/**`, gulp.series(copy, refresh));
+  gulp.watch(`${srcFolder}/downloads/**`, gulp.series(copy, refresh));
 };
 
 const refresh = (done) => {
@@ -214,12 +194,12 @@ const copy = () => {
   return gulp
     .src(
       [
-        srcFolder + "/fonts/*.{woff,woff2}",
-        srcFolder + "/img/**",
+        `${srcFolder}/fonts/*.{woff,woff2}`,
+        `${srcFolder}/img/**`,
+        `${srcFolder}/favicon/**`,
+        `${srcFolder}/video/**`,
+        `${srcFolder}/downloads/**`,
         // srcFolder + '/data/**',
-        srcFolder + "/favicon/**",
-        srcFolder + "/video/**",
-        // srcFolder + '/downloads/**',
         // srcFolder + '/*.php',
       ],
       {
@@ -253,7 +233,7 @@ const start = series(build, syncserver);
 // root = `content/` - webp добавляются и обновляются только в source/img/content/
 
 const createWebp = () => {
-  const root = `catalog/scandica/`;
+  const root = `content/`;
   return gulp
     .src(`${srcFolder}/img/${root}**/*.{png,jpg}`)
     .pipe(webp({ quality: 90 }))

@@ -1,0 +1,182 @@
+{
+  "externalForm": {
+    "discussModal": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"841105\",hash:\"7996435f3912dc70d4a8cb313cf6b826\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_841105\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1632903968\"></script>",
+    "discussBody": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"823744\",hash:\"3e5bddc0ee041117a0393f68b52f5c00\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_823744\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629471665\"></script>",
+    "registrationViewingModal": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"823750\",hash:\"e76b0394838a458bc0c9c429b22b83e2\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_823750\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629472904\"></script>",
+    "backCallModal": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"824308\",hash:\"eb4c8a02bc8d0e34f40c0bf6717e14c2\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_824308\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629695953\"></script>",
+    "alreadyHave": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"824437\",hash:\"bc1d3d7136b6a981ba531b07a2f4df4f\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_824437\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629710154\"></script>",
+    "discussBody2": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"824449\",hash:\"82b1de926fdb7586c319326cd6a0c87f\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_824449\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629710572\"></script>",
+    "contactFeedback": "<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:\"824473\",hash:\"229bc93141dbd97270bacd314cfb1290\",locale:\"ru\"})}(window,0,\"amo_forms_\",\"params\",\"load\");</script><script id=\"amoforms_script_824473\" async=\"async\" charset=\"utf-8\" src=\"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1629712966\"></script>"
+  },
+  "projectsList": {
+    "kanny": {
+      "name": "Канны",
+      "type": "Авторский проект",
+      "square": "238",
+      "floors": "1",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "3",
+      "closet": "2",
+      "balconies": "0",
+      "pdfHref": "/downloads/Канны.pdf"
+    },
+    "scandika": {
+      "name": "Скандика",
+      "type": "Авторский проект",
+      "square": "360",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "4",
+      "bathrooms": "3",
+      "closet": "2",
+      "balconies": "0",
+      "pdfHref": "/downloads/Скандика.pdf"
+    },
+    "keln": {
+      "name": "Кёльн",
+      "type": "Типовой проект",
+      "square": "325",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "3",
+      "closet": "2",
+      "balconies": "1",
+      "pdfHref": "/downloads/Кёльн.pdf",
+      "cost": "~"
+    },
+    "amsterdam": {
+      "name": "Амстердам",
+      "type": "Авторский проект",
+      "square": "195",
+      "floors": "1",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "2",
+      "bathrooms": "2",
+      "closet": "3",
+      "balconies": "0",
+      "pdfHref": "/downloads/Амстердам.pdf"
+    },
+    "kataloniya": {
+      "name": "Каталония",
+      "type": "Авторский проект",
+      "square": "355",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "4",
+      "bathrooms": "4",
+      "closet": "2",
+      "balconies": "0",
+      "pdfHref": "/downloads/Каталония.pdf"
+    },
+    "zheneva": {
+      "name": "Женева",
+      "type": "Авторский проект",
+      "square": "375",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "4",
+      "bathrooms": "5",
+      "closet": "1",
+      "balconies": "3",
+      "pdfHref": "/downloads/Женева.pdf"
+    },
+    "khelsinki": {
+      "name": "Хельсинки",
+      "type": "Типовой проект",
+      "square": "180",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "closet": "1",
+      "balconies": "2",
+      "pdfHref": "/downloads/Хельсинки.pdf",
+      "cost": "~"
+    },
+    "bremen": {
+      "name": "Бремен",
+      "type": "Типовой проект",
+      "square": "176",
+      "floors": "1",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "closet": "1",
+      "balconies": "-",
+      "pdfHref": "/downloads/Бремен.pdf",
+      "cost": "~"
+    },
+    "nitstsa": {
+      "name": "Ницца",
+      "type": "Типовой проект",
+      "square": "169",
+      "floors": "1",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "closet": "-",
+      "balconies": "-",
+      "pdfHref": "/downloads/Ницца.pdf",
+      "cost": "~"
+    },
+    "bratislava": {
+      "name": "Братислава",
+      "type": "Типовой проект",
+      "square": "152",
+      "floors": "1",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "closet": "-",
+      "balconies": "-",
+      "pdfHref": "/downloads/Братислава.pdf",
+      "cost": "~"
+    },
+    "keyptaun": {
+      "name": "Кейптаун",
+      "type": "Типовой проект",
+      "square": "166,5",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "closet": "-",
+      "balconies": "-",
+      "pdfHref": "/downloads/Кейптаун.pdf",
+      "cost": "~"
+    },
+    "larnaka": {
+      "name": "Ларнака",
+      "type": "Типовой проект",
+      "square": "199",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "closet": "1",
+      "balconies": "-",
+      "cost": "~"
+    },
+    "toronto": {
+      "name": "Торонто",
+      "type": "Типовой проект",
+      "square": "231",
+      "floors": "2",
+      "material": "Газоблок / Теплая керамика (Porotherm)",
+      "bedrooms": "3",
+      "bathrooms": "3",
+      "closet": "1",
+      "balconies": "-",
+      "cost": "~"
+    }
+  },
+  "text": {
+    "individual-design": {
+      "2": "<p><b>В&nbsp;нашем портфолио созданных проектов входят планировки, состав помещений, визуализация. Просматривая&nbsp;их, заказчик наглядно видит, какие решения ему нравятся, а&nbsp;какие он&nbsp;хотел&nbsp;бы изменить или добавить.</b></p><p>Данный процесс сильно облегчает составление грамотного задания на&nbsp;разработку объемно-планировочного решения.</p><p><b>Грамотно спроектировать&nbsp;&mdash; значит добиться максимального комфорта в&nbsp;логистике передвижения по&nbsp;дому, полностью отвечающему всем вашим эстетическим и&nbsp;функциональным требованиям.</b></p><p>Далее мы&nbsp;подробнее расскажем об&nbsp;этапах индивидуального проектирования.</p>",
+      "3": "<ul> <li><b>Выезд архитектора</b> на участок для определения места будущей застройки, анализа рельефа, сторон света и особенностей участка</li> <li><b>Заполнение технического задания, ответы на вопросы:</b> <ul> <li>Состав семьи сегодня и планы по ее увеличению;</li> <li>Проживание пожилых и маленьких членов семьи, которым удобнее будет жилая комната на первом этаже, удобная лестница на второй этаж</li> <li>Пожелания по площади и этажности дома, количеству спален, санузлов;</li> <li>Район строительства, для определения толщины стен и типа фундамента;</li> <li>Пожелания заказчика по расположению дома на участке;</li> <li>Индивидуальные пожелания по материалу облицовке стен, материалу кровли, по наличию сауны, камина, спортзала, кабинета. На встрече заказчику показываем реальные образцы материалов;</li> <li>Архитектурные и стилистические особенности дома;</li> <li>Используемые конструктивные особенности;</li> <li>Бюджет строительства;</li> <li>Эскизные варианты.</li> </ul></li> <li><b>Доработка проекта.</b> В процессе проектирования дома архитектором, к процессу подключается конструктор, инженер. Просчитываются все нагрузки, вносятся замечания от конструктора и инженера.</li> <li><b>Согласование</b> архитектором всех используемых решений в проекте с заказчиком</li> <li><b>Утверждение</b> готового проекта заказчиком.</li></ul>"
+    }
+
+  }
+}
