@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 
 module.exports = {
-  context: path.resolve(__dirname, '#src'),
+  context: path.resolve(__dirname, 'source'),
   mode: 'development',
   entry: {
     main: './js/main.js',
