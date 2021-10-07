@@ -3,14 +3,14 @@
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  height: 57px;
-  padding: 0 3vw;
-  padding-top: 68px;
+  // height: 57px;
+  padding: 2% 3vw;
   color: $color-default-white;
+  transition: opacity $default-transition-settings;
 
   @media (max-width: 1100px) {
     padding-top: 3.5%;
@@ -194,36 +194,36 @@
     }
   }
 
-  &__telegram {
-    margin-right: 23px;
-
-    svg {
-      width: 27px;
-      height: 23px;
-      fill: $color-default-white;
-      transition: 0.2s;
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &:first-child {
+      margin-right: 20px;
     }
-
-    &:hover {
+    &:hover,
+    &:focus {
       svg {
         fill: $primary-color;
       }
     }
   }
 
-  &__whatsapp {
-    svg {
-      width: 23px;
-      height: 23px;
-      fill: $color-default-white;
-      transition: 0.2s;
-    }
+  &__social-icon {
+    transition: 0.2s;
+    fill: $color-default-white;
 
-    &:hover {
-      svg {
-        fill: $primary-color;
-      }
-    }
+  }
+
+  &__social-icon--tg {
+    width: 27px;
+    height: 23px;
+  }
+
+  &__social-icon--wa {
+    width: 23px;
+    height: 23px;
   }
 
   &__contacts {
@@ -249,8 +249,10 @@
   }
 
   &__consultation {
+    padding: 0;
     font-weight: 300;
     font-size: 16.7px;
+    line-height: 1;
     color: $color-default-white;
     text-decoration: underline;
 
@@ -261,5 +263,17 @@
     @media (max-width: 1450px) {
       font-size: 1.2rem;
     }
+  }
+
+  &--hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &--bg-dark {
+    background-color: $secondary-color;
+    color: $color-default-white;
+    padding: 1em 3vw;
+    border-bottom: 1px solid $primary-color;
   }
 }
