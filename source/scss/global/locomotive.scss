@@ -54,20 +54,20 @@ html.has-scroll-smooth,
   will-change: transform;
 }
 
-.has-scroll-smooth img.bigTranslatedImg {
+.has-scroll-smooth .js-picture__img--big-scroll {
   --overflow: 80px;
 }
 
-.has-scroll-smooth img.midTranslatedImg {
+.has-scroll-smooth .js-picture__img--mid-scroll {
   --overflow: 60px;
 }
 
 @media screen and (min-width: 1900px) {
-  .has-scroll-smooth img.bigTranslatedImg {
+  .has-scroll-smooth .js-picture__img--big-scroll {
     --overflow: 120px;
   }
 
-  .has-scroll-smooth img.midTranslatedImg {
+  .has-scroll-smooth .js-picture__img--mid-scroll {
     --overflow: 80px;
   }
 }
@@ -84,17 +84,16 @@ html.has-scroll-smooth,
 /* $Text animate
    ====================================== */
 
-.animated-text {
+.animated-text,
+.animated-text.is-inview.hideFb {
+  opacity: 0;
+  // animation: fadeInUp 1s ease;
   transition: all 1s ease;
-  animation: fadeInUp 1s ease;
+  transform: translateY(1vw);
 }
 
+.animated-text.animated-text--active,
 .animated-text.is-inview {
   opacity: 1;
   transform: translateY(0);
-}
-
-.animated-text.is-inview.hideFb {
-  opacity: 0;
-  transform: translateY(1vw);
 }

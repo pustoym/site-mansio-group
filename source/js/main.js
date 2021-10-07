@@ -1,27 +1,32 @@
-import { jqSlick } from "./vendor/slick-slider";
-import { lightbox } from "./vendor/glightbox";
-import { initModals } from "./modules/init-modals";
-import { smParams } from "./modules/pageload";
-import { textAnimate } from "./modules/animate";
-import { showSideMenu } from "./modules/show-side-menu";
-import { showFilter } from "./modules/catalog-filter";
-import { tabs } from "./modules/product-tabs";
-import { tabGallery } from "./modules/tabgallery";
-import { Tab } from 'bootstrap';
-// import { scroll } from "./vendor/locomotive-scroll";
+import {initModals} from './modules/init-modals';
+import {smoothParams} from './modules/pageload';
+import {textAnimate, addAttrScrollToImg, limitImgHeight} from './modules/animate';
+import {initScroll, destroyScroll, updateScroll, scrollMenu} from './vendor/locomotive-scroll';
+// import {addHideClassToFirstScreen,showFirstBlock} from './utils/firstscreen-animate.js';
+import {showSideMenu} from './modules/show-side-menu';
+import {showFilter} from './modules/catalog-filter';
+import {tabs} from './modules/product-tabs';
+// import {jqSlick} from './vendor/slick-slider';
 
-document.addEventListener("DOMContentLoaded", function () {
-  jqSlick();
-  tabs();
-  // tabGallery();
+
+document.addEventListener('DOMContentLoaded', () => {
   showSideMenu();
-  showFilter();
-  initModals();
-  // textAnimate();
+  textAnimate();
+  addAttrScrollToImg();
+  // destroyScroll();
+  // initScroll();
+  updateScroll();
+  scrollMenu();
 
+  window.addEventListener('load', () => {
+    initModals();
+    showFilter();
+    tabs();
+    // jqSlick();
+  });
   // ajax links
-  if (!$("body").hasClass("disable-effects")) {
-    $("#siteWrapper").smoothState(smParams);
+  if (!$('body').hasClass('disable-effects')) {
+    $('#siteWrapper').smoothState(smoothParams);
 
     // $(".header__link a, .footer__link a, .header__logo[href], .footer__logo[href]").on("click", function (e) {
     //   createOnAjaxLoader();
@@ -38,5 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
     //     var href = $(this).attr('href');
     //     content.load(href);
     // });
+  }
+});
+
+$('body').imagesLoaded(function () {
+  if (!$('body').hasClass('disable-effects')) {
+    document.body.classList.remove('loading');
+    limitImgHeight();
+    updateScroll();
+    $(window).resize(function () {
+      setTimeout(function () {
+        limitImgHeight();
+        updateScroll();
+      }, 700);
+    });
   }
 });

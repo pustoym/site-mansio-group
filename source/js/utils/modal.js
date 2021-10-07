@@ -8,7 +8,7 @@ const openModal = (modal, callback, preventScrollLock) => {
   }
 
   if (!preventScrollLock) {
-    disableScrolling();
+    disableScrolling(true);
   }
 };
 
