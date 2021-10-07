@@ -74,29 +74,7 @@
     visibility: visible;
     opacity: 1;
   }
-  // &__scene {
-  //   animation-duration: 0.25s;
-  //   transition-timing-function: ease-in;
-  //   animation-fill-mode: both;
 
-  //   &--fadein {
-  //     animation-name: fadeIn;
-  //   }
-
-  //   &--fadeinup {
-  //     animation-name: fadeInUp;
-  //   }
-
-  //   &--fadeinright {
-  //     animation-name: fadeInRight;
-  //   }
-  // }
-
-  // &--is-exiting {
-  //   .wrapper__scene {
-  //     animation-direction: alternate-reverse;
-  //   }
-  // }
 
   &--no-scrollbar {
     height: 100vh;
