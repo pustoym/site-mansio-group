@@ -223,11 +223,8 @@
   gap: 10px;
 
   @include viewport--lg {
-    justify-content: center;
-  }
-
-  @include viewport--xs {
     flex-direction: column;
+    justify-content: center;
   }
 }
 
