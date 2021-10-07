@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-js">
   <head>
-    @@include("components/base/head.html", {
+    @@include("../components/base/head.html", {
       "title": "«@@projectsList.nitstsa.name» — Авторский проект Mansio group",
       "description": "",
       "keywords": ""
@@ -10,17 +10,17 @@
 
   <body id="pageBody">
     <div id="siteWrapper" class="wrapper">
-      @@include('components/header/header.html')
+      @@include('../components/header/header.html')
 
       <main id="pageMain">
-        @@include('components/first-screen/first-screen.html', {
+        @@include('../components/first-screen/first-screen.html', {
           "title": "@@projectsList.nitstsa.name",
           "bgClass": "nitstsa"
         })
 
         <section class="details">
           <div class="container container--xxl">
-            @@include('components/headline/headline.html', {
+            @@include('../components/headline/headline.html', {
               "headline": "Детали проекта" })
           </div>
 
@@ -162,7 +162,7 @@
                           <p class="author__experience">Опыт: 120 проектов</p>
                         </div>
                       </div>
-                      @@include('components/btn/btn.html', {
+                      @@include('../components/btn/btn.html', {
                         "href": "@@projectsList.nitstsa.pdfHref",
                         "text": "Получить презентацию",
                         "mod": "blue",
@@ -189,7 +189,7 @@
               </table>
 
               @@if (projectsList.nitstsa.type == "Типовой проект") {
-                @@include('components/btn/btn.html', {
+                @@include('../components/btn/btn.html', {
                   "href": "@@projectsList.nitstsa.pdfHref",
                   "text": "Получить презентацию",
                   "mod": "blue",
@@ -200,10 +200,10 @@
           </article>
         </section>
 
-        <!-- @@include('components/house-gallery/house-gallery.html') -->
+        <!-- @@include('../components/house-gallery/house-gallery.html') -->
 
         <!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
-        <!-- @@include('components/row-form/row-form.html', {
+        <!-- @@include('../components/row-form/row-form.html', {
         "title": "Понравился проект или хотите его изменить, дополнить?",
         "subtitle": "Напишите ваш номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы обсудить детали.",
         "buttonText": "Рассчитать стоимость"
@@ -211,11 +211,11 @@
 
         <section class="catalog">
           <div class="container container--xxl">
-            @@include('components/headline/headline.html', {
+            @@include('../components/headline/headline.html', {
               "headline": "Посмотрите похожие проекты" })
 
             <ul class="catalog__list catalog__list--gap-solid">
-@@include("components/card/card.html", {
+@@include("../components/card/card.html", {
   "href": "/project-keln.html",
   "bemElement": "catalog__item",
   "bemMod": "catalog",
@@ -227,7 +227,7 @@
   "imgSrc": "img/catalog/keln/1",
   "imgW": "950"
 })
-@@include("components/card/card.html", {
+@@include("../components/card/card.html", {
   "href": "/project-zheneva.html",
   "bemElement": "catalog__item",
   "bemMod": "catalog",
@@ -239,7 +239,7 @@
   "imgSrc": "img/catalog/zheneva/1",
   "imgW": "950"
 })
-    @@include("components/card/card.html", {
+    @@include("../components/card/card.html", {
       "href": "/project-bremen.html",
       "bemElement": "catalog__item",
       "bemMod": "catalog",
@@ -251,7 +251,7 @@
       "imgSrc": "img/catalog/bremen/1",
       "imgW": "950"
     })
-    @@include("components/card/card.html", {
+    @@include("../components/card/card.html", {
       "href": "/project-bratislava.html",
       "bemElement": "catalog__item",
       "bemMod": "catalog",
@@ -267,7 +267,7 @@
           </div>
         </section>
 
-        @@include('components/contacts/contacts.html', {
+        @@include('../components/contacts/contacts.html', {
           "title": "Спроектируем ваш <br />индивидуальный дом",
           "dsc": "",
           "person": {
@@ -281,13 +281,13 @@
           "btnText": "Записаться на&nbsp;встречу с&nbsp;архитектором", })
       </main>
 
-      @@include('components/footer/footer.html')
+      @@include('../components/footer/footer.html')
 
-      @@include("components/base/modal.html", {
+      @@include("../components/base/modal.html", {
         "name": "back-call",
         "fitContent": true, })
 
-      @@include("components/base/modal.html", {
+      @@include("../components/base/modal.html", {
         "name": "registration-for-viewing",
         "responsive": true, })
     </div>

@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
     "title": "Mansio — Проекты",
     "description": "",
     "keywords": ""
@@ -12,35 +12,35 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
 
-    @@include('components/header/header.html', {
+    @@include('../components/header/header.html', {
       "activeLinkIndex": 0
     })
-    
+
     <main id="pageMain">
 
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
         "title": "Наши проекты",
         "bgClass": "projects"
       })
 
-      @@include('components/we-do/we-do.html')
+      @@include('../components/we-do/we-do.html')
 
       <!-- filter -->
-      @@include('components/filter/filter.html')
+      @@include('../components/filter/filter.html')
       <!-- TODO: написать нативный обработчик форм -->
-      <!-- @@include('components/row-form/row-form.html', {
+      <!-- @@include('../components/row-form/row-form.html', {
         "title": "У&nbsp;вас есть свой проект?",
         "subtitle": "Загрузите его для расчета. Проведем профессиональную экспертизу и&nbsp;сделаем подробную смету.",
         "buttonText": "Рассчитать стоимость"
       }) -->
 
       <!-- project-item -->
-      <!-- @@include('components/project-item/project-item.html') -->
+      <!-- @@include('../components/project-item/project-item.html') -->
 
-      @@include('components/catalog/catalog.html')
+      @@include('../components/catalog/catalog.html')
 
       <!-- contacts -->
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "title": "Спроектируем ваше <br>индивидуальное решение",
         "dsc": "",
         "person": {
@@ -56,14 +56,14 @@
 
     </main>
     <!-- footer -->
-    @@include('components/footer/footer.html', {
+    @@include('../components/footer/footer.html', {
       "activeLinkIndex": 0
     })
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
       "name": "registration-for-viewing",
       "responsive": true,
     })
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
       "name": "back-call",
       "fitContent": true,
     })

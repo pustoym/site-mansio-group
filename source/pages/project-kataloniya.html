@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-js">
   <head>
-    @@include("components/base/head.html", {
-      "title": "«@@projectsList.kanny.name» — Авторский проект Mansio group",
+    @@include("../components/base/head.html", {
+      "title": "«@@projectsList.kataloniya.name» — Авторский проект Mansio group",
       "description": "",
       "keywords": ""
     })
@@ -10,17 +10,17 @@
 
   <body id="pageBody">
     <div id="siteWrapper" class="wrapper">
-      @@include('components/header/header.html')
+      @@include('../components/header/header.html')
 
       <main id="pageMain">
-        @@include('components/first-screen/first-screen.html', {
-          "title": "@@projectsList.kanny.name",
-          "bgClass": "kanny"
+        @@include('../components/first-screen/first-screen.html', {
+          "title": "@@projectsList.kataloniya.name",
+          "bgClass": "kataloniya"
         })
 
         <section class="details">
           <div class="container container--xxl">
-            @@include('components/headline/headline.html', {
+            @@include('../components/headline/headline.html', {
               "headline": "Детали проекта" })
           </div>
 
@@ -38,8 +38,8 @@
                   <img
                     class="project-gallery__main-picture"
                     id="expandImg"
-                    src="./img/catalog/kanny/1.jpg"
-                    alt="@@projectsList.kanny.name: дворовой фасад"
+                    src="./img/catalog/kataloniya/1.jpg"
+                    alt="@@projectsList.kataloniya.name: дворовой фасад"
                     width="885"
                   />
                 </picture>
@@ -47,32 +47,32 @@
                   <li class="project-gallery__thumbnails-item">
                     <img
                       onclick="tabGallery(this);"
-                      src="./img/catalog/kanny/1.jpg"
-                      alt="@@projectsList.kanny.name: дворовой фасад"
+                      src="./img/catalog/kataloniya/1.jpg"
+                      alt="@@projectsList.kataloniya.name: дворовой фасад"
                       width="200"
                     />
                   </li>
                   <li class="project-gallery__thumbnails-item">
                     <img
                       onclick="tabGallery(this);"
-                      src="./img/catalog/kanny/2.jpg"
-                      alt="@@projectsList.kanny.name: главный фасад"
+                      src="./img/catalog/kataloniya/2.jpg"
+                      alt="@@projectsList.kataloniya.name: главный фасад"
                       width="200"
                     />
                   </li>
                   <li class="project-gallery__thumbnails-item">
                     <img
                       onclick="tabGallery(this);"
-                      src="./img/catalog/kanny/3.jpg"
-                      alt="@@projectsList.kanny.name: главный фасад под углом"
+                      src="./img/catalog/kataloniya/3.jpg"
+                      alt="@@projectsList.kataloniya.name: главный фасад под углом"
                       width="200"
                     />
                   </li>
                   <li class="project-gallery__thumbnails-item">
                     <img
                       onclick="tabGallery(this);"
-                      src="./img/catalog/kanny/4.jpg"
-                      alt="@@projectsList.kanny.name: дворовой фасад под углом"
+                      src="./img/catalog/kataloniya/4.jpg"
+                      alt="@@projectsList.kataloniya.name: дворовой фасад под углом"
                       width="200"
                     />
                   </li>
@@ -85,7 +85,7 @@
                 <tbody class="project__table-inner">
                   <tr class="project__table-row">
                     <th class="project__table-th project__table-th--blue">Название проекта:</th>
-                    <td class="project__table-td"><h3 class="project__title">@@projectsList.kanny.name</h3></td>
+                    <td class="project__table-td"><h3 class="project__title">@@projectsList.kataloniya.name</h3></td>
                   </tr>
 
                   <tr class="project__table-row">
@@ -100,32 +100,32 @@
                         project__table-td
                         project__table-td--big
                         project__table-td--blue
-                      ">@@projectsList.kanny.square&nbsp;м2</td>
+                      ">@@projectsList.kataloniya.square&nbsp;м2</td>
                   </tr>
 
                   <tr class="project__table-row icon icon--wall">
                     <th class="project__table-th">Материал стен:</th>
-                    <td class="project__table-td">@@projectsList.kanny.material</td>
+                    <td class="project__table-td">@@projectsList.kataloniya.material</td>
                   </tr>
 
                   <tr class="project__table-row icon icon--bed">
                     <th class="project__table-th">Спальни:</th>
-                    <td class="project__table-td">@@projectsList.kanny.bedrooms</td>
+                    <td class="project__table-td">@@projectsList.kataloniya.bedrooms</td>
                   </tr>
 
                   <tr class="project__table-row icon icon--bathtub">
                     <th class="project__table-th">Ванные:</th>
-                    <td class="project__table-td">@@projectsList.kanny.bathrooms</td>
+                    <td class="project__table-td">@@projectsList.kataloniya.bathrooms</td>
                   </tr>
 
                   <tr class="project__table-row icon icon--balcony">
                     <th class="project__table-th">Балконы:</th>
-                    <td class="project__table-td">@@projectsList.kanny.balconies</td>
+                    <td class="project__table-td">@@projectsList.kataloniya.balconies</td>
                   </tr>
 
                   <tr class="project__table-row icon icon--closet">
                     <th class="project__table-th">Гардеробные:</th>
-                    <td class="project__table-td">@@projectsList.kanny.closet</td>
+                    <td class="project__table-td">@@projectsList.kataloniya.closet</td>
                   </tr>
 
                   <tr class="project__table-row">
@@ -138,7 +138,7 @@
                     <td class="project__table-td project__table-td--text">Скоро расскажем подробней 😉</td>
                   </tr>
 
-                  @@if (projectsList.kanny.type == "Авторский проект") {
+                  @@if (projectsList.kataloniya.type == "Авторский проект") {
                   <tr class="project__table-row">
                     <th
                       class="
@@ -162,8 +162,8 @@
                           <p class="author__experience">Опыт: 120 проектов</p>
                         </div>
                       </div>
-                      @@include('components/btn/btn.html', {
-                        "href": "@@projectsList.kanny.pdfHref",
+                      @@include('../components/btn/btn.html', {
+                        "href": "@@projectsList.kataloniya.pdfHref",
                         "text": "Получить презентацию",
                         "mod": "blue",
                         "bemElement": "project__btn",
@@ -173,7 +173,7 @@
                   }
 
                   <!-- Блок выводится у типового проекта вместо автора проекта -->
-                  @@if (projectsList.kanny.type == "Типовой проект") {
+                  @@if (projectsList.kataloniya.type == "Типовой проект") {
                   <tr class="project__table-row">
                     <th
                       class="
@@ -182,15 +182,15 @@
                         project__table-th--blue
                       ">Стоимость проекта:
                     </th>
-                    <td class="project__table-td project__table-td--big">@@projectsList.kanny.cost&nbsp;₽</td>
+                    <td class="project__table-td project__table-td--big">@@projectsList.kataloniya.cost&nbsp;₽</td>
                   </tr>
                   }
                 </tbody>
               </table>
 
-              @@if (projectsList.kanny.type == "Типовой проект") {
-                @@include('components/btn/btn.html', {
-                  "href": "@@projectsList.kanny.pdfHref",
+              @@if (projectsList.kataloniya.type == "Типовой проект") {
+                @@include('../components/btn/btn.html', {
+                  "href": "@@projectsList.kataloniya.pdfHref",
                   "text": "Получить презентацию",
                   "mod": "blue",
                   "bemElement": "project__btn",
@@ -200,10 +200,10 @@
           </article>
         </section>
 
-        <!-- @@include('components/house-gallery/house-gallery.html') -->
+        <!-- @@include('../components/house-gallery/house-gallery.html') -->
 
         <!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
-        <!-- @@include('components/row-form/row-form.html', {
+        <!-- @@include('../components/row-form/row-form.html', {
         "title": "Понравился проект или хотите его изменить, дополнить?",
         "subtitle": "Напишите ваш номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы обсудить детали.",
         "buttonText": "Рассчитать стоимость"
@@ -211,11 +211,11 @@
 
         <section class="catalog">
           <div class="container container--xxl">
-            @@include('components/headline/headline.html', {
+            @@include('../components/headline/headline.html', {
               "headline": "Посмотрите похожие проекты" })
 
             <ul class="catalog__list catalog__list--gap-solid">
-@@include("components/card/card.html", {
+@@include("../components/card/card.html", {
   "href": "/project-keln.html",
   "bemElement": "catalog__item",
   "bemMod": "catalog",
@@ -227,7 +227,7 @@
   "imgSrc": "img/catalog/keln/1",
   "imgW": "950"
 })
-@@include("components/card/card.html", {
+@@include("../components/card/card.html", {
   "href": "/project-zheneva.html",
   "bemElement": "catalog__item",
   "bemMod": "catalog",
@@ -239,7 +239,7 @@
   "imgSrc": "img/catalog/zheneva/1",
   "imgW": "950"
 })
-    @@include("components/card/card.html", {
+    @@include("../components/card/card.html", {
       "href": "/project-bremen.html",
       "bemElement": "catalog__item",
       "bemMod": "catalog",
@@ -251,7 +251,7 @@
       "imgSrc": "img/catalog/bremen/1",
       "imgW": "950"
     })
-    @@include("components/card/card.html", {
+    @@include("../components/card/card.html", {
       "href": "/project-nitstsa.html",
       "bemElement": "catalog__item",
       "bemMod": "catalog",
@@ -267,7 +267,7 @@
           </div>
         </section>
 
-        @@include('components/contacts/contacts.html', {
+        @@include('../components/contacts/contacts.html', {
           "title": "Спроектируем ваш <br />индивидуальный дом",
           "dsc": "",
           "person": {
@@ -281,13 +281,13 @@
           "btnText": "Записаться на&nbsp;встречу с&nbsp;архитектором", })
       </main>
 
-      @@include('components/footer/footer.html')
+      @@include('../components/footer/footer.html')
 
-      @@include("components/base/modal.html", {
+      @@include("../components/base/modal.html", {
         "name": "back-call",
         "fitContent": true, })
 
-      @@include("components/base/modal.html", {
+      @@include("../components/base/modal.html", {
         "name": "registration-for-viewing",
         "responsive": true, })
     </div>

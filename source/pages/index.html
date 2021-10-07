@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
     "title": "Mansio — Главная",
     "description": "",
     "keywords": ""
@@ -12,25 +12,25 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
     <!-- Header -->
-    @@include('components/header/header.html', {
+    @@include('../components/header/header.html', {
       "main": true
     })
-    
+
     <main id="pageMain">
       <!-- First Screen -->
-      @@include('components/intro/intro.html')
+      @@include('../components/intro/intro.html')
       <!-- works -->
-      @@include('components/we-do/we-do.html', {
+      @@include('../components/we-do/we-do.html', {
         "headline": "Проектируем и строим",
       })
       <!-- about -->
-      @@include('components/approach/approach.html')
+      @@include('../components/approach/approach.html')
       <!-- product -->
-      @@include('components/product/product.html')
+      @@include('../components/product/product.html')
       <!-- features -->
-      @@include('components/features/template.html')
+      @@include('../components/features/template.html')
       <!-- contacts -->
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "noMarginTop": true,
         "title": "Организуем встречу с&nbsp;нашим<br>архитектором, на которой&nbsp;вы<span>:</span>",
         "dsc": "",
@@ -45,15 +45,15 @@
         "btnText": "Записаться на&nbsp;встречу с&nbsp;архитектором"
       })
       <!-- услуги -->
-      @@include('components/services/services.html', {
+      @@include('../components/services/services.html', {
         "main": true
       })
 
-      <!-- @@include('components/reviews/reviews.html') -->
+      <!-- @@include('../components/reviews/reviews.html') -->
 
-      <!-- @@include('components/reviews-slider/reviews-slider.html') -->
+      <!-- @@include('../components/reviews-slider/reviews-slider.html') -->
 
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "title": "Мы&nbsp;готовы проконсультировать <br>Вас по&nbsp;любому вопросу",
         "dsc": "",
         "person": {
@@ -67,28 +67,28 @@
       })
     </main>
     <!-- footer -->
-    @@include('components/footer/footer.html', {
+    @@include('../components/footer/footer.html', {
       "main": true
     })
 
   </div>
   <!-- инклюд модалки -->
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
     "name": "discuss",
     "responsive": true,
   })
 
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
     "name": "registration-for-viewing",
     "responsive": true,
   })
 
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
     "name": "already-have",
     "fitContent": true,
   })
 
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
     "name": "back-call",
     "fitContent": true,
   })

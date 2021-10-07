@@ -58,18 +58,16 @@ const ftpSettings = require("./ftp_settings.json");
 const connect = ftp.create(ftpSettings);
 
 const html = () => {
-  return src(path.src.html)
-    .pipe(
-      plumber({
-        errorHandler: function (err) {
-          notify.onError({
-            title: "HTML compilation error",
-            message: err.message,
-          })(err);
-          this.emit("end");
-        },
-      })
-    )
+  return src(['source/pages/**/*.html'])
+    .pipe(plumber({
+      errorHandler: function (err) {
+        notify.onError({
+          title: "HTML compilation error",
+          message: err.message,
+        })(err);
+        this.emit("end");
+      },
+    }))
     .pipe(fileinclude({
       prefix: "@@",
       basepath: "@file",
@@ -83,7 +81,7 @@ const html = () => {
         wrap_attributes: "auto",
       })
     )
-    .pipe(dest(path.build.html));
+    .pipe(dest('build'));
 };
 exports.html = html;
 

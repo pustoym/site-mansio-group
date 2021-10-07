@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
   "title": "Mansio — Спасибо за заявку",
   "description": "",
   "keywords": ""
@@ -12,7 +12,7 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
     <!-- header -->
-    @@include('components/header/header.html')
+    @@include('../components/header/header.html')
     <main id="pageMain">
       <div class="first-screen  first-screen--thankyou">
         <div class="container">
@@ -22,7 +22,7 @@
             <p>Если нет времени ждать, то&nbsp;позвоните нам по&nbsp;номеру: <a href='tel:+74951820242'>+7 (495)
                 182-02-42</a> или напишите в&nbsp;мессенджер: <a href='##'>Whatsapp</a> или <a href='##'>Telegram</a>
             </p>
-            @@include("components/btn/btn.html", {
+            @@include("../components/btn/btn.html", {
               "text": "Вернуться на главную",
               "href": "/index.html"
             })
@@ -31,10 +31,10 @@
       </div>
     </main>
     <!-- footer -->
-    @@include('components/footer/footer.html')
+    @@include('../components/footer/footer.html')
 
     <!-- инклюд модалки -->
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
       "name": "back-call",
       "fitContent": true,
     })

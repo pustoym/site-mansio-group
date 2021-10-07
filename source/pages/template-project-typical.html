@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
   "title": "Mansio — Типовой проект «Скандика»",
   "description": "",
   "keywords": ""
@@ -12,33 +12,33 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
 
-    @@include('components/header/header.html')
+    @@include('../components/header/header.html')
 
     <main id="pageMain">
 
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
       "title": "Скандика",
       "bgClass": "scandica"
       })
 
       <section class="details">
         <div class="container  container--xxl">
-          @@include('components/headline/headline.html', {
+          @@include('../components/headline/headline.html', {
           "headline": "Детали проекта"
           })
         </div>
 
-        @@include('components/project/project.html', {
+        @@include('../components/project/project.html', {
           "type": "@@projectsList.kanny.type",
           "presentation": "@@projectsList.scandika.pdfHref"
         })
 
       </section>
 
-      @@include('components/house-gallery/house-gallery.html')
+      @@include('../components/house-gallery/house-gallery.html')
 
       <!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
-      <!-- @@include('components/row-form/row-form.html', {
+      <!-- @@include('../components/row-form/row-form.html', {
         "title": "Понравился проект или хотите его изменить, дополнить?",
         "subtitle": "Напишите ваш номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы обсудить детали.",
         "buttonText": "Рассчитать стоимость"
@@ -46,11 +46,11 @@
 
       <section class="catalog">
         <div class="container  container--xxl">
-          @@include('components/headline/headline.html', {
+          @@include('../components/headline/headline.html', {
           "headline": "Посмотрите похожие проекты"
           })
           <ul class="catalog__list  catalog__list--gap-solid">
-            @@include("components/card/card.html", {
+            @@include("../components/card/card.html", {
             "bemElement": "catalog__item",
             "bemMod": "catalog",
             "title": "Амбассадор",
@@ -58,7 +58,7 @@
             "imgSrc": "img/catalog/7",
             "imgW": "950"
             })
-            @@include("components/card/card.html", {
+            @@include("../components/card/card.html", {
             "bemElement": "catalog__item",
             "bemMod": "catalog",
             "title": "Мио",
@@ -66,7 +66,7 @@
             "imgSrc": "img/catalog/8",
             "imgW": "951"
             })
-            @@include("components/card/card.html", {
+            @@include("../components/card/card.html", {
             "bemElement": "catalog__item",
             "bemMod": "catalog",
             "title": "Софтлайн",
@@ -74,7 +74,7 @@
             "imgSrc": "img/catalog/9",
             "imgW": "950"
             })
-            @@include("components/card/card.html", {
+            @@include("../components/card/card.html", {
             "bemElement": "catalog__item",
             "bemMod": "catalog",
             "title": "Спектрум",
@@ -86,11 +86,11 @@
         </div>
       </section>
 
-      @@include('./components/project/project-benefits/project-benefits.html')
+      @@include('../components/project/project-benefits/project-benefits.html')
 
-      @@include('./components/project/project-about/project-about.html')
+      @@include('../components/project/project-about/project-about.html')
 
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "noMarginTop": true,
         "title": "Спроектируем ваш <br>индивидуальный дом",
         "dsc": "",
@@ -106,15 +106,15 @@
       })
     </main>
 
-    @@include('components/footer/footer.html')
+    @@include('../components/footer/footer.html')
 
 
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
     "name": "back-call",
     "fitContent": true,
     })
 
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
     "name": "registration-for-viewing",
     "responsive": true,
     })

@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
   "title": "Mansio — Команда",
   "description": "",
   "keywords": ""
@@ -12,10 +12,10 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
     <!-- header -->
-    @@include('components/header/header.html')
+    @@include('../components/header/header.html')
     <main id="pageMain">
       <!-- intro-contacts -->
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
       "title": "Наша команда",
       "bgClass": "team"
       })
@@ -24,7 +24,7 @@
           <div class="division__team">
             <h2 class="division__title">Администрация</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Скоро представим",
               "memberPost": "Со всеми должностями",
@@ -46,7 +46,7 @@
           <div class="division__team">
             <h2 class="division__title">Отдел продаж</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Екатерина Дмитренко",
               "memberPost": "Маркетолог",
@@ -66,7 +66,7 @@
               ])
             </ul>
 
-            @@include("components/base/modal.html", {
+            @@include("../components/base/modal.html", {
             "name": "memberED",
             "responsive": true,
             })
@@ -74,7 +74,7 @@
           <div class="division__team">
             <h2 class="division__title">Архитектурный отдел</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Елизавета Труб",
               "memberPost": "Ведущий Архитектор",
@@ -94,7 +94,7 @@
               ])
             </ul>
 
-                @@include("components/base/modal.html", {
+                @@include("../components/base/modal.html", {
                 "name": "memberET",
                 "responsive": true,
                 })
@@ -103,7 +103,7 @@
           <div class="division__team">
             <h2 class="division__title">Конструкторский отдел</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Скоро представим",
               "memberPost": "Со всеми должностями",
@@ -125,7 +125,7 @@
           <div class="division__team">
             <h2 class="division__title">Проектный отдел</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Скоро представим",
               "memberPost": "Со всеми должностями",
@@ -147,7 +147,7 @@
           <div class="division__team">
             <h2 class="division__title">Строительный отдел</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Скоро представим",
               "memberPost": "Со всеми должностями",
@@ -169,7 +169,7 @@
           <div class="division__team">
             <h2 class="division__title">Клиентский отдел</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Скоро представим",
               "memberPost": "Со всеми должностями",
@@ -191,7 +191,7 @@
           <div class="division__team">
             <h2 class="division__title">Отдел снабжения</h2>
             <ul class="division__list">
-              @@loop('components/division/division.html', [
+              @@loop('../components/division/division.html', [
               {"bemElement": "division__member",
               "memberName": "Скоро представим",
               "memberPost": "Со всеми должностями",
@@ -221,13 +221,13 @@
               кадров требуют определения и&nbsp;уточнения позиций, занимаемых участниками в&nbsp;отношении поставленных
               задач.</p>
             <div class="about-item__btn-wrap">
-              @@include('components/btn/btn.html', {
+              @@include('../components/btn/btn.html', {
                 "text": "Отправить резюме",
                 "mod": "blue",
                 "bemElement": "about-item__btn",
                 "modal": "vacancyResponse"
                 })
-                @@include('components/btn/btn.html', {
+                @@include('../components/btn/btn.html', {
                   "text": "Смотреть вакансии",
                   "bemElement": "about-item__btn",
                   "href": "vacancy.html"
@@ -243,16 +243,16 @@
 
     </main>
     <!-- footer -->
-    @@include('components/footer/footer.html')
+    @@include('../components/footer/footer.html')
 
   </div>
   <!-- инклюд модалки -->
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
     "name": "back-call",
     "fitContent": true,
   })
 
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
     "name": "vacancyResponse",
     "fitContent": true,
   })

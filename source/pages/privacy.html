@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
   "title": "Mansio — Политика конфиденциальности",
   "description": "Политика в отношении обработки персональных данных оператором ООО «МАНСИО ГРУПП»",
   "keywords": ""
@@ -12,10 +12,10 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
 
-    @@include('components/header/header.html')
+    @@include('../components/header/header.html')
     <main id="pageMain">
 
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
       "title": "Политика конфиденциальности",
       "bgClass": "contacts",
       "dsc": "<a class='btn' download href='/download.pdf'>Скачать</a>"
@@ -398,10 +398,10 @@
       </div>
     </main>
 
-    @@include('components/footer/footer.html')
+    @@include('../components/footer/footer.html')
 
 
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
     "name": "back-call",
     "fitContent": true,
     })

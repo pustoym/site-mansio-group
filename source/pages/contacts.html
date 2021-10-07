@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
     "title": "Mansio — Контакты",
     "description": "",
     "keywords": ""
@@ -12,29 +12,29 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
 
-    @@include('components/header/header.html', {
+    @@include('../components/header/header.html', {
     "activeLinkIndex": 4
     })
 
     <main id="pageMain">
 
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
         "title": "Контакты",
         "bgClass": "contacts"
       })
 
-      @@include('components/connection/connection.html')
+      @@include('../components/connection/connection.html')
 
-      <!-- @@include('components/members/template.html') -->
+      <!-- @@include('../components/members/template.html') -->
 
 
-      @@include('components/info/template.html')
+      @@include('../components/info/template.html')
 
-      @@include('components/map/map.html')
+      @@include('../components/map/map.html')
 
-      <!-- @@include('components/info-foto/template.html') -->
+      <!-- @@include('../components/info-foto/template.html') -->
 
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "title": "Наши специалисты оперативно изучат ваше обращение, свяжутся с&nbsp;вами и&nbsp;ответят на&nbsp;все интересующие вопросы",
         "dsc": "",
         "person": {
@@ -49,12 +49,12 @@
 
     </main>
 
-    @@include('components/footer/footer.html', {
+    @@include('../components/footer/footer.html', {
     "activeLinkIndex": 4
     })
 
   </div>
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
   "name": "back-call",
   "fitContent": true,
   })

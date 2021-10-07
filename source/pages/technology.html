@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
   "title": "Mansio — Технологии",
   "description": "",
   "keywords": ""
@@ -12,21 +12,21 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
     <!-- header -->
-    @@include('components/header/header.html', {
+    @@include('../components/header/header.html', {
     "activeLinkIndex": 2
     })
 
     <main id="pageMain">
       <!-- intro-contacts -->
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
       "title": "Технологии строительства",
       "bgClass": "tech",
       "dsc": "<p style='text-transform: uppercase;'>Высокая степень качества и надежности домов компании «MANSIO GROUP» обусловлена использованием:</p><ul><li>Надежных и&nbsp;проверенных годами технологий строительства</li><li>Только качественных строительных материалов крупных заводов изготовителей</li></ul>"
       })
       <!-- Сетка технологий -->
-      @@include('components/technology/technology.html')
+      @@include('../components/technology/technology.html')
 
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "title": "Остались вопросы? <br>Мы&nbsp;проконсультируем Вас!",
         "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
         "person": {
@@ -41,12 +41,12 @@
       })
     </main>
     <!-- footer -->
-    @@include('components/footer/footer.html', {
+    @@include('../components/footer/footer.html', {
     "activeLinkIndex": 2
     })
   </div>
     <!-- инклюд модалки -->
-    @@include("components/base/modal.html", {
+    @@include("../components/base/modal.html", {
     "name": "back-call",
     "fitContent": true,
     })

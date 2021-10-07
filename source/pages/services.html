@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
 
 <head>
-  @@include("components/base/head.html", {
+  @@include("../components/base/head.html", {
     "title": "Mansio — Услуги",
     "description": "",
     "keywords": ""
@@ -12,18 +12,18 @@
 <body id="pageBody">
   <div id="siteWrapper" class="wrapper">
     <!-- header -->
-    @@include('components/header/header.html', {
+    @@include('../components/header/header.html', {
     "activeLinkIndex": 1
     })
     <main id="pageMain">
       <!-- intro-contacts -->
-      @@include('components/first-screen/first-screen.html', {
+      @@include('../components/first-screen/first-screen.html', {
       "title": "Услуги",
       "bgClass": "services"
       })
       <section class="about-item  about-item--brand">
         <div class="about-item__inner">
-          @@include('components/brand-flag/brand-flag.html')
+          @@include('../components/brand-flag/brand-flag.html')
           <div class="about-item__text">
             <h2 class="about-item__title">Mansio Group</h2>
             <p><b>Мы&nbsp;&mdash; строительная компания полного цикла.</b></p>
@@ -51,9 +51,9 @@
         </div>
       </section>
 
-      @@include('components/services/services.html')
+      @@include('../components/services/services.html')
 
-      @@include('components/contacts/contacts.html', {
+      @@include('../components/contacts/contacts.html', {
         "title": "Проконсультируем вас <br>по&nbsp;любой услуге!",
         "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
         "person": {
@@ -68,18 +68,18 @@
       })
     </main>
 
-    @@include('components/footer/footer.html', {
+    @@include('../components/footer/footer.html', {
     "activeLinkIndex": 1
     })
   </div>
 
   <!-- инклюд модалки -->
-  @@include("components/base/modal.html", {
+  @@include("../components/base/modal.html", {
   "name": "back-call",
   "fitContent": true,
   })
 
-  @@include('components/base/modal.html', {
+  @@include('../components/base/modal.html', {
     "name": "already-have",
     "fitContent": true,
   })

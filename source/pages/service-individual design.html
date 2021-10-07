@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-js">
   <head>
-    @@include("components/base/head.html", {
+    @@include("../components/base/head.html", {
       "title": "Индивидуальное проектирование от Mansio group",
       "description": "",
       "keywords": "" })
@@ -9,10 +9,10 @@
 
   <body id="pageBody">
     <div id="siteWrapper" class="wrapper">
-      @@include('components/header/header.html')
+      @@include('../components/header/header.html')
 
       <main id="pageMain">
-        @@include('components/first-screen/first-screen.html', {
+        @@include('../components/first-screen/first-screen.html', {
           "title": "Индивидуальное проектирование",
           "dsc": '<p>С&nbsp;каждым заказчиком мы&nbsp;работаем индивидуально.<br>Каждый проект уникален, как отпечатки пальцев.</p><p>Наши лучшие архитекторы, конструктора, инженеры и&nbsp;дизайнеры создадут ваш индивидуальный дом с&nbsp;учетом ваших пожеланий, особенностей рельефа и&nbsp;требований местных инстанций, норм и&nbsp;правил.</p>',
           "bgClass": "engineering"})
@@ -82,7 +82,7 @@
           </ul>
         </section>
 
-        @@include('components/about/about-item.html', {
+        @@include('../components/about/about-item.html', {
           "text": "<p>Мы&nbsp;собрали портфолио проектов домов из&nbsp;газоблока, керамического блока, кирпича и&nbsp;монолита. Каждый из&nbsp;этих проектов разрабатывался для определенной семьи или человека.</p><p>Индивидуальный проект&nbsp;&mdash; это момент, история, повод для гордости и&nbsp;радости, но&nbsp;часто наши заказчики на&nbsp;первое место ставят простые мелочи и&nbsp;функциональность.</p><p>Куда складывать игрушки? Где разместить спорт уголок ребенку? Где и&nbsp;как помыть лапы любимому питомцу, где он&nbsp;будет спать? Куда деть спорт инвентарь? Жена любит готовить, куда деть огромное кол-во бытовых приборов? Вопросов которые стоят перед архитектором в&nbsp;процессе проектирования огромное количество. Из&nbsp;простых мелочей и&nbsp;состоит комфорт, гармония.</p>",
           "title": "Кому необходимо индивидуальное проектирование",
           "titleHide": true,
@@ -91,7 +91,7 @@
           "imgAlt": "Архитектор Mansio за работой"
         })
 
-        @@include('components/about/about-item.html', {
+        @@include('../components/about/about-item.html', {
         "text": "@@text.individual-design.2",
         "title": "Польза портфолио",
         "titleHide": true,
@@ -101,7 +101,7 @@
         "invert": true,
         })
 
-        @@include('components/about/about-item.html', {
+        @@include('../components/about/about-item.html', {
         "text": "@@text.individual-design.3",
         "title": "Этапы работ",
         "imgName": "content-3",
@@ -115,7 +115,7 @@
               <h2 class="division__title">Архитекторы</h2>
               <p class="division__subtitle">Представляем команду Архитектурного отдела, работаем с&nbsp;любовью для вас</p>
               <ul class="division__list">
-                @@loop('components/division/division.html', [
+                @@loop('../components/division/division.html', [
                 {"bemElement": "division__member",
                 "memberName": "Скоро представим",
                 "memberPost": "Со всеми должностями",
@@ -152,7 +152,7 @@
           </div>
         </section>
 
-        @@include('components/contacts/contacts.html', {
+        @@include('../components/contacts/contacts.html', {
           "title": "Получить консультацию<br> специалистов Mansio Group",
           "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
           "person": {
@@ -166,10 +166,10 @@
         })
       </main>
 
-      @@include('components/footer/footer.html')
+      @@include('../components/footer/footer.html')
 
       <!-- инклюд модалки -->
-      @@include("components/base/modal.html", { "name": "back-call",
+      @@include("../components/base/modal.html", { "name": "back-call",
       "fitContent": true, })
     </div>
 

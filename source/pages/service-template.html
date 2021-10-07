@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-js">
   <head>
-    @@include("components/base/head.html", { "title": "Шаблон страницы услуг",
+    @@include("../components/base/head.html", { "title": "Шаблон страницы услуг",
     "description": "", "keywords": "" })
   </head>
 
   <body id="pageBody">
     <div id="siteWrapper" class="wrapper">
-      @@include('components/header/header.html')
+      @@include('../components/header/header.html')
 
       <main id="pageMain">
-        @@include('components/first-screen/first-screen.html', { "title":
+        @@include('../components/first-screen/first-screen.html', { "title":
         "строительство", "bgClass": "construction" })
 
         <section class="container" style="max-width: 1520px">
@@ -154,37 +154,37 @@
               <h2 class="division__title">Специалисты</h2>
               <ul class="division__list">
 
-                @@include("components/card/card.html", {
+                @@include("../components/card/card.html", {
                   "bemElement": "division__member",
                   "title": "Иванов Иван Александрович",
                   "subtitle": "Учредитель Mansio Group",
                   "imgSrc": "img/member-portret", "imgW": "370" })
 
-                @@include("components/card/card.html", {
+                @@include("../components/card/card.html", {
                   "bemElement": "division__member",
                   "title": "Иванов Иван Александрович",
                   "subtitle": "Учредитель Mansio Group",
                   "imgSrc": "img/member-portret", "imgW": "370" })
 
-                @@include("components/card/card.html", {
+                @@include("../components/card/card.html", {
                   "bemElement": "division__member",
                   "title": "Иванов Иван Александрович",
                   "subtitle": "Учредитель Mansio Group",
                   "imgSrc": "img/member-portret", "imgW": "370" })
 
-                @@include("components/card/card.html", {
+                @@include("../components/card/card.html", {
                   "bemElement": "division__member",
                   "title": "Иванов Иван Александрович",
                   "subtitle": "Учредитель Mansio Group",
                   "imgSrc": "img/member-portret", "imgW": "370" })
 
-                  @@include("components/card/card.html", {
+                  @@include("../components/card/card.html", {
                   "bemElement": "division__member",
                   "title": "Иванов Иван Александрович",
                   "subtitle": "Учредитель Mansio Group",
                   "imgSrc": "img/member-portret", "imgW": "370" })
 
-                  @@include("components/card/card.html", {
+                  @@include("../components/card/card.html", {
                   "bemElement": "division__member",
                   "title": "Иванов Иван Александрович",
                   "subtitle": "Учредитель Mansio Group",
@@ -218,7 +218,7 @@
           </div>
         </section>
 
-              @@include('components/contacts/contacts.html', {
+              @@include('../components/contacts/contacts.html', {
         "title": "Получить консультацию<br> специалистов Mansio Group",
         "dsc": "Менеджер свяжется с&nbsp;вами в&nbsp;кратчайшие сроки и&nbsp;проведет исчерпывающую консультацию",
         "person": {
@@ -232,10 +232,10 @@
       })
       </main>
 
-      @@include('components/footer/footer.html')
+      @@include('../components/footer/footer.html')
 
       <!-- инклюд модалки -->
-      @@include("components/base/modal.html", { "name": "back-call",
+      @@include("../components/base/modal.html", { "name": "back-call",
       "fitContent": true, })
     </div>
 
