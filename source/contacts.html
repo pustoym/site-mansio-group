@@ -18,27 +18,22 @@
 
     <main id="pageMain">
 
-      <!-- intro-contacts -->
       @@include('components/first-screen/first-screen.html', {
         "title": "Контакты",
         "bgClass": "contacts"
       })
-      <!-- connection -->
+
       @@include('components/connection/connection.html')
 
-      <!-- members -->
       <!-- @@include('components/members/template.html') -->
 
-      <!-- info -->
+
       @@include('components/info/template.html')
 
-      <!-- map -->
       @@include('components/map/map.html')
 
-      <!-- info-foto -->
       <!-- @@include('components/info-foto/template.html') -->
 
-      <!-- contacts -->
       @@include('components/contacts/contacts.html', {
         "title": "Наши специалисты оперативно изучат ваше обращение, свяжутся с&nbsp;вами и&nbsp;ответят на&nbsp;все интересующие вопросы",
         "dsc": "",
@@ -53,17 +48,16 @@
       })
 
     </main>
-    <!-- footer -->
+
     @@include('components/footer/footer.html', {
     "activeLinkIndex": 4
     })
 
-          <!-- инклюд модалки -->
-          @@include("components/base/modal.html", {
-          "name": "back-call",
-          "fitContent": true,
-          })
   </div>
+  @@include("components/base/modal.html", {
+  "name": "back-call",
+  "fitContent": true,
+  })
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
