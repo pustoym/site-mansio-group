@@ -1,11 +1,19 @@
 export const textAnimate = () => {
   let animatedBlocks = $(
-      'h1, h2, h3, h4, h5, h6, p:not([class^="action-call"]), li, dt, dd, .btn:not(.card__modal-btn)'
+      'h1, h2, h3, h4, h5, h6, p:not([class^="action-call"]), li, dt, dd, .btn:not(.card__modal-btn), .article-card'
   );
 
   animatedBlocks.addClass('animated-text');
   animatedBlocks.attr('data-scroll', '');
   animatedBlocks.attr('data-scroll-offset', '50');
+
+  let contentInTabs = document.querySelectorAll('.product__content *, .article-card__btn, .modal *, .tabs *');
+  contentInTabs.forEach((item) => {
+
+    if (item.classList.contains('animated-text')) {
+      item.classList.remove('animated-text');
+    }
+  });
 };
 
 export const addAttrScrollToImg = () => {
