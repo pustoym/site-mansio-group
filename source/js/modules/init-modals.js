@@ -21,6 +21,7 @@ const initModals = () => {
   const modalvacancyResponse = document.querySelector('.modal--vacancyResponse');
   const modalvacancyResponseBtns = document.querySelectorAll('[data-modal="vacancyResponse"]');
 
+  // Vacancy modals
   const modalVacancy1 = document.querySelector('.modal--vacancy1');
   const modalVacancy1Btns = document.querySelectorAll('[data-modal="vacancy1"]');
 
@@ -36,11 +37,28 @@ const initModals = () => {
   const modalVacancy5 = document.querySelector('.modal--vacancy5');
   const modalVacancy5Btns = document.querySelectorAll('[data-modal="vacancy5"]');
 
-  const modalMemberET = document.querySelector('.modal--memberET');
-  const modalMemberETBtns = document.querySelectorAll('[data-modal="memberET"]');
+  // Team members modals
+  const ModalMember1 = document.querySelector('.modal--memberAdminDA');
+  const ModalBtnsMember1 = document.querySelectorAll('[data-modal="memberAdminDA"]');
 
-  const modalMemberED = document.querySelector('.modal--memberED');
-  const modalMemberEDBtns = document.querySelectorAll('[data-modal="memberED"]');
+  const ModalMember2 = document.querySelector('.modal--memberET');
+  const ModalBtnsMember2 = document.querySelectorAll('[data-modal="memberET"]');
+
+  const ModalMember3 = document.querySelector('.modal--memberED');
+  const ModalBtnsMember3 = document.querySelectorAll('[data-modal="memberED"]');
+
+  const ModalMember4 = document.querySelector('.modal--memberArchitectPA');
+  const ModalBtnsMember4 = document.querySelectorAll('[data-modal="memberArchitectPA"]');
+
+  const ModalMember5 = document.querySelector('.modal--memberConstructorSB');
+  const ModalBtnsMember5 = document.querySelectorAll('[data-modal="memberConstructorSB"]');
+
+  const ModalMember6 = document.querySelector('.modal--memberConstructorIA');
+  const ModalBtnsMember6 = document.querySelectorAll('[data-modal="memberConstructorIA"]');
+
+  const ModalMember7 = document.querySelector('.modal--memberBuilderVK');
+  const ModalBtnsMember7 = document.querySelectorAll('[data-modal="memberBuilderVK"]');
+
 
   // фикс для редких случаев, когда модалка появляется при загрузке страницы
   window.addEventListener('load', () => {
@@ -87,12 +105,32 @@ const initModals = () => {
     setupModal(modalVacancy5, false, modalVacancy5Btns, false, false);
   }
 
-  if (modalMemberET && modalMemberETBtns.length) {
-    setupModal(modalMemberET, false, modalMemberETBtns, false, false);
+  if (ModalMember1 && ModalBtnsMember1.length) {
+    setupModal(ModalMember1, false, ModalBtnsMember1, false, false);
   }
 
-  if (modalMemberED && modalMemberEDBtns.length) {
-    setupModal(modalMemberED, false, modalMemberEDBtns, false, false);
+  if (ModalMember2 && ModalBtnsMember2.length) {
+    setupModal(ModalMember2, false, ModalBtnsMember2, false, false);
+  }
+
+  if (ModalMember3 && ModalBtnsMember3.length) {
+    setupModal(ModalMember3, false, ModalBtnsMember3, false, false);
+  }
+
+  if (ModalMember4 && ModalBtnsMember4.length) {
+    setupModal(ModalMember4, false, ModalBtnsMember4, false, false);
+  }
+
+  if (ModalMember5 && ModalBtnsMember5.length) {
+    setupModal(ModalMember5, false, ModalBtnsMember5, false, false);
+  }
+
+  if (ModalMember6 && ModalBtnsMember6.length) {
+    setupModal(ModalMember6, false, ModalBtnsMember6, false, false);
+  }
+
+  if (ModalMember7 && ModalBtnsMember7.length) {
+    setupModal(ModalMember7, false, ModalBtnsMember7, false, false);
   }
 };
 
