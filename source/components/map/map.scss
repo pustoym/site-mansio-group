@@ -49,8 +49,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: 82px 0;
-    padding-left: 76px;
+    padding: 80px;
     box-shadow: 0 17px 33px 0 rgba(124, 151, 170, 0.2);
     background-color: #ffffff;
 
@@ -62,9 +61,7 @@
     @media (max-width: 991px) {
       max-width: 100%;
       box-shadow: none;
-      padding-left: 0;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding: 40px 20px;
 
       &::after {
         left: 0;
@@ -73,6 +70,8 @@
 
     @media (max-width: 576px) {
       padding-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &::after {
