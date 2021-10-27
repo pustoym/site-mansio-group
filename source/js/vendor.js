@@ -11,22 +11,22 @@ import {Tab} from 'bootstrap';
 // lighthouse fix  Does not use passive listeners to improve scrolling performance
 // more https://stackoverflow.com/questions/60357083/does-not-use-passive-listeners-to-improve-scrolling-performance-lighthouse-repo
 
-jQuery.event.special.touchstart = {
+$.event.special.touchstart = {
   setup(_, ns, handle) {
     this.addEventListener('touchstart', handle, {passive: !ns.includes('noPreventDefault')});
   },
 };
-jQuery.event.special.touchmove = {
+$.event.special.touchmove = {
   setup(_, ns, handle) {
     this.addEventListener('touchmove', handle, {passive: !ns.includes('noPreventDefault')});
   },
 };
-jQuery.event.special.wheel = {
+$.event.special.wheel = {
   setup(_, ns, handle) {
     this.addEventListener('wheel', handle, {passive: true});
   },
 };
-jQuery.event.special.mousewheel = {
+$.event.special.mousewheel = {
   setup(_, ns, handle) {
     this.addEventListener('mousewheel', handle, {passive: true});
   },
@@ -36,16 +36,16 @@ jQuery.event.special.mousewheel = {
 
 $(function () {
   /* scroll mouse */
-  $('[data-scroll]').on('click', function (event) {
-    event.preventDefault();
+  // $('[data-scroll]').on('click', function (event) {
+  //   event.preventDefault();
 
-    const elementID = $(this).data('scroll');
-    const elementOffset = $(elementID).offset().top;
+  //   const elementID = $(this).data('scroll');
+  //   const elementOffset = $(elementID).offset().top;
 
-    $('html,body').animate({
-      scrollTop: elementOffset,
-    }, 700);
-  });
+  //   $('html,body').animate({
+  //     scrollTop: elementOffset,
+  //   }, 700);
+  // });
   /* -- scroll mouse end -- */
 });
 
