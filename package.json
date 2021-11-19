@@ -29,7 +29,6 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "^10.3.6",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.12",
     "circular-dependency-plugin": "5.2.0",
@@ -38,7 +37,6 @@
     "del": "^6.0.0",
     "duplicate-package-checker-webpack-plugin": "3.0.0",
     "eslint": "^7.32.0",
-    "eslint-config-htmlacademy": "^4.1.0",
     "gh-pages": "^3.2.3",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
@@ -60,7 +58,6 @@
     "gulp-webp": "^4.0.1",
     "gulp.spritesmith": "^6.12.1",
     "stylelint": "^13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.10",
     "vinyl-ftp": "^0.6.1",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1"
