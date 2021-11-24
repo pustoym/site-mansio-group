@@ -17,10 +17,11 @@ $secondary-color-lighten: #153248; // hsl(206, 55%, 18%)
 
 $grey: #595959;
 $pale-grey: #dce6ed;
-
 $metalic-blue: #517489;
 
+// Семантические цвета
 
+$text-color: $secondary-color;
 $link-color:                  $primary-color;
 $link-color--hover:           darken($primary-color, 15%);
 

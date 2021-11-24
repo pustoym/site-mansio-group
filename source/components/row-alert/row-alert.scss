@@ -13,6 +13,7 @@
   font-size: $font-size-sm;
   line-height: 1.68;
   text-align: center;
+  font-weight: bold;
 
   @include viewport--md {
     margin-top: 0;
@@ -26,5 +27,13 @@
 
   &__inner {
     max-width: 1030px;
+  }
+
+  p {
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
   }
 }

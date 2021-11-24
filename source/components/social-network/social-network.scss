@@ -1,0 +1,46 @@
+// .social-network
+.contacts__link {
+  display: flex;
+  align-items: center;
+
+  a {
+    padding-top: 15px;
+    margin-left: 0;
+    margin-right: 31px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: $color-default-white;
+    transition: 0.2s;
+
+    &:hover {
+      fill: $primary-color;
+    }
+  }
+}
+
+.social-network--bg-white {
+  svg {
+    fill: #7c97aa;
+  }
+}
+
+.contacts__vk {
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.contacts__youtube {
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}

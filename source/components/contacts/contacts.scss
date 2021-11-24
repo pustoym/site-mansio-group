@@ -93,42 +93,4 @@
       }
     }
   }
-
-  &__link {
-    display: flex;
-    align-items: center;
-
-    a {
-      margin-right: 31px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    svg {
-      width: 26px;
-      height: 26px;
-      fill: $color-default-white;
-      transition: 0.2s;
-
-      &:hover {
-        fill: $primary-color;
-      }
-    }
-  }
-
-  &__vk {
-    svg {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  &__youtube {
-    svg {
-      width: 32px;
-      height: 32px;
-    }
-  }
 }
