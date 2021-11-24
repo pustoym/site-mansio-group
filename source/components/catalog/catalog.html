@@ -2,6 +2,19 @@
   <h2 class="visually-hidden">Каталог домов</h2>
   <ul class="catalog__list">
     @@include("../card/card.html", {
+      "href": "/project-budapesht.html",
+      "bemMod": "catalog",
+      "bemElement": "catalog__item",
+      "bemElementMod": "catalog__item",
+      "title": "@@projectsList.budapesht.name",
+      "subtitle": "@@projectsList.budapesht.type",
+      "propSquare": "@@projectsList.budapesht.square",
+      "propfloors": "@@projectsList.budapesht.floors",
+      "propMaterial": "@@projectsList.budapesht.material",
+      "imgSrc": "img/catalog/budapesht/budapesht-card",
+      "imgW": "950"
+    })
+    @@include("../card/card.html", {
       "href": "/project-amsterdam.html",
       "bemElement": "catalog__item",
       "bemMod": "catalog",
@@ -149,7 +162,7 @@
       "href": "/project-toronto.html",
       "bemMod": "catalog",
       "bemElement": "catalog__item",
-      "bemElementMod": "catalog__item--last-child",
+      "bemElementMod": "catalog__item",
       "title": "@@projectsList.toronto.name",
       "subtitle": "@@projectsList.toronto.type",
         "propSquare": "@@projectsList.toronto.square",
@@ -158,5 +171,6 @@
       "imgSrc": "img/catalog/toronto/1",
       "imgW": "950"
     })
+    <!-- Модификатор @bemElementMod: last-child для непарного блока -->
   </ul>
 </section>

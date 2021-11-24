@@ -170,6 +170,18 @@
       "closet": "1",
       "balconies": "-",
       "cost": "~"
+    },
+    "budapesht": {
+      "name": "Будапешт",
+      "type": "-",
+      "square": "-",
+      "floors": "1",
+      "material": "-",
+      "bedrooms": "-",
+      "bathrooms": "-",
+      "closet": "-",
+      "balconies": "-",
+      "cost": "~"
     }
   },
   "text": {
