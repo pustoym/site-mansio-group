@@ -29,6 +29,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "9.5.x",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.12",
     "circular-dependency-plugin": "5.2.0",
@@ -57,7 +58,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-webp": "^4.0.1",
     "gulp.spritesmith": "^6.12.1",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.0.1",
     "vinyl-ftp": "^0.6.1",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1"
