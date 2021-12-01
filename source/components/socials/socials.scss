@@ -1,0 +1,52 @@
+.socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &--bg-white {
+    svg {
+      fill: #7c97aa;
+    }
+  }
+}
+
+.socials__link {
+  padding: 11px 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $primary-color;
+    }
+  }
+}
+
+.socials__icon {
+  width: 26px;
+  height: 26px;
+  fill: $color-default-white;
+  transition: 0.2s;
+
+  &--tg {
+    width: 27px;
+    height: 23px;
+  }
+
+  &--wa {
+    width: 23px;
+    height: 23px;
+  }
+
+  &--vk {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--yt {
+    width: 32px;
+    height: 32px;
+  }
+}

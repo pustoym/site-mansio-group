@@ -185,46 +185,7 @@
     }
   }
 
-  &__social {
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 1100px) {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    &:first-child {
-      margin-right: 20px;
-    }
-    &:hover,
-    &:focus {
-      svg {
-        fill: $primary-color;
-      }
-    }
-  }
-
-  &__social-icon {
-    transition: 0.2s;
-    fill: $color-default-white;
-
-  }
-
-  &__social-icon--tg {
-    width: 27px;
-    height: 23px;
-  }
-
-  &__social-icon--wa {
-    width: 23px;
-    height: 23px;
-  }
+  // &__social {}
 
   &__contacts {
     display: flex;

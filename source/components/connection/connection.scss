@@ -97,7 +97,7 @@
       color: #7c97aa;
       text-decoration: underline;
 
-      margin-left: 5px;
+      // margin-left: 5px;
 
       @media (max-width: 567px) {
         font-size: 1.4rem;
@@ -164,4 +164,8 @@
       line-height: 2.2rem;
     }
   }
+}
+
+.connection__socials {
+  padding-top: 15px;
 }
