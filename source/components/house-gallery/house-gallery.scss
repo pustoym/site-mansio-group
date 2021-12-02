@@ -11,8 +11,7 @@
     }
   }
 
-  // &__content {
-  // }
+  // &__content {}
 
   &__section {
     display: grid;
@@ -22,7 +21,6 @@
     justify-items: center;
     justify-content: center;
     gap: 30px;
-
     @include viewport--md {
       gap: 15px;
     }
@@ -37,8 +35,7 @@
     grid-template-rows: auto auto;
   }
 
-  // &__item {
-  // }
+  // &__item {}
 
   &__item--big {
     grid-column: 2 / -1;

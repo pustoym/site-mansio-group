@@ -1,9 +1,10 @@
-<section class="services">
+<section class="services  @@if (context.main) {services--main}">
   <h2 class="visually-hidden">Перечень услуг Mansio group</h2>
+  @@if (!context.main) {
   <div class="services__item">
     <picture class="services__foto  js-picture">
       <source srcset="img/content/layer-18.webp 1x" width="875" />
-      <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-18.jpg" alt="##" width="875"  />
+      <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-18.jpg" alt="##" width="875" />
     </picture>
     <div class="services__content">
       <div class="services__desc">
@@ -18,13 +19,8 @@
         <li>Количество и&nbsp;расположение входных дверей;</li>
         <li>Этажность строения;</li>
         <li>Материал, из&nbsp;которого будет строиться дом;</li>
-        <li>
-          Наличие котельной, пристроенного к&nbsp;дому гаража и&nbsp;других
-          объектов;
-        </li>
-        <li>
-          Устройство санузлов;
-        </li>
+        <li>Наличие котельной, пристроенного к&nbsp;дому гаража и&nbsp;других объектов;</li>
+        <li>Устройство санузлов;</li>
         <li>Количество и&nbsp;величину окон;</li>
         <li>Наличие проходных комнат и&nbsp;др.</li>
       </ul>
@@ -47,7 +43,7 @@
     <div class="services__foto services__foto--right">
       <picture class="js-picture">
         <source srcset="img/content/layer-19.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-19.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-19.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
@@ -75,7 +71,7 @@
     <div class="services__foto">
       <picture class="js-picture">
         <source srcset="img/content/layer-20.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-20.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-20.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
@@ -100,7 +96,7 @@
     <div class="services__foto services__foto--right">
       <picture class="js-picture">
         <source srcset="img/content/layer-21.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-21.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-21.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
@@ -140,7 +136,7 @@
     <div class="services__foto">
       <picture class="js-picture">
         <source srcset="img/content/layer-22.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-22.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-22.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
@@ -169,7 +165,7 @@
     <div class="services__foto services__foto--right">
       <picture class="js-picture">
         <source srcset="img/content/layer-24.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-24.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-24.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
@@ -200,14 +196,17 @@
     <div class="services__foto">
       <picture class="js-picture">
         <source srcset="img/content/layer-25.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-25.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-25.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
       <div class="services__title">Ландшафтный дизайн</div>
       <div class="services__text">
-        <span>Наша цель – создать комфортное и гармоничное пространство для жизни, где участок, экстерьер и интерьер являются единым целым.</span>
-        <span>При разработке ландшафтного дизайна учитываем архитектурный стиль дома, концепцию дизайна интерьера, пожелания заказчика и индивидуальные особенности, такие, как наличие домашних питомцев и аллергия на растения.</span>
+        <span>Наша цель – создать комфортное и гармоничное пространство для жизни, где участок, экстерьер и интерьер
+          являются единым целым.</span>
+        <span>При разработке ландшафтного дизайна учитываем архитектурный стиль дома, концепцию дизайна интерьера,
+          пожелания заказчика и индивидуальные особенности, такие, как наличие домашних питомцев и аллергия на
+          растения.</span>
       </div>
       @@include('../btn/btn.html',{
       "text": "Подробнее",
@@ -217,12 +216,13 @@
       })
     </div>
   </div>
+}
   @@if (context.main) {
   <div class="services__item">
     <div class="services__foto services__foto--right">
       <picture class="js-picture">
         <source srcset="img/content/layer-26.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-26.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-26.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">
@@ -247,7 +247,7 @@
     <div class="services__foto">
       <picture class="js-picture">
         <source srcset="img/content/layer-27.webp 1x" width="875" />
-        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-27.jpg" alt="##" width="875"  />
+        <img class="js-picture__img  js-picture__img--mid-scroll" src="img/content/layer-27.jpg" alt="##" width="875" />
       </picture>
     </div>
     <div class="services__content">

@@ -7,13 +7,15 @@
   }
 
   &__name-wrap {
-    padding-top: 150px;
+    max-width: 160px;
+    padding-top: 130px;
     flex: none;
     text-align: right;
     font-size: 16.7px;
 
     @media (max-width: 1280px - 0.02) {
-      padding-top: 100px;
+      max-width: unset;
+      padding-top: 80px;
     }
   }
 

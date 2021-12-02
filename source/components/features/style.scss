@@ -14,24 +14,49 @@
     padding-top: 30px;
   }
 
+  &__blockquote {
+    margin: 0;
+    padding: 38px 0;
+    margin-bottom: 80px;
+
+    @include viewport--xs {
+      padding: 0;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__blockquote-cite {
+    padding-top: 30px;
+    display: block;
+    text-align: right;
+    padding-right: 50px;
+
+    @include viewport--md {
+      padding-right: 20px;
+    }
+
+    @include viewport--xs {
+      padding-top: 20px;
+      padding-right: 0;
+      font-size: 13px;
+    }
+  }
+
   &__title {
     font-weight: 700;
     font-size: 3.3rem;
     color: $secondary-color;
     text-transform: uppercase;
+    padding: 0;
 
-    padding: 38px 0;
     padding-left: 100px;
     border-left: 1px solid $secondary-color;
-    margin-bottom: 111px;
 
-    @media (max-width: 576px) {
+    @include viewport--xs {
       font-size: 2.2rem;
       line-height: 2.6rem;
-      padding-left: 0;
       border-left: none;
-      padding: 0;
-      margin-bottom: 90px;
+      padding-left: 0;
     }
   }
 
