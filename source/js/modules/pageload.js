@@ -12,9 +12,9 @@ import {createOnAjaxLoader, afterAjaxLoaderAnimate} from '../utils/loaders';
 
 
 const reinitOnAfter = () => {
-  lightbox.init();
   initScroll();
   initModals();
+  lightbox.init();
   textAnimate();
   addAttrScrollToImg();
   showSideMenu();
@@ -22,6 +22,9 @@ const reinitOnAfter = () => {
   tabs();
   // tabGallery();
   addHideClassToFirstScreen();
+  // animMenuEls();
+  showFirstBlock();
+  scrollMenu();
 };
 
 export const smoothParams = {
@@ -48,7 +51,7 @@ export const smoothParams = {
         $('#siteWrapper').removeAttr('style');
         $('#pageHeader').removeClass('header--bg-dark');
         $('#pageHeader').removeClass('header--hide');
-      }, 600);
+      }, 300);
 
       $(window).scrollTop(0);
       // if ($("div").hasClass("glightbox-container")) {
@@ -61,6 +64,7 @@ export const smoothParams = {
         afterAjaxLoaderAnimate();
         showFirstBlock();
       }, 1000);
+
       setTimeout(() => {
         $('.ajaxloader').remove();
         updateScroll();
@@ -77,9 +81,6 @@ export const smoothParams = {
 
     $('body').imagesLoaded().done(function () {
       jqSlick();
-      // animMenuEls();
-      showFirstBlock();
-      scrollMenu();
 
       setTimeout(function () {
         // if ($('body').hasClass('chrome')) {

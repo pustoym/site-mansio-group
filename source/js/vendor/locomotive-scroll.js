@@ -18,8 +18,8 @@ export const destroyScroll = () => {
   scroll.destroy();
 };
 
-export const scrollMenu = () => {
-  // HIDE menu to scrollDown
+export const scrollMenuLegacy = () => {
+
   const html = document.querySelector('html');
   const header = document.getElementById('pageHeader');
   // let windowHeight = html.clientHeight;
@@ -49,7 +49,7 @@ export const scrollMenu = () => {
 
   // show hide menu on window scroll
   if (!html.classList.contains('has-scroll-init')) {
-    $(document).on('scroll', function() {
+    $(document).on('scroll', function () {
       let scrolled = $(window).scrollTop();
 
       if (scrolled > 100 && scrolled > scrollPrev) {
@@ -67,7 +67,42 @@ export const scrollMenu = () => {
     });
   }
 };
+export const scrollMenu = () => {
 
+  const html = document.querySelector('html');
+  const header = document.getElementById('pageHeader');
+  let wHeight = $(window).outerHeight();
+  console.log('компонент скрола меню подключен');
+
+  if ($('.header').length > 0) {
+    console.log('длина хедера больше нуля');
+    let headerTopPos = wHeight;
+
+    if (!html.classList.contains('has-scroll-init')) {
+      $(document).on('scroll', function () {
+
+        if ($(window).scrollTop() > headerTopPos) {
+          header.classList.add('header--bg-dark');
+        } else {
+          header.classList.remove('header--bg-dark');
+        }
+      })
+    }
+
+    if (html.classList.contains('has-scroll-init')) {
+      console.log('локомотив скролл активен');
+      scroll.on('scroll', (obj) => {
+
+        if (obj.scroll.y > headerTopPos) {
+          console.log('позиция скрола больше величины окна');
+          header.classList.add('header--bg-dark');
+        } else {
+          header.classList.remove('header--bg-dark');
+        }
+      });
+    }
+  }
+};
 
 // $("body").imagesLoaded(function () {
 //   if (!$("body").hasClass("disable-effects")) {

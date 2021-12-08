@@ -33,21 +33,9 @@ $.event.special.mousewheel = {
 };
 
 // JQuery section
+// $(function () {
 
-$(function () {
-  /* scroll mouse */
-  // $('[data-scroll]').on('click', function (event) {
-  //   event.preventDefault();
-
-  //   const elementID = $(this).data('scroll');
-  //   const elementOffset = $(elementID).offset().top;
-
-  //   $('html,body').animate({
-  //     scrollTop: elementOffset,
-  //   }, 700);
-  // });
-  /* -- scroll mouse end -- */
-});
+// });
 
 // -- этот скрипт загружает модуль для тестирования, его не должно быть в финальном билде и на проде для клиента
 // import {testInstruments} from './vendor/testInstruments';

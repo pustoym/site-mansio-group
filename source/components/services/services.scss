@@ -224,6 +224,7 @@
 .services__btns-wrapper {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
 
@@ -234,7 +235,7 @@
 }
 
 .services__btn {
-  width: auto;
+  width: 100%;
   max-width: 100%;
   padding: 1em 2em;
   padding-right: calc(2em + 78px);

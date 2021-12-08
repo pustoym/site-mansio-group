@@ -37,7 +37,9 @@ export const addAttrScrollToImg = () => {
 // }
 
 export const limitImgHeight = () => {
+
   $('.js-picture').each(function () {
+
     $(this).removeAttr('style');
     let _el = $(this).find('.js-picture__img').height();
     $(this).css('height', _el + 'px');
