@@ -221,6 +221,9 @@ exports.deploy = deploy;
 const build = series(clean, svgo, sprite, parallel(js, css, html, copy));
 const start = series(build, syncserver);
 
+exports.build = build;
+exports.start = start;
+
 // Optional tasks
 //---------------------------------
 
@@ -238,17 +241,21 @@ const createWebp = () => {
     .pipe(gulp.dest(`${srcFolder}/img/${root}`));
 };
 
+exports.webp = createWebp;
+
 const optimizeImages = () => {
   return gulp
-    .src(buildFolder + "/img/**/*.{png,jpg}")
+    .src(`${srcFolder}/img/**/*.{png,jpg}`)
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.mozjpeg({ quality: 75, progressive: true }),
       ])
     )
-    .pipe(gulp.dest(buildFolder + "/img"));
+    .pipe(gulp.dest(buildFolder + "/img/"));
 };
+
+exports.imagemin = optimizeImages;
 
 const deployFtp = () => {
   return src(["build/**/*.*", "!build/**/*.map"])
@@ -256,10 +263,6 @@ const deployFtp = () => {
     .pipe(connect.dest("/mansio-group/public_html/"));
 };
 
-exports.build = build;
-exports.start = start;
-exports.webp = createWebp;
-exports.imagemin = optimizeImages;
 exports.deployFtp = deployFtp;
 
 gulp.task("otf2ttf", function () {
