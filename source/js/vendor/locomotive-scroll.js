@@ -67,12 +67,26 @@ export const scrollMenuLegacy = () => {
     });
   }
 };
+
+const createUpButton = () => {
+  let btn = document.createElement('button');
+  btn.type = 'button';
+  btn.classList.add('up-button');
+  document.querySelector('body').appendChild(btn);
+  btn.onclick = () => {
+    scroll.scrollTo('top');
+  }
+};
+
 export const scrollMenu = () => {
 
   const html = document.querySelector('html');
   const header = document.getElementById('pageHeader');
   let wHeight = $(window).outerHeight();
   console.log('компонент скрола меню подключен');
+
+  createUpButton();
+  let upButton = document.querySelector('.up-button');
 
   if ($('.header').length > 0) {
     console.log('длина хедера больше нуля');
@@ -83,8 +97,10 @@ export const scrollMenu = () => {
 
         if ($(window).scrollTop() > headerTopPos) {
           header.classList.add('header--bg-dark');
+          upButton.classList.add('up-button--shown');
         } else {
           header.classList.remove('header--bg-dark');
+          upButton.classList.remove('up-button--shown');
         }
       })
     }
@@ -96,8 +112,10 @@ export const scrollMenu = () => {
         if (obj.scroll.y > headerTopPos) {
           console.log('позиция скрола больше величины окна');
           header.classList.add('header--bg-dark');
+          upButton.classList.add('up-button--shown');
         } else {
           header.classList.remove('header--bg-dark');
+          upButton.classList.remove('up-button--shown');
         }
       });
     }

@@ -42,8 +42,8 @@
     width: 700px;
     // width: 40%;
     max-width: 40%;
-    margin-right: 5.2vw;
     margin-left: 7.3vw;
+    margin-right: 5.2vw;
 
     @include viewport--md {
       align-items: center;
@@ -197,10 +197,15 @@
   }
 
   .about-item__text {
+    padding-top: 130px;
     // margin-left: 70px;
     margin-left: 3.6vw;
-    padding-top: 130px;
     margin-right: 5.2vw;
+
+    @include viewport--xl {
+      margin-left: 2.0vw;
+      margin-right: 2.3vw;
+    }
 
     @include viewport--lg {
       padding-top: 30px;
