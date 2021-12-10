@@ -1,0 +1,38 @@
+.up-button {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 50px;
+  display: none;
+  width: 68px;
+  height: 68px;
+  border: none;
+  transform: rotate(-90deg);
+  background-color: $primary-color;
+  background-image: url('../img/sprite/arrows.svg');
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity $default-transition-settings;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: saturate($primary-color, 10);
+  }
+
+  &--shown {
+    display: block;
+    animation: fadeInRight 1s ease-in-out;
+  }
+
+  @include viewport--sm {
+    width: 48px;
+    height: 48px;
+    background-size: 8px;
+  }
+}
