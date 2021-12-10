@@ -1,125 +1,165 @@
 <section class="house-gallery">
-        <div class="container  container--xxl">
-          @@include('../headline/headline.html', {
-          "headline": "Рассмотрите проект внимательнее"
-          })
+  <div class="container  container--xxl">
+    @@include('../headline/headline.html', {
+    "headline": "Рассмотрите проект внимательнее"
+    })
 
-          <div class="tabs">
-            <ul class="house-gallery__nav-list  tabs__list  nav nav-tabs" id="galleryNavTabsList" role="tablist">
-              <li class="tabs__list-item" role="presentation">
-                <button class="tabs__btn  active" id="exterior-tab" type="button" role="tab" aria-controls="exterior"
-                  aria-selected="true" data-bs-toggle="tab" data-bs-target="#exterior">Внешний вид</button>
-              </li>
-              <li class="tabs__list-item" role="presentation">
-                <button class="tabs__btn" id="layouts-tab" type="button" role="tab" aria-controls="layouts"
-                  aria-selected="false" data-bs-toggle="tab" data-bs-target="#layouts">Планировки</button>
-              </li>
-              <li class="tabs__list-item" role="presentation">
-                <button class="tabs__btn" id="facades-tab" type="button" role="tab" aria-controls="facades"
-                  aria-selected="false" data-bs-toggle="tab" data-bs-target="#facades">Фасады</button>
-              </li>
-            </ul>
+    <div class="tabs">
+      <ul class="house-gallery__nav-list  tabs__list  nav nav-tabs" id="galleryNavTabsList" role="tablist">
+        <li class="tabs__list-item" role="presentation">
+          <button class="tabs__btn  active" id="exterior-tab" type="button" role="tab" aria-controls="exterior"
+            aria-selected="true" data-bs-toggle="tab" data-bs-target="#exterior">Внешний вид</button>
+        </li>
+        <li class="tabs__list-item" role="presentation">
+          <button class="tabs__btn" id="layouts-tab" type="button" role="tab" aria-controls="layouts"
+            aria-selected="false" data-bs-toggle="tab" data-bs-target="#layouts">Планировки</button>
+        </li>
+        <li class="tabs__list-item" role="presentation">
+          <button class="tabs__btn" id="facades-tab" type="button" role="tab" aria-controls="facades"
+            aria-selected="false" data-bs-toggle="tab" data-bs-target="#facades">Фасады</button>
+        </li>
+      </ul>
 
-            <div class="house-gallery__content">
+      <div class="house-gallery__content">
 
-              <section class="tabs__pane active" id="exterior" role="tabpanel" aria-labelledby="exterior-tab">
-                <h3 class="visually-hidden">Скандика&nbsp;&mdash; фотографии внешнего вида</h3>
-                <div class="house-gallery__section">
-                  <a href="./img/catalog/scandica/scandica1-full.jpg" class="house-gallery__item glightbox">
-                    <picture class="house-gallery__picture-wrap">
-                      <source srcset="./img/catalog/scandica/scandica1.webp 1x" type="image/webp">
-                      <img src="./img/catalog/scandica/scandica1.jpg" class="house-gallery__img"
-                        alt="Скандика: дворовой фасад" width="885">
-                    </picture>
-                  </a>
+        <section class="tabs__pane active" id="exterior" role="tabpanel" aria-labelledby="exterior-tab">
+          <h3 class="visually-hidden">Скандика&nbsp;&mdash; фотографии внешнего вида</h3>
+          <div class="house-gallery__section">
 
-                  <a href="./img/catalog/scandica/scandica1-cut.jpg"
-                    class="house-gallery__item  house-gallery__item--big  glightbox">
-                    <picture class="house-gallery__picture-wrap">
-                      <source srcset="./img/catalog/scandica/scandica1-cut.webp 1x" type="image/webp">
-                      <img src="./img/catalog/scandica/scandica1-cut.jpg" class="house-gallery__img"
-                        alt="Скандика: дворовой фасад увеличенно" width="885">
-                    </picture>
-                  </a>
+            <a href="/img/catalog/scandica/scandica1-full.jpg" class="house-gallery__item glightbox">
+              <picture class="house-gallery__picture-wrap">
+                <source srcset="/img/catalog/scandica/scandica1.webp 1x" type="image/webp">
+                <img src="/img/catalog/scandica/scandica1.jpg" class="house-gallery__img" alt="Скандика: дворовой фасад"
+                  width="885">
+              </picture>
+            </a>
 
-                  <a href="./img/catalog/scandica/scandica2-full.jpg" class="house-gallery__item  glightbox">
-                    <picture class="house-gallery__picture-wrap">
-                      <source srcset="./img/catalog/scandica/scandica2.webp 1x" type="image/webp">
-                      <img src="./img/catalog/scandica/scandica2.jpg" class="house-gallery__img"
-                        alt="Скандика: главный фасад" width="885">
-                    </picture>
-                  </a>
+            <a href="/img/catalog/scandica/scandica1-cut.jpg"
+              class="house-gallery__item  house-gallery__item--big  glightbox">
+              <picture class="house-gallery__picture-wrap">
+                <source srcset="/img/catalog/scandica/scandica1-cut.webp 1x" type="image/webp">
+                <img src="/img/catalog/scandica/scandica1-cut.jpg" class="house-gallery__img"
+                  alt="Скандика: дворовой фасад увеличенно" width="885">
+              </picture>
+            </a>
 
-                  <a href="./img/catalog/scandica/scandica3-full.jpg" class="house-gallery__item  glightbox">
-                    <picture class="house-gallery__picture-wrap">
-                      <source srcset="./img/catalog/scandica/scandica3.webp 1x" type="image/webp">
-                      <img src="./img/catalog/scandica/scandica3.jpg" class="house-gallery__img"
-                        alt="Скандика: главный фасад под углом" width="885">
-                    </picture>
-                  </a>
+            <a href="/img/catalog/scandica/scandica2-full.jpg" class="house-gallery__item  glightbox">
+              <picture class="house-gallery__picture-wrap">
+                <source srcset="/img/catalog/scandica/scandica2.webp 1x" type="image/webp">
+                <img src="/img/catalog/scandica/scandica2.jpg" class="house-gallery__img" alt="Скандика: главный фасад"
+                  width="885">
+              </picture>
+            </a>
 
-                  <a href="./img/catalog/scandica/scandica4-full.jpg" class="house-gallery__item  glightbox">
-                    <picture class="house-gallery__picture-wrap">
-                      <source srcset="./img/catalog/scandica/scandica4.webp 1x" type="image/webp">
-                      <img src="./img/catalog/scandica/scandica4.jpg" class="house-gallery__img"
-                        alt="Скандика: дворовой фасад под углом" width="885">
-                    </picture>
-                  </a>
-                </div>
-              </section>
+            <a href="/img/catalog/scandica/scandica3-full.jpg" class="house-gallery__item  glightbox">
+              <picture class="house-gallery__picture-wrap">
+                <source srcset="/img/catalog/scandica/scandica3.webp 1x" type="image/webp">
+                <img src="/img/catalog/scandica/scandica3.jpg" class="house-gallery__img"
+                  alt="Скандика: главный фасад под углом" width="885">
+              </picture>
+            </a>
 
-              <section class="tabs__pane" id="layouts"
-                role="tabpanel" aria-labelledby="layouts-tab">
-                <h3 class="visually-hidden">Скандика&nbsp;&mdash; планы дома</h3>
-                <div class="house-gallery__section  house-gallery__section--one-row">
-                  <figure class="house-gallery__figure">
-                    <a href="./img/catalog/scandica/plan-scandica-first@2x.png" class="house-gallery__item glightbox">
-                      <picture class="house-gallery__picture-wrap">
-
-                        <source srcset="./img/catalog/scandica/plan-scandica-first.webp 1x,
-                                                          ./img/catalog/scandica/plan-scandica-first@2x.webp 2x" type="image/webp">
-
-                        <img src="./img/catalog/scandica/plan-scandica-first.png"
-                          srcset="./img/catalog/scandica/plan-scandica-first@2x.png 2x" class="house-gallery__img"
-                          alt="Скандика: дворовой фасад" width="450">
-                      </picture>
-                    </a>
-                    <figcaption class="house-gallery__figcaption">1 этаж</figcaption>
-                  </figure>
-
-                  <figure class="house-gallery__figure">
-                    <a href="./img/catalog/scandica/plan-scandica-second@2x.png" class="house-gallery__item glightbox">
-                      <picture class="house-gallery__picture-wrap">
-
-                        <source srcset="./img/catalog/scandica/plan-scandica-second.webp 1x,
-                                                                          ./img/catalog/scandica/plan-scandica-second@2x.webp 2x"
-                          type="image/webp">
-
-                        <img src="./img/catalog/scandica/plan-scandica-second.png"
-                          srcset="./img/catalog/scandica/plan-scandica-second@2x.png 2x" class="house-gallery__img"
-                          alt="Скандика: дворовой фасад" width="450">
-                      </picture>
-                    </a>
-                    <figcaption class="house-gallery__figcaption">2 этаж</figcaption>
-                  </figure>
-                </div>
-
-              </section>
-
-              <section class="house-gallery__tabs-pane tabs__pane" id="facades" role="tabpanel"
-                aria-labelledby="facades-tab">
-                <h3 class="visually-hidden">Скандика&nbsp;&mdash; фотографии фасадов дома</h3>
-                <p style="text-align: center;">Фотограф на выезде! Как вернется сразу же загрузим фото 📷🏠</p>
-              </section>
-
-            </div>
+            <a href="/img/catalog/scandica/scandica4-full.jpg" class="house-gallery__item  glightbox">
+              <picture class="house-gallery__picture-wrap">
+                <source srcset="/img/catalog/scandica/scandica4.webp 1x" type="image/webp">
+                <img src="/img/catalog/scandica/scandica4.jpg" class="house-gallery__img"
+                  alt="Скандика: дворовой фасад под углом" width="885">
+              </picture>
+            </a>
           </div>
+        </section>
 
-          <!-- <a class="download-link" href="##" download>
+        <section class="tabs__pane" id="layouts" role="tabpanel" aria-labelledby="layouts-tab">
+          <h3 class="visually-hidden">Скандика&nbsp;&mdash; планы дома</h3>
+          <div class="house-gallery__section  house-gallery__section--one-row">
+
+            <figure class="house-gallery__figure">
+              <a href="/img/catalog/scandica/plan-scandica-first@2x.png" class="house-gallery__item glightbox">
+                <picture class="house-gallery__picture-wrap">
+                  <source srcset="/img/catalog/scandica/plan-scandica-first.webp 1x,
+                                  /img/catalog/scandica/plan-scandica-first@2x.webp 2x" type="image/webp">
+                  <img src="/img/catalog/scandica/plan-scandica-first.png"
+                    srcset="/img/catalog/scandica/plan-scandica-first@2x.png 2x" class="house-gallery__img"
+                    alt="Скандика: дворовой фасад" width="450">
+                </picture>
+              </a>
+              <figcaption class="house-gallery__figcaption">1 этаж</figcaption>
+            </figure>
+
+            <figure class="house-gallery__figure">
+              <a href="/img/catalog/scandica/plan-scandica-second@2x.png" class="house-gallery__item glightbox">
+                <picture class="house-gallery__picture-wrap">
+                  <source srcset="/img/catalog/scandica/plan-scandica-second.webp 1x,
+                                  /img/catalog/scandica/plan-scandica-second@2x.webp 2x" type="image/webp">
+                  <img src="./img/catalog/scandica/plan-scandica-second.png"
+                    srcset="./img/catalog/scandica/plan-scandica-second@2x.png 2x" class="house-gallery__img"
+                    alt="Скандика: дворовой фасад" width="450">
+                </picture>
+              </a>
+              <figcaption class="house-gallery__figcaption">2 этаж</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="house-gallery__tabs-pane tabs__pane" id="facades" role="tabpanel" aria-labelledby="facades-tab">
+          <h3 class="visually-hidden">Скандика&nbsp;&mdash; фотографии фасадов дома</h3>
+          <div class="house-gallery__section  house-gallery__section--one-row">
+
+            <figure class="house-gallery__figure">
+              <a href="/img/catalog/scandica/Скандика сзади-1.png" class="house-gallery__item glightbox">
+                <picture class="house-gallery__picture-wrap">
+                  <source srcset="/img/catalog/scandica/Скандика сзади-1.webp 1x" type="image/webp">
+                  <img src="/img/catalog/scandica/Скандика сзади-1.png" class="house-gallery__img" alt="Проект Скандика: рендер фасада"
+                    width="450">
+                </picture>
+              </a>
+              <figcaption class="house-gallery__figcaption">Сзади</figcaption>
+            </figure>
+
+            <figure class="house-gallery__figure">
+              <a href="/img/catalog/scandica/Скандика слева-1.png" class="house-gallery__item glightbox">
+                <picture class="house-gallery__picture-wrap">
+                  <source srcset="/img/catalog/scandica/Скандика слева-1.webp 1x" type="image/webp">
+                  <img src="/img/catalog/scandica/Скандика слева-1.png" class="house-gallery__img" alt="Проект Скандика: рендер фасада"
+                    width="450">
+                </picture>
+              </a>
+              <figcaption class="house-gallery__figcaption">Слева</figcaption>
+            </figure>
+
+            <figure class="house-gallery__figure">
+              <a href="/img/catalog/scandica/Скандика спереди-1.png" class="house-gallery__item glightbox">
+                <picture class="house-gallery__picture-wrap">
+                  <source srcset="/img/catalog/scandica/Скандика спереди-1.webp 1x" type="image/webp">
+                  <img src="/img/catalog/scandica/Скандика спереди-1.png" class="house-gallery__img" alt="Проект Скандика: рендер фасада"
+                    width="450">
+                </picture>
+              </a>
+              <figcaption class="house-gallery__figcaption">Спереди</figcaption>
+            </figure>
+
+            <figure class="house-gallery__figure">
+              <a href="/img/catalog/scandica/Скандика справа-1.png" class="house-gallery__item glightbox">
+                <picture class="house-gallery__picture-wrap">
+                  <source srcset="/img/catalog/scandica/Скандика справа-1.webp 1x" type="image/webp">
+                  <img src="/img/catalog/scandica/Скандика справа-1.png" class="house-gallery__img" alt="Проект Скандика: рендер фасада"
+                    width="450">
+                </picture>
+              </a>
+              <figcaption class="house-gallery__figcaption">Справа</figcaption>
+            </figure>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- <a class="download-link" href="##" download>
             <svg width="48" height="55">
               <use xlink:href="/img/sprite_auto.svg#pdf"></use>
             </svg>Скачать презентацию проекта
           </a> -->
 
-        </div>
-      </section>
+  </div>
+</section>

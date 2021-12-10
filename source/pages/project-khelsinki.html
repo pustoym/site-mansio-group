@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
   <head>
     @@include("../components/base/head.html", {
-      "title": "«@@projectsList.khelsinki.name» — Авторский проект Mansio group",
+      "title": "«@@projectsList.khelsinki.name» — Типовой проект Mansio group",
       "description": "",
       "keywords": ""
     })
@@ -200,7 +200,110 @@
           </article>
         </section>
 
-        <!-- @@include('../components/house-gallery/house-gallery.html') -->
+        <section class="house-gallery">
+          <div class="container  container--xxl">
+            @@include('../components/headline/headline.html', {
+            "headline": "Рассмотрите проект внимательнее"
+            })
+
+            <div class="tabs">
+              <ul class="house-gallery__nav-list  tabs__list  nav nav-tabs" id="galleryNavTabsList" role="tablist">
+                <li class="tabs__list-item" role="presentation">
+                  <button class="tabs__btn  active" id="layouts-tab" type="button" role="tab" aria-controls="layouts"
+                    aria-selected="false" data-bs-toggle="tab" data-bs-target="#layouts">Планировки</button>
+                </li>
+                <li class="tabs__list-item" role="presentation">
+                  <button class="tabs__btn" id="facades-tab" type="button" role="tab" aria-controls="facades"
+                    aria-selected="false" data-bs-toggle="tab" data-bs-target="#facades">Фасады</button>
+                </li>
+              </ul>
+
+              <div class="house-gallery__content">
+
+                <section class="tabs__pane active" id="layouts" role="tabpanel" aria-labelledby="layouts-tab">
+                  <h3 class="visually-hidden">Хельсинки&nbsp;&mdash; планы дома</h3>
+                  <div class="house-gallery__section  house-gallery__section--one-row">
+
+                    <figure class="house-gallery__figure">
+                      <a href="/img/catalog/khelsinki/Хельсинки 1 этаж сайт.png" class="house-gallery__item glightbox">
+                        <picture class="house-gallery__picture-wrap">
+                          <source srcset="/img/catalog/khelsinki/Хельсинки 1 этаж сайт.webp 1x" type="image/webp">
+                          <img src="/img/catalog/khelsinki/Хельсинки 1 этаж сайт.png" class="house-gallery__img"
+                            alt="Проект Хельсинки: первый этаж" width="450">
+                        </picture>
+                      </a>
+                      <figcaption class="house-gallery__figcaption">1 этаж</figcaption>
+                    </figure>
+
+                    <figure class="house-gallery__figure">
+                      <a href="/img/catalog/khelsinki/Хельсинки 2 этаж сайт.png" class="house-gallery__item glightbox">
+                        <picture class="house-gallery__picture-wrap">
+                          <source srcset="/img/catalog/khelsinki/Хельсинки 2 этаж сайт.webp 1x" type="image/webp">
+                          <img src="/img/catalog/khelsinki/Хельсинки 2 этаж сайт.png" class="house-gallery__img"
+                            alt="Проект Хельсинки: второй этаж" width="450">
+                        </picture>
+                      </a>
+                      <figcaption class="house-gallery__figcaption">2 этаж</figcaption>
+                    </figure>
+
+                  </div>
+                </section>
+
+                <section class="house-gallery__tabs-pane tabs__pane" id="facades" role="tabpanel" aria-labelledby="facades-tab">
+                  <h3 class="visually-hidden">Хельсинки&nbsp;&mdash; фотографии фасадов дома</h3>
+                  <div class="house-gallery__section  house-gallery__section--one-row">
+
+                    <figure class="house-gallery__figure">
+                      <a href="/img/catalog/khelsinki/Хельсинки сзади-1.png" class="house-gallery__item glightbox">
+                        <picture class="house-gallery__picture-wrap">
+                          <source srcset="/img/catalog/khelsinki/Хельсинки сзади-1.webp 1x" type="image/webp">
+                          <img src="/img/catalog/khelsinki/Хельсинки сзади-1.png" class="house-gallery__img"
+                            alt="Проект Хельсинки: рендер фасада" width="450">
+                        </picture>
+                      </a>
+                      <figcaption class="house-gallery__figcaption">Сзади</figcaption>
+                    </figure>
+
+                    <figure class="house-gallery__figure">
+                      <a href="/img/catalog/khelsinki/Хельсинки слева-1.png" class="house-gallery__item glightbox">
+                        <picture class="house-gallery__picture-wrap">
+                          <source srcset="/img/catalog/khelsinki/Хельсинки слева-1.webp 1x" type="image/webp">
+                          <img src="/img/catalog/khelsinki/Хельсинки слева-1.png" class="house-gallery__img"
+                            alt="Проект Хельсинки: рендер фасада" width="450">
+                        </picture>
+                      </a>
+                      <figcaption class="house-gallery__figcaption">Слева</figcaption>
+                    </figure>
+
+                    <figure class="house-gallery__figure">
+                      <a href="/img/catalog/khelsinki/Хельсинки спереди-1.png" class="house-gallery__item glightbox">
+                        <picture class="house-gallery__picture-wrap">
+                          <source srcset="/img/catalog/khelsinki/Хельсинки спереди-1.webp 1x" type="image/webp">
+                          <img src="/img/catalog/khelsinki/Хельсинки спереди-1.png" class="house-gallery__img"
+                            alt="Проект Хельсинки: рендер фасада" width="450">
+                        </picture>
+                      </a>
+                      <figcaption class="house-gallery__figcaption">Спереди</figcaption>
+                    </figure>
+
+                    <figure class="house-gallery__figure">
+                      <a href="/img/catalog/khelsinki/Хельсинки справа-1.png" class="house-gallery__item glightbox">
+                        <picture class="house-gallery__picture-wrap">
+                          <source srcset="/img/catalog/khelsinki/Хельсинки справа-1.webp 1x" type="image/webp">
+                          <img src="/img/catalog/khelsinki/Хельсинки справа-1.png" class="house-gallery__img"
+                            alt="Проект Хельсинки: рендер фасада" width="450">
+                        </picture>
+                      </a>
+                      <figcaption class="house-gallery__figcaption">Справа</figcaption>
+                    </figure>
+
+                  </div>
+                </section>
+
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- TODO: функционал формы невозможно интегрировать конструктором AMOcrm -->
         <!-- @@include('../components/row-form/row-form.html', {
