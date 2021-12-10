@@ -303,6 +303,14 @@
       background-image: url("../img/catalog/budapesht/budapesht-1@2x.jpg");
     }
   }
+
+    &--milan {
+    background-image: url("../img/catalog/milan/milan-1.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog/milan/milan-1@2x.jpg");
+    }
+  }
 }
 
 .webp .first-screen {
@@ -574,6 +582,14 @@
 
     @include retina {
       background-image: url("../img/catalog/budapesht/budapesht-1@2x.webp");
+    }
+  }
+
+    &--milan {
+    background-image: url("../img/catalog/milan/milan-1.webp");
+
+    @include retina {
+      background-image: url("../img/catalog/milan/milan-1@2x.webp");
     }
   }
 }

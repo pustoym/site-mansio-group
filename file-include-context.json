@@ -182,6 +182,18 @@
       "closet": "-",
       "balconies": "-",
       "cost": "~"
+    },
+    "milan": {
+      "name": "Милан",
+      "type": "Типовой проект",
+      "square": "275",
+      "floors": "2",
+      "material": "-",
+      "bedrooms": "5",
+      "bathrooms": "3",
+      "closet": "1",
+      "balconies": "-",
+      "cost": "~"
     }
   },
   "text": {

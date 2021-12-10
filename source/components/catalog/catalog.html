@@ -15,6 +15,19 @@
       "imgW": "950"
     })
     @@include("../card/card.html", {
+      "href": "/project-milan.html",
+      "bemMod": "catalog",
+      "bemElement": "catalog__item",
+      "bemElementMod": "catalog__item",
+      "title": "@@projectsList.milan.name",
+      "subtitle": "@@projectsList.milan.type",
+      "propSquare": "@@projectsList.milan.square",
+      "propfloors": "@@projectsList.milan.floors",
+      "propMaterial": "@@projectsList.milan.material",
+      "imgSrc": "img/catalog/milan/milan-card",
+      "imgW": "950"
+    })
+    @@include("../card/card.html", {
       "href": "/project-amsterdam.html",
       "bemElement": "catalog__item",
       "bemMod": "catalog",
@@ -162,7 +175,7 @@
       "href": "/project-toronto.html",
       "bemMod": "catalog",
       "bemElement": "catalog__item",
-      "bemElementMod": "catalog__item",
+      "bemElementMod": "catalog__item catalog__item--last-child",
       "title": "@@projectsList.toronto.name",
       "subtitle": "@@projectsList.toronto.type",
         "propSquare": "@@projectsList.toronto.square",
@@ -171,6 +184,6 @@
       "imgSrc": "img/catalog/toronto/1",
       "imgW": "950"
     })
-    <!-- Модификатор @bemElementMod: last-child для непарного блока -->
+    <!-- Модификатор @bemElementMod: catalog__item--last-child для непарного блока -->
   </ul>
 </section>
