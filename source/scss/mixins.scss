@@ -16,30 +16,35 @@
 
 // Desktop first
 
+// 1900px
 @mixin viewport--xl {
   @media (max-width: $viewport--xxl) {
     @content;
   }
 }
 
+// 1440px
 @mixin viewport--lg {
   @media (max-width: $viewport--xl - 0.02) {
     @content;
   }
 }
 
+// 1024px
 @mixin viewport--md {
   @media (max-width: $viewport--lg - 0.02) {
     @content;
   }
 }
 
+// 768px
 @mixin viewport--sm {
   @media (max-width: $viewport--md - 0.02) {
     @content;
   }
 }
 
+// 576px
 @mixin viewport--xs {
   @media (max-width: $viewport--sm - 0.02) {
     @content;

@@ -1,7 +1,6 @@
 .benefits-list {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0;
@@ -14,6 +13,7 @@
   @include viewport--md {
     padding-top: 40px;
     padding-bottom: 45px;
+    flex-wrap: wrap;
   }
 
   @include viewport--xs {
@@ -26,9 +26,11 @@
     list-style: none;
     // width: 25%;
     min-width: 210px;
+    max-width: 450px;
 
     @include viewport--md {
       width: 50%;
+      max-width: auto;
       margin-bottom: 40px;
       text-align: center;
     }
@@ -69,6 +71,18 @@
 
     .benefits-list__item-subtitle {
       color: $grey;
+    }
+  }
+
+  &--pt-0 {
+    // padding-top: 0;
+
+    @include viewport--md {
+      padding-top: inherit;
+    }
+
+    @include viewport--xs {
+      padding-top: inherit;
     }
   }
 }

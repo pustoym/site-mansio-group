@@ -33,6 +33,7 @@
 @import "../components/benefits-list/benefits-list";
 @import "global/webp";
 @import "../components/footer/footer";
+@import "blocks/article";
 // modal
 @import "blocks/modal";
 @import "blocks/member";
@@ -129,5 +130,4 @@
 
 
 // контент на втрунних страницах
-@import "blocks/article";
 @import "../components/socials/socials";

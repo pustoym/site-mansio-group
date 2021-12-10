@@ -1,6 +1,15 @@
 .article {
   padding: 7vw 0;
   // text-align: center;
+
+  &__title {
+    @include h2;
+    text-align: center;
+  }
+}
+
+.article__content,
+.editable-content {
   font-size: $font-size;
   line-height: 1.9;
 
@@ -68,8 +77,5 @@
   strong {
     font-weight: bolder;
   }
-  &__title {
-    @include h2;
-    text-align: center;
-  }
+
 }

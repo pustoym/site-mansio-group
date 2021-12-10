@@ -75,6 +75,11 @@
     background-blend-mode: darken;
   }
 
+  &--khelsinki,
+  &--toronto {
+    background-position: center;
+  }
+
   &__inner {
     padding-left: 100px;
 
