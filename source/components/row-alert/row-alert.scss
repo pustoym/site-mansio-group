@@ -1,4 +1,4 @@
-.row-alert {
+.row-section {
   min-height: 250px;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,6 @@
   font-size: $font-size-sm;
   line-height: 1.68;
   text-align: center;
-  font-weight: bold;
 
   @include viewport--md {
     margin-top: 0;
@@ -23,6 +22,15 @@
   @include viewport--xs {
     margin-bottom: 10px;
     padding: 30px 15px 35px;
+  }
+
+  &--alert {
+    font-weight: bold;
+  }
+
+  &--bg {
+    background: url('../img/bg/row-bg.jpg') center no-repeat;
+    color: #ffffff;
   }
 
   &__inner {
